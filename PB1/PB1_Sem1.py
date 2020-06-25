@@ -1,7 +1,12 @@
-
 import sys
-sys.stdout = open("/home/s20016/pythonlesson/CP/output.txt", "w")
-sys.stdin = open("/home/s20016/pythonlesson/CP/input.txt", "r")
+
+#! School laptop Path:
+#sys.stdout = open("/home/s20016/pythonlesson/CP/output.txt", "w")
+#sys.stdin = open("/home/s20016/pythonlesson/CP/input.txt", "r")
+
+#! Personal Laptop Path:
+sys.stdout = open("myGithub/myProjects/PB1/output.txt", "w")
+sys.stdin = open("myGithub/myProjects/PB1/input.txt", "r")
 # TODO===============================================================
 # TODO import modules here:
 
@@ -400,4 +405,5 @@ while True:
 """
 
 #* AOJ ITP1_5_C - Print a Chessboard
-
+a = input()
+print(a)
