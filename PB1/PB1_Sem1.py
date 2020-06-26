@@ -6,17 +6,17 @@ import sys
 #! PL PATH:
 sys.stdout = open("output.txt", "w")
 sys.stdin = open("input.txt", "r")
-# TODO===============================================================
+# TODO ==============================================================
 # TODO START CODE HERE:
 
 # import random
 # import op_function as op
 # from functools import reduce
 
-# TODO===============================================================
+# TODO ==============================================================
 # TODO Start code from here:
 
-#! PB 1 06/10/2020===================================================
+#! PB1 06/10/2020 ===================================================
 #* Lesson
 """
 m, n, k = (random.randint(0, 10) for num in range(3))
@@ -52,7 +52,7 @@ print(op.f("JC Tinio"))
 print(op.f1("JC TINIO"))
 """
 
-#! PB1 (06/11/2020)=====================================================
+#! PB1 06/11/2020 ===================================================
 """
 #* CodeCombat Warmup2 - last2
 def last2(str):
@@ -116,7 +116,7 @@ def rotate_left3(nums):
   return nums
 """
 
-#! PB1 (06/16/2020)=======================================================
+#! PB1 06/16/2020 ===================================================
 #TODO try on your own later:
 # 1. $ git clone https://github.com/omas-public/nlp100
 # 2. https://codingbat.com/prob/p145834 TRY str(value, 2)
@@ -225,7 +225,7 @@ def lucky_sum(a, b, c):
 print(lucky_sum(1,2,3))
    """ 
 
-#! PB1 (06/17/2020)============================================================
+#! PB1 06/17/2020 ===================================================
 #* CodingBat Logic-2 > no_teen_sum
 """
 def no_teen_sum(a, b, c):
@@ -252,7 +252,7 @@ def round10(n):
 print(round_sum(16, 17, 18))
 """
 
-#! PB1 (06/18/2020)=========================================================
+#! PB1 06/18/2020 ===================================================
 #TODO LESSON:
 # https://wiki.python.org/moin/BitwiseOperators     <= Study later!
 # Study Binary, negative binary, decimal binary
@@ -266,7 +266,7 @@ def close_far(a, b, c):
 print(close_far(4, 5, 3))
 """
 
-#! PB1 (06/24/2020)=========================================================
+#! PB1 06/24/2020 ===================================================
 #TODO Lesson 
 # 2 important components in a computer: CPU and Memory
 
@@ -340,7 +340,7 @@ a, b = map(int, input().split())
 print("{} {} {:.10f}".format(int(a/b), a%b, a/b))
 """
 
-#! PB 1 (06/25/2020)=======================================================
+#! PB1 06/25/2020 ===================================================
 #TODO Lesson: Finish all this:
 # TypingClub Progress:    72%
 # Paiza: Video Lesson:    
@@ -402,7 +402,7 @@ while True:
             print("#"*b)
     print()
 """
-#! PB1 REVIEW (06/26/2020)=================================================
+#! PB1 06/26/2020 ===================================================
 #* AOJ ITP1_5_C - Print a Chessboard
 """
 while True:
