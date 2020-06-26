@@ -1,14 +1,13 @@
 import sys
-
-#! School laptop Path:
+#! SL PATH:
 #sys.stdout = open("/home/s20016/pythonlesson/CP/output.txt", "w")
 #sys.stdin = open("/home/s20016/pythonlesson/CP/input.txt", "r")
 
-#! Personal Laptop Path:
-sys.stdout = open("myGithub/myProjects/PB1/output.txt", "w")
-sys.stdin = open("myGithub/myProjects/PB1/input.txt", "r")
+#! PL PATH:
+sys.stdout = open("output.txt", "w")
+sys.stdin = open("input.txt", "r")
 # TODO===============================================================
-# TODO import modules here:
+# TODO START CODE HERE:
 
 # import random
 # import op_function as op
@@ -403,7 +402,74 @@ while True:
             print("#"*b)
     print()
 """
-
+#! PB1 REVIEW (06/26/2020)=================================================
 #* AOJ ITP1_5_C - Print a Chessboard
-a = input()
-print(a)
+"""
+while True:
+    a, b = map(int, input().split())
+    if a == 0 and b == 0:
+        break 
+    for y in range(0, a):
+        for x in range(0, b):
+            if (y + x)%2 == 0:
+                print("#", end="")
+            else:
+                print(".", end="")
+        print()
+    print()
+"""
+
+#* AOJ ITP1_5_D - Structured Programming
+"""
+a = int(input())
+for i in range(1, a + 1):
+    if i % 3 == 0 or str(i).find("3") != -1:
+        print(" {}".format(i), end="")
+print()
+"""
+
+#* AOJ ITP1_6_A - Reversing Numbers
+"""
+n = input()
+x = list(map(int, input().split()))
+x.reverse()
+
+print(" ".join(map(str, x)))
+"""
+
+#* AOJ ITP1_6_B - Finding Missing Cards
+"""
+n = int(input())
+rc = list(input() for i in range(n))
+for s in ["S","H","C","D"]:
+    for num in range(1, 14):
+        allc = "{} {}".format(s, str(num))
+        if allc not in rc: print(allc)
+"""
+#! NOT YET SOLVED!
+#* AOJ ITP1_6_C - Official House
+"""
+build_num = 0
+while True:
+  if build_num == 4: break
+  for i in range(3):
+      print(" 0" * 10)
+  print("#" * 20)
+  build_num += 1
+"""
+
+#* AOJ ITP1_8_B - Sum of Numbers 
+"""
+while True:
+    n = input()
+    x = list(int(i) for i in str(n))
+    s = sum(x)
+    if s == 0: break
+    print(s)
+"""
+
+#* AOJ ITP1_8_C - Counting Characters
+#TODO STUDY: stdin, map
+import sys
+s = sys.stdin.read().lower()
+for c in map(chr, range(97,123)): print(f"{c} : {s.count(c)}")
