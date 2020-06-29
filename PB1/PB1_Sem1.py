@@ -343,7 +343,7 @@ print("{} {} {:.10f}".format(int(a/b), a%b, a/b))
 #! PB1 06/25/2020 ===================================================
 #TODO Lesson: Finish all this:
 # TypingClub Progress:    72%
-# Paiza: Video Lesson:    
+# Paiza: Video Lesson:    100%
 # Paiza: Code Chronicle:  100%
 # CodingBat:              100%
 # AOJ:                    
@@ -470,6 +470,86 @@ while True:
 
 #* AOJ ITP1_8_C - Counting Characters
 #TODO STUDY: stdin, map
+"""
 import sys
 s = sys.stdin.read().lower()
 for c in map(chr, range(97,123)): print(f"{c} : {s.count(c)}")
+"""
+
+#! PB1 06/27/2020 ===================================================
+#* Multiplication Table: Practice Code
+"""
+def multiply(x, y):
+    return x * y
+for i in range(1, 10):
+    for num in range(1, 10):
+        print(i * num, end="")
+        if num < 9:
+            print(", ", end="")
+    print()
+"""
+
+#! PB1 06/29/2020 ===================================================
+#* AOJ ITP1_7_A - Grading
+"""
+while True:
+    m, f, r = map(int, input().split())
+
+    if sum((m, f, r)) == -3: break
+    if m == -1 or f == -1: print("F")
+    elif m + f >= 80: print("A") 
+    elif m + f >= 65: print("B") 
+    elif m + f >= 50: print("C") 
+    elif m + f >= 30: 
+        if r >= 50: print("C")
+        else: print("D")
+    else: print("F")
+"""
+
+#* AOJ ITP1_9_A - Finding a Word
+"""
+import sys
+w = input()
+p = sys.stdin
+count = 0
+
+for line in p:
+    x = line.lower().split().count(w)
+    count += x
+print(count)
+"""
+
+#* AOJ ITP1_8_A - Toggling Cases
+"""
+x = str(input())
+print(x.swapcase())
+"""
+
+#* AOJ ITP1_10_A - Distance
+"""
+import math
+x1, y1, x2, y2 = map(float, input().split())
+
+d = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)  
+print("{:.8f}".format(d))
+"""
+
+#* AOJ ITP1_10_B - Triangle
+"""
+import math
+a, b, c = map(float, input().split())
+
+A = ((a*b) * math.sin(math.radians(c)) * 0.5)
+L = math.sqrt((a**2) + (b**2) - (2*a*b) * math.cos(math.radians(c))) + a + b
+H = 2 * A / a
+
+print("{:.8f}\n{:.8f}\n{:.8f}".format(A, L, H))
+"""
+
+#* AOJ ITP1_8_D - Ring
+"""
+x = input() * 2
+w = input()
+
+print("Yes" if w in x else "No")
+"""

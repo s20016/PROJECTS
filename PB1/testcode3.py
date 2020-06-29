@@ -9,8 +9,7 @@ sys.stdin = open("input.txt", "r")
 # TODO===============================================================
 # TODO START CODE HERE:
 
+x = input() * 2
+w = input()
 
-import sys
-s = sys.stdin.read().lower()
-for c in map(chr, range(97,123)): print(f"{c} : {s.count(c)}")
-
+print("Yes" if w in x else "No")
