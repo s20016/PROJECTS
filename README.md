@@ -2,6 +2,8 @@
 
 Lecture Notes:
 
-Sem1
-    - PB1
-        - PB1_Sem1.py = Notes from 05/20 ~ 06/30
+Sem 1
+・Notes
+    ・PB1
+        ・PythonProjects 
+        ・PB1_Sem1.py (05/20 ~ 06/30)

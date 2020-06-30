@@ -1,7 +1,7 @@
 import sys
 #! SL PATH:
-#sys.stdout = open("/home/s20016/pythonlesson/CP/output.txt", "w")
-#sys.stdin = open("/home/s20016/pythonlesson/CP/input.txt", "r")
+sys.stdout = open("PB1/output.txt", "w")
+sys.stdin = open("PB1/input.txt", "r")
 
 #! PL PATH:
 sys.stdout = open("output.txt", "w")
@@ -553,3 +553,6 @@ w = input()
 
 print("Yes" if w in x else "No")
 """
+
+#! PB1 06/30/2020 ===================================================
+#* ITP1_9_D - Transformation

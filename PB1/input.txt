@@ -1,2 +1,5 @@
-vanceknowledgetoad
-advance
+abcde
+3
+replace 1 3 xyz
+reverse 0 2
+print 1 4

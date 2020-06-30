@@ -9,7 +9,3 @@ sys.stdin = open("input.txt", "r")
 # TODO===============================================================
 # TODO START CODE HERE:
 
-x = input() * 2
-w = input()
-
-print("Yes" if w in x else "No")

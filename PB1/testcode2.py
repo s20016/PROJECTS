@@ -9,5 +9,3 @@ sys.stdin = open("input.txt", "r")
 # TODO===============================================================
 # TODO START CODE HERE:
 
-x = str(input())
-print(x.swapcase())

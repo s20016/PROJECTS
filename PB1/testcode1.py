@@ -9,14 +9,17 @@ sys.stdin = open("input.txt", "r")
 # TODO===============================================================
 # TODO START CODE HERE:
 
-x = list(str(input()))
 w = str(input())
-u = ""
+n = int(input())
+x = sys.stdin
 
-for c in w:
-    if c in x:
-        u += c
-        del c 
-    else: print("No")
-if u == w:
-    print("Yes")
+for cmd in x:
+    j = list(cmd.split())
+    if j[0] == "replace":
+        a, b, c, d = map(str, input().split())
+        print(a, b, c, d)
+    elif j[0] == "reverse":
+        a, b, c = map(str, input())
+
+
+print(w)
