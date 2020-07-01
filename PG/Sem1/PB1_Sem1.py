@@ -7,14 +7,14 @@ sys.stdin = open("PB1/input.txt", "r")
 sys.stdout = open("output.txt", "w")
 sys.stdin = open("input.txt", "r")
 # TODO ==============================================================
-# TODO START CODE HERE:
+# TODO IMPORT MODULES HERE:
 
 # import random
 # import op_function as op
 # from functools import reduce
 
 # TODO ==============================================================
-# TODO Start code from here:
+# TODO START CODE FROM HERE:
 
 #! PB1 06/10/2020 ===================================================
 #* Lesson
