@@ -18,15 +18,38 @@ Chapter 4, Chpater 5 = Important!
 Chapter 6, Chapter 7 = Less important
 Chapter 8            = Important!
 
+#TODO Study this part!
+======================
 2 Types:
 Interpreter:
     - Python 3
-    - Slower than compiler
-    - made by Guido Van Rossum
+    - Speed: Interpreter < Compiler
+    - By Guido Van Rossum
 Compiler:
-    - Compiler > interpreter, in terms of speed
-    - interpreter reads per line while compiler reads whole code.
     - C
+    - Speed: Interpreter > Compiler
+    - interpreter reads per line while compiler reads whole code.
+======================
+
+Useful Functions:
+    1.  pow(x, y, z) 
+        x	A number, the base
+        y	A number, the exponent
+        z	Optional. A number, the modulus
+
+    2.  import math
+        math.gcd(341, 253)
+        >>> 1
+
+        same as;
+        a, b = 341, 253
+        a, b = b, a%b
+        # repeat until 0
+
+Searh Later:
+    1. When to use Camelcase?
+    2. What is "literal" in Python
+    
 
 
-
+"""
