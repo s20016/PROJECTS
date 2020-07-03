@@ -3,11 +3,11 @@ import sys
 sys.stdout = open("output.txt", "w")
 sys.stdin = open("input.txt", "r")
 # TODO ==============================================================
-# TODO START CODE HERE:
+# TODO IMPORT MODULE HERE:
 
 
 # TODO ==============================================================
-# TODO Start code from here:
+# TODO START CODE HERE:
 
 #! P1 07/01/2020 ====================================================
 #* Lesson Notes:
