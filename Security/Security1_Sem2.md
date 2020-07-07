@@ -72,3 +72,4 @@ Note: If one of these six elements is omitted, information security is deficient
     - 監査 (かんさ) => 第三者による作業のチェック Third-party check
     - 管理 (かんり) => 自分たちがやっている作業のチェック Self-check
 
+### **Chapter 02**
