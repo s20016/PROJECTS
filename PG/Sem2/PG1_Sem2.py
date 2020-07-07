@@ -143,3 +143,14 @@ Useful Functions:
         l[1:4] = []
         l = [0, 8]
     
+    3.  Printing num with bin
+        for i in range(50):
+	    print("{:>8} {}".format(bin(i), i))
+
+        limiting number of decimal places:
+        x = 121.13241985145145
+
+Method 1: print("{:.6f}".format(x))
+Method 2: print("%.6f" % x)
+
+"""

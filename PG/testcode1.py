@@ -5,5 +5,5 @@ sys.stdin = open("input.txt", "r")
 # TODO ==============================================================
 # TODO START CODE HERE:
 
-from testmod import *
-print(bytwo(0, 100))
+for i in range(50):
+	print("{:>8} {}".format(bin(i), i))
