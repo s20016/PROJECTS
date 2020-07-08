@@ -553,6 +553,3 @@ w = input()
 
 print("Yes" if w in x else "No")
 """
-
-#! PB1 06/30/2020 ===================================================
-#* ITP1_9_D - Transformation

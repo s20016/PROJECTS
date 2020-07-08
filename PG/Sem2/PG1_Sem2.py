@@ -150,7 +150,60 @@ Useful Functions:
         limiting number of decimal places:
         x = 121.13241985145145
 
-Method 1: print("{:.6f}".format(x))
-Method 2: print("%.6f" % x)
+        M1: print("{:.6f}".format(x))
+        M   2: print("%.6f" % x)
 
 """
+
+#! P1 07/08/2020 ====================================================
+#* Lesson Notes:
+"""
+    #* One line: If, else Function
+    1.  a = 20
+        M1: x = 'OK' if a >= 10 else 'NG'
+        print(x)
+        M2: x = {False: 'NG', True: 'OK'}[a >= 10]
+
+    #* One line: For function    
+    2.  l = [e * 2 for e in range(20)]
+        print(l)
+
+    #* Combination of For and If function
+    3.  l = [str(i) for i in [0, 1, 2, 3] if i % 2 == 0 ]
+        print("\n".join(l))
+
+    4.  l = [1, 1, 2, 3, 5, 8, 13]
+        x = sum([e for e in l if e % 2 != 0])
+        print(x)
+
+    #* Printing by twos
+    5.  M1: x = [e for e in range(0, 20, 2) if e % 2 == 0]
+        M2: y = list(range(0, 20, 2))
+        print(x)
+        print(y)
+
+    #* Alternative for continue, skip 2
+    6.  x = [x for x in range(5) if x != 2]
+        print(x)
+
+    #* Guessing alphabet game (run in Python IDLE)
+    7.  M1:
+        import random
+        x = [ chr(c) for c in range(ord("a"), ord("z") + 1)]
+        while True:
+            ch = random.choice(x)
+            val = input("Enter val: ")
+            ans = "OK" if ch == val else "NG"
+            print(ans)
+            print(ch)
+
+        M2:
+        from random import choice
+        x = [ chr(c) for c in range(ord("a"), ord("z") + 1)]
+        for _ in iter(input, choice(x)):
+            print("NG")
+        print("OK")
+
+        #TODO:
+        Study iter
+        

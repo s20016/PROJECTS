@@ -6,6 +6,6 @@ sys.stdin = open("input.txt", "r")
 # TODO START CODE HERE:
 
 
-x = 121.13241985145145
-print("{:.6f}".format(x))
-print("%.6f" % x)
+l = [1, 1, 2, 3, 5, 8, 13]
+x = sum([e for e in l if e % 2 != 0])
+print(x)
