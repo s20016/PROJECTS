@@ -206,3 +206,18 @@ Useful Functions:
         #TODO:
         Study iter
 """
+#! PB1 07/09/2020 ===================================================
+#* Counting prime numbers
+"""
+x = int(input())
+y = int(input())
+count = 0
+for num in range(y, y + x):
+    if num > 1:
+        for i in range(2, num):
+            if (num % i) == 0:
+                break
+        else:
+            count += 1
+print(count) 
+"""

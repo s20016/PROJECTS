@@ -1,2 +1,0 @@
-Enter val: NG l
-Enter val: 2
