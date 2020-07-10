@@ -1,9 +1,4 @@
 import sys
-#! SL PATH:
-sys.stdout = open("PB1/output.txt", "w")
-sys.stdin = open("PB1/input.txt", "r")
-
-#! PL PATH:
 sys.stdout = open("output.txt", "w")
 sys.stdin = open("input.txt", "r")
 # TODO ==============================================================
@@ -18,6 +13,14 @@ sys.stdin = open("input.txt", "r")
 
 #! PB1 06/10/2020 ===================================================
 #* Lesson
+#* Multiplication Table
+"""
+for row in range(10):
+    for col in range(10):
+        num = "{:>2}".format((row + 1) * (col + 1))
+        print(num, end = " ")
+    print()
+"""
 """
 m, n, k = (random.randint(0, 10) for num in range(3))
 print("m{}, n{}, k{}".format(m,n,k))
@@ -54,7 +57,7 @@ print(op.f1("JC TINIO"))
 
 #! PB1 06/11/2020 ===================================================
 """
-#* CodeCombat Warmup2 - last2
+#* Codeingbat Warmup2 - last2
 def last2(str):
 
   if len(str) == 0:
@@ -72,14 +75,14 @@ def last2(str):
   w = int(rest.count(str[-2:]))
   return w
 
-#* CodeCombat Warmup2 - array123
+#* Codingbat Warmup2 - array123
 def array123(nums):
     for i in range(len(nums)-2):
         if nums[i]==1 and nums[i+1]==2 and nums[i+2]==3:
             return True
     return False
 
-#* CodeCombat Warmup2 - string_match
+#* Codingbat Warmup2 - string_match
 def string_match(a, b):
     shorter = min(len(a), len(b))
     count = 0
