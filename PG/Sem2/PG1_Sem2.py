@@ -278,4 +278,6 @@ print(count)
     M3: import math
         print(math.gcd(num1, num2))
 
-        
+    6. #* join and one line for fucntion
+        print("".join([l.get(c, c) for c in x]))
+"""
