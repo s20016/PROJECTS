@@ -221,3 +221,61 @@ for num in range(y, y + x):
             count += 1
 print(count) 
 """
+
+#! PB1 07/14/2020 ===================================================
+#* Lesson Notes: Page 70
+"""
+    #* Useful Codes
+    #* Identifying MAX and MIN (int per line)
+    1.  import sys
+        x = list(sys.stdin.read().split("\n"))
+        for i in range(0, len(x)):
+            x[i] = int(x[i])
+        print(max(x))
+        print(min(x))
+
+    #* List >> range(num), str
+    2.  lines = list(map(str, range(1, 11)))
+        print(lines)
+        with open("number.txt", "w") as f:
+            f.write("\n".join(lines))
+
+        with open("number.txt", "r") as f:
+            print(sum(map(int, list(f))))
+
+    #* Def to Lambda
+    3.  def add2(a, b):
+            return a + b
+        print(add2(1, 2))
+
+        add = lambda a, b : a + b
+        print(add(1, 2))
+
+    #* Converting str list to int list
+    4.  x = input()
+        y = sys.stdin.read().split(" ")
+        for i in range(0, len(y)):
+            y[i] = int(y[i])
+        print(sum(y))
+   
+    5.  #* GCD
+    M1: def gcd(a, b):
+        a, b = max([a, b]), min([a, b])
+        while b:
+            a, b = b, a % b
+        return a
+    print(gcd(num2, num2))
+
+    M2: def binary(n):
+            buf = []
+            while n:
+                n, m = divmod(n, 2)
+                buf.append(str(m))
+                return "".join(reversed(buf))
+        print(binary(num1, num2))
+
+    #* No need to use "from math import *"
+    M3: import math
+        print(math.gcd(num1, num2))
+
+        

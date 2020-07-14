@@ -5,7 +5,9 @@ sys.stdin = open("input.txt", "r")
 # TODO ==============================================================
 # TODO START CODE HERE:
 
-
-l = [1, 1, 2, 3, 5, 8, 13]
-x = sum([e for e in l if e % 2 != 0])
-print(x)
+def gcd(a, b):
+        a, b = max([a, b]), min([a, b])
+        while b:
+            a, b = b, a % b
+        return a
+print(gcd(20, 100))
