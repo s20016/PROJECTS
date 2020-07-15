@@ -251,7 +251,7 @@ print(count)
         add = lambda a, b : a + b
         print(add(1, 2))
 
-    #* Converting str list to int list
+    #* Converting str list to int list 1
     4.  x = input()
         y = sys.stdin.read().split(" ")
         for i in range(0, len(y)):
@@ -281,3 +281,30 @@ print(count)
     6. #* join and one line for fucntion
         print("".join([l.get(c, c) for c in x]))
 """
+#! P1 07/15/2020 ====================================================
+#* Lesson Notes:
+"""
+    1.  #* Fibonacci
+    M1: def fib(n):
+        a, b = 0, 1
+        while a < n:
+            print(a, end=" ")
+            a, b = b, a + b
+        print(fib(1000))
+
+    M2: def fib2(n):
+            a, b = 0, 1
+            for _ in range(10):
+                a, b = b, a + b
+            return b
+        print(fib2(10), end=" ")
+
+    #* dict
+    2.  l = {0 : "今日", 1 : "明日", -1: "昨日"}
+        def day(n):
+            return l[n]
+        print(day(0))
+
+    #* Converting str list to int list 1
+    3.  x = list(map(int, input().split()))
+
