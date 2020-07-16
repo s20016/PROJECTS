@@ -5,12 +5,17 @@ sys.stdin = open("input.txt", "r")
 # TODO ==============================================================
 # TODO START CODE HERE:
 
-def f(text):
-    text = text.replace('&', '\&').replace('#', '\#')
-    return text
-print(f("abc&def#ghi"))
-
-f = lambda text : text.replace('&', '\&').replace('#', '\#')
-print(f("abc&def#ghi"))
 
 
+"""
+import math as m, sys 
+x = list(map(int, [i for i in sys.stdin.read().split("\n")]))
+print((m.floor((x[0] / x[1]) * x[2]) - x[0]))
+"""
+
+
+x = float(input())
+y = float(input())
+z = float(input())
+print(round(((x / y) * z) - x))
+  
