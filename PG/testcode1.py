@@ -8,8 +8,15 @@ sys.stdin = open("input.txt", "r")
 #exec("print(int(input()) % 24)")
 #print(int(input()) % 24)
 
+#* Reading vertical input()
 #lines = [line.strip() for line in sys.stdin.readlines()]
 #x = list(map(int, [i for i in lines]))
-#x = list(map(int, input().splt()))
+# --> x = list(map(int, [line.strip() for line in sys.stdin.readlines()]))
+
+#* Reading horizonatal line input()
+#x = list(map(int, input().split()))
 #x, y = map(int, input().split())
+
+#* Splitting 1 horizontal str input()
+#x = list(map(str, [i for i in sys.stdin.readline()]))
 

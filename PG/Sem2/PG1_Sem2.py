@@ -308,3 +308,41 @@ print(count)
     #* Converting str list to int list 1
     3.  x = list(map(int, input().split()))
 """
+
+#! P1 07/16/2020 ====================================================
+#* Lesson Notes:
+"""
+    #* Lambda 1
+    1.  def f(text):
+            text = text.replace('&', '\&').replace('#', '\#')
+            return text
+        print(f("abc&def#ghi"))
+
+        f = lambda text : text.replace('&', '\&').replace('#', '\#')
+        print(f("abc&def#ghi"))
+
+    #* Subtracting Time without leading zero 
+    2.  import datetime as d
+        y = d.datetime.strptime(input(), '%H:%M') - d.timedelta(hours=1, minutes=50)
+        x = y.time().strftime('%-H:%-M')    #(remove "-" for leading zero)
+        print(x)
+
+    #* Lambda 2 w/ print
+    3.  add = lambda a, b : a + b
+        p = print
+        p(add(2, 2)) 
+        >>> 4
+
+    #* Lambda 3
+    4.  add = lambda a : lambda b : a + b
+        print(add(2)(2))
+        >>> 4
+    
+    #* Lamda 4
+    5.  x = list(map(lambda x: x * 2, [1, 2, 3, 4, 5]))
+        print(x)
+
+    #* printing leading zeroes
+    6. print("{:04}".format(int(input())))
+
+
