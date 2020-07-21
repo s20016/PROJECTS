@@ -20,3 +20,9 @@ sys.stdin = open("input.txt", "r")
 #* Splitting 1 horizontal str input()
 #x = list(map(str, [i for i in sys.stdin.readline()]))
 
+#* Reading multiple lines, with multiple horizontal input() into int
+#l = []
+#for i in range(n):
+#    x = list(map(int, [i for i in sys.stdin.readline().split()]))
+#    l.append(x)
+

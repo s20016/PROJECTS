@@ -344,5 +344,52 @@ print(count)
 
     #* printing leading zeroes
     6. print("{:04}".format(int(input())))
+"""
+#! P1 07/16/2020 ====================================================
+# Temperature
+"""
+f = lambda key: {"in" : 5, "out": 3}.get(key, 0)
+N = int(input())
+d = dict([input().split() for _ in range(N)])
 
+result = []
+temp = 0
 
+log = [f(d.get(str(i))) for i in range(24)]
+
+for v in log:
+    temp = max(0, temp - 1)
+    temp += v
+    result.append(temp)
+
+l = [2 if v > 0 else 1 for v in result]
+print(sum(l))
+"""
+
+# left over letter
+"""
+from collections import Counter
+
+x, y = map(int, input().split())
+s, t = [input() for _ in range(2)]
+
+sdic = dict(Counter(s))
+tdic = dict(Counter(t))
+
+print(sum([v for v in [v - Counter(s).get(k, 0) for k, v in Counter(t).items()] if v > 0 ]))
+
+for k, v in tdic.items():
+    print(k, v - sdic[k])
+"""
+
+# 
+
+ds = [input().split() for _ in range(5)]
+count = len(([[d, e] for d, e in ds if d == e]))
+print("OK" if count == 5 else "NG")
+
+"""
+s, t = [int(input()) for _ in range(2)]
+s, t = 10, 3
+["+" if i == t else "-" for i in range(s)]
+"""
