@@ -5,5 +5,3 @@ sys.stdin = open("input.txt", "r")
 # TODO ==============================================================
 # TODO START CODE HERE:
 
-
-
