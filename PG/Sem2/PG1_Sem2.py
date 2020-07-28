@@ -380,16 +380,39 @@ print(sum([v for v in [v - Counter(s).get(k, 0) for k, v in Counter(t).items()] 
 
 for k, v in tdic.items():
     print(k, v - sdic[k])
-"""
 
-# 
-
-ds = [input().split() for _ in range(5)]
-count = len(([[d, e] for d, e in ds if d == e]))
-print("OK" if count == 5 else "NG")
-
-"""
 s, t = [int(input()) for _ in range(2)]
 s, t = 10, 3
 ["+" if i == t else "-" for i in range(s)]
+"""
+
+#! P1 07/28/2020 ====================================================
+# list(map(int, ["1", "2"]))
+# [int(e) for e in ["1", "2"]]
+
+"""
+#* Set function
+s = sorted(set("isdkbdfbklabklvbdvlsdbsvdv"))
+print(s)
+>>> ['a', 'b', 'd', 'f', 'i', 'k', 'l', 's', 'v']
+
+print({i for i in [1, 2, 3, 2]})
+>>> {1, 2, 3}
+
+#* Sets in Python
+>>> A = {"A", "B", "C", "D"}
+>>> B = {"G", "H", "I", "D"}
+>>> A & B
+{'D'}
+>>> A ^ B
+{'G', 'H', 'B', 'C', 'I', 'A'}
+>>> A - B
+{'A', 'B', 'C'}
+>>> B - A
+{'G', 'H', 'I'}
+>>> A | B
+{'G', 'H', 'B', 'D', 'C', 'I', 'A'}
+>>> sorted(A | B)
+['A', 'B', 'C', 'D', 'G', 'H', 'I']
+
 """
