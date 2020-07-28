@@ -27,4 +27,3 @@ sys.stdin = open("input.txt", "r")
 #    l.append(x)
 
 #x = [list(map(int, [i for i in sys.stdin.readline().split()])) for _ in range(n)]
-
