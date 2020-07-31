@@ -2,6 +2,7 @@
 
 ### **PG**
 - **PythonProjects** 
+- **CP_Input.py** List of ways to READ input( )
 - **Class Notes**
     - PB1_Sem1.py (05/20 ~ 06/30)
       - CodingBat Python (Complete)
