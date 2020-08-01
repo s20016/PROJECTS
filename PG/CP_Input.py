@@ -1,5 +1,5 @@
 ### List of ways to READ input()
-### Last Update: July 31, 2020
+### Last Update: August 1, 2020
 
 ###TODO Note:
 # MODULE: import sys when "sys.stdin" in use
@@ -20,11 +20,18 @@ x, y, z = sys.stdin.readline().split()
 # print(x, z) >>> 0 Hello
 
 x = input().split()
-
+                                     
 x = sys.stdin.read().split()
 
 # 08 10 Hello 99.9
 # print(x) >>> ['08', '10', 'Hello', '99.9']
+
+# Use for int or float
+x = list(map(float, input().split()))
+
+x = list(map(float, sys.stdin.read().split()))
+
+# print(x) >>> [8.0, 10.0, 52.0, 99.9]
 
 #! Single line input() / 1 (str, int, float) / GOAL: Split each CHAR
 x = list(input())
@@ -90,3 +97,19 @@ for key, value in x.items(): x[key] = int(value)
 # C 30
 
 # print(x) >>> {'A': 10, 'B': 20, 'C': 30}
+
+
+#! Multiple lines input() / 1 (str, int, float) / GOAL: Assign each KEY with int(VAL)
+z = {}
+x = [input() for _ in range(n)]
+y = [int(input()) for _ in range(n)]
+for i, key in enumerate(x): z[key] = y[i]
+
+# A
+# B
+# C
+# 1
+# 2
+# 3
+
+# print(z) >>> {'A': 1, 'B': 2, 'C': 3}
