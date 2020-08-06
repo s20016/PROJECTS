@@ -311,7 +311,6 @@ print(count)
 
 #! P1 07/16/2020 ====================================================
 #* Lesson Notes:
-
 """
     #* Lambda 1
     1.  def f(text):
@@ -417,3 +416,37 @@ print({i for i in [1, 2, 3, 2]})
 ['A', 'B', 'C', 'D', 'G', 'H', 'I']
 
 """
+
+#! P1 08/06/2020 ====================================================
+
+"""
+$ pip3 install beautifulsoup4 requests lxml
+
+import requests
+from bs4 import BeautifulSoup
+import re
+
+uri = 'https://ja.wikipedia.org/wiki/%E5%B8%B8%E7%94%A8%E6%BC%A2%E5%AD%97%E4%B8%80%E8%A6%A7'
+soup = BeautifulSoup(requests.get(uri).text, 'lxml')
+print([tag.text for tag in soup.find_all('a', title=re.compile("wikt:."))])
+
+"""
+
+
+"""
+import pandas as pd
+
+uri = 'https://xn--eckwa2aa3a9c8j8bve9d.gamewith.jp/article/show/284'
+tables = pd.read_html(uri, match='評価点')
+
+print(tables[0])
+
+"""
+
+"""
+import requests, json
+url = 'https://judgeapi.u-aizu.ac.jp/users/s20016'
+res = requests.get(url).text
+print(res)
+"""
+

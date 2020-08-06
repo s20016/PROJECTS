@@ -103,7 +103,11 @@ for key, value in x.items(): x[key] = int(value)
 z = {}
 x = [input() for _ in range(n)]
 y = [int(input()) for _ in range(n)]
-for i, key in enumerate(x): z[key] = y[i]
+# for i, key in enumerate(x): z[key] = y[i]
+A = dict(zip(x, y))
+
+# One line can also be used:
+B = dict(zip([input() for _ in range(n)], [int(input()) for _ in range(n)]))
 
 # A
 # B
@@ -112,4 +116,4 @@ for i, key in enumerate(x): z[key] = y[i]
 # 2
 # 3
 
-# print(z) >>> {'A': 1, 'B': 2, 'C': 3}
+# print(z) / print(A) / print(B) >>> {'A': 1, 'B': 2, 'C': 3}

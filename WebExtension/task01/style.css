@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
 }
+
 a {
     text-decoration: none;
 }
+
 .container {
     min-height: 100vh;
     width: 100%;
@@ -19,14 +23,88 @@ a {
     align-items: center;
     justify-content: center;
 }
+
+/* nav Section */
+
+nav {
+    width: 100%;
+    background-color: transparent ;
+}
+
+/* Logo Section */
+
+nav p a {
+    color: white;
+    font-size: 20px;
+    line-height: 60px;
+    float: left;
+    padding: 0px 20px;
+}
+
+nav p a:hover{
+    color: orangered;
+}
+
+/* End Logo Section */
+
+nav ul {
+    float: left;
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    font-size: 14px;
+    padding: 22px 14px 5px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: orangered;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    padding: 10px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 140px;
+}
+
+nav ul li ul li a {
+    padding: 8px 14px;    
+}
+
+nav ul li ul li a:hover {
+    background-color: transparent;
+    color: orangered;
+}
+
+/* End nav Section */
+
 /* Home Section */
+
 #home {
     background-image: url(./img/homebg.jpg);
     background-size: cover;
     background-position: top center;
     position: relative;
-    z-index: 1;
+    z-index: -1;
 }
+
 #home::after {
     content: '';
     position: absolute;
@@ -38,12 +116,14 @@ a {
     opacity: 0.7;
     z-index: -1;
 }
+
 #home .home {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 50px;
     justify-content: flex-start;
 }
+
 #home h1 {
     display: block;
     width: fit-content;
@@ -51,9 +131,11 @@ a {
     position: relative;
     color: white;
 }
+
 #home h1 span {
     color: orangered;
 }
+
 #home h2 {
     display: block;
     width: fit-content;
@@ -64,6 +146,7 @@ a {
     animation: text_reveal .5s ease forwards;
     animation-delay: 1.5s;
 }
+
 #home h2 span {
     position: absolute;
     top: 0;
@@ -96,23 +179,28 @@ a {
 */
 /* End Home Section */
 
-/* KeyFrames 
+/* KeyFrames */
+
 @keyframes text_reveal_box {
+
     50% {
         width: 100%;
         left: 0;
     }
+
     100% {
         width: 0;
         left: 100%;
     }
 }
+
 @keyframes text_reveal {
+	
     100% {
         color: white;
     }
 }
- End KeyFrames */
+/* End KeyFrames */
 
 /* Cyber Security Section */
 
