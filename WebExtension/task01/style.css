@@ -182,7 +182,6 @@ nav ul li ul li a:hover {
 /* KeyFrames */
 
 @keyframes text_reveal_box {
-
     50% {
         width: 100%;
         left: 0;
@@ -195,11 +194,11 @@ nav ul li ul li a:hover {
 }
 
 @keyframes text_reveal {
-	
     100% {
         color: white;
     }
 }
+
 /* End KeyFrames */
 
 /* Cyber Security Section */
