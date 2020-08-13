@@ -2,7 +2,9 @@ import random, sys
 
 # Title
 ast14 = "*" * 14
-print(f" {ast14}\n * HIGH & LOW *\n {ast14}")
+dash4 = "-" * 4
+#print(f" {ast14}\n * HIGH & LOW *\n {ast14}")
+print(f"\n{dash4} HIGH & LOW GAME {dash4}")
 
 # Scoreboard
 user_score = 0
