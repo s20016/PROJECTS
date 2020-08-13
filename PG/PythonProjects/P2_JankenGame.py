@@ -5,9 +5,13 @@ user_score = 0
 comp_score = 0
 rematch = 1
 
+# Title
+dash4 = "-" * 4
+print(f"\n{dash4} JANKEN GAME {dash4}")
+
 while True:
     def num_matches():
-        print(f"\n----- Round {rematch} -----")
+        print(f"\n------ Round {rematch} ------")
         match_choice = int(input("\nNumber of Janken Match: "))
         return match_choice
 

@@ -17,7 +17,7 @@ def Comp_option():
 
 
 def User_option(num):
-    user_choice = input(f"\n== R{game_round}: High or Low? (h/l): ")
+    user_choice = input(f"\n-- R{game_round}: High or Low? (h/l): ")
     if user_choice.lower() in ["h", "l"]:
         return user_choice.lower()
     else: 
