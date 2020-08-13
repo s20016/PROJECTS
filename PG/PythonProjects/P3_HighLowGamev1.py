@@ -1,10 +1,16 @@
+# ------------------------------- Version Notes ------------------------------ #
+# [Project 3] High & Low Game v.1
+# Card number UP TO 9 ONLY.
+# Random next card. Round DOES NOT CONTINUE from revealed card.
+
 import random, sys
 
 # Title
-ast14 = "*" * 14
-dash4 = "-" * 4
-#print(f" {ast14}\n * HIGH & LOW *\n {ast14}")
-print(f"\n{dash4} HIGH & LOW GAME {dash4}")
+ast25 = "*" * 27
+dash4 = "-" * 3
+spac3 = " " * 6
+# print(f" {ast25}\n *{spac3}HIGH & LOW v1{spac3}*\n {ast25}")
+print(f"\n {dash4} HIGH & LOW GAME v1 {dash4}-")
 
 # Scoreboard
 user_score = 0

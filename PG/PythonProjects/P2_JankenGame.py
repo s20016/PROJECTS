@@ -1,3 +1,6 @@
+# ------------------------------- Version Notes ------------------------------ #
+# [Project 2] Janken Game v.1
+
 import random
 
 # Scores:
