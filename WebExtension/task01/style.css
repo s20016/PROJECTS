@@ -1,5 +1,9 @@
+/* ---------------------------------- FONTS --------------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+
+/* ----------------------------------- CSS ---------------------------------- */
 
 * {
     padding: 0;
@@ -24,28 +28,28 @@ a {
     justify-content: center;
 }
 
-/* nav Section */
-
+/* ------------------------------ NAV SESCTION ------------------------------ */
 nav {
     width: 100%;
     background-color: transparent ;
 }
 
-/* Logo Section */
+/* ------------------------------ LOGO SECTION ------------------------------ */
 
 nav p a {
     color: white;
-    font-size: 20px;
-    line-height: 60px;
+    font-size:15px;
+    line-height: 58px;
     float: left;
     padding: 0px 20px;
 }
 
 nav p a:hover{
+    transition: .4s;
     color: orangered;
 }
 
-/* End Logo Section */
+/* ---------------------------- END LOGO SECTION ---------------------------- */
 
 nav ul {
     float: left;
@@ -60,12 +64,13 @@ nav ul li {
 nav ul li a {
     display: block;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     padding: 22px 14px 5px;
     text-decoration: none;
 }
 
 nav ul li a:hover {
+    transition: .4s;
     color: orangered;
 }
 
@@ -93,12 +98,12 @@ nav ul li ul li a:hover {
     color: orangered;
 }
 
-/* End nav Section */
+/* ----------------------------- END NAV SECTION ---------------------------- */
 
-/* Home Section */
+/* ------------------------------ HOME SECTION ------------------------------ */
 
 #home {
-    background-image: url(./img/homebg.jpg);
+    background-image: url(./img/background/homebg.jpg);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -126,6 +131,7 @@ nav ul li ul li a:hover {
 
 #home h1 {
     display: block;
+    letter-spacing: 1.5px;
     width: fit-content;
     font-size: 4rem;
     position: relative;
@@ -153,7 +159,7 @@ nav ul li ul li a:hover {
     left: 0;
     height: 100%;
     width: 0;
-    background-color: rgb(230, 57, 5);
+    background-color: rgb(255, 69, 0);
     animation: text_reveal_box 1s ease;
     animation-delay: 1s;
 }
@@ -177,9 +183,10 @@ nav ul li ul li a:hover {
     background-color: white;
 }
 */
-/* End Home Section */
 
-/* KeyFrames */
+/* ---------------------------- END HOME SECTION ---------------------------- */
+
+/* ------------------------------- KEY FRAMES ------------------------------- */
 
 @keyframes text_reveal_box {
     50% {
@@ -199,8 +206,74 @@ nav ul li ul li a:hover {
     }
 }
 
-/* End KeyFrames */
+/* ----------------------------- END KEY FRAMES ----------------------------- */
 
 /* Cyber Security Section */
 
 /* End Cyber Security Section */
+
+/* --------------------------------- SM --------------------------------- */
+
+#footer .social-media {
+	background: transparent;
+	text-align: right;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    padding-bottom: 10px;
+}
+
+#footer .social-media img {
+    height: 20px;
+}
+#footer .social-media img:hover {
+    transition: 0.4s;
+    transform: scale(1.2);
+}
+
+/* 
+#footer .social-media img:hover {
+    border: 1px solid orangered;
+    border-radius: 50%;
+} */
+
+/* 
+#footer .footer-buttom {
+	background: transparent;
+	color: white;
+	height: 0px;
+	width: 100%;
+	text-align: right;
+	position: absolute;
+    bottom: 0px;
+    padding-right: 30px;
+} */
+
+/* ------------------------------- END SM ------------------------------- */
+
+/* ------------------------------- SCROLL BAR ------------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+/* background: #f1f1f1; */
+background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888;
+/* background: orangered; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+/* background: orangered; */
+}
+
+/* ----------------------------- END SCROLL BAR ----------------------------- */
