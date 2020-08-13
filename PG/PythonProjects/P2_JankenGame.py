@@ -21,7 +21,7 @@ while True:
             user_choice = "s"
         else: 
             print("Invalid option. Try again.")
-            User_option()
+            user_choice = User_option()
         return user_choice
 
 
@@ -40,39 +40,39 @@ while True:
         if user_choice == "r":
             ans = "Rock"
             if comp_choice == "r": 
-                print(f"User: {ans}. Comp: {ans}. TIE!")
+                print(f"Player: {ans}. Comp: {ans}. TIE!")
                 continue
             elif comp_choice == "p":
-                print(f"User: {ans}. Comp: Paper. LOST!")
+                print(f"Player: {ans}. Comp: Paper. LOST!")
                 comp_score += 1
             else:
-                print(f"User: {ans}. Comp: Scissors. WIN!")
+                print(f"player: {ans}. Comp: Scissors. WIN!")
                 user_score += 1
             
         #Paper
         if user_choice == "p":
             ans = "Paper"
             if comp_choice == "p": 
-                print(f"User: {ans}. Comp: {ans}. TIE!")
+                print(f"Player: {ans}. Comp: {ans}. TIE!")
                 continue
             elif comp_choice == "s":
-                print(f"User: {ans}. Comp: Scissors. LOST!")
+                print(f"Player: {ans}. Comp: Scissors. LOST!")
                 comp_score += 1
             else:
-                print(f"User: {ans}. Comp: Rock. WIN!")
+                print(f"Player: {ans}. Comp: Rock. WIN!")
                 user_score += 1
 
         #Scissors
         if user_choice == "s":
             ans = "Scissors"
             if comp_choice == "s": 
-                print(f"User: {ans}. Comp: {ans}. TIE!")
+                print(f"Player: {ans}. Comp: {ans}. TIE!")
                 continue
             elif comp_choice == "r":
-                print(f"User: {ans}. Comp: Rock. LOST!")
+                print(f"Player: {ans}. Comp: Rock. LOST!")
                 comp_score += 1
             else:
-                print(f"User: {ans}. Comp: Paper. WIN!")
+                print(f"Player: {ans}. Comp: Paper. WIN!")
                 user_score += 1
 
 
@@ -103,4 +103,4 @@ while True:
         break
     else:
         print("Game Over!")   
-        break  
+        break
