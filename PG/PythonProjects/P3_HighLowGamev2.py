@@ -11,7 +11,7 @@ ast25 = "*" * 27
 dash4 = "-" * 3
 spac3 = " " * 6
 # print(f" {ast25}\n *{spac3}HIGH & LOW v2{spac3}*\n {ast25}")
-print(f"\n {dash4} HIGH & LOW GAME v2 {dash4}-")
+print(f"\n--{dash4} HIGH & LOW GAME v2 {dash4}--")
 
 # Scoreboard
 user_score = 0
@@ -32,7 +32,7 @@ def User_option(num):
     if user_choice.lower() in ["h", "l"]:
         return user_choice.lower()
     else: 
-        print("Invalid Option")
+        print(f"-- Invalid Option: '{user_choice}'\n")
         sys.exit()
         
 
@@ -50,7 +50,7 @@ while True:
         pass
     else:
         h_score = highscore.append(user_score)
-        print(f"\nHighscore: {max(highscore)}, Game Over!\nTHANK YOU FOR PLAYING!")
+        print(f"\n-- Highscore: {max(highscore)}, Game Over! --\n    THANK YOU FOR PLAYING!\n")
         user_score = 0
         game_round = 1
         sys.exit()
@@ -67,6 +67,7 @@ while True:
 
         ast, tab2, tab, f_ast = "*" * 5, " " * 2, " " * 5, "*" * 3
         spc = "*{}*".format(" " * 3)
+        spc7, spc10 = " " * 7, " " * 10 
 
         f_card, s_card = Deck_continue()
 
@@ -88,9 +89,9 @@ while True:
         else: 
             fcd, scd = "* {} *".format(fn_card), "* {} *".format(sn_card)
 
-        initial_card = f"\n {ast}{tab}{ast}\n {spc}{tab}{ast}\n {fcd}{tab}{ast}\n {spc}{tab}{ast}\n {ast}{tab}{ast}"
+        initial_card = f"\n{spc7}{ast}{tab}{ast}\n{spc7}{spc}{tab}{ast}\n{spc7}{fcd}{tab}{ast}\n{spc7}{spc}{tab}{ast}\n{spc7}{ast}{tab}{ast}"
 
-        reveal_card = f"\n {ast}{tab}{ast}\n {spc}{tab}{spc}\n {fcd}{tab2}{symbol}{tab2}{scd}\n {spc}{tab}{spc}\n {ast}{tab}{ast}\n"
+        reveal_card = f"\n{spc7}{ast}{tab}{ast}\n{spc7}{spc}{tab}{spc}\n{spc7}{fcd}{tab2}{symbol}{tab2}{scd}\n{spc7}{spc}{tab}{spc}\n{spc7}{ast}{tab}{ast}\n"
 
         print(f"{initial_card}")
 
@@ -101,17 +102,17 @@ while True:
             if s_card > f_card or s_card == f_card: 
                 user_score += 1
                 gt = "<"
-                print(f"{reveal_card}\nYou Won! Score: {user_score}")
+                print(f"{reveal_card}\n      You Won! Score: {user_score}")
             else: 
-                print(f"\n{reveal_card}\nYou Lost! Final Score: {user_score}\n{f_ast}GAME OVER!{f_ast}")
+                print(f"\n{reveal_card}\n   You Lost! Final Score: {user_score}\n\n{spc10}GAME OVER!")
                 break
 
         if user_choice == "l":
             if s_card < f_card or s_card == f_card:
                 user_score += 1
-                print(f"{reveal_card}\nYou Won! Score: {user_score}")
+                print(f"{reveal_card}\n      You Won! Score: {user_score}")
             else: 
-                print(f"\n{reveal_card}\nYou Lost! Final Score: {user_score}\n{f_ast} GAME OVER! {f_ast}")
+                print(f"\n{reveal_card}\n   You Lost! Final Score: {user_score}\n\n{spc10}GAME OVER!")
                 break
         
         s_card_seq.append(s_card)
