@@ -10,7 +10,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -20,7 +19,6 @@ html {
 a {
     text-decoration: none;
 }
-
 .container {
     min-height: 90vh;
     width: 100%;

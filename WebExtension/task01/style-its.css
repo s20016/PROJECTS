@@ -84,9 +84,6 @@ i:hover {
 /* ----------------------------- END NAV SECTION ---------------------------- */
 
 /* --------------------------------- CONTENT -------------------------------- */
-img {
-    max-width: 100%;
-}
 #cs_case1 h1 {
     padding-top: 30px;
     letter-spacing: 1.5px;
@@ -164,21 +161,6 @@ img {
 h2 {
     font-family: 'Noto Serif JP', serif;
     font-size: 36px;
-}
-.caption {
-    transform: uppercase;
-    opacity: 0,8;
-    font-size: 15px;
-    margin-bottom: 10px;
-}
-.view {
-    text-transform: uppercase;
-    margin-top: 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-.view:hover {
-    text-decoration: underline;
 }
 .jobs{
     text-align: center;
