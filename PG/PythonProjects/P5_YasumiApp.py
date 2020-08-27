@@ -15,8 +15,8 @@ def JP_holidays():
 
 def App_answer(user_response, yn_img, ans, ans2):
     # Creating new HTML File
-    file = open(f"{user_response}.html","w")
-    file_name = f"{user_response}.html"
+    file = open(file_name := "YasumiApp.html","w")
+    # file_name = f"{user_response}.html"
 
     # HTML Content
     img_style = f"* {{margin: 0; padding: 0; background-image: url({yn_img}); background-size: cover;}}"
@@ -35,17 +35,18 @@ def Correct_response(correct_ans):
     # Finding perfect gif for App_answer
     yn_url = "https://yesno.wtf/api"
     yn_response_img = req.get(yn_url).json()["image"]
-    res = list(yn_response_img.split("/"))
+    res = list(yn_response_img.split("/"))[4]
 
-    if res[4] == correct_ans: yn_response_img
+    if res == correct_ans: yn_response_img
     else: yn_response_img = Correct_response(correct_ans)
     return yn_response_img
 
-
+# User input()
 user_input = input("\n休みですか？: ")
-holidays_jp = JP_holidays()
 
 # Main mechanics
+holidays_jp = JP_holidays()
+
 if user_input in holidays_jp.keys():
     emoticon = random.choice(["ヽ(*⌒▽⌒*)ﾉ", "(≧◡≦) ♡", "(￢‿￢ )", "╰(▔∀▔)╯"])
     yn_response_img = Correct_response("yes")
