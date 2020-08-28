@@ -15,19 +15,23 @@ import webbrowser, random, os, time
 def User_answer():
     x = "Enter YYYY-MM-DD (Ex. 2020-08-10)"
     user_input = str(input(f"\n{x}\n---- 休みですか？: "))
-    date = list(user_input.split("-"))
-    if 2019 <= int(date[0]) <= 2021:
-        if 1 <= int(date[1]) <= 12:
-            if 1 < int(date[2]) <= 31:
-                user_input = "-".join(date)
-            else:
-                print("---- Invalid Day")
+    try: 
+        date = list(user_input.split("-"))
+        if 2019 <= int(date[0]) <= 2021:
+            if 1 <= int(date[1]) <= 12:
+                if 1 < int(date[2]) <= 31:
+                    user_input = "-".join(date)
+                else:
+                    print("---- Invalid Day")
+                    user_input = User_answer()
+            else: 
+                print("---- Invalid Month")
                 user_input = User_answer()
-        else: 
-            print("---- Invalid Month")
+        else:
+            print("---- Invalid Year")
             user_input = User_answer()
-    else:
-        print("---- Invalid Year")
+    except:
+        print("---- Invalid Input")
         user_input = User_answer()
     return user_input
 
