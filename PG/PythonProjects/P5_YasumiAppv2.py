@@ -52,7 +52,7 @@ def App_answer(user_response, yn_img, ans, ans2, ans3):
     # Creating new HTML File
     file = open(file_name := "./YasumiApp.html","w")
 
-    # HTML Content
+    # HTML Contentpy
     img_style = f"* {{margin: 0; padding: 0; background-image: url({yn_img}); background-size: cover; color: rgb(255, 200, 61); font-family: 'MS Gothic', 'Arial'; text-align: center; text-shadow: 0 2px 2px rgba(0,0,0,0.5);}}"
     ans_style = f"h1 {{font-size: 80px; text-transform: uppercase; position: absolute; top: 50%; left: 50%; transform:translate(-50%, -50%); background: transparent; color: rgb(255, 200, 61); line-height: 1.4;}}"
     emoji_style = f"span {{font-size: 40px; background: transparent;}}"
