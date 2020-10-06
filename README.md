@@ -2,16 +2,16 @@
 
 ### **PG**
 - **Python**
-    1. **PythonProjects** 
-    2. **CP_Input.py**
-    3. **Class Notes**
+    - **PythonProjects** 
+    - **CP_Input.py**
+    - **Class Notes**
         - PB1_Sem1.py (05/20 ~ 06/30)
         - PG1_Sem2.py (07/01 ~ 08/30)
 - **Java**
     
 
 ### **WebExtension**
-- **Class Projects HTML** (05/17 ~ )
+- **Class Projects HTML** (05/17 ~ 08/30)
     - Chapter01 「[Windows環境でHTMLを作ってみよう](WebExtension/chapter01/ch01-firsthtml-win.html)」
     - Chapter02 「[Linux環境でHTMLを作ってみよう](WebExtension/chapter02/ch02-firsthtml-linux.html)」
     - Chapter03 「[マークアップの考え方トレーニング](WebExtension/chapter03/ch03-markuptag1.html)」
