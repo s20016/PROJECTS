@@ -1,4 +1,4 @@
-# MyProjects
+# [PROJECTS]
 
 ### **PG**
 - **Python**
