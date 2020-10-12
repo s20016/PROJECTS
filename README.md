@@ -1,5 +1,3 @@
-# [PROJECTS]
-
 ### **PG**
 - **Python**
     - **PythonProjects** 
