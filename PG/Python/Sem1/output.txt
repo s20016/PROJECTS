@@ -1,1 +1,192 @@
-672
+<li>1. 3D Kanojo: Real Girl</li>
+ <li>2. 5 Centimeters per Second (M)</li>
+ <li>3. Absolute Duo</li>
+ <li>4. Air Gear</li>
+ <li>5. Akame ga Kill</li>
+ <li>6. Akane-Iro no Somaru Saka</li>
+ <li>7. Akuma no Riddle</li>
+ <li>8. (2) Aldnoah.Zero/ II</li>
+ <li>9. Amagami SS/ + Plus</li>
+ <li>10. Amagi Brilliant Park</li>
+ <li>11. Anelog</li>
+ <li>12. Angel Beats</li>
+ <li>13. Ano Hana/ Ano Hana: The Movie (M)</li>
+ <li>14. Another</li>
+ <li>15. Ao no Exorcist/ 2</li>
+ <li>16. Arcana Famiglia</li>
+ <li>17. Asa made Jugyou Chu!</li>
+ <li>18. Ben-to</li>
+ <li>19. Black Bullet</li>
+ <li>20. Black Rock Shooter</li>
+ <li>21. Blood Lad</li>
+ <li>22. Boku no Hero Academia/ II/ III</li>
+ <li>23. Boku wa tomodachi ga sukunai/ Next</li>
+ <li>24. Bokura wa Minna Kawaisou</li>
+ <li>25. Btooom!</li>
+ <li>26. Campione!</li>
+ <li>27. Castle in the Sky (M)</li>
+ <li>28. Citrus</li>
+ <li>29. Charlotte</li>
+ <li>30. Chuunibyou demo koi ga Shitai!/ Ren</li>
+ <li>31. Clannad/ After Story</li>
+ <li>32. Code Geass: Hangyaku no Lelouch/ R2</li>
+ <li>33. C-The money of soul & possibility ctrl.</li>
+ <li>34. Dakara Boku ha H ga dekinai</li>
+ <li>35. Danganronpa</li>
+ <li>36. Darling in the Franxx</li>
+ <li>37. Date a live/ 2</li>
+ <li>38. Death Note</li>
+ <li>39. Death Parade</li>
+ <li>40. Death March Kara Hajimaru Isekai</li>
+ <li>41. Demon Slayer</li>
+ <li>42. Denpa onna to seishun otoko</li>
+ <li>43. Devil Survovor 2 the Animation</li>
+ <li>44. Dragon Ball/ Z</li>
+ <li>45. Dragon Crisis</li>
+ <li>46. Dororo 2019</li>
+ <li>47. Durarara!!/ Shuo x2/ ten</li>
+ <li>48. Eden of the East</li>
+ <li>49. Ero Manga Sensei</li>
+ <li>50. Fate Stay Night</li>
+ <li>51. FSN - Unlimited Blade Works</li>
+ <li>52. FSN - Heaven’s Feel I (M)</li>
+ <li>53. Freezing/ Vibration</li>
+ <li>54. Gangsta</li>
+ <li>55. GATE</li>
+ <li>56. Girls und Panzer</li>
+ <li>57. Goblin Slayer</li>
+ <li>58. God Eater</li>
+ <li>59. Godzilla: Kaijuu Wakusei (M) 1/2/3</li>
+ <li>60. Golden Time</li>
+ <li>61. Gosick</li>
+ <li>62. Grand Blue</li>
+ <li>63. Grisaia no Kaijitsu/ Rakuen</li>
+ <li>64. (2) Guilty Crown</li>
+ <li>65. Hagure Yuusha no Estetica</li>
+ <li>66. Hello World (M)</li>
+ <li>67. Hidan No Aria</li>
+ <li>68. Highschool DxD/ New/ Born</li>
+ <li>69. Highschool of the Dead</li>
+ <li>70. Hitsugi no Chaika/ Avenging Battle</li>
+ <li>71. Hoshizore he kakaru Hashi</li>
+ <li>72. Hyouka</li>
+ <li>73. Inu x Boku SS</li>
+ <li>74. IS: Infinite Stratos/ 2</li>
+ <li>75. Isekai Maou to Shoukan Shoujo no Dorei Majutsu</li>
+ <li>76. Istuka Tenma no Kurousagi</li>
+ <li>77. Ixion Saga DT</li>
+ <li>78. Just Because!</li>
+ <li>79. Kabaneri of the Iron Fortress</li>
+ <li>80. Kaichou wa maid sama</li>
+ <li>81. Kamisama no Inai Nichiyoubi</li>
+ <li>82. Kaze no Stigma</li>
+ <li>83. Kimikiss Pure Rogue</li>
+ <li>84. Kimi no na (M)</li>
+ <li>85. Kimi no Suizou wo Tabetai (M)</li>
+ <li>86. Kimo no Iru Machi</li>
+ <li>87. Kiss x Sis</li>
+ <li>88. (2) Koe no Katachi (M) [Note: Movie ends in Chap. 57 of Manga]</li>
+ <li>89. (2) Kokoro Connect</li>
+ <li>90. Kore wa Zombie desuka?/ of the Dead</li>
+ <li>91. Kyoukai no Kanata</li>
+ <li>92. Ladies x Butlers!</li>
+ <li>93. Machine-doll wa Kizutsukanai</li>
+ <li>94. Madan no Ou to Vanadis</li>
+ <li>95. Mahou Sensou</li>
+ <li>96. Mahoutsukai no Yome</li>
+ <li>97. Maiden Dusk of Amnesia</li>
+ <li>98. Maji de watashi ni Koi shinasai</li>
+ <li>99. Maoyuu Mao Yuusha</li>
+ <li>100. Maou Gakuin no Futtekigosha</li>
+ <li>101. Masamune-kun no Revenge</li>
+ <li>102. Mashiro Iro Symphony</li>
+ <li>103. Mayo Chiki!</li>
+ <li>104. Megalo Box</li>
+ <li>105. MSG: Seed/ Destiny</li>
+ <li>106. MSG: Iron-Blooded Orphans/ 2</li>
+ <li>107. MSG: Unicorn Re:0096</li>
+ <li>108. Mirai Nikki/ Redial</li>
+ <li>109. Myself; Yourself</li>
+ <li>110. Nakitai Watdashi wa Neko wo Kaburu (M)</li>
+ <li>111. Naruto/ Shippuden</li>
+ <li>112. Naruto Shippuden: Blood Prison (M)</li>
+ <li>113. Naruto Shippuden: Bonds (M)</li>
+ <li>114. Naruto Shippuden: Road to Ninja (M)</li>
+ <li>115. Naruto Shippuden: The lost Tower (M)</li>
+ <li>116. Naruto Shippuden: Will of Fire (M)</li>
+ <li>117. Nerawareta Gakuen (M)</li>
+ <li>118. Nisekoi/ 2</li>
+ <li>119. No Game No Life</li>
+ <li>120. Noragami</li>
+ <li>121. Nourin</li>
+ <li>122. Nyan Koi</li>
+ <li>123. Oda Nobuna no yabou</li>
+ <li>124. Omamori Himari</li>
+ <li>125. One Piece: Strong World (M)</li>
+ <li>126. Oni dakedo aisae areba kankenai yone</li>
+ <li>127. Ore Imo/ 2</li>
+ <li>128. Outbreak Company</li>
+ <li>129. Overlord/ II</li>
+ <li>130. Papa no Iukoto wo kikinasai</li>
+ <li>131. Parasite the Maxim</li>
+ <li>132. Princess Lover!</li>
+ <li>133. Rakudai Kishi no Cavalry</li>
+ <li>134. (2) Re:Zero kara Hajimaru Isekai Seikatsu/2</li>
+ <li>135. Rescue Me!</li>
+ <li>136. Robotics; Note</li>
+ <li>137. Rokko no Yuusha</li>
+ <li>138. Saenai Hiroin no Sodatekata / ♭</li>
+ <li>139. Saenai Hiroin no Sodatekata Fine (M)</li>
+ <li>140. Saikin, Imouto no yousu gaokashin daga</li>
+ <li>141. Sakura sou no pet na Kanojo</li>
+ <li>142. Sakura Trick</li>
+ <li>143. School Days</li>
+ <li>144. Seikoku no Dragonar</li>
+ <li>145. Seikon no Blacksmith</li>
+ <li>146. Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai</li>
+ <li>147. Seinshun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai (M)</li>
+ <li>148. Sekai Seifuku: Bouryaku no Zvezda</li>
+ <li>149. Sekirei/ Pure Engagement</li>
+ <li>150. Shakugan no Shana/ II/ III</li>
+ <li>151. Shingeki No Kyojin/ II/ III</li>
+ <li>152. Shuffle! / Memories</li>
+ <li>153. Steins;Gate</li>
+ <li>154. Steins;Gate Fuka Ryouiki no Deja vu (M)</li>
+ <li>155. Strike the Blood</li>
+ <li>156. Summer Wars (M)</li>
+ <li>157. (2) Susei no Gargantia/ OVA</li>
+ <li>158. Sword Art Online I/ II/ III</li>
+ <li>159. SAO: Alternative GGO</li>
+ <li>160. (2) SAO: Extra Edition (M)</li>
+ <li>161. SAO: Ordinal Scale (M)</li>
+ <li>162. Tada-kun wa Koi wo Shinai</li>
+ <li>163. Tales of Zestria the X/ 2nd Season</li>
+ <li>164. Tensei Shitara Slime Datta Ken</li>
+ <li>165. Tate no Yuusha no Nariagari</li>
+ <li>166. Teacher Please</li>
+ <li>167. Terror in Tokyo</li>
+ <li>168. Terra Formars/Revenge</li>
+ <li>169. The Girl who Leapt Through Time (M)</li>
+ <li>170. The Irregular at Magical High School</li>
+ <li>171. Toaru Hikuushi no Koiuta</li>
+ <li>172. Tokyo ESP</li>
+ <li>173. Tokyo Ghoul/ √A</li>
+ <li>174. Tokyo Magnitude 8.0</li>
+ <li>175. Tokyo Ravens</li>
+ <li>176. Tonari no Kaibutsu-kun/ Gokudou-kun</li>
+ <li>177. Tonari no Seki-kun</li>
+ <li>178. ToraDora</li>
+ <li>179. Trinity Seven</li>
+ <li>180. True Tears</li>
+ <li>181. Tsuki ga Kirei</li>
+ <li>182. Witch Craft Works</li>
+ <li>183. Weathering with You (M)</li>
+ <li>184. Wotaku ni Koi wa Muzukashii</li>
+ <li>185. Yahari Ore no Seishun Rabukome wa macchigatteiru/ Zoku/ Kan</li>
+ <li>186. Yamada and the Seven Witches</li>
+ <li>187. Yosuga no Sora</li>
+ <li>188. Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</li>
+ <li>189. Your Lie in April</li>
+ <li>190. Yuushaibu</li>
+ <li>191. (2) Zero no Tsukaima/ II/ III/ IV</li>
+ <li>192. Zetsuen no Tempest</li>
