@@ -30,7 +30,7 @@ def User_answer():
         else:
             print("---- Invalid Year")
             user_input = User_answer()
-    except:
+    except ValueError:
         print("---- Invalid Input")
         user_input = User_answer()
     return user_input
