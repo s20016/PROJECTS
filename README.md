@@ -10,10 +10,11 @@
 
 ### **WebExtension**
 - **Class Projects HTML** (05/17 ~ )
+    - Chapter00 「[HTML PROJECTS](chapter00/[P1]_Ch04/ch04.html)」Updated: 10/20/2020
     - Chapter01 「[Windows環境でHTMLを作ってみよう](WebExtension/chapter01/ch01-firsthtml-win.html)」
     - Chapter02 「[Linux環境でHTMLを作ってみよう](WebExtension/chapter02/ch02-firsthtml-linux.html)」
     - Chapter03 「[マークアップの考え方トレーニング](WebExtension/chapter03/ch03-markuptag1.html)」
-    - Chapter04 「[自己紹介ページ](WebExtension/chapter04/ch04-markuptag1.html)」// **Last Update: OCT, 16, 2020**
+    - Chapter04 「[自己紹介ページ](WebExtension/chapter04/ch04-markuptag1.html)」Updated: 10/16/2020
     - Chapter05 「[リンク、画像、コメント、特殊文字](WebExtension/chapter05/ch05-markuptag2.html)」
     - Chapter06 「[ページにCSSを適用するトレーニング](WebExtension/chapter06/index.html)」
     - Chapter07 「[テキストの装飾](WebExtension/chapter07/ch07-fontsytle.html)」  
