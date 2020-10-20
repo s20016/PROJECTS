@@ -10,7 +10,7 @@
 
 ### **WebExtension**
 - **Class Projects HTML** (05/17 ~ )
-    - Project01 「[AniLIST PROJECT](WebExtension/chapter00/index.html)」Updated: 10/20/2020
+    - Project01 「[AniLIST PROJECT](WebExtension/Project01/index.html)」Updated: 10/20/2020
     - Chapter01 「[Windows環境でHTMLを作ってみよう](WebExtension/chapter01/ch01-firsthtml-win.html)」
     - Chapter02 「[Linux環境でHTMLを作ってみよう](WebExtension/chapter02/ch02-firsthtml-linux.html)」
     - Chapter03 「[マークアップの考え方トレーニング](WebExtension/chapter03/ch03-markuptag1.html)」
