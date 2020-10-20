@@ -5,4 +5,11 @@ sys.stdout = open("/home/s20016/Documents/PROJECTS/PG/Python/Sem1/output.txt", "
 # TODO ==============================================================
 # TODO START CODE HERE:
 
-print(input())
+import sys
+l = []
+
+x = sys.stdin.read().split("\n")
+for i in x:
+    l.append(f"<li>{i}</li>\n")
+
+print(*l)
