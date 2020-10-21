@@ -1,15 +1,23 @@
 import sys
-sys.stdin = open("/home/s20016/Documents/PROJECTS/PG/Python/Sem1/input.txt", "r")
-sys.stdout = open("/home/s20016/Documents/PROJECTS/PG/Python/Sem1/output.txt", "w")
+sys.stdin = open("input.txt", "r")
+sys.stdout = open("output.txt", "w")
 #! TEST CODE 3
 # TODO ==============================================================
 # TODO START CODE HERE:
 
-import sys
+import string
+
+alphabet = list(string.ascii_lowercase)
+x = list(map(int, input().split()))
+A = dict(zip(alphabet, x))
+y = list(map(str, input()))
+
 l = []
 
-x = sys.stdin.read().split("\n")
-for i in x:
-    l.append(f"<li>{i}</li>\n")
+for char in y:
+    count = A.get(char)
+    if count > 0:
+        l.append(char)
+        A[char] = count - 1
 
-print(*l)
+print("".join(l))

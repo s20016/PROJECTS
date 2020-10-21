@@ -5,11 +5,17 @@ sys.stdout = open("output.txt", "w")
 # TODO ==============================================================
 # TODO START CODE HERE:
 
-import sys
+x, y = list(map(str, input().split()))
 
-x = list(sys.stdin.read().split("\n"))
-l = []
-for i in x:
-    l.append(f"<li>{i}</li>\n")
+date = list(x.split("/"))
+time = list(y.split(":"))
 
-print(*l)
+ntime = int(time[0])
+ndate = int(date[1])
+
+for i in range(10):
+    if ntime >= 24:
+        ntime -= 24
+        ndate += 1
+
+print(f"{date[0]}/{ndate} {str(ntime).zfill(2)}:{time[1]}")

@@ -1,24 +1,18 @@
 import sys
-sys.stdin = open("Python/Sem1/input.txt", "r")
-sys.stdout = open("Python/Sem1/output.txt", "w")
+sys.stdin = open("input.txt", "r")
+sys.stdout = open("output.txt", "w")
 #! TEST CODE 1
 # TODO ==============================================================
 # TODO START CODE HERE:
 
-x, y = list(map(int, input().split()))
-n = '{:0{}}'.format(min(x, y), len(str(max(x, y))))
+x, y = list(map(str, input().split()))
 
-a = [str(max(x, y)), n]
-m = 1
-l = []
-l2 = []
+date = list(x.split("/"))
+time = list(y.split(":"))
 
-for n in range(len(str(max(x, y)))):
-    l.append((int(a[0][-m]) + int(a[1][-m])))
-    m += 1
-l.reverse()
+A = int(time[0]) // 24
+B = int(time[0]) % 24
+print(A, B)
+h = str(abs(A - B - 1)).zfill(2)
 
-for n in l:
-    l2.append(str(n)[-1])
-
-print("".join(l2))
+print(f"{date[0]}/{int(date[1]) + A}", f"{h}:{time[1]}")
