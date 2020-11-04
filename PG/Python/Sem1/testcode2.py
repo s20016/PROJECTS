@@ -1,9 +1,9 @@
 import sys
 sys.stdin = open("input.txt", "r")
 sys.stdout = open("output.txt", "w")
-#! TEST CODE 2
-# TODO ==============================================================
-# TODO START CODE HERE:
+
+# TEST CODE 2
+# ==============================================================
 
 x, y = list(map(str, input().split()))
 

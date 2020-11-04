@@ -1,9 +1,9 @@
 import sys
 sys.stdin = open("input.txt", "r")
 sys.stdout = open("output.txt", "w")
-#! TEST CODE 3
-# TODO ==============================================================
-# TODO START CODE HERE:
+
+# TEST CODE 3
+# ==============================================================
 
 import string
 
@@ -21,3 +21,5 @@ for char in y:
         A[char] = count - 1
 
 print("".join(l))
+
+#Test
