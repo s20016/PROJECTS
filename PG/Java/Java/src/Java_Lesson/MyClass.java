@@ -1,6 +1,9 @@
 package Java_Lesson;
 
 public class MyClass {
-    int x = 10;
-    int y = 100;
+    public static void main(String[] args) {
+        int x = 10, y = 20;
+
+        System.out.printf("x + y = %d", x + y);
+    }
 }
