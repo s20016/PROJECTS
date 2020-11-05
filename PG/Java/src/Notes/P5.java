@@ -1,4 +1,4 @@
-package PGII_Java;
+package Notes;
 import java.util.Scanner;
 
 public class P5 {

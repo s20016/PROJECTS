@@ -1,4 +1,4 @@
-package PGII_Java;
+package Notes;
 
 public class P6 {
     public static void main(String[] args){
