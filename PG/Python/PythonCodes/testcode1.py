@@ -6,8 +6,8 @@ sys.stdout = open("output.txt", "w")
 # TEST CODE 1
 # ==============================================================
 
-x = int(input())
-print(x + 25)
+x = input()
+print(f"Hello, {x}")
 
 # Test
 # Test
