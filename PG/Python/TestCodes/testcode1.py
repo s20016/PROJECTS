@@ -6,4 +6,4 @@ sys.stdout = open("output.txt", "w")
 # TEST CODE 1
 # ==============================================================
 
-print(input())
+print(f"Hello {input()}")
