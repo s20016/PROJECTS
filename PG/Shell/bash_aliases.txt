@@ -1,0 +1,20 @@
+export PATH=$PATH:$HOME/.local/bin  # Personal Laptop PATH
+
+# Aliases
+alias pycode="nvim -S ~/PROJECTS/PG/Python/Codes/PythonSession.vim"
+
+
+# Functions
+function pyrun() {
+    cat ~/PROJECTS/PG/Python/Codes/input.txt | python3 ~/PROJECTS/PG/Python/Codes/testcode$1.py && cat ~/PROJECTS/PG/Python/Codes/output.txt
+}
+
+function upbash() {
+    cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/bash_aliases.txt
+    cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/
+    for f in ~/PROJECTS/PG/Shell/*.vim; do mv -- "$f" "${f%.vim}.txt" ; done
+}
+
+# Adding aliases to nvim
+# let $BASH_ENV = "~/.bash_aliases" <- Add to ~/.config/nvim/init.vim
+shopt -s expand_aliases
