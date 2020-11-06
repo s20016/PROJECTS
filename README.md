@@ -1,13 +1,3 @@
-### **PG**
-- **Python**
-    - **PythonProjects** 
-    - **CP_Input.py**
-    - **Class Notes**
-        - PB1_Sem1.py (05/20 ~ 06/30)
-        - PG1_Sem2.py (07/01 ~ 08/30)
-- **Java**
-    
-
 ### **WebExtension**
 - **HTML Projects**
     - Project01 &nbsp;「[AniLIST](WebExtension/Project01/index.html)」Updated: 10/20/2020
