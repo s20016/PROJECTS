@@ -12,20 +12,21 @@ function pyrun() {
 function pycode() {
     NAME=$(uname -a | awk '{print $2}')
     FILES=~/PROJECTS/PG/Python/Codes/*.py
+    USER=$(echo $USER)
+
     for f in $FILES; do
         if [[ ${NAME} = "GL504GM" ]]; then
-            sed -i '3,4 s/~/\home\czekras/' ${f} 
+            sed -i '3,4 s/\/home\/s20016/${USER}/' ${f} 
         elif [[ ${NAME} = "SF313-51" ]]; then
-            sed -i '3,4 s/\/home\/czekras/~/' ${f}
+            sed -i '3,4 s/\/home\/czekras/${USER}/' ${f}
         fi
     done
-    nvim -S ~/.config/nvim/session/PythonSession.vim    
+    nvim -S /home/${USER}/PROJECTS/PG/Shell/session/PythonSession.vim
 }
 
 function upbash() {
     cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/bash_aliases.txt
     cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/
-    cp ~/.config/nvim/session/*.vim ~/PROJECTS/PG/Shell/
     for f in ~/PROJECTS/PG/Shell/*.vim; do mv -- "$f" "${f%.vim}.txt" ; done
 }
 

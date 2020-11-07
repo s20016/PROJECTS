@@ -8,9 +8,9 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +1 testcode1.py
-badd +0 testcode2.py
-badd +0 testcode3.py
-badd +0 input.txt
+badd +1 testcode2.py
+badd +1 testcode3.py
+badd +1 input.txt
 badd +1 output.txt
 argglobal
 %argdel
@@ -115,7 +115,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
-normal! 06|
+normal! 05|
 tabedit output.txt
 set splitbelow splitright
 set nosplitbelow
