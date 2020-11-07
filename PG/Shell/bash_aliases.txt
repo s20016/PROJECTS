@@ -38,14 +38,18 @@ pullbash() {
     case "$response" in
         [yY][eE][sS]|[yY])
             NAME=$(uname -a | awk '{print $2}')
+            VAR1="/mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
+            VAR2="/mnt/c/Users/s20016/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
             cat ~/PROJECTS/PG/Shell/bash_aliases.txt > ~/.bash_aliases
             cat ~/PROJECTS/PG/Shell/init.txt > ~/.config/nvim/init.vim
             cat ~/PROJECTS/PG/Shell/local_bundles.txt > ~/.config/nvim/local_bundles.vim
             cat ~/PROJECTS/PG/Shell/local_init.txt > ~/.config/nvim/local_init.vim
             if [[ ${NAME} = "GL504GM" ]]; then
-                cat ~/PROJECTS/PG/Shell/settings.txt > /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
+                cat ~/PROJECTS/PG/Shell/settings.txt > ${VAR1}
+                sed -i '50 s/b453ae62-4e3d-5e58-b989-0a998ec441b8/{2c4de342-38b7-51cf-b940-2309a097f518/' ${VAR1} 
             elif [[ ${NAME} = "SF313-51" ]]; then
-                cat ~/PROJECTS/PG/Shell/settings.txt > /mnt/c/Users/s20016/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json 
+                cat ~/PROJECTS/PG/Shell/settings.txt > ${VAR2}
+                sed -i '50 s/2c4de342-38b7-51cf-b940-2309a097f518/{b453ae62-4e3d-5e58-b989-0a998ec441b8/' ${VAR2}
             fi
             source ~/.bash_aliases && source ~/.bashrc
             echo Update Complete!
