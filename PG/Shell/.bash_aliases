@@ -25,12 +25,12 @@ pycode() {
 
 pushbash() {
     NAME=$(uname -a | awk '{print $2}')
-    cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/bash_aliases.txt
+    cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/.bash_aliases
     cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/
     if [[ ${NAME} = "GL504GM" ]]; then
-        cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json > ~/PROJECTS/PG/Shell/settings.txt
+        cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json > ~/PROJECTS/PG/Shell/settings.json
     fi
-    for f in ~/PROJECTS/PG/Shell/*.vim; do mv -- "$f" "${f%.vim}.txt" ; done
+    # for f in ~/PROJECTS/PG/Shell/*.vim; do mv -- "$f" "${f%.vim}.txt" ; done
 }
 
 pullbash() {
@@ -40,16 +40,16 @@ pullbash() {
             NAME=$(uname -a | awk '{print $2}')
             VAR1="/mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
             VAR2="/mnt/c/Users/s20016/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
-            cat ~/PROJECTS/PG/Shell/bash_aliases.txt > ~/.bash_aliases
-            cat ~/PROJECTS/PG/Shell/init.txt > ~/.config/nvim/init.vim
-            cat ~/PROJECTS/PG/Shell/local_bundles.txt > ~/.config/nvim/local_bundles.vim
-            cat ~/PROJECTS/PG/Shell/local_init.txt > ~/.config/nvim/local_init.vim
+            cat ~/PROJECTS/PG/Shell/.bash_aliases > ~/.bash_aliases
+            cat ~/PROJECTS/PG/Shell/init.vim > ~/.config/nvim/init.vim
+            cat ~/PROJECTS/PG/Shell/local_bundles.vim > ~/.config/nvim/local_bundles.vim
+            cat ~/PROJECTS/PG/Shell/local_init.vim > ~/.config/nvim/local_init.vim
             if [[ ${NAME} = "GL504GM" ]]; then
-                cat ~/PROJECTS/PG/Shell/settings.txt > ${VAR1}
+                cat ~/PROJECTS/PG/Shell/settings.json > ${VAR1}
                 sed -i '11, 50 s/c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40/2c4de342-38b7-51cf-b940-2309a097f518/' ${VAR1} 
                 sed -i '55 s/s20016/czekras/' ${VAR1}
             elif [[ ${NAME} = "SF313-51" ]]; then
-                cat ~/PROJECTS/PG/Shell/settings.txt > ${VAR2}
+                cat ~/PROJECTS/PG/Shell/settings.json > ${VAR2}
                 sed -i '11, 50 s/2c4de342-38b7-51cf-b940-2309a097f518/c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40/' ${VAR2}
                 sed -i '55 s/czekras/s20016/' ${VAR2}
                 sed -i '55 s/Ubuntu/Ubuntu-18\.04/' ${VAR2}
