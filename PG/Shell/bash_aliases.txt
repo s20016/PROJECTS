@@ -45,7 +45,7 @@ pullbash() {
             if [[ ${NAME} = "GL504GM" ]]; then
                 cat ~/PROJECTS/PG/Shell/settings.txt > /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
             elif [[ ${NAME} = "SF313-51" ]]; then
-                cat ~/PROJECTS/PG/Shell/settings.txt > /mnt/c/Users/20016/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json 
+                cat ~/PROJECTS/PG/Shell/settings.txt > /mnt/c/Users/s20016/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json 
             fi
             source ~/.bash_aliases && source ~/.bashrc
             echo Update Complete!
