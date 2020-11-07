@@ -20,7 +20,7 @@ pycode() {
             sed -i '3,4 s/czekras/s20016/' ${f}
         fi
     done
-    nvim -S ~/PROJECTS/PG/Shell/Session/PythonSession.vim
+    nvim -S ~/.config/nvim/session/PythonSession.vim
 }
 
 pushbash() {
