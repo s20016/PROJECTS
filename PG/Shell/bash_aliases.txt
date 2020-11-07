@@ -1,19 +1,18 @@
-export PATH=$PATH:$HOME/.local/bin  # Personal Laptop PATH
+export PATH=$PATH:$HOME/.local/bin  # GL504GM Laptop PATH
 
 # Aliases
 alias sbash="source ~/.bashrc"
 
 
 # Functions
-function pyrun() {
+pyrun() {
     cat ~/PROJECTS/PG/Python/Codes/input.txt | python3 ~/PROJECTS/PG/Python/Codes/testcode$1.py && cat ~/PROJECTS/PG/Python/Codes/output.txt
 }
 
-function pycode() {
+pycode() {
     NAME=$(uname -a | awk '{print $2}')
     FILES=~/PROJECTS/PG/Python/Codes/*.py
     USER=$(echo $USER)
-
     for f in $FILES; do
         if [[ ${NAME} = "GL504GM" ]]; then
             sed -i '3,4 s/s20016/czekras/' ${f} 
@@ -21,15 +20,41 @@ function pycode() {
             sed -i '3,4 s/czekras/s20016/' ${f}
         fi
     done
-    nvim -S ~/PROJECTS/PG/Shell/session/PythonSession.vim
+    nvim -S ~/PROJECTS/PG/Shell/Session/PythonSession.vim
 }
 
-function upbash() {
+pushbash() {
+    NAME=$(uname -a | awk '{print $2}')
     cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/bash_aliases.txt
     cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/
+    if [[ ${NAME} = "GL504GM" ]]; then
+        cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json > ~/PROJECTS/PG/Shell/settings.txt
+    fi
     for f in ~/PROJECTS/PG/Shell/*.vim; do mv -- "$f" "${f%.vim}.txt" ; done
 }
 
+pullbash() {
+    read -p "Update .bashrc .bash_aliases WinTerminal(Settings)? [Y/n] " response
+    case "$response" in
+        [yY][eE][sS]|[yY])
+            NAME=$(uname -a | awk '{print $2}')
+            cat ~/PROJECTS/PG/Shell/bash_aliases.txt > ~/.bash_aliases
+            cat ~/PROJECTS/PG/Shell/init.txt > ~/.config/nvim/init.vim
+            cat ~/PROJECTS/PG/Shell/local_bundles.txt > ~/.config/nvim/local_bundles.vim
+            cat ~/PROJECTS/PG/Shell/local_init.txt > ~/.config/nvim/local_init.vim
+            if [[ ${NAME} = "GL504GM" ]]; then
+                cat ~/PROJECTS/PG/Shell/settings.txt > /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
+            elif [[ ${NAME} = "SF313-51" ]]; then
+                cat ~/PROJECTS/PG/Shell/settings.txt > /mnt/c/Users/20016/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json 
+            fi
+            source ~/.bash_aliases && source ~/.bashrc
+            echo Update Complete!
+            ;;
+        *)
+            echo Update Canceled!
+            ;;
+    esac
+}
 
 # Adding aliases to nvim
 # let $BASH_ENV = "~/.bash_aliases" <- Add to ~/.config/nvim/init.vim

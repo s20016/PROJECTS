@@ -8,4 +8,4 @@ sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 
 x = input()
 for i in range(5):
-    print(f"Hello, {x}")
+    print("Hello {x}")
