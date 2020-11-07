@@ -1,7 +1,8 @@
 export PATH=$PATH:$HOME/.local/bin  # Personal Laptop PATH
 
 # Aliases
-alias pycode="nvim -S ~/PROJECTS/PG/Python/Codes/PythonSession.vim"
+alias sbash="source ~/.bashrc"
+alias pycode="nvim -S ~/.config/nvim/session/PythonSession.vim"
 
 
 # Functions
@@ -12,6 +13,7 @@ function pyrun() {
 function upbash() {
     cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/bash_aliases.txt
     cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/
+    cp ~/.config/nvim/session/*.vim ~/PROJECTS/PG/Shell/
     for f in ~/PROJECTS/PG/Shell/*.vim; do mv -- "$f" "${f%.vim}.txt" ; done
 }
 
