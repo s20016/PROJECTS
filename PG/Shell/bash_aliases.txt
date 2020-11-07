@@ -16,9 +16,9 @@ function pycode() {
 
     for f in $FILES; do
         if [[ ${NAME} = "GL504GM" ]]; then
-            sed -i '3,4 s/\/home\/s20016/${USER}/' ${f} 
+            sed -i '3,4 s/s20016/czekras/' ${f} 
         elif [[ ${NAME} = "SF313-51" ]]; then
-            sed -i '3,4 s/\/home\/czekras/${USER}/' ${f}
+            sed -i '3,4 s/czekras/s20016/' ${f}
         fi
     done
     nvim -S /home/${USER}/PROJECTS/PG/Shell/session/PythonSession.vim
