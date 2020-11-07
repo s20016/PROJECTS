@@ -8,10 +8,10 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +1 testcode1.py
-badd +1 testcode2.py
-badd +1 testcode3.py
-badd +1 input.txt
-badd +1 output.txt
+badd +0 testcode2.py
+badd +0 testcode3.py
+badd +0 input.txt
+badd +0 output.txt
 argglobal
 %argdel
 $argadd testcode1.py
@@ -70,7 +70,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
-normal! 05|
+normal! 0
 wincmd w
 argglobal
 if bufexists("output.txt") | buffer output.txt | else | edit output.txt | endif
@@ -90,6 +90,7 @@ normal! zt
 1
 normal! 0
 wincmd w
+3wincmd w
 exe 'vert 1resize ' . ((&columns * 121 + 86) / 173)
 exe '2resize ' . ((&lines * 19 + 21) / 43)
 exe 'vert 2resize ' . ((&columns * 51 + 86) / 173)
