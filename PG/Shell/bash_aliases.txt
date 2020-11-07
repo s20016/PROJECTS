@@ -2,12 +2,24 @@ export PATH=$PATH:$HOME/.local/bin  # Personal Laptop PATH
 
 # Aliases
 alias sbash="source ~/.bashrc"
-alias pycode="nvim -S ~/.config/nvim/session/PythonSession.vim"
 
 
 # Functions
 function pyrun() {
     cat ~/PROJECTS/PG/Python/Codes/input.txt | python3 ~/PROJECTS/PG/Python/Codes/testcode$1.py && cat ~/PROJECTS/PG/Python/Codes/output.txt
+}
+
+function pycode() {
+    NAME=$(uname -a | awk '{print $2}')
+    FILES=~/PROJECTS/PG/Python/Codes/*.py
+    for f in $FILES; do
+        if [[ ${NAME} = "GL504GM" ]]; then
+            sed -i '3,4 s/~/\home\czekras/' ${f} 
+        elif [[ ${NAME} = "SF313-51" ]]; then
+            sed -i '3,4 s/\/home\/czekras/~/' ${f}
+        fi
+    done
+    nvim -S ~/.config/nvim/session/PythonSession.vim    
 }
 
 function upbash() {
@@ -16,6 +28,7 @@ function upbash() {
     cp ~/.config/nvim/session/*.vim ~/PROJECTS/PG/Shell/
     for f in ~/PROJECTS/PG/Shell/*.vim; do mv -- "$f" "${f%.vim}.txt" ; done
 }
+
 
 # Adding aliases to nvim
 # let $BASH_ENV = "~/.bash_aliases" <- Add to ~/.config/nvim/init.vim
