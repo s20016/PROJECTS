@@ -5,3 +5,5 @@ sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 
 # TEST CODE 3
 # =========================================================================
+
+print("Test")
