@@ -34,7 +34,7 @@ pushbash() {
 }
 
 pullbash() {
-    read -p "Update .bashrc .bash_aliases WinTerminal(Settings)? [Y/n] " response
+    read -p "Update: .bash_aliases  .config/nvim/*.vim  WinTerminal(Settings)? [Y/n] " response
     case "$response" in
         [yY][eE][sS]|[yY])
             NAME=$(uname -a | awk '{print $2}')
