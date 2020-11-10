@@ -13,7 +13,8 @@
 html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
-    background: url("img/background/home_bg.jpg");
+    /* background: url("img/background/home_bg.jpg"); */
+    background: url("https://i.ibb.co/yWtD7pz/home-bg.jpg");
     background-size: cover;
 }
 a {
