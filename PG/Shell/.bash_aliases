@@ -1,4 +1,4 @@
-export PATH=$PATH:$HOME/.local/bin  # GL504GM Laptop PATH
+export PATH=$PATH:$HOME/.local/bin  # GL504GM, SF313-51, SF313-51U
 
 # Aliases
 alias sbash="source ~/.bashrc"
