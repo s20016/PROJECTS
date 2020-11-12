@@ -5,9 +5,14 @@ alias sbash="source ~/.bashrc"
 
 
 # Functions
+
+# Python Functions *****************************************************************************
+
 pyrun() {
     cat ~/PROJECTS/PG/Python/Codes/input.txt | python3 ~/PROJECTS/PG/Python/Codes/testcode$1.py && cat ~/PROJECTS/PG/Python/Codes/output.txt
+    echo
 }
+
 
 pycode() {
     NAME=$(uname -a | awk '{print $2}')
@@ -22,7 +27,26 @@ pycode() {
     done
     nvim -S ~/.config/nvim/session/PythonSession.vim
 }
+# Java Functions *******************************************************************************
 
+javacode() {
+    nvim -S ~/.config/nvim/session/JavaSession.vim
+}
+
+
+javarun() {
+   if [[ ${1} = "w" ]]; then
+       java ~/PROJECTS/PG/Java/src/Codes/testcode$2.java > ~/PROJECTS/PG/Java/src/Codes/output.txt && cat ~/PROJECTS/PG/Java/src/Codes/output.txt
+       echo
+   elif [[ ${1} = "r" ]]; then
+       cat ~/PROJECTS/PG/Java/src/Codes/input.txt | java ~/PROJECTS/PG/Java/src/Codes/testcode$2.java > ~/PROJECTS/PG/Java/src/Codes/output.txt && cat ~/PROJECTS/PG/Java/src/Codes/output.txt
+       echo
+   fi
+}
+
+# Nvim Functions *******************************************************************************
+
+# Function to be used ONLY by GL504GM
 pushbash() {
     NAME=$(uname -a | awk '{print $2}')
     cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/.bash_aliases
@@ -33,6 +57,7 @@ pushbash() {
     # for f in ~/PROJECTS/PG/Shell/*.vim; do mv -- "$f" "${f%.vim}.txt" ; done
 }
 
+# Function to be used ONLY by SF313-51 & SF313-51U
 pullbash() {
     read -p "Update: .bash_aliases  .config/nvim/*.vim  WinTerminal(Settings)? [Y/n] " response
     case "$response" in
