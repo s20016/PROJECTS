@@ -2,7 +2,7 @@ export PATH=$PATH:$HOME/.local/bin  # GL504GM, SF313-51, SF313-51U
 
 # Aliases
 alias sbash="source ~/.bashrc"
-
+alias update="sudo apt update && sudo apt upgrade -y"
 
 # Functions
 
@@ -27,6 +27,7 @@ pycode() {
     done
     nvim -S ~/.config/nvim/session/PythonSession.vim
 }
+
 # Java Functions *******************************************************************************
 
 javacode() {
@@ -38,7 +39,7 @@ javarun() {
    if [[ ${1} = "w" ]]; then
        java ~/PROJECTS/PG/Java/src/Codes/testcode$2.java > ~/PROJECTS/PG/Java/src/Codes/output.txt && cat ~/PROJECTS/PG/Java/src/Codes/output.txt
        echo
-   elif [[ ${1} = "r" ]]; then
+   elif [[ ${1} = "rw" ]]; then
        cat ~/PROJECTS/PG/Java/src/Codes/input.txt | java ~/PROJECTS/PG/Java/src/Codes/testcode$2.java > ~/PROJECTS/PG/Java/src/Codes/output.txt && cat ~/PROJECTS/PG/Java/src/Codes/output.txt
        echo
    fi
