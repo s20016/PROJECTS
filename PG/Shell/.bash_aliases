@@ -9,10 +9,21 @@ alias update="sudo apt update && sudo apt upgrade -y"
 # Python Functions *****************************************************************************
 
 pyrun() {
-    cat ~/PROJECTS/PG/Python/Codes/input.txt | python3 ~/PROJECTS/PG/Python/Codes/testcode$1.py && cat ~/PROJECTS/PG/Python/Codes/output.txt
+    NAME=$(uname -a | awk '{print $2}')
+    FILES=~/PROJECTS/PG/Python/Codes/*.py
+    USER=$(echo $USER)
+    for f in $FILES; do
+        if [[ ${NAME} = "GL504GM" ]]; then
+            sed -i '3,4 s/s20016/czekras/' ${f} 
+        elif [[ ${NAME} = "SF313-51" ]]; then
+            sed -i '3,4 s/czekras/s20016/' ${f}
+        fi
+    done
+    cat ~/PROJECTS/PG/Python/Codes/input.txt | python3 ~/PROJECTS/PG/Python/Codes/testcode$1.py \
+        > ~/PROJECTS/PG/Python/Codes/output.txt
+    cat ~/PROJECTS/PG/Python/Codes/output.txt
     echo
 }
-
 
 pycode() {
     NAME=$(uname -a | awk '{print $2}')
@@ -34,15 +45,21 @@ javacode() {
     nvim -S ~/.config/nvim/session/JavaSession.vim
 }
 
-
 javarun() {
-   if [[ ${1} = "w" ]]; then
-       java ~/PROJECTS/PG/Java/src/Codes/testcode$2.java > ~/PROJECTS/PG/Java/src/Codes/output.txt && cat ~/PROJECTS/PG/Java/src/Codes/output.txt
-       echo
-   elif [[ ${1} = "rw" ]]; then
-       cat ~/PROJECTS/PG/Java/src/Codes/input.txt | java ~/PROJECTS/PG/Java/src/Codes/testcode$2.java > ~/PROJECTS/PG/Java/src/Codes/output.txt && cat ~/PROJECTS/PG/Java/src/Codes/output.txt
-       echo
-   fi
+#   if [[ ${1} = "w" ]]; then
+#       java ~/PROJECTS/PG/Java/src/Codes/testcode$2.java > ~/PROJECTS/PG/Java/src/Codes/output.txt \
+#           cat ~/PROJECTS/PG/Java/src/Codes/output.txt
+#       echo
+#   elif [[ ${1} = "rw" ]]; then
+#       cat ~/PROJECTS/PG/Java/src/Codes/input.txt | java ~/PROJECTS/PG/Java/src/Codes/testcode$2.java \
+#           > ~/PROJECTS/PG/Java/src/Codes/output.txt
+#       cat ~/PROJECTS/PG/Java/src/Codes/output.txt
+#       echo
+#   fi
+   cat ~/PROJECTS/PG/Java/src/Codes/input.txt | java ~/PROJECTS/PG/Java/src/Codes/testcode$1.java \
+       > ~/PROJECTS/PG/Java/src/Codes/output.txt
+   cat ~/PROJECTS/PG/Java/src/Codes/output.txt 
+   echo
 }
 
 # Nvim Functions *******************************************************************************
@@ -53,7 +70,8 @@ pushbash() {
     cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/.bash_aliases
     cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/
     if [[ ${NAME} = "GL504GM" ]]; then
-        cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json > ~/PROJECTS/PG/Shell/settings.json
+        cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json \
+            > ~/PROJECTS/PG/Shell/settings.json
     fi
     # for f in ~/PROJECTS/PG/Shell/*.vim; do mv -- "$f" "${f%.vim}.txt" ; done
 }
@@ -79,7 +97,7 @@ pullbash() {
                 sed -i '11, 50 s/2c4de342-38b7-51cf-b940-2309a097f518/c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40/' ${VAR2}
                 sed -i '55 s/czekras/s20016/' ${VAR2}
                 sed -i '55 s/Ubuntu/Ubuntu-18\.04/' ${VAR2}
-                sed -i '61 s/13/14/' ${VAR2}
+                sed -i '61 s/12/14/' ${VAR2}
             fi
             source ~/.bash_aliases && source ~/.bashrc
             echo Update Complete!

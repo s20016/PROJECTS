@@ -1,7 +1,7 @@
 " vim-bootstrap 
 
 "*****************************************************************************
-"" Vim-PLug core
+" Vim-Plug core
 "*****************************************************************************
  
 " $BASH_ENV to add bash alias to nvim
@@ -31,7 +31,7 @@ endif
 call plug#begin(expand('~/.local/share/nvim/site/plugged'))
 
 "*****************************************************************************
-"" Plug install packages
+" Plug install packages
 "*****************************************************************************
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -74,7 +74,7 @@ Plug 'honza/vim-snippets'
 Plug 'tomasr/molokai'
 
 "*****************************************************************************
-"" Custom bundles
+" Custom bundles
 "*****************************************************************************
 
 " html
@@ -111,7 +111,7 @@ filetype plugin indent on
 
 
 "*****************************************************************************
-"" Basic Setup
+" Basic Setup
 "*****************************************************************************"
 "" Encoding
 set encoding=utf-8
@@ -155,18 +155,17 @@ let g:session_autosave = "no"
 let g:session_command_aliases = 1
 
 "*****************************************************************************
-"" Visual Settings
+" Visual Settings
 "*****************************************************************************
 syntax on
 set ruler
 set number
 
 let no_buffers_menu=1
-silent! colorscheme molokai
-syntax on
 let g:molokai_original = 1
 let g:rehash256 = 1
 set background=dark
+silent! colorscheme molokai
 
 set mousemodel=popup
 set t_Co=256
@@ -191,10 +190,9 @@ else
 endif
 
 
-
 "" Disable the blinking cursor.
 set gcr=a:blinkon2
-set scrolloff=3
+set scrolloff=6
 
 "" Status bar
 set laststatus=2
@@ -227,7 +225,7 @@ let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
 
 "*****************************************************************************
-"" Abbreviations
+" Abbreviations
 "*****************************************************************************
 "" no one is really happy until you have this shortcuts
 cnoreabbrev W! w!
@@ -236,7 +234,7 @@ cnoreabbrev Qall! qall!
 cnoreabbrev Wq wq
 cnoreabbrev Wa wa
 cnoreabbrev wQ wq
-cnoreabbrev WQ wq
+ cnoreabbrev WQ wq
 cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
@@ -248,7 +246,7 @@ let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 50
+let g:NERDTreeWinSize = 45
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
@@ -256,7 +254,7 @@ nnoremap <silent> <F3> :NERDTreeToggle<CR>
 " grep.vim
 nnoremap <silent> <leader>f :Rgrep<CR>
 let Grep_Default_Options = '-IR'
-let Grep_Skip_Files = '*.log *.db'
+let Grep_iSkip_Files = '*.log *.db'
 let Grep_Skip_Dirs = '.git node_modules'
 
 " terminal emulation
@@ -264,13 +262,13 @@ nnoremap <silent> <leader>sh :terminal<CR>
 
 
 "*****************************************************************************
-"" Commands
+" Commands
 "*****************************************************************************
 " remove trailing whitespaces
 command! FixWhitespace :%s/\s\+$//e
 
 "*****************************************************************************
-"" Functions
+" Functions
 "*****************************************************************************
 if !exists('*s:setupWrapping')
   function s:setupWrapping()
@@ -281,7 +279,7 @@ if !exists('*s:setupWrapping')
 endif
 
 "*****************************************************************************
-"" Autocmd Rules
+" Autocmd Rules
 "*****************************************************************************
 "" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
 augroup vimrc-sync-fromstart
@@ -311,7 +309,7 @@ augroup END
 set autoread
 
 "*****************************************************************************
-"" Mappings
+" Mappings
 "*****************************************************************************
 
 "" Split
@@ -436,7 +434,7 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <Leader>o :.Gbrowse<CR>
 
 "*****************************************************************************
-"" Custom configs
+" Custom configs
 "*****************************************************************************
 
 " html
@@ -479,7 +477,8 @@ let g:jedi#smart_auto_mappings = 0
     \'python': ['flake8'], })
 
 " vim-airline
-let g:airline#extensions#virtualenv#enabled = 1
+" let g:airline#extensions#virtualenv#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
 
 " Syntax highlight
 " Default highlight is better than polyglot
@@ -497,7 +496,7 @@ if filereadable(expand("~/.config/nvim/local_init.vim"))
 endif
 
 "*****************************************************************************
-"" Convenience variables
+" Convenience variables
 "*****************************************************************************
 
 " vim-airline
@@ -507,21 +506,21 @@ endif
 
 if !exists('g:airline_powerline_fonts')
   let g:airline#extensions#tabline#left_sep = ' '
-  let g:airline#extensions#tabline#left_alt_sep = '|'
-  let g:airline_left_sep          = '▶'
-  let g:airline_left_alt_sep      = '»'
-  let g:airline_right_sep         = '◀'
-  let g:airline_right_alt_sep     = '«'
+  let g:airline#extensions#tabline#left_alt_sep = ''
+"   let g:airline_left_sep          = '▶'
+"   let g:airline_left_alt_sep      = '»'
+"   let g:airline_right_sep         = '◀'
+"   let g:airline_right_alt_sep     = '«'
   let g:airline#extensions#branch#prefix     = '⤴' "➔, ➥, ⎇
   let g:airline#extensions#readonly#symbol   = '⊘'
   let g:airline#extensions#linecolumn#prefix = '¶'
   let g:airline#extensions#paste#symbol      = 'ρ'
-  let g:airline_symbols.linenr    = '␊'
-  let g:airline_symbols.branch    = '⎇'
+  let g:airline_symbols.linenr    = '' "'␊'
+  let g:airline_symbols.branch    = 'ᚠ' " '⎇'
   let g:airline_symbols.paste     = 'ρ'
   let g:airline_symbols.paste     = 'Þ'
   let g:airline_symbols.paste     = '∥'
-  let g:airline_symbols.whitespace = 'Ξ'
+  let g:airline_symbols.whitespace = '' "'Ξ'
 else
   let g:airline#extensions#tabline#left_sep = ''
   let g:airline#extensions#tabline#left_alt_sep = ''
