@@ -4,7 +4,7 @@
 #### **HTML Class Projects** (05/17 ~ )
 * Task01&nbsp; &nbsp; &nbsp; &nbsp;「[学科紹介](WebExtension/task01/)」
 * Chapter01 「[Windows環境でHTML](WebExtension/chapter01/ch01-firsthtml-win.html)」
-* Chapter02 「[Linux環境でHTMLを作う](WebExtension/chapter02/ch02-firsthtml-linux.html)」
+* Chapter02 「[Linux環境でHTMLを作る](WebExtension/chapter02/ch02-firsthtml-linux.html)」
 * Chapter03 「[マークアップの考え方](WebExtension/chapter03/ch03-markuptag1.html)」
 * Chapter04 「[自己紹介ページ](WebExtension/chapter04/ch04-markuptag1.html)」
 * Chapter05 「[リンク、画像、特殊文字](WebExtension/chapter05/ch05-markuptag2.html)」
