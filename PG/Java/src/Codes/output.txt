@@ -1,1 +1,2 @@
-The sum of a and b is = -70
+名前は、ポチ, 3歳です。
+Name: ポチ, Age: 3
