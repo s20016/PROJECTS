@@ -5,20 +5,16 @@ import java.util.List;
 
 public class testcode3 {
     public static void main(String[] args) {
+        int [] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int idx = 8;
 
-		ArrayList<String> l = new ArrayList<>();
-        int arr[] = {-3, -2, -1, 0, 1, 2, 3};
-        
-        for (int i : arr) {
-            if (i < 0) {
-            	l.add("負");
-            } else if (i > 0) {
-            	l.add("正");
-            } else {
-            	l.add("零");
-            }
-        }
-        System.out.println(l);
+        List<Integer> x = new ArrayList<Integer>(a.length);
+		// int [] x = new int[a.length];
+
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] != idx) { x.add(a[i]); }
+		}
+		System.out.println(x);
     }
 }
 
