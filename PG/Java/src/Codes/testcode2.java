@@ -13,6 +13,7 @@ class testcode2 {
         MyDog.SetName("ポチ");
         // MyDog.SetName("Pocchi");
         MyDog.ShowProfile();
+
     }
 
     public void SetName ( String nm ) {
@@ -25,7 +26,7 @@ class testcode2 {
 
     public void ShowProfile() {
     System.out.printf("名前は、%s, %d歳です。%n", Name, Age);
-    System.out.printf("Name: %s, Age: %d", Name, Age);
+    System.out.printf("Name: %s, Age: %d \n", Name, Age);
     // System.out.println("日本語");
     }
 }

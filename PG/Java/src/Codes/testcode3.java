@@ -1,20 +1,14 @@
 package Codes;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
-public class testcode3 {
+public class testcode1 {
     public static void main(String[] args) {
-        int [] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int idx = 8;
-
-        List<Integer> x = new ArrayList<Integer>(a.length);
-		// int [] x = new int[a.length];
-
-		for (int i = 0; i < a.length; i++) {
-			if (a[i] != idx) { x.add(a[i]); }
-		}
-		System.out.println(x);
+        
+        int[] z = new int[5];
+        for (int i = 0; i < 10; i++) {
+            z[i] = i;
+        }
+        System.out.println(Arrays.toString(z));
     }
 }
-
