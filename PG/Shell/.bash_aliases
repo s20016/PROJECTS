@@ -47,18 +47,18 @@ javacode() {
 
 javarun() {
 #   if [[ ${1} = "w" ]]; then
-#       java ~/PROJECTS/PG/Java/src/Codes/testcode$2.java > ~/PROJECTS/PG/Java/src/Codes/output.txt \
-#           cat ~/PROJECTS/PG/Java/src/Codes/output.txt
+#       java ~/PROJECTS/PG/Java/src/codes/testcode$2.java > ~/PROJECTS/PG/Java/src/codes/output.txt \
+#           cat ~/PROJECTS/PG/Java/src/codes/output.txt
 #       echo
 #   elif [[ ${1} = "rw" ]]; then
-#       cat ~/PROJECTS/PG/Java/src/Codes/input.txt | java ~/PROJECTS/PG/Java/src/Codes/testcode$2.java \
-#           > ~/PROJECTS/PG/Java/src/Codes/output.txt
-#       cat ~/PROJECTS/PG/Java/src/Codes/output.txt
+#       cat ~/PROJECTS/PG/Java/src/codes/input.txt | java ~/PROJECTS/PG/Java/src/codes/testcode$2.java \
+#           > ~/PROJECTS/PG/Java/src/codes/output.txt
+#       cat ~/PROJECTS/PG/Java/src/codes/output.txt
 #       echo
 #   fi
-   cat ~/PROJECTS/PG/Java/src/Codes/input.txt | java ~/PROJECTS/PG/Java/src/Codes/testcode$1.java \
-       > ~/PROJECTS/PG/Java/src/Codes/output.txt
-   cat ~/PROJECTS/PG/Java/src/Codes/output.txt 
+   cat ~/PROJECTS/PG/Java/src/codes/input.txt | java ~/PROJECTS/PG/Java/src/codes/testcode$1.java \
+       > ~/PROJECTS/PG/Java/src/codes/output.txt
+   cat ~/PROJECTS/PG/Java/src/codes/output.txt 
    echo
 }
 
@@ -97,7 +97,7 @@ pullbash() {
                 sed -i '11, 50 s/2c4de342-38b7-51cf-b940-2309a097f518/c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40/' ${VAR2}
                 sed -i '55 s/czekras/s20016/' ${VAR2}
                 sed -i '55 s/Ubuntu/Ubuntu-18\.04/' ${VAR2}
-                sed -i '61 s/12/13/' ${VAR2}
+                sed -i '61 s/12/14/' ${VAR2}
             fi
             source ~/.bash_aliases && source ~/.bashrc
             echo Update Complete!
