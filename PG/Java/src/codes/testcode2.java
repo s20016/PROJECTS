@@ -5,22 +5,23 @@ import java.util.Arrays;
 public class testcode2 {
 
 	public static void main(String[] args) {
-		int [] a = {};
-		int idx = 0;
-		int x = 99;
-//		int [] expected = {99};
+		int [] a = {1, 2, 3, 4, 5, 6, 7};
+		int [] b = {5, 4, 3, 2, 1};
 
-		idx = (idx >= a.length) ? a.length : (idx < 0) ? 0 : idx;
+		// int [] expected_a = {5, 4, 3, 2, 1, 6, 7};
+		// int [] expected_b = {1, 2, 3, 4, 5};
 
-		int [] ret = new int[a.length + 1];
-		for (int i = 0, j = 0; i < ret.length; i++, j++) {
-			if (i == idx) {
-				ret[i] = x;
-				j--; } else {
-				ret[i] = a[j];
-			}
+		let [x, y] = [2, 1];
+
+
+		for(int i = 0, tmp = 0; i < Math.min(a.length, b.length); i++) {
+			// tmp = a[i];
+			// a[i] = b[i];
+			// b[i] = tmp;
+			[b, a] = [a, b];
 		}
-		// return ret;
-		System.out.println(Arrays.toString(ret));
+
+		System.out.println(Arrays.toString(a));
+		System.out.println(Arrays.toString(b));
 	}
 }
