@@ -1,27 +1,40 @@
 package codes;
 
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class testcode2 {
 
 	public static void main(String[] args) {
-		int [] a = {1, 2, 3, 4, 5, 6, 7};
-		int [] b = {5, 4, 3, 2, 1};
+		int [] a = {1, 3, 4, 7, 9, 11};
+		int idx = 0;
+		int n = 7;
+		// int [] expected = {};
 
-		// int [] expected_a = {5, 4, 3, 2, 1, 6, 7};
-		// int [] expected_b = {1, 2, 3, 4, 5};
+    	// Method 1
+    	ArrayList<Integer> x = new ArrayList<Integer>();
+    	ArrayList<Integer> y = new ArrayList<Integer>();
 
-		let [x, y] = [2, 1];
+        for (int i = 0; i < a.length; i++) {
+        	y.add(a[i]);
+        	if (i < idx || i >= n + idx) {
+				x.add(a[i]);
+			}
+        }
 
-
-		for(int i = 0, tmp = 0; i < Math.min(a.length, b.length); i++) {
-			// tmp = a[i];
-			// a[i] = b[i];
-			// b[i] = tmp;
-			[b, a] = [a, b];
+		int [] ret = new int[x.size()];
+		for (int i = 0; i < ret.length; i++) {
+			ret[i] = x.get(i);
 		}
 
-		System.out.println(Arrays.toString(a));
-		System.out.println(Arrays.toString(b));
+		int [] ret2 = new int[a.length];
+		for (int i = 0; i < a.length; i++) {
+			ret2[i] = y.get(i);
+		}
+
+		// return (n == idx) ? ret2 : ret;
+		System.out.println(Arrays.toString(ret2));
+		System.out.println(Arrays.toString(ret));
 	}
+	
 }

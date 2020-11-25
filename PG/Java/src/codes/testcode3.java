@@ -5,20 +5,38 @@ import java.util.Arrays;
 public class testcode3 {
 
 	public static void main(String[] args) {
+		int [] a = {1, 3, 4, 7, 9, 11};
+		int idx = 0;
+		int n = 7;
+		// int [] expected = {};
+		int [] ret;
 
-		int [] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-		// int expected = 1;
+    	if (n <= 0 || idx < 0) {
 
-		// int [] x = new int[1];
-		int x = a[0];
-		// x[0] = 1;
-		for (int i = 0; i < a.length; i++) {
-			if (x >= a[i]) {
-				x = a[i];
+    		ret = new int[a.length];
+    		for (int i = 0; i < a.length; i++) {
+    			ret[i] = a[i];
 			}
-		}
-		// return a;
-		// System.out.println(Arrays.toString(x));
-		System.out.println(x);
+			
+    	} else {
+    		if (idx + n >= a.length) {
+    			if (n > a.length - idx ) {
+    				ret = new int[a.length - idx];
+    			} else {
+    				ret = new int[a.length];
+    			}
+    		} else {
+    			ret = new int[a.length - n];
+    		}
+
+    		for (int i = 0, j = 0; i < a.length; i++) {
+    			if ( i < idx || i >= idx + n) {
+    				ret[j++] = a[i];
+    			}
+    		}
+    	}
+
+		// return ret;
+		System.out.println(Arrays.toString(ret));
 	}
 }
