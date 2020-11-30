@@ -2,9 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>シングルコラムレイアウト</title>
+  <mata name="viewport" content="width=device-width, initial-scale=1">
+  <title>ナビゲーションメニューを作成する	</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <header>
+    <div class="container">
+			<div class="head-inner">
+				<button class="hamburger" id="mobile-menu"></button>
+			</div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <ul class="navbar">
+        <li><a href="#">ホーム</a></li>
+        <li><a href="#">会社案内</a></li>
+        <li><a href="#">製品案内</a></li>
+        <li><a href="#">サポート</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section>
+    <div class="container">
+      <main>
+        <div class="main-inner">
+          <p class="main-title">Main</p>
+        </div>
+      </main>
+
+      <aside class="sidebar sidebar1">
+        sidebar
+      </aside>
+
+      <aside class="sidebar sidebar2">
+        sidebar
+      </aside>
+    </div>
+  </section>
+
+	<footer>
+		<div class="container">
+			<div class="footer-inner">
+				<p class="copyright">Footer &copy;20XX HTML/CSS Technic</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="sript.js"></script>
 </body>
 </html>
