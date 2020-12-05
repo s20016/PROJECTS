@@ -224,4 +224,171 @@ public class PG3_Sem4 {
 	//   }
 	//   return str.toUpperCase();
 	// }
+
+    // CodingBat String1 - helloName 
+	// public String helloName(String name) {
+	// 	  return String.format("Hello %s!", name);
+	// 	}
+
+    // CodingBat String1 - makeAbba 
+	// public String makeAbba(String a, String b) {
+	//   return String.format("%s%s%s%s", a, b, b, a);
+	// }
+
+    // CodingBat String1 - makeTags 
+	// public String makeTags(String tag, String word) {
+	//   return String.format("<%s>%s</%s>", tag, word, tag);
+	// }
+
+    // CodingBat String1 - makeOutWord 
+	// public String makeOutWord(String out, String word) {
+	// 	return out.substring(0, 2) + word + out.substring(2);
+	// }
+
+    // CodingBat String1 - extraEnd 
+	// public String extraEnd(String str) {
+	//   String f2 = str.substring(str.length() -2);
+	//   return (str.length() >= 2) ? f2 + f2 + f2 : null;
+	// }
+
+    // CodingBat String1 - firstTwo 
+	// public String firstTwo(String str) {
+	//   return (str.length() >= 2) ? str.substring(0, 2) : str;
+	// }
+
+    // CodingBat String1 - firstHalf 
+	// public String firstHalf(String str) {
+	//   return str.substring(0, str.length() / 2);
+	// }
+
+    // CodingBat String1 - withoutEnd 
+	// public String withoutEnd(String str) {
+	//   return str.substring(1, str.length() - 1);
+	// }
+
+    // CodingBat String1 - comboString 
+	// public String comboString(String a, String b) {
+	//   return (a.length() > b.length()) ? b + a + b : a + b + a;
+	// }
+
+    // CodingBat String1 - nonStart 
+	// public String nonStart(String a, String b) {
+	//   return a.substring(1, a.length()) + b.substring(1, b.length());
+	// }
+
+    // CodingBat String1 - left2 
+	// public String left2(String str) {
+	//   return str.substring(2, str.length()) + str.substring(0, 2);
+	// }
+
+    // CodingBat String1 - right2 
+	// public String right2(String str) {
+	//   return str.substring(str.length() - 2) + str.substring(0, str.length() - 2);
+	// }
+
+    // CodingBat String1 - theEnd 
+	// public char theEnd(String str, boolean front) {
+	//   return (front == true) ? str.charAt(0) : str.charAt(str.length() - 1);
+	// }
+
+    // CodingBat String1 - withoutEnd 
+	// public String withouEnd2(String str) {
+	//   return (str.length() > 2 ) ? str.substring(1, str.length() - 1) : "";
+	// }
+
+    // CodingBat String1 - middleTwo 
+	// public String middleTwo(String str) {
+	//   return (str.length() > 2) ? str.substring(str.length() / 2 - 1, str.length() / 2 + 1) : str;
+	// }
+
+    // CodingBat String1 - endsLy 
+	// public boolean endsLy(String str) {
+	//   return (str.length() >= 2 && str.substring(str.length() - 2).equals("ly"));
+	// }
+
+    // CodingBat String1 - nTwice 
+	// public String nTwice(String str, int n) {
+	//   return str.substring(0, n) + str.substring(str.length() - n);
+	// }
+
+    // CodingBat String1 - twoChar 
+	// public String twoChar(String str, int index) {
+	//   if (2 <= str.length() - index && str.length() - index <= str.length()) {
+	// 	return str.substring(index, index + 2);
+	//   }
+	//   return str.substring(0, 2);
+	// }
+
+    // CodingBat String1 - middleThree 
+	// public String middleThree(String str) {
+	// 	int len = str.length() / 2;
+	// 	String f = str.substring(len - 1, len);
+	// 	String m = str.substring(len, len + 1);
+	// 	String l = str.substring(len + 1, len + 2);
+	// 	return f + m + l;
+	// }
+
+    // CodingBat String1 - hasBad 
+	// public boolean hasBad(String str) {
+	//   return (str.length() >= 3) && (str.substring(0, 3).equals("bad") ? true : 
+	// 	(str.length() >= 4) && str.substring(1, 4).equals("bad"));
+	// }
+
+    // CodingBat String1 - atFirst 
+	// public String atFirst(String str) {
+	//   return (0 < str.length() && str.length() < 2) ? str + "@" : 
+	// 	(str.length() <= 0) ? "@@" : str.substring(0, 2); 
+	// }
+
+    // CodingBat String1 - lastChars 
+	// public String lastChars(String a, String b) {
+	//   if (a.length() > 0) {
+	// 	if (b.length() > 0) {
+	// 	  return a.substring(0, 1) + b.substring(b.length() - 1);
+	// 	} else {
+	// 	  return a.substring(0, 1) + "@";
+	// 	}
+	//   } else {
+	// 	if (b.length() > 0) {
+	// 	  return "@" + b.substring(b.length() - 1);
+	// 	}
+	//   }
+	//   return "@@";
+	// }
+
+    // CodingBat String1 - conCat 
+	// public String conCat(String a, String b) {
+	// 	if (a.length() > 0 && b.length() == 0 || a.length() == 0 && b.length() > 0) { 
+	// 		return a + b; 
+	// }
+	//   String x = a.substring(a.length() - 1);
+	//   String y = b.substring(0, 1);
+	//   return (x.equals(y)) ? a.substring(0, a.length() - 1) + b.substring(0, b.length()) : a + b;
+	// }
+
+    // CodingBat String1 - lastTwo 
+	// public String lastTwo(String str) {
+	// 	if (str.length() > 2) {
+	// 		return str.substring(0, str.length() - 2) + str.substring(str.length() - 1) + str.substring(str.length() - 2, str.length() - 1);
+	// 	} else if (str.length() == 2) {
+	// 		return str.substring(str.length() - 1) + str.substring(str.length() - 2, str.length() - 1);
+	// 	}
+	// 	return str;
+	// }
+
+    // CodingBat String1 - seeColor 
+	// public String seeColor(String str) {
+	//   return (str.length() >= 4 && str.substring(0, 4).equals("blue")) ? "blue" : 
+	// 	(str.length() >= 3 && str.substring(0, 3).equals("red")) ? "red" : "";
+	// }
+
+    // CodingBat String1 - frontAgain 
+	// public boolean frontAgain(String str) {
+	//   return str.length() >= 2 && str.substring(0, 2).equals(str.substring(str.length() - 2, str.length()));
+	// }
+
+    // CodingBat String1 - minCat 
+	// public String minCat(String a, String b) {
+	// 	return (a.length() > b.length()) ? a.substring(a.length() - b.length()) + b : a + b.substring(b.length() - a.length());
+	// }
 }
