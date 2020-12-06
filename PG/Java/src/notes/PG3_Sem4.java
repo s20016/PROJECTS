@@ -391,4 +391,79 @@ public class PG3_Sem4 {
 	// public String minCat(String a, String b) {
 	// 	return (a.length() > b.length()) ? a.substring(a.length() - b.length()) + b : a + b.substring(b.length() - a.length());
 	// }
+
+    // CodingBat String1 - extraFront 
+	// public String extraFront(String str) {
+	//   return (str.length() >= 2) ? str.substring(0, 2) + str.substring(0, 2) + str.substring(0, 2) : str + str + str;
+	// }
+
+    // CodingBat String1 - without2 
+	// public String without2(String str) {
+	// 	if (str.length() > 1) {
+	// 		  if (str.substring(0, 2).equals(str.substring(str.length() - 2))) {
+	// 			  return str.substring(2, str.length());
+	// 		  }
+	// 	  } 
+	// 	  return str;
+	// }
+
+    // CodingBat String1 - deFront 
+	// public String deFront(String str) {    
+	// 	if (str.charAt(0) == 'a') {
+	// 		if (str.charAt(1) == 'b') {
+	// 			  return str;
+	// 		  } else {
+	// 			  return "a" + str.substring(2, str.length());
+	// 		  }
+	// 	} else if (str.charAt(1) == 'b') {
+	// 		  return str.substring(1, str.length());
+	// 	  }
+	// 	  return str.substring(2, str.length());
+	// }
+
+    // CodingBat String1 - startWord 
+	// public String startWord(String str, String word) {
+	//   if (str.length() < word.length()) return "";
+	//   if (str.length() <= 1) return str.substring(0, word.length());
+	// 	if (word.length() >= 2) {
+	// 		if (str.substring(1, word.length()).equals(word.substring(1, word.length()))) {
+	// 			return str.substring(0, word.length());
+	// 		}
+	// 	} else if (word.length() == 1) {
+	// 		if (str.substring(1, 2).equals(word)) {
+	// 			return str.substring(0, 1);
+	// 		}
+	// 	} 
+	// 	return "";
+	// }
+
+    // CodingBat String1 - withoutX 
+	// public String withoutX(String str) {
+	//   if (str.length() <= 0) return "";
+	// 	if (str.length() >= 2 && str.subSequence(0, 1).equals("x")) {
+	// 		if (str.substring(str.length() - 1).equals("x")) {
+	// 			return str.substring(1, str.length() - 1);
+	// 		} else {
+	// 			return str.substring(1, str.length());
+	// 		}
+	// 	} else if (str.substring(str.length() - 1).equals("x")) {
+	// 		return str.substring(0, str.length() - 1);
+	// 	}
+	// 	return str;
+	// }
+
+    // CodingBat String1 - withoutX2 
+	// public String withoutX2(String str) {
+	//   if (str.length() <= 1) return "";
+	//   if (str.length() >= 2 && str.substring(0, 1).equals("x")) {
+	// 	if (str.substring(1, 2).equals("x")) {
+	// 	  return str.substring(2, str.length());
+	// 	} else {
+	// 	  return str.substring(1, str.length());
+	// 	}
+	//   } else if (str.substring(1, 2).equals("x")) {
+	// 	return str.substring(0, 1) + str.substring(2, str.length());
+	//   }
+	//   return str;
+	// }
 }
