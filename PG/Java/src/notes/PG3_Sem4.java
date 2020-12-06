@@ -3,9 +3,7 @@ package notes;
 public class PG3_Sem4 {
 
 	public static void main(String[] args) {
-		
-		PG3_Sem4 x = new PG3_Sem4();
-//		System.out.println(x.everyNth("Miracle", 2));
+
 	}
 
 	/*
