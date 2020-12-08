@@ -5,6 +5,8 @@
 # MODULE: import sys when "sys.stdin" in use
 # n == number of lines
 
+import sys
+
 #TODO Single line input() ===========================================================
 #! Single line input() / 1 (str, int, float)
 x = input()         # use for str (hi, hello)

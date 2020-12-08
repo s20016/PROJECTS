@@ -6,6 +6,13 @@ sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 # TEST CODE 1
 # =========================================================================
 
-x = sys.stdin.read().split("\n")
-for i in x:
-    print(f"<li>{i}</li>")
+def string_splosion(str):
+    l = []; count = 1
+    for i in str:
+        l.append(str[:count])
+        count += 1
+    print("".join(l))
+
+string_splosion('Code')
+string_splosion('abc')
+string_splosion('ab')

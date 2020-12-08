@@ -1,12 +1,8 @@
 import sys
-sys.stdout = open("output.txt", "w")
-sys.stdin = open("input.txt", "r")
-# TODO ==============================================================
-# TODO IMPORT MODULE HERE:
 
-
-# TODO ==============================================================
-# TODO START CODE HERE:
+sys.stdin = open("/home/czekras/PROJECTS/PG/Python/Codes/input.txt", "r")
+sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
+# =========================================================================
 
 #! P1 07/01/2020 ====================================================
 #* Lesson Notes:
@@ -414,7 +410,6 @@ print({i for i in [1, 2, 3, 2]})
 {'G', 'H', 'B', 'D', 'C', 'I', 'A'}
 >>> sorted(A | B)
 ['A', 'B', 'C', 'D', 'G', 'H', 'I']
-
 """
 
 #! P1 08/06/2020 ====================================================
@@ -429,18 +424,14 @@ import re
 uri = 'https://ja.wikipedia.org/wiki/%E5%B8%B8%E7%94%A8%E6%BC%A2%E5%AD%97%E4%B8%80%E8%A6%A7'
 soup = BeautifulSoup(requests.get(uri).text, 'lxml')
 print([tag.text for tag in soup.find_all('a', title=re.compile("wikt:."))])
-
 """
-
 
 """
 import pandas as pd
-
 uri = 'https://xn--eckwa2aa3a9c8j8bve9d.gamewith.jp/article/show/284'
 tables = pd.read_html(uri, match='評価点')
 
 print(tables[0])
-
 """
 
 """
