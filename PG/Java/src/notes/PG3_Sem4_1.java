@@ -6,7 +6,8 @@ public class PG3_Sem4_1 {
 
 	public static void main(String[] args) {
 	
-		usingScanner();
+//		usingScanner();
+		IntWithString();
 	}
 
 	/*
@@ -23,6 +24,7 @@ public class PG3_Sem4_1 {
 	 * 		printInJava();
 	 * 		intLong();
 	 * 		usingScanner();
+	 * 		IntWithString();
 	 */
 	
 	static void forLoop() {
@@ -125,4 +127,10 @@ public class PG3_Sem4_1 {
 		scan.close();
 	}
 	
+	static void IntWithString() {
+		int a = 10, b = 20;
+		System.out.println(a + b);
+		System.out.println("¥" + a + b);	// ¥1020 - does not add a, b
+		System.out.println(a + b + "円");	// 30円 - Adds a, b
+	}
 }
