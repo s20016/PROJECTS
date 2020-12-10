@@ -6,8 +6,7 @@ public class PG3_Sem4_1 {
 
 	public static void main(String[] args) {
 	
-//		usingScanner();
-		IntWithString();
+		continueStatement();
 	}
 
 	/*
@@ -25,9 +24,21 @@ public class PG3_Sem4_1 {
 	 * 		intLong();
 	 * 		usingScanner();
 	 * 		IntWithString();
+	 * 
+	 * Lesson 6 (12-10-2020)
+	 * 		usingScanner2();
+	 * 		logicOperation();
+	 * 		properIfStatement();
+	 * 		switchStatement();
+	 * 		continueStatement();
 	 */
 	
 	static void forLoop() {
+		
+		// for (initialization; termination; increment) {
+		//     statement
+		// }
+		
 		for (int i = 0; i < 2; i++) {
 			System.out.println("i = " + i);
 		}
@@ -132,5 +143,88 @@ public class PG3_Sem4_1 {
 		System.out.println(a + b);
 		System.out.println("¥" + a + b);	// ¥1020 - does not add a, b
 		System.out.println(a + b + "円");	// 30円 - Adds a, b
+	}
+	
+	static void usingScanner2() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a num: ");
+		int a = scan.nextInt();
+		
+		// &
+		String ret = (0 <= a & a <= 100) ? "In Range" : "Not in Range";
+		System.out.println(ret);
+		
+		// |
+		String ret2 = (0 <= a | a <= 100) ? "In Range" : "Not in Range";
+		System.out.println(ret2);
+		
+		scan.close();
+	}
+	
+	static void logicOperation() {
+		int i = 13;
+		
+		// && || - checks right hand side only if necessary
+		// &  |  - checks both side
+		
+		if (i == 10 & i < 10) { System.out.println("&: OK"); }
+		if (i == 10 && i < 10) { System.out.println("&&: OK"); }
+		
+		if (i == 10 | i > 10) { System.out.println("|: OK"); }
+		if (i > 10 || i == 10) { System.out.println("||: OK"); }
+	}
+	
+	static void properIfStatement() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a num: ");
+		int a = scan.nextInt();
+		
+		// not recommended writing. Use {} for better readability
+		if (a > 10) 
+			System.out.println("a > 10");		// if true, printed else skipped
+			System.out.println("Run Complete");	// true or false, printed
+		
+		// recommended writing
+		if (a > 10 ) {
+			System.out.println("a > 10");
+		}
+		System.out.println("Run Complete");
+			
+		scan.close();
+	}
+	
+	static void switchStatement() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a num: ");
+		int a = scan.nextInt();
+		
+		// if a = 1 && break; all gone, prints all case
+		switch(a) {
+			case 1:
+				System.out.println("one");
+				break;
+			case 2:
+				System.out.println("two");
+				break;
+			case 3:
+				System.out.println("three");
+				break;
+			default: 
+				System.out.println("Other");
+				break;
+		}
+		
+		scan.close();
+	}
+	
+	static void continueStatement() {
+		for (int i = 0; i <= 10; i++) {
+			System.out.print(i);
+			if (i > 9) {
+				continue;
+			}
+		System.out.print(", ");		// if i > 9, loop is skipped
+		// 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10		// no ", " at the end
+		}
 	}
 }
