@@ -479,4 +479,141 @@ public class PG3_Sem4_2 {
         }
         return str;
     }
+
+    // CodingBat Warmup2 - stringTimes
+    public String stringTimes(String str, int n) {
+        String ret = "";
+        for (int i = 0; i < n; i++) {
+            ret += str;
+        }
+        return ret;
+    }
+
+    // CodingBat Warmup2 - frontTimes
+    public String frontTimes(String str, int n) {
+        String ret = "";
+        for (int i = 0; i < n; i++) {
+            if (str.length() > 3) {
+                ret += str.substring(0, 3);
+            } else {
+                ret += str;
+            }
+        }
+        return ret;
+    }
+
+    // CodingBat Warmup2 - countXX
+    public int countXX(String str) {
+        int count = 0;
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.substring(i, i + 2).equals("xx")) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    // CodingBat Warmup2 - doubleX
+    public boolean doubleX(String str) {
+        // Method 1 (Readability of code can be imporved)
+        // return (str.length() >= 2 && str.contains("x") && str.indexOf('x') != str.length() - 1)
+        // 	? str.substring(str.indexOf('x'), str.indexOf('x') + 2).equals("xx")
+        // 	: false;	
+
+        // Method 2
+        int i = str.indexOf("x");
+        if (i == -1) return false;
+        String x = str.substring(i);
+        return x.startsWith("xx");
+    }
+
+    // CodingBat Warmup2 - stringBits
+    public String stringBits(String str) {
+        String ret = "";
+        for (int i = 0; i < str.length(); i += 2) {
+            ret += str.charAt(i); // ret += str.substring(i, i + 1);
+        }
+        return ret;
+    }
+
+    // CodingBat Warmup2 - stringSplosion
+    public String stringSplosion(String str) {
+        String ret = "";
+        for (int i = 0; i <= str.length(); i++) {
+            ret += str.substring(0, i);
+        }
+        return ret;
+    }
+
+    // CodingBat Warmup2 - last2
+    public int last2(String str) {
+        if (str.length() < 2) return 0;
+        int count = 0;
+        String f2 = str.substring(str.length() - 2);
+        for (int i = 0; i < str.length() - 2; i++) {
+            if (str.substring(i, i + 2).equals(f2)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    // CodingBat Warmup2 - arrayCount9
+    public int arrayCount9(int[] nums) {
+        int count = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 9) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    // CodingBat Warmup2 - arrayFront9
+    public boolean arrayFront9(int[] nums) {
+        boolean ret = false;
+        for (int i = 0; i < nums.length; i++) {
+            if (i < 4 && nums[i] == 9) {
+                ret = true;
+                break;
+            }
+        }
+        return ret;
+    }
+
+    // CodingBat Warmup2 - array123
+    public boolean array123(int[] nums) {
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] == 1 && nums[i + 1] == 2 && nums[i + 2] == 3) return true;
+        }
+        return false;
+    }
+
+    // CodingBat Warmup2 - stringMatch
+    public int stringMatch(String a, String b) {
+        int count = 0;
+        for (int i = 0; i < Math.min(a.length(), b.length()) - 1; i++) {
+            if (a.substring(i, i + 2).equals(b.substring(i, i + 2))) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    // CodingBat Warmup2 - sttringX
+    public String stringX(String str) {
+        String ret = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (!(0 < i && i < str.length() - 1 && str.substring(i, i + 1).equals("x"))) {
+                ret += str.substring(i, i + 1);
+            }
+        }
+        return ret;
+    }
+
+    // CodingBat Warmup2 - 
+    // CodingBat Warmup2 - 
+    // CodingBat Warmup2 - 
+    // CodingBat Warmup2 - 
+    // CodingBat Warmup2 - 
 }

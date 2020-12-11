@@ -4,25 +4,22 @@ public class testcode1 {
 
 	public static void main(String[] args) {
 		testcode1 x = new testcode1();
-		System.out.println(x.startWord("hippo", "hi"));
-		System.out.println(x.startWord("hippo", "xip"));
-		System.out.println(x.startWord("hippo", "i"));
-        
-    //		startWord("hippo", "hi") → "hi"
-    //		startWord("hippo", "xip") → "hip"
-    //		startWord("hippo", "i") → "h"
-    }
+//		int[] arr = {1, 1, 2, 3, 1};
+		System.out.println(x.stringX("xxHxix"));
+		System.out.println(x.stringX("xabxxxcdx"));
 	
-	public String startWord(String str, String word) {
-		if (word.length() >= 2) {
-			if (str.substring(1, 2).equals(word.substring(1, 2))) {
-				return str.substring(0, word.length());
+//		stringX("xxHxix") → "xHix"
+//		stringX("abxxxcd") → "abcd"
+//		stringX("xabxxxcdx") → "xabcdx"
+    }
+
+	public String stringX(String str) {
+		String ret = "";
+		for (int i = 0; i < str.length(); i++) {
+			if (!(0 < i && i < str.length() - 1 && str.substring(i, i + 1).equals("x"))) {
+				ret += str.substring(i, i + 1);
 			}
-		} else if (word.length() == 1) {
-			if (str.substring(1, 2).equals(word)) {
-				return str.substring(0, 1);
-			}
-		} 
-		return "";
+		}
+		return ret;
 	}
 }
