@@ -1,9 +1,9 @@
 ## **WebExtension**
 
 #### **HTML Projects**
-* Project01 &nbsp;「[AniLIST](WebExtension/Project01/index.html)」Updated: 12/04/2020
+* Project01 &nbsp;「[AniLIST](WebExtension/Project01/theAnimeList.html)」Updated: 12/11/2020
 
-#### **HTML Class Projects** (05/17 ~ )
+#### **HTML Class Projects**
 * Task01&nbsp; &nbsp; &nbsp; &nbsp;「[学科紹介](WebExtension/task01/)」
 * Chapter01 「[Windows環境でHTML](WebExtension/chapter01/ch01-firsthtml-win.html)」
 * Chapter02 「[Linux環境でHTMLを作る](WebExtension/chapter02/ch02-firsthtml-linux.html)」
