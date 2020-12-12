@@ -6,8 +6,9 @@
     <title>AniList</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 
     <!-- Fontawesome icon -->
     <script src="https://kit.fontawesome.com/837bd79ab0.js" crossorigin="anonymous"></script>
@@ -19,94 +20,82 @@
     }
 
     body {
-        max-width: 600px;
+        max-width: 800px;
         background-color: #101010;
         margin: auto;
-        font-family: Montserrat, sans-serif;
-        color: #fff;
-    }
-
-    .navbar {
-        display: none;
-        margin: 2px 0 0 0;
-        padding: 0 20px;
-        list-style-type: none;
-        background: #101010 ;
-    }
-
-    .navbar li a {
-        display: block;
-        padding: 10px 16px 10px 0;
-        color: #A9A9B0;
-        text-decoration: none;
-        text-align: right;
-    }
-
-    .navbar li a:hover {
+        font-family: -apple-system, BlinkMacSystemFont, 
+            Montserrat, Roboto, Oxygen, Ubuntu, Cantarell,
+            'Open Sans', 'Helvetica Neue', sans-serif;
         color: #fff;
     }
 
     header {
-        padding: 30px 16px 50px;
+        position: fixed;
+        padding: 30px 16px 60px;
+        margin: 0;
+        z-index: 4;
     }
 
     .title {
+        position: fixed;
+        font-weight: 600;
         float: left;
-        font-size: 26px;
-        /* padding: 8px 16px; */
+        font-size: 28px;
         padding: 8px 0px 8px 16px;
 
     }
 
-    .menu {
-        float: right;
-        margin-right: 15px;
-        border: none;
-        font-size: 24px;
-        color: #A9A9B0;
-        width: 45px;
-        height: 50px;
-        border-width: contain;
-        background-size: contain;
-        background-color: transparent;
-        outline: none;
-    }
-
-    .menu:hover {
-        color: #fff;
+    .block {
+        margin: auto;
+        position: fixed;
+        left: 0;
+        right: 0;
+        margin-top: 0;
+        padding: 90px 30px 0;
+        background-color: #242427;
     }
 
     .update {
+        text-transform: uppercase;
         font-size: 12px;
-        padding: 34px 32px 0;
+        padding: 95px 30px 0;
         color:  #A9A9B0;
+        z-index: 1;
     }
 
     .anilist {
-        font-size: 17px;
-        line-height: 1.5;
+        font-size: 15px;
         font-variant-numeric: tabular-nums;
         unicode-bidi: isolate;
         text-indent: 0px;
         text-align: start;
         text-align-last: start;
-        padding-left: 8px;
+
     }
 
-    .anilist ol li{
-        padding-right: 12px;
+    .anilist ul {
+        padding-inline-start: 30px;
+        padding-inline-end: 10px;
+        line-height: 1.8;
+    }
+    
+
+    .anilist ul li{
+        padding: 5px 0 7px 0;
+        list-style-type: none;
+        list-style: none;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        border-color: #A9A9B0;
     }
 
-    /* .waifu {
+    .total {
         display: block;
-        background-image: url("https://i.ibb.co/MPSVc2Q/Katou-Megumi.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        margin: 40px auto;
-    } */
+        margin-top: 20px;
+        text-align: center;
+        color: #A9A9B0;
+        font-size: 20px;
+    }
     
     /* BTT */
     .btt {
@@ -145,42 +134,30 @@
     ::-webkit-scrollbar-thumb:hover {
         background: #fff;
     }
-
 </style>
 <body>
     <!-- TITLE -->
     <header>
-        <div class="container">
-            <div class="title">
-                ANIME WATCHED
-            </div>
-            <div>
-                <button class="menu"><i class="fas fa-bars"></i></button>
-            </div>
+        <div class="title">
+            Anime List
         </div>
     </header>
 
-    <!-- NAV -->
     <section>
-        <div class="container">
-            <div class="navbar">
-                <li><a href="theAnimeList.html">ANIME</a></li>
-                <li><a href="#">MANGA</a></li>
-            </div>
-        </div>
+        <div class="block"></div>
     </section>
 
     <!-- UPDATE -->
-    <section class="container">
+    <section>
         <div class="update">
             <p>Updated: December 11, 2020</p>
         </div>
     </section>
 
     <!-- ANILIST -->
-    <section class="container">
+    <section>
         <div class="anilist">
-            <ol>
+            <ul>
                 <li>3D Kanojo: Real Girl</li>
                 <li>5 Centimeters per Second (M)</li>
                 <li>Absolute Duo</li>
@@ -208,37 +185,37 @@
                 <li>Boku wa Tomodachi ga Sukunai/ Next</li>
                 <li>Bokura wa Minna Kawaisou</li>
                 <li>Btooom!</li>
+                <li>C - The Money of Soul & Possibility Ctrl.</li>
                 <li>Campione!</li>
                 <li>Castle in the Sky (M)</li>
-                <li>Citrus</li>
                 <li>Charlotte</li>
                 <li>Chuunibyou Demo Koi ga Shitai!/ Ren</li>
+                <li>Citrus</li>
                 <li>Clannad/ After Story</li>
                 <li>Code Geass: Hangyaku no Lelouch/ R2</li>
-                <li>C - The Money of Soul & Possibility Ctrl.</li>
                 <li>Dakara Boku ha H ga Dekinai</li>
                 <li>Danganronpa</li>
+                <li>Danshi Koukousei no Nichojou</li>
                 <li>Darling in the Franxx</li>
                 <li>Date a live/ 2</li>
-                <li>Danshi Koukousei no Nichojou</li>
+                <li>Death March Kara Hajimaru Isekai</li>
                 <li>Death Note</li>
                 <li>Death Parade</li>
-                <li>Death March Kara Hajimaru Isekai</li>
                 <li>Demon Slayer</li>
                 <li>Denpa Onna to Seishun Otoko</li>
                 <li>Devil Survovor 2 the Animation</li>
+                <li>Dororo 2019</li>
                 <li>Dragon Ball/ Z</li>
                 <li>Dragon Crisis</li>
-                <li>Dororo 2019</li>
                 <li>Durarara!!/ Shuo x2/ ten</li>
                 <li>Eden of the East</li>
                 <li>Ero Manga Sensei</li>
-                <li>Fate Stay Night</li>
-                <li>FSN - Unlimited Blade Works</li>
                 <li>FSN - Heaven’s Feel I (M)</li>
+                <li>FSN - Unlimited Blade Works</li>
+                <li>Fate Stay Night</li>
                 <li>Freezing/ Vibration</li>
-                <li>Gangsta</li>
                 <li>GATE</li>
+                <li>Gangsta</li>
                 <li>Girls und Panzer</li>
                 <li>Goblin Slayer</li>
                 <li>Goblin Slayer: Goblin’s Crown (M)</li>
@@ -257,8 +234,8 @@
                 <li>Hitsugi no Chaika/ Avenging Battle</li>
                 <li>Hoshizore he Kakaru Hashi</li>
                 <li>Hyouka</li>
-                <li>Inu x Boku SS</li>
                 <li>IS: Infinite Stratos/ 2</li>
+                <li>Inu x Boku SS</li>
                 <li>Isekai Maou to Shoukan Shoujo no Dorei Majutsu</li>
                 <li>Istuka Tenma no Kurousagi</li>
                 <li>Ixion Saga DT</li>
@@ -267,10 +244,10 @@
                 <li>Kaichou wa Maid Sama</li>
                 <li>Kamisama no Inai Nichiyoubi</li>
                 <li>Kaze no Stigma</li>
-                <li>Kimikiss Pure Rogue</li>
                 <li>(2) Kimi ni Todoke/ II</li>
-                <li>Kimi no na (M)</li>
                 <li>Kimi no Suizou wo Tabetai (M)</li>
+                <li>Kimi no na (M)</li>
+                <li>Kimikiss Pure Rogue</li>
                 <li>Kimo no Iru Machi</li>
                 <li>Kiss x Sis</li>
                 <li>(2) Koe no Katachi (M)</li>
@@ -278,31 +255,31 @@
                 <li>Kore wa Zombie desuka?/ of the Dead</li>
                 <li>Kyoukai no Kanata</li>
                 <li>Ladies x Butlers!</li>
+                <li>MSG: Iron-Blooded Orphans/ 2</li>
+                <li>MSG: Seed/ Destiny</li>
+                <li>MSG: Unicorn Re:0096</li>
                 <li>Machine-doll wa Kizutsukanai</li>
                 <li>Madan no Ou to Vanadis</li>
                 <li>Mahou Sensou</li>
                 <li>Mahoutsukai no Yome</li>
                 <li>Maiden Dusk of Amnesia</li>
                 <li>Maji de watashi ni Koi shinasai</li>
-                <li>Maoyuu Mao Yuusha</li>
                 <li>Maou Gakuin no Futtekigosha</li>
+                <li>Maoyuu Mao Yuusha</li>
                 <li>Masamune-kun no Revenge</li>
                 <li>Mashiro Iro Symphony</li>
                 <li>Mayo Chiki!</li>
                 <li>Megalo Box</li>
-                <li>Monogatari Series</li>
-                <li>MSG: Seed/ Destiny</li>
-                <li>MSG: Iron-Blooded Orphans/ 2</li>
-                <li>MSG: Unicorn Re:0096</li>
                 <li>Mirai Nikki/ Redial</li>
+                <li>Monogatari Series</li>
                 <li>Myself; Yourself</li>
                 <li>Nakitai Watashi wa Neko wo Kaburu (M)</li>
-                <li>Naruto/ Shippuden</li>
                 <li>Naruto Shippuden: Blood Prison (M)</li>
                 <li>Naruto Shippuden: Bonds (M)</li>
                 <li>Naruto Shippuden: Road to Ninja (M)</li>
                 <li>Naruto Shippuden: The Lost Tower (M)</li>
                 <li>Naruto Shippuden: Will of Fire (M)</li>
+                <li>Naruto/ Shippuden</li>
                 <li>Nerawareta Gakuen (M)</li>
                 <li>Nisekoi/ 2</li>
                 <li>No Game No Life</li>
@@ -326,16 +303,19 @@
                 <li>Rescue Me!</li>
                 <li>Robotics; Note</li>
                 <li>Rokko no Yuusha</li>
+                <li>SAO: Alternative GGO</li>
+                <li>(2) SAO: Extra Edition (M)</li>
+                <li>SAO: Ordinal Scale (M)</li>
                 <li>Saenai Hiroin no Sodatekata / ♭</li>
                 <li>Saenai Hiroin no Sodatekata Fine (M)</li>
                 <li>Saikin, Imouto no Yousu Gaokashin Daga</li>
-                <li>Sakura-sou no Pet na Kanojo</li>
                 <li>Sakura Trick</li>
+                <li>Sakura-sou no Pet na Kanojo</li>
                 <li>School Days</li>
                 <li>Seikoku no Dragonar</li>
                 <li>Seikon no Blacksmith</li>
-                <li>Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai</li>
                 <li>Seinshun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai (M)</li>
+                <li>Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai</li>
                 <li>Sekai Seifuku: Bouryaku no Zvezda</li>
                 <li>Sekirei/ Pure Engagement</li>
                 <li>Shakugan no Shana/ II/ III</li>
@@ -347,16 +327,13 @@
                 <li>Summer Wars (M)</li>
                 <li>(2) Susei no Gargantia/ OVA</li>
                 <li>Sword Art Online I/ II/ III</li>
-                <li>SAO: Alternative GGO</li>
-                <li>(2) SAO: Extra Edition (M)</li>
-                <li>SAO: Ordinal Scale (M)</li>
                 <li>Tada-kun wa Koi wo Shinai</li>
                 <li>Tales of Zestria the X/ 2nd Season</li>
-                <li>Tensei Shitara Slime Datta Ken</li>
                 <li>Tate no Yuusha no Nariagari</li>
                 <li>Teacher Please</li>
+                <li>Tensei Shitara Slime Datta Ken</li>
+                <li>Terra Formars/ Revenge</li>
                 <li>Terror in Tokyo</li>
-                <li>Terra Formars/Revenge</li>
                 <li>The Girl who Leapt Through Time (M)</li>
                 <li>The Irregular at Magical High School</li>
                 <li>Toaru Hikuushi no Koiuta</li>
@@ -364,17 +341,17 @@
                 <li>Tokyo Ghoul/ √A</li>
                 <li>Tokyo Magnitude 8.0</li>
                 <li>Tokyo Ravens</li>
-                <li>(2) Tonari no Kaibutsu-kun/ OVA</li>
+                <li>Tonari no Kaibutsu-kun/ OVA</li>
                 <li>Tonari no Seki-kun</li>
                 <li>(2) ToraDora!</li>
                 <li>Trinity Seven</li>
                 <li>True Tears</li>
                 <li>Tsuki ga Kirei</li>
                 <li>Tsurezure Children</li>
-                <li>Violet Evergarden/ OVA</li>
                 <li>VE: Eternity and the Auto Memory Doll (M)</li>
-                <li>Witch Craft Works</li>
+                <li>Violet Evergarden/ OVA</li>
                 <li>Weathering with You (M)</li>
+                <li>Witch Craft Works</li>
                 <li>Wotaku ni Koi wa Muzukashii</li>
                 <li>Yahari Ore no Seishun Rabukome wa macchigatteiru/ Zoku/ Kan</li>
                 <li>Yamada and the Seven Witches</li>
@@ -384,12 +361,13 @@
                 <li>Yuushaibu</li>
                 <li>(2) Zero no Tsukaima/ II/ III/ IV</li>
                 <li>Zetsuen no Tempest</li>
-            </ol>
+            </ul>
         </div>
     </section>
 
-    <!-- WAIFU -->
-    <div class="waifu"></div>
+    <section>
+        <div class="total"></div>
+    </section>
     
     <!-- BTT -->
     <section class="btt">
@@ -397,6 +375,15 @@
     </section>
 
     <!-- JS -->
-    <script src="../chapter12/ch12-03/script.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
+
+    <script>
+        // total 
+        $(".total").append(`${$(".anilist li").length} Anime`);
+    </script>
 </body>
 </html>

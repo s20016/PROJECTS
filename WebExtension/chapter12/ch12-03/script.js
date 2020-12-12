@@ -9,10 +9,3 @@ if(e&&1===a.nodeType)while(c=e[d++])a.removeAttribute(c)}}),hb={set:function(a,b
 		$('.navbar').slideToggle()
 	})
 })(jQuery);
-
-// theAnimeList.html
-(function($){
-	$('.menu').on('click', function(){
-		$('.navbar').slideToggle()
-	})
-})(jQuery);
