@@ -32,9 +32,10 @@ finalMainList = []
 for i in mainList:
     if "(M)" in i:
         newI = i.replace("(M)", "").strip()
-        finalMainList.append(f"<dt>{newI}</dt>")
+        finalMainList.append(f'<li class="M">{newI}</li>')
+        movieList.append(newI)
     else:
-        finalMainList.append(f"<dd>{i}</dd>")
+        finalMainList.append(f"<li>{i}</li>")
 
 
 # print(mainList)
