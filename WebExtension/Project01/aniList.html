@@ -5,153 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AniList</title>
 
+    <!-- normalize.css -->
+    <link rel="stylesheet" href="../chapter12/ch12-03/normalize.css">
+    <link rel="stylesheet" href="style.css">
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 
-    <!-- Fontawesome icon -->
+    <!-- Icon -->
     <script src="https://kit.fontawesome.com/837bd79ab0.js" crossorigin="anonymous"></script>
 
 </head>
-<style>
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        max-width: 800px;
-        background-color: #101010;
-        margin: auto;
-        font-family: -apple-system, BlinkMacSystemFont, 
-            Montserrat, Roboto, Oxygen, Ubuntu, Cantarell,
-            'Open Sans', 'Helvetica Neue', sans-serif;
-        color: #fff;
-    }
-
-    header {
-        padding: 30px 16px 60px;
-        margin: 0;
-        z-index: 4;
-    }
-
-    .title {
-        font-weight: 600;
-        float: left;
-        font-size: 30px;
-        padding: 0 0 0 16px;
-
-    }
-
-    .block {
-        display: none;
-        margin: auto;
-        position: fixed;
-        left: 0;
-        right: 0;
-        margin-top: 0;
-        padding: 70px 30px 0;
-        background-color: #101010;
-        opacity: 0.1;
-    }
-
-    .update {
-        text-transform: uppercase;
-        font-size: 12px;
-        padding: 0px 30px 0;
-        color:  #A9A9B0;
-        z-index: 1;
-    }
-
-    .anilist {
-        font-size: 15px;
-        font-variant-numeric: tabular-nums;
-        unicode-bidi: isolate;
-        text-indent: 0px;
-        text-align: start;
-        text-align-last: start;
-    }
-
-    .anilist ul {
-        padding-inline-start: 30px;
-        padding-inline-end: 10px;
-        line-height: 1.8;
-    }
-    
-
-    .anilist li {
-        margin-left: 0;
-        padding: 5px 0 7px 0;
-        list-style-type: none;
-        list-style: none;
-        border-style: solid;
-        border-width: 0 0 1px 0;
-        border-color: #222223;
-    }
-
-    ul .M {
-        padding: 5px 0 7px 0;
-        list-style-type: none;
-        list-style: none;
-        border-style: solid;
-        border-width: 0 0 1px 0;
-        border-color: #222223;
-
-        list-style-type: "M  ";
-    }
-
-    ul .M::marker {
-        font-weight: 700;
-        color: #0584FF;
-        font-size: 14px;
-    }
-
-    .total {
-        display: block;
-        margin-top: 20px;
-        text-align: center;
-        color: #A9A9B0;
-        font-size: 20px;
-    }
-    
-    /* BTT */
-    .btt {
-        width: 100%;
-        text-align: center;
-        margin: 70px auto;
-    }
-    .gotopbtn {
-        color: #888;
-        position: relative;
-        font-size: 20px;
-    }
-
-    .gotopbtn:hover {
-        color: #fff;
-    }
-
-    /* SCROLL BAR */
-    /* width */
-    ::-webkit-scrollbar {
-        width: 9px;
-    }
-
-    /* Track */
-    ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        background: transparent;
-    }
-
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        background: #888;
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: #fff;
-    }
-</style>
 <body>
     <!-- TITLE -->
     <header>
@@ -160,14 +26,16 @@
         </div>
     </header>
 
-    <section>
-        <div class="block"></div>
-    </section>
-
     <!-- UPDATE -->
     <section>
         <div class="update">
             <p>Updated: December 11, 2020</p>
+        </div>
+        <div class="legend">
+            <ul>
+                <li class="legend1">Movie</li>
+                <li class="legend2">Watch Count</li>
+            </ul>
         </div>
     </section>
 
@@ -182,7 +50,7 @@
                 <li>Akame ga Kill</li>
                 <li>Akane-Iro no Somaru Saka</li>
                 <li>Akuma no Riddle</li>
-                <li>(2) Aldnoah.Zero/ II</li>
+                <li>Aldnoah.Zero/ II<span class="R">2</span></li>
                 <li>Amagami SS/ + Plus</li>
                 <li>Amagi Brilliant Park</li>
                 <li>Anelog</li>
@@ -237,12 +105,12 @@
                 <li>Goblin Slayer</li>
                 <li class="M">Goblin Slayer: Goblin’s Crown</li>
                 <li>God Eater</li>
-                <li class="M">Godzilla: Kaijuu Wakusei  1/2/3</li>
+                <li class="M">Godzilla: Kaijuu Wakusei 1/2/3</li>
                 <li>Golden Time</li>
                 <li>Gosick</li>
                 <li>Grand Blue</li>
                 <li>Grisaia no Kaijitsu/ Rakuen</li>
-                <li>(2) Guilty Crown</li>
+                <li>Guilty Crown<span class="R">2</span></li>
                 <li>Hagure Yuusha no Estetica</li>
                 <li class="M">Hello World</li>
                 <li>Hidan No Aria</li>
@@ -261,14 +129,14 @@
                 <li>Kaichou wa Maid Sama</li>
                 <li>Kamisama no Inai Nichiyoubi</li>
                 <li>Kaze no Stigma</li>
-                <li>(2) Kimi ni Todoke/ II</li>
+                <li>Kimi ni Todoke/ II<span class="R">2</span></li>
                 <li class="M">Kimi no Suizou wo Tabetai</li>
                 <li class="M">Kimi no na</li>
                 <li>Kimikiss Pure Rogue</li>
                 <li>Kimo no Iru Machi</li>
                 <li>Kiss x Sis</li>
-                <li class="M">(2) Koe no Katachi</li>
-                <li>(2) Kokoro Connect</li>
+                <li class="M">Koe no Katachi<span class="R">2</span></li>
+                <li>Kokoro Connect<span class="R">2</span></li>
                 <li>Kore wa Zombie desuka?/ of the Dead</li>
                 <li>Kyoukai no Kanata</li>
                 <li>Ladies x Butlers!</li>
@@ -307,7 +175,7 @@
                 <li>Omamori Himari</li>
                 <li class="M">One Piece: Strong World</li>
                 <li>Oni Dakedo Aisae Areba Kankenai Yone</li>
-                <li>(2) Orange</li>
+                <li>Orange<span class="R">2</span></li>
                 <li class="M">Orange: Mirai</li>
                 <li>Ore Imo/ 2</li>
                 <li>Outbreak Company</li>
@@ -316,7 +184,7 @@
                 <li>Parasite the Maxim</li>
                 <li>Princess Lover!</li>
                 <li>Rakudai Kishi no Cavalry</li>
-                <li>(2) Re:Zero kara Hajimaru Isekai Seikatsu/2</li>
+                <li>Re:Zero kara Hajimaru Isekai Seikatsu/2<span class="R">2</span></li>
                 <li>Rescue Me!</li>
                 <li>Robotics; Note</li>
                 <li>Rokko no Yuusha</li>
@@ -339,9 +207,9 @@
                 <li class="M">Steins;Gate Fuka Ryouiki no Deja vu</li>
                 <li>Strike the Blood</li>
                 <li class="M">Summer Wars</li>
-                <li>(2) Susei no Gargantia/ OVA</li>
+                <li>Susei no Gargantia/ OVA<span class="R">2</span></li>
                 <li>SAO: Alternative GGO</li>
-                <li class="M">(2) SAO: Extra Edition</li>
+                <li class="M">SAO: Extra Edition<span class="R">2</span></li>
                 <li class="M">SAO: Ordinal Scale</li>
                 <li>Sword Art Online I/ II/ III</li>
                 <li>Tada-kun wa Koi wo Shinai</li>
@@ -358,9 +226,9 @@
                 <li>Tokyo Ghoul/ √A</li>
                 <li>Tokyo Magnitude 8.0</li>
                 <li>Tokyo Ravens</li>
-                <li>(2) Tonari no Kaibutsu-kun/ OVA</li>
+                <li>Tonari no Kaibutsu-kun/ OVA<span class="R">2</span></li>
                 <li>Tonari no Seki-kun</li>
-                <li>(2) ToraDora!</li>
+                <li>ToraDora!<span class="R">2</span></li>
                 <li>Trinity Seven</li>
                 <li>True Tears</li>
                 <li>Tsuki ga Kirei</li>
@@ -376,14 +244,24 @@
                 <li>Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</li>
                 <li>Your Lie in April</li>
                 <li>Yuushaibu</li>
-                <li>(2) Zero no Tsukaima/ II/ III/ IV</li>
+                <li>Zero no Tsukaima/ II/ III/ IV<span class="R">2</span></li>
                 <li>Zetsuen no Tempest</li>
             </ul>
         </div>
+        <div style="clear: both;"></div>
     </section>
 
     <section>
-        <div class="total"></div>
+        <div class="total">
+            <button class="total2" id="toggleMenu"></button>
+        </div>
+        <div class="total">
+            <ul class="totalMenu">
+                <li class="totalM">Movies</li>
+                <li class="totalR">Rewatch</li>
+            </ul>
+        </div>
+        <!-- <div class="block"></div> -->
     </section>
     
     <!-- BTT -->
@@ -400,7 +278,21 @@
 
     <script>
         // total 
-        $(".total").append(`${$(".anilist li").length} Anime`);
+        $(".total2").append(`${$(".anilist li").length} Anime`);
+        $(".totalM").prepend(`${$(".M").length} `);
+        $(".totalR").prepend(`${$(".R").length} `);
+
+        // totalMenu
+        (function($){
+        $('#toggleMenu').on('click', function(){
+                $('.totalMenu').slideToggle()
+            })
+        })(jQuery);
+
+        // show btt if scroll stop
+        $(document).scroll(function() {
+            $('.btt').stop(true, true).hide().fadeIn(1000);
+        });
     </script>
 </body>
 </html>
