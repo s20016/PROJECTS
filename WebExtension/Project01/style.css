@@ -55,18 +55,18 @@ header {
 }
 
 .legend .legend1::marker {
-    color: #0A84FF;
+    color: #70D7FF;
 }
 
 .legend .legend2::marker {
-    color: #FF453A;
+    color: #FF6482;
 }
 
 .anilist {
     float: left;
     font-size: 15px;
-    font-variant-numeric: tabular-nums;
-    unicode-bidi: isolate;
+    /* font-variant-numeric: tabular-nums; */
+    /* unicode-bidi: isolate; */
     text-indent: 0px;
     text-align: start;
     text-align-last: start;
@@ -92,24 +92,32 @@ header {
 
 .anilist ul .M {
     padding: 5px 0 7px 0;
-    list-style-type: none;
-    list-style: none;
     border-style: solid;
     border-width: 0 0 1px 0;
-    list-style-type: "M  ";
+    /* list-style-type: "M  "; */
+    font-size: 14px;
+    color:  #70D7FF;
 }
 
-.anilist ul .M::marker {
+/* .M::before {
+    content: "M ";
+    padding: 5px 0 7px 0;
+    font-weight: 600;
+    color:  #0A84FF;
+    font-size: 15px;
+} */
+
+/* .anilist ul .M::marker {
     padding: 5px 0 7px 0;
     font-weight: 600;
     color:  #0A84FF;
     font-size: 14px;
-}
+} */
 
 .anilist .R {
     float: right;
     padding: 0 7px;
-    color: #FF453A;
+    color: #FF6482;
     font-weight: 600;
     font-size: 14px;
 }
