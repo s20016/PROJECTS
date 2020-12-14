@@ -4,20 +4,21 @@ public class testcode1 {
 
 	public static void main(String[] args) {
 		testcode1 x = new testcode1();
-//		int[] arr = {1, 1, 2, 3, 1};
-		System.out.println(x.stringX("xxHxix"));
-		System.out.println(x.stringX("xabxxxcdx"));
+		int[] arr = {1, 2, 7, 1};
+		System.out.println(x.has271(arr));
 	
-//		stringX("xxHxix") → "xHix"
-//		stringX("abxxxcd") → "abcd"
-//		stringX("xabxxxcdx") → "xabcdx"
+//		has271([1, 2, 7, 1]) → true
+//		has271([1, 2, 8, 1]) → false
+//		has271([2, 7, 1]) → true
     }
 
-	public String stringX(String str) {
-		String ret = "";
-		for (int i = 0; i < str.length(); i++) {
-			if (!(0 < i && i < str.length() - 1 && str.substring(i, i + 1).equals("x"))) {
-				ret += str.substring(i, i + 1);
+	public boolean has271(int[] nums) {
+		boolean ret = false;
+		for (int i = 0; i < nums.length - 2; i++) {
+			if (nums[i + 1] == nums[i] + 5 
+				&& nums[i] - 3 <= nums[i + 2] 
+				&& nums[i + 2] < nums[i] + 2) {
+					return ret = true;
 			}
 		}
 		return ret;

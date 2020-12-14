@@ -611,9 +611,63 @@ public class PG3_Sem4_2 {
         return ret;
     }
 
-    // CodingBat Warmup2 - 
-    // CodingBat Warmup2 - 
-    // CodingBat Warmup2 - 
-    // CodingBat Warmup2 - 
-    // CodingBat Warmup2 - 
+    // CodingBat Warmup2 - altPairs
+	public String altPairs(String str) {
+		String ret = "";
+		boolean skip = true;
+		for (int i = 0; i < str.length();) {
+			ret += str.substring(i, i + 1);
+			if (skip) {
+				i += 1;
+				skip = false;
+			} else {
+				i += 3;
+				skip = true;
+			}
+		}
+		return ret;
+	}
+
+    // CodingBat Warmup2 - stringYak
+	public String stringYak(String str) {
+		String ret = str.replace("yak", "");
+		return ret;
+	}
+
+    // CodingBat Warmup2 - array667
+	public int array667(int[] nums) {
+		int count = 0;
+		for (int i = 0; i < nums.length - 1; i++) {
+			if (nums[i] == 6) {
+				if (nums[i + 1] == 6 || nums[i + 1] == 7) {
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+
+    // CodingBat Warmup2 - noTriples
+	public boolean noTriples(int[] nums) {
+	    boolean ret = true;
+	    for (int i = 0; i < nums.length - 2; i++) {
+		if (nums[i] == nums[i + 1] && nums[i + 1] == nums[i + 2]) {
+			return ret = false;
+			}
+		}
+		return ret;
+	}
+
+    // CodingBat Warmup2 - has271
+	public boolean has271(int[] nums) {
+		boolean ret = false;
+		for (int i = 0; i < nums.length - 2; i++) {
+			if (nums[i + 1] == nums[i] + 5 
+				&& nums[i] - 3 <= nums[i + 2] 
+				&& nums[i + 2] < nums[i] + 2) {
+					return ret = true;
+			}
+		}
+		return ret;
+	}
 }
