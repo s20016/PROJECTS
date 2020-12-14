@@ -1,199 +1,137 @@
 html {
-    scroll-behavior: smooth;
-}
-
-body {
-    max-width: 600px;
-    background-color: #101010;
-    /* background-color: #1C1C1E; */
-    margin: auto;
-    font-family: -apple-system, BlinkMacSystemFont, 
-        Montserrat, Roboto, Oxygen, Ubuntu, Cantarell,
-        'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fff;
+  max-width: 600px;
+  margin: auto;
+  background-color: #101010;
+  scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Montserrat, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 header {
-    padding: 30px 16px 60px;
-    margin: 0;
-    z-index: 4;
+  z-index: 5;
+  color: #ffffff;
+  padding: 30px 32px 34px;
 }
 
-.title {
-    font-weight: 700;
-    float: left;
-    font-size: 34px;
-    padding: 0 0 0 16px;
-
+header .mainHeader {
+  font-size: 34px;
+  font-weight: 700;
 }
 
-.update {
-    text-transform: uppercase;
-    font-size: 12px;
-    padding: 0px 30px 0;
-    color:  #A9A9B0;
-    /* color:  #8D8D93; */
-    z-index: 1;
+.subHeader {
+  z-index: 4;
+  color: #A9A9B0;
+  text-transform: uppercase;
 }
 
-.legend {
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 10px;
-    color:  #A9A9B0;
-    z-index: 1;
+.subHeader .updateDate {
+  margin: 0px;
+  padding: 0 30px;
+  font-size: 12px;
 }
 
-.legend ul li {
-    line-height: 1.4;
-    margin-left: 7px;
-    list-style-type: disc;
+.subHeader .updateDate p {
+  margin: 0 0 12px;
 }
 
-.legend ul li::marker {
-    font-size: 14px;
+.subHeader .legend {
+  font-size: 10px;
 }
 
-.legend .legend1::marker {
-    color: #70D7FF;
+.subHeader .legend li {
+  line-height: 1.4;
+  margin: 0 0 0 7px;
 }
 
-.legend .legend2::marker {
-    color: #FF6482;
+.subHeader .legend li::marker {
+  font-size: 14px;
 }
 
-.anilist {
-    float: left;
-    font-size: 15px;
-    /* font-variant-numeric: tabular-nums; */
-    /* unicode-bidi: isolate; */
-    text-indent: 0px;
-    text-align: start;
-    text-align-last: start;
+.subHeader .legend .legendM::marker {
+  color: #70D7FF;
 }
 
-.anilist ul {
-    padding-inline-start: 30px;
-    padding-inline-end: 10px;
-    line-height: 1.8;
+.subHeader .legend .legendR::marker {
+  color: #FF6482;
 }
 
-
-.anilist li {
-    margin-left: 0;
-    padding: 7px 0 7px 0;
-    list-style-type: none;
-    list-style: none;
-    border-style: solid;
-    border-width: 0 0 1px 0;
-    border-color: #222223;
-    /* border-color: #2A2A2C; */
+.aniList {
+  color: #ffffff;
+  font-size: 15px;
+  text-align-last: start;
 }
 
-.anilist ul .M {
-    padding: 5px 0 7px 0;
-    border-style: solid;
-    border-width: 0 0 1px 0;
-    /* list-style-type: "M  "; */
-    font-size: 14px;
-    color:  #70D7FF;
+.aniList ul {
+  margin: 25px 0 15px 0;
+  -webkit-padding-start: 30px;
+          padding-inline-start: 30px;
+  -webkit-padding-end: 10px;
+          padding-inline-end: 10px;
+  line-height: 1.8;
 }
 
-/* .M::before {
-    content: "M ";
-    padding: 5px 0 7px 0;
-    font-weight: 600;
-    color:  #0A84FF;
-    font-size: 15px;
-} */
-
-/* .anilist ul .M::marker {
-    padding: 5px 0 7px 0;
-    font-weight: 600;
-    color:  #0A84FF;
-    font-size: 14px;
-} */
-
-.anilist .R {
-    float: right;
-    padding: 0 7px;
-    color: #FF6482;
-    font-weight: 600;
-    font-size: 14px;
+.aniList li {
+  padding: 7px 0;
+  list-style-type: none;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: #222223;
 }
 
-.anilist li:last-child {
-    border: none;
+.aniList li:last-child {
+  border: none;
+}
+
+.aniList .M {
+  color: #70D7FF;
+}
+
+.aniList .R {
+  color: #FF6482;
+  float: right;
+  font-weight: 600;
+  padding: 0 7px;
 }
 
 .total {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+  color: #A9A9B0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.total2 {
-    border: none;
-    margin-top: 20px;
-    color: #A9A9B0;
-    font-size: 22px;
-    background-color: transparent;
-    outline: none;
+.total .total2 {
+  color: #A9A9B0;
+  border: none;
+  margin: 20px 0 0 0;
+  font-size: 22px;
+  background-color: transparent;
+  outline: none;
 }
 
-.totalMenu {
-    display: none;
-    font-size: 9px;
-    padding: 0 40px;
-    color: #A9A9B0;
-    justify-content: center;
-    margin: 0;
-    text-transform: uppercase;
+.total .totalMenu {
+  display: none;
+  font-size: 9px;
+  padding: 0 40px;
+  text-transform: uppercase;
 }
 
-.totalMenu li {
-    display: inline-block;
-    list-style-type: none;
-    list-style: none;
-    margin: 5px 4px;
+.total .totalMenu li {
+  display: inline;
+  list-style: none;
+  margin: 5px 4px;
 }
 
-/* BTT */
 .btt {
-    right: 0;
-    left: 0;
-    margin: 40px auto 50px;
-    width: 100%;
-    text-align: center;
-}
-.gotopbtn {
-    color: #A9A9B0;
-    position: relative;
-    font-size: 20px;
+  text-align: center;
+  margin: 40px auto 50px;
 }
 
-.gotopbtn:hover {
-    color: #fff;
+.btt .gotopbtn {
+  color: #A9A9B0;
+  font-size: 20px;
 }
-
-/* SCROLL BAR */
-/* width */
-::-webkit-scrollbar {
-    width: 9px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #fff;
-}
+/*# sourceMappingURL=style.css.map */
