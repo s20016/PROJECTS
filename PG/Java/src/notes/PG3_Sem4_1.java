@@ -31,6 +31,9 @@ public class PG3_Sem4_1 {
 	 * 		properIfStatement();
 	 * 		switchStatement();
 	 * 		continueStatement();
+	 * 
+	 * Lesson 7 (12-15-2020) 
+	 * 		
 	 */
 	
 	static void forLoop() {
@@ -227,4 +230,8 @@ public class PG3_Sem4_1 {
 		// 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10		// no ", " at the end
 		}
 	}
+	
+	
+	
+	
 }

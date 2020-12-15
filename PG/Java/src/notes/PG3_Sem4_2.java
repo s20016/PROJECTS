@@ -382,7 +382,9 @@ public class PG3_Sem4_2 {
     // CodingBat String1 - lastTwo 
     public String lastTwo(String str) {
         if (str.length() > 2) {
-            return str.substring(0, str.length() - 2) + str.substring(str.length() - 1) + str.substring(str.length() - 2, str.length() - 1);
+            return str.substring(0, str.length() - 2) 
+            		+ str.substring(str.length() - 1) 
+            		+ str.substring(str.length() - 2, str.length() - 1);
         } else if (str.length() == 2) {
             return str.substring(str.length() - 1) + str.substring(str.length() - 2, str.length() - 1);
         }
@@ -402,7 +404,9 @@ public class PG3_Sem4_2 {
 
     // CodingBat String1 - minCat 
     public String minCat(String a, String b) {
-        return (a.length() > b.length()) ? a.substring(a.length() - b.length()) + b : a + b.substring(b.length() - a.length());
+        return (a.length() > b.length()) 
+        		? a.substring(a.length() - b.length()) + b 
+        		: a + b.substring(b.length() - a.length());
     }
 
     // CodingBat String1 - extraFront 
