@@ -74,7 +74,16 @@ function intWithString() {
     e1.forEach(value => console.log(value));
 }
  
-//TODO call function
-// interactionTest();
-// typeConversion();
-intWithString();
+// Review 12-15-2020
+let fruits = ["apple", "banana", "orange", "grape", "mango"]
+
+function arrayReview() {
+    // fruits.shift()               // Removes first index ("apple") from list
+    // fruits.unshift("kiwi")       // Prepends "kiwi" to list
+    fruits.slice(1)
+    console.log(
+        fruits.slice(1)
+    )
+}
+
+arrayReview()
