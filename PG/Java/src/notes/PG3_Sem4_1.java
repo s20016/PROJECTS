@@ -6,7 +6,7 @@ public class PG3_Sem4_1 {
 
 	public static void main(String[] args) {
 	
-		continueStatement();
+		queueTest1();
 	}
 
 	/*
@@ -32,8 +32,10 @@ public class PG3_Sem4_1 {
 	 * 		switchStatement();
 	 * 		continueStatement();
 	 * 
-	 * Lesson 7 (12-15-2020) 
-	 * 		
+	 * Lesson 8 (12-16-2020) 
+	 * 		arrayList();
+	 * 		queueTest1();
+	 * 
 	 */
 	
 	static void forLoop() {
@@ -231,7 +233,42 @@ public class PG3_Sem4_1 {
 		}
 	}
 	
+	static void arrayList() {
+		// int[] arrayName;			// declare array
+		// int arrayName[];			// declare array (Not recommended)
+		
+//		int[] array = new int[3];	// declaring array with length of 3	
+		
+//		array[0] = 10;				// initializing value
+//		array[1] = 20;
+//		array[2] = 30;
+		
+		int[] array = {10, 20, 30};	// initializing value 
+		
+//		for (int i = 0; i < array.length; i++) {	// standard for loop (Method 1)
+//			int val = array[i];
+//			System.out.println(val);
+//		}
+		
+		for (int val : array) {						// enhanced for loop (Method 2)
+			System.out.println(val);
+		}
+	}
 	
+	static void queueTest1() {
+		System.out.println("A");
+		queueTest2();
+		System.out.println("E");
+	}
 	
+	static void queueTest2() {
+		System.out.println("B");
+		queueTest3();
+		System.out.println("D");
+	}
+	
+	static void queueTest3() {
+		System.out.println("C");
+	}
 	
 }

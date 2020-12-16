@@ -86,4 +86,12 @@ function arrayReview() {
     )
 }
 
-arrayReview()
+const array = [1, 2, 3, 4, 5]
+
+function sortByLength(array) {
+    const i = array.filter(v => v % 2 === 0)
+    const x = array.concat(v => v in i)
+    console.log(x)
+}
+
+sortByLength(array)
