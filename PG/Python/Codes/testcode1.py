@@ -1,18 +1,17 @@
 import sys
 
-sys.stdin = open("/home/czekras/PROJECTS/PG/Python/Codes/input.txt", "r")
-sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
+# sys.stdin = open("/home/czekras/PROJECTS/PG/Python/Codes/input.txt", "r")
+# sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 
 # TEST CODE 1
 # =========================================================================
 
-# 6 59
-# 8 50
-# 0 30
+n = int(input())
+print(round(180 * (n - 2) / n))
 
-a, b = map(int, input().split())
-print(((a * 1000) / b) * b)
-print("yes" if ((a * 1000) / b) * b >= 10000 else "no")
+# a, b = map(int, input().split())
+# print(((a * 1000) / b) * b)
+# print("yes" if ((a * 1000) / b) * b >= 10000 else "no")
 
 # x = input().split()
 # l = {i: x.count(i) for i in x}
