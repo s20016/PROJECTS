@@ -6,33 +6,13 @@ sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 # TEST CODE 2
 # =========================================================================
 
-# n = int(input())
-# x = [input() for _ in range(n)]
-# l = []
-# for i in x:
-#     if i not in l:
-#         l.append(i)
-#     else:
-#         l.remove(i)
-#         l.append(i)
+list = [*range(2, int(input()) + 1)]
 
-# l.reverse()
-# print("\n".join(l))
+for x in [2, 3, 4, 5, 7]:
+    for y in list:
+        if x == y:
+            continue
+        elif y % x == 0:
+            list.remove(y)
 
-x = input()
-l = [input() for _ in range(int(input()))]
-w = []
-
-for i in l:
-    if x == i:
-        w.append("first")
-    elif str(int(x) + 1) == i or str(int(x) - 1) == i:
-        w.append("adjacent")
-    elif x[-4:] == i[-4:]:
-        w.append("second")
-    elif x[-3:] == i[-3:]:
-        w.append("third")
-    else:
-        w.append("blank")
-
-print("\n".join(i for i in w))
+print(list)

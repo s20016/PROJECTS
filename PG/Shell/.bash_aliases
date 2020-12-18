@@ -62,6 +62,18 @@ javarun() {
    echo
 }
 
+# JavaScript Functions *******************************************************************************
+
+jscode() {
+    nvim -S ~/.config/nvim/session/JsSession.vim
+}
+
+jsrun() {
+   cat ~/PROJECTS/PG/JavaScript/Codes/input.txt | node ~/PROJECTS/PG/JavaScript/Codes/testcode$1.java \
+       > ~/PROJECTS/PG/JavaScript/Codes/output.txt
+   cat ~/PROJECTS/PG/JavaScript/Codes/output.txt 
+   echo
+}
 # Nvim Functions *******************************************************************************
 
 # Function to be used ONLY by GL504GM
