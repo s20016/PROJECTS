@@ -52,7 +52,9 @@ for i in mainList:
         if i[:4] == "(2) ":
             newI2 = newI.replace("(2)", "").strip()
             movieList.append(newI2)
-            finalMainList.append(f'<li>{newI2}<span class="M">&#9679;</span><span class="R">&#9679;&#9679;</span></li>')
+            finalMainList.append(
+                f'<li>{newI2}<span class="M">&#9679;</span><span class="R">&#9679;&#9679;</span></li>'
+            )
             continue
         finalMainList.append(f'<li>{newI}<span class="M">&#9679;</span></li>')
         movieList.append(newI)
@@ -73,7 +75,7 @@ for i in mainList:
 # for i in mainListSort:
 #     if i in movieList:
 #         finalMainList.append(f"<dt>{i}</dt>")
-#     else: 
+#     else:
 #         finalMainList.append(f"<dd>{i}</dd>")
 
 # print(len(rewatchList))     # 12 Rewatch

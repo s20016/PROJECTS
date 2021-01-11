@@ -69,7 +69,7 @@ jscode() {
 }
 
 jsrun() {
-   cat ~/PROJECTS/PG/JavaScript/Codes/input.txt | node ~/PROJECTS/PG/JavaScript/Codes/testcode$1.java \
+   cat ~/PROJECTS/PG/JavaScript/Codes/input.txt | node ~/PROJECTS/PG/JavaScript/Codes/testcode$1.js \
        > ~/PROJECTS/PG/JavaScript/Codes/output.txt
    cat ~/PROJECTS/PG/JavaScript/Codes/output.txt 
    echo
