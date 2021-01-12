@@ -5,8 +5,27 @@ import java.util.Scanner;		// usingScanner();
 public class PG3_Sem4_1 {
 
 	public static void main(String[] args) {
-	
-		queueTest1();
+		
+		// Test method here:
+		getSetMethod();
+		
+		// Lesson 9 (01-12-2021) OOP
+//		class Robot {
+//			String name;
+//			public void sayHello() {
+//				System.out.println("Hi, I'm " + name);
+//			}
+//		}
+//		
+//		Robot robotA = new Robot();
+//		robotA.name = "Java Robot A";
+//		
+//		Robot robotB = new Robot();
+//		robotB.name = "Java Robot B";
+//		
+//		robotA.sayHello();
+//		robotB.sayHello();
+		
 	}
 
 	/*
@@ -36,6 +55,9 @@ public class PG3_Sem4_1 {
 	 * 		arrayList();
 	 * 		queueTest1();
 	 * 
+	 * Lesson 9 (01-12-2021)
+	 * 		4 Pillars of OOP
+	 * 			lesson9();
 	 */
 	
 	static void forLoop() {
@@ -271,4 +293,46 @@ public class PG3_Sem4_1 {
 		System.out.println("C");
 	}
 	
+	static void lesson9() {
+		/**
+		 * 4 Pillars of Object Oriented Programming (OOP)
+		 * 		ABSTRACTION		- Hiding of Info. Show only Essentials
+		 * 						- Isolate impact of changes
+		 * 		POLYMORPHISM	- Redefining switch/case statements 
+		 * 		INHERITANCE		- Sharing of Info. Eliminate redundant code
+		 * 		ENCAPSULATION	- Group related variable and function
+		 * 						- Manipulation of data and functions
+		 * 
+		 * Get Method & Set Method
+		 * 		get method (getVARNAME) - returns value of variable
+		 * 		set method (setVARNAME) - takes parameter then assign to variable	
+		 * 		
+		 * this Keyword in Java
+		 * 		- refer instance variable of current class
+		 */
+	}
+	
+	static void getSetMethod() {
+		class Robot {
+			private String name;
+			
+			public void sayHello() {
+				System.out.println();
+			}
+			
+			public void setName(String name) {
+				this.name = name;
+			}
+			
+			public String getName() {
+				return name;
+			}
+		}
+		
+		Robot robot = new Robot();
+		robot.setName("Java Robot");
+		
+		robot.sayHello();
+	}
+
 }
