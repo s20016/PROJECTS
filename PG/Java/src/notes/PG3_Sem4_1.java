@@ -7,24 +7,8 @@ public class PG3_Sem4_1 {
 	public static void main(String[] args) {
 		
 		// Test method here:
-		getSetMethod();
-		
-		// Lesson 9 (01-12-2021) OOP
-//		class Robot {
-//			String name;
-//			public void sayHello() {
-//				System.out.println("Hi, I'm " + name);
-//			}
-//		}
-//		
-//		Robot robotA = new Robot();
-//		robotA.name = "Java Robot A";
-//		
-//		Robot robotB = new Robot();
-//		robotB.name = "Java Robot B";
-//		
-//		robotA.sayHello();
-//		robotB.sayHello();
+		constructorSample1();
+		constructorSample2();
 		
 	}
 
@@ -56,10 +40,18 @@ public class PG3_Sem4_1 {
 	 * 		queueTest1();
 	 * 
 	 * Lesson 9 (01-12-2021)
-	 * 		4 Pillars of OOP
-	 * 			lesson9();
+	 * 		getSetMethod();
+	 * 
+	 * Lesson 10 (01-13-2021)
+	 * 		getSetMethod2();
+	 * 		heapSample();
+	 * 		constructorSample1();
+	 * 		constructorSample2();
+	 * 		
 	 */
 	
+	
+	/**	Lesson 4 (12-08-2020) **/
 	static void forLoop() {
 		
 		// for (initialization; termination; increment) {
@@ -118,6 +110,8 @@ public class PG3_Sem4_1 {
 		}
 	}
 	
+	
+	/** Lesson 5 (12-09-2020) **/
 	static void finalVar() {
 		final int finalVar;
 		finalVar = 10;		// Assigns the final value
@@ -172,6 +166,8 @@ public class PG3_Sem4_1 {
 		System.out.println(a + b + "円");	// 30円 - Adds a, b
 	}
 	
+	
+	/** Lesson 6 (12-10-2020) **/
 	static void usingScanner2() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter a num: ");
@@ -255,6 +251,8 @@ public class PG3_Sem4_1 {
 		}
 	}
 	
+	
+	/** Lesson 8 (12-16-2020) **/
 	static void arrayList() {
 		// int[] arrayName;			// declare array
 		// int arrayName[];			// declare array (Not recommended)
@@ -272,7 +270,7 @@ public class PG3_Sem4_1 {
 //			System.out.println(val);
 //		}
 		
-		for (int val : array) {						// enhanced for loop (Method 2)
+		for (int val : array) {		// enhanced for loop (Method 2)
 			System.out.println(val);
 		}
 	}
@@ -293,46 +291,165 @@ public class PG3_Sem4_1 {
 		System.out.println("C");
 	}
 	
-	static void lesson9() {
-		/**
-		 * 4 Pillars of Object Oriented Programming (OOP)
-		 * 		ABSTRACTION		- Hiding of Info. Show only Essentials
-		 * 						- Isolate impact of changes
-		 * 		POLYMORPHISM	- Redefining switch/case statements 
-		 * 		INHERITANCE		- Sharing of Info. Eliminate redundant code
-		 * 		ENCAPSULATION	- Group related variable and function
-		 * 						- Manipulation of data and functions
-		 * 
-		 * Get Method & Set Method
-		 * 		get method (getVARNAME) - returns value of variable
-		 * 		set method (setVARNAME) - takes parameter then assign to variable	
-		 * 		
-		 * this Keyword in Java
-		 * 		- refer instance variable of current class
-		 */
-	}
+	
+	/** Lesson 9 (01-12-2021) **/
+	
+	/**
+	 * 4 Pillars of Object Oriented Programming (OOP)
+	 * 		ABSTRACTION		- Hiding of Info. Show only Essentials
+	 * 						- Isolate impact of changes
+	 * 		POLYMORPHISM	- Redefining switch/case statements 
+	 * 		INHERITANCE		- Sharing of Info. Eliminate redundant code
+	 * 		ENCAPSULATION	- Group related variable and function
+	 * 						- Manipulation of data and functions
+	 * 
+	 * Get Method & Set Method
+	 * 		get method (getVARNAME) - returns value of variable
+	 * 		set method (setVARNAME) - takes parameter then assign to variable	
+	 * 		
+	 * this Keyword in Java
+	 * 		- refer instance variable of current class
+	 */
 	
 	static void getSetMethod() {
 		class Robot {
-			private String name;
-			
+			String name;
 			public void sayHello() {
-				System.out.println();
+				System.out.println("Hi, I'm " + name);
 			}
-			
-			public void setName(String name) {
-				this.name = name;
+		}
+		
+		Robot robotA = new Robot();
+		robotA.name = "Java Robot A";
+		
+		Robot robotB = new Robot();
+		robotB.name = "Java Robot B";
+		
+		robotA.sayHello();
+		robotB.sayHello();
+	}
+
+	/** Lesson 10 (01-13-2021) **/
+	
+	/**
+	 * Garbage Collection (GC) - Process of destroying UNREFERENCED OBJESTCS in the HEAP
+	 * 						   - Follows FIFO (First in, First out) algorithm
+	 * 						   - Performed automatically
+	 * 						   - If HEAP is full, GC is performed from Old Space
+	 * 
+	 * Ways in which Objects are Unreferenced:
+	 * 		1. Nulling the reference.
+	 * 			Test a = new Test();
+	 * 			a = null;
+	 * 
+	 * 		2. Assigning a reference to another.
+	 * 			Test a = new Test(); 
+	 * 			Test b = new Test();
+	 * 			a = b;
+	 * 
+	 * 		3. Anonymous object.
+	 * 			new Test();
+	 * 
+	 * Stack	- Linear data structure for LOCAL VARIABLES
+	 * 			- Follows LIFO (Last in, Fist out) algorithm
+	 * 			- Follows three basic operation: PUSH, POP, (TOP), isEmpty
+	 * Heap		- Stores OBJECTS
+	 * 			- Divided into 2 parts: Young Space & Old Space
+	 * 
+	 */
+	
+	static void getSetMethod2() {
+		class LedLight {
+			private int status = 0;
+			public void lightUp() {
+				if (status == 0) {
+					status = 1;
+					System.out.println("Lights on!");
+				}
 			}
-			
+			public void lightDown() {
+				if (status == 1) {
+					status = 0;
+					System.out.println("Lights off!");
+				}
+			}
+		}
+		
+		class Robot {
+			private String name;
+			private LedLight light;
+			public void sayHello() {
+				light.lightUp();
+				System.out.println("Hi I'm " + name);
+				light.lightDown();
+			}
+			public void setLight(LedLight light) {
+				this.light = light;
+			}
 			public String getName() {
 				return name;
+			}
+			public void setName(String name) {
+				this.name = name;
 			}
 		}
 		
 		Robot robot = new Robot();
 		robot.setName("Java Robot");
-		
+		robot.setLight(new LedLight());
 		robot.sayHello();
 	}
-
+	
+	static void heapSample() {
+		class Test {						
+			private String name;					
+			public void sayHello() {					
+				System.out.println("Hi, I'm " + name);				
+			}					
+			public String getName() {					
+				return name;				
+			}					
+			public void setName(String name) {					
+				this.name = name;				
+			}					
+		}						
+				
+		Test a = new Test();						
+		Test b = a;				// Ways of Object is Unreferenced No.2	
+		a.setName("A");						
+		b.setName("B");
+		a.sayHello();
+		b.sayHello();
+		
+		// Output:
+		// Hi, I'm B
+		// Hi, I'm B
+	}
+	
+	static void constructorSample1() {
+		class A {						
+			public A() {					
+				System.out.println("Const1");				
+			}					
+			public void hello() {					
+				System.out.println("Hello Const1");				
+			}					
+		}
+		
+		A a = new A();						
+		a.hello();
+//		a.A();		// Error
+	}
+	
+	static void constructorSample2() {
+		class A {
+			public void hello() {
+				System.out.println("Hello Const2");
+			}
+		}
+		
+		A a = new A();
+		a.hello();
+	}
+	
 }
