@@ -451,5 +451,4 @@ public class PG3_Sem4_1 {
 		A a = new A();
 		a.hello();
 	}
-	
 }
