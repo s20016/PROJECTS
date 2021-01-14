@@ -7,9 +7,7 @@ public class PG3_Sem4_1 {
 	public static void main(String[] args) {
 		
 		// Test method here:
-		constructorSample1();
-		constructorSample2();
-		
+		instanceSample();
 	}
 
 	/*
@@ -47,7 +45,13 @@ public class PG3_Sem4_1 {
 	 * 		heapSample();
 	 * 		constructorSample1();
 	 * 		constructorSample2();
-	 * 		
+	 * 
+	 * Lesson 11 (01-14-2021)
+	 * 		constructorSample3();
+	 * 		overloadSample();
+	 * 		overloadSample2();
+	 * 		instanceSample();
+	 * 
 	 */
 	
 	
@@ -452,4 +456,64 @@ public class PG3_Sem4_1 {
 		a.hello();
 	}
 	
+	
+	/** Lesson 11 (01-14-2021) **/
+	static void constructorSample3() {
+		// Sample code without "Setter" or "Getter"
+		class A {
+			private String name;
+			public A(String name) {
+				this.name = name;
+			}
+			public void hello() {
+				System.out.println("Hello " + name);
+			}
+		}
+		
+		A a = new A("Java");
+		a.hello();
+	}
+	
+	static void overloadSample() {
+		class overload {
+			public void hello() {
+				System.out.println("Hello");
+			}
+			public void hello(String name) {
+				System.out.println("Hello" + name);
+			}
+		}
+		overload sample = new overload();
+		sample.hello("Java1");
+		sample.hello();
+		sample.hello("Java2");
+	}
+	
+	static void overloadSample2() {
+		class overload {
+			public overload() {
+				System.out.println("Default");
+			}
+			public overload(String val) {
+				System.out.println(val);
+			}
+		}
+		new overload();
+		new overload("Hello");
+	}
+	
+	static void instanceSample() {
+		class sample {
+			// The method hello() cannot be declared static
+//			public static void hello() {
+			public void hello() {
+				// do something
+			}
+		}
+		sample[] samples = new sample[3];
+		
+		for (sample sample : samples) {
+			System.out.println(sample);
+		}
+	}
 }
