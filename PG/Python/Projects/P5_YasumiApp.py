@@ -125,7 +125,7 @@ def Correct_response(correct_ans):
 
 # Main
 d5, d = "-" * 5, " " * 12
-print(f"\n{d5} YASUMI DESUKA? APP. v2 {d5}")
+print(f"\n{d5}{d5} Yasumi Desuka? {d5}{d5}")
 print(f"{d} 2019-2021")
 
 user_input = User_answer()

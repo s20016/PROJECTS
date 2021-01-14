@@ -12,7 +12,7 @@ ast25 = "*" * 27
 dash4 = "-" * 3
 spac3 = " " * 6
 # print(f" {ast25}\n *{spac3}HIGH & LOW v2{spac3}*\n {ast25}")
-print(f"\n--{dash4} HIGH & LOW GAME v2 {dash4}--")
+print(f"\n--{dash4}-- HIGH & LOW GAME -{dash4}--")
 
 # Scoreboard
 user_score = 0
