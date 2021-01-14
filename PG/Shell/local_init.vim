@@ -5,22 +5,25 @@ let g:loaded_matchparen=1
 " set tabstop=2
 " set shiftwidth=2
 
-
 autocmd Filetype python setlocal ts=4 sw=4 expandtab
-autocmd Filetype javascript setlocal ts=4 sw=4 expandtab
+autocmd Filetype java setlocal ts=4 sw=4 expandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+
+autocmd Filetype javascriptreact setlocal ts=2 sw=2 expandtab
 
 ""------------------------------------
 " ale_linters
 ""------------------------------------
 
 let g:ale_linters = {
-    \ 'javascript': ['standard'],
     \ 'python': ['flake8'],
+    \ 'javascript': ['standard'],
     \ }
 
 let g:ale_fixers = {
-    \ 'javascript': ['prettier_standard'],
     \ 'python':['autopep8','black','isort'],
+    \ 'javascript': ['prettier_standard'],
+    \ 'javascriptreact': ['prettier_standard'],
     \ }
 
 let g:ale_lint_on_save = 1

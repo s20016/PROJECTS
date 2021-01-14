@@ -265,7 +265,6 @@ let Grep_Skip_Dirs = '.git node_modules'
 " terminal emulation
 nnoremap <silent> <leader>sh :terminal<CR>
 
-
 "*****************************************************************************
 " Commands
 "*****************************************************************************
