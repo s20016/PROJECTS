@@ -56,6 +56,10 @@ class Game extends React.Component {
     }
   
     handleClick(i) {
+        // Custom
+        // const xMarker = "X"
+        // const oMarker = "O"
+
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
         const current = history[history.length - 1];
         const squares = current.squares.slice();
@@ -63,6 +67,7 @@ class Game extends React.Component {
             return;
         }
         squares[i] = this.state.xIsNext ? "X" : "O";
+        // squares[i] = this.state.xIsNext ? xMarker : oMarker;
         this.setState({
             history: history.concat([{
                 squares: squares
@@ -92,16 +97,23 @@ class Game extends React.Component {
             </li>
             );
         });
+
+        // Custom
+        function resetGame() {
+            window.location.reload();
+        }
   
         let status;
         if (winner) {
             status = "Winner: " + winner;
+            alert("Winner: " + winner)
         } else {
-            status = "Next player: " + (this.state.xIsNext ? "X" : "O");
+            status = "Player: " + (this.state.xIsNext ? "X" : "O");
         }
     
         return (
             <div className="game">
+                <div className="heading">tictactoe</div>
                 <div className="game-board">
                     <Board
                     squares={current.squares}
@@ -109,8 +121,11 @@ class Game extends React.Component {
                     />
                 </div>
                 <div className="game-info">
-                    <div>{status}</div>
-                    <ol>{moves}</ol>
+                    {/* <div>{status}</div> */}
+                    <button className="resetBoard" onClick={resetGame}>
+                        <i className="fas fa-redo"></i>
+                    </button>
+                    {/* <ol>{moves}</ol> */}
                 </div>
             </div>
         );
