@@ -1,7 +1,7 @@
 ## **WebExtension**
 
 #### **HTML Projects**
-* Project01 &nbsp;「[AniLIST](WebExtension/Project01/aniList.html)」Updated: 1/11/2020
+* Project01 &nbsp;「[AniLIST](WebExtension/Project01/aniList.html)」Updated: 01/18/2020
 
 #### **HTML Class Projects**
 * Task01&nbsp; &nbsp; &nbsp; &nbsp;「[学科紹介](WebExtension/task01/)」
