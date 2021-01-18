@@ -5,10 +5,18 @@ let g:loaded_matchparen=1
 " set tabstop=2
 " set shiftwidth=2
 
+" PG
 autocmd Filetype python setlocal ts=4 sw=4 expandtab
 autocmd Filetype java setlocal ts=4 sw=4 expandtab
-autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 
+" WebExtension
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype php setlocal ts=2 sw=2 expandtab
+autocmd Filetype css setlocal ts=2 sw=2 expandtab
+autocmd Filetype scss setlocal ts=2 sw=2 expandtab
+
+" WebApplication
+autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascriptreact setlocal ts=2 sw=2 expandtab
 
 ""------------------------------------
