@@ -1,0 +1,261 @@
+@charset "UTF-8";
+
+/*
+Theme Name: MY THEME
+Author: TRAVEL SKETCH
+Description: This is my original theme.
+Version: 1.0
+*/
+
+/* Header */
+header {
+    margin-bottom: 40px;
+    background-color: #4a5f7e;
+    color: #fff;
+}
+
+header a {
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.siteinfo {
+    overflow: hidden;
+    padding: 14px;
+}
+
+.siteinfo h1 {
+    float: left;
+    margin: 0;
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 25px
+}
+
+.siteinfo p {
+    float: right;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+body {
+    margin: 0;
+    text-align: justify;
+    font-family: Helvetica, sans-serif;
+    /* margin: 0px 80px; */
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+article {
+    margin: 40px 0px;
+}
+
+article h1 {
+    /* text-align: center; */
+    margin: 20px 0px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+article h1 a {
+    color: #000;
+    text-decoration: none;
+}
+
+.postinfo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.postinfo a {
+    color: #000000; 
+    text-decoration: none;
+}
+
+.postinfo .postcat {
+    margin-left: 20px;
+}
+
+.postinfo .postcom {
+    margin-left: 20px;
+}
+
+.postinfo i {
+    color: #4a5f7e;
+}
+
+.pagenav a {
+    padding: 30px 15px;
+    margin: 0px 0px;
+    /* border: solid 1px #ccc; */
+    border-radius: 50%;
+    color: #4a5f7e;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.pagenav a:hover {
+    color: #7293c4;
+}
+
+.pagenav .old a {
+    float: left;
+}
+
+.pagenav .new a {
+    float: right;
+}
+
+.pagenav {
+    overflow: hidden;
+    /* margin: 40px 0px; */
+}
+
+footer {
+    padding: 10px 0;
+    background-color: #4a5f7e;
+    color: #fff;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+article img {
+    border: none;
+    max-width: 100%;
+    height: auto;
+}
+
+.aligncenter {
+    display: block;
+    margin: 30px auto;
+}
+
+.wp-block-gallery figcaption {
+    max-width: 100%;
+    margin: 0 auto;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.blogmenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.blogmenu .widget {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #e8e8e8;
+}
+
+.blogmenu .widgettitle {
+    margin: 10px auto 10px;
+    border-right: solid 10px #4a5f7e;
+    color: #4a5f7e;
+    font-size: 14px;
+}
+
+.blogmenu li a {
+    display: block;
+    padding: 10px 5px;
+    color: #666;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.blogmenu li a:hover {
+    background-color: #fff;
+}
+
+.archive-title {
+    margin: 0 0 40px 0;
+    background-color: #eee;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.archive-title i {
+    padding: 15px;
+    background-color: #4a5f7e;
+    color: #fff;
+
+}
+
+/* Comment form */
+#respond p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+#respond label {
+    font-size: 14px;
+}
+
+#respond input,
+#respond textarea {
+    width: 100%;
+    padding: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#respond input[type="submit"] {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    background-color: #e6cc1c;
+    cursor: pointer;
+}
+
+#respond input[type="submit"]:hover {
+    background-color: #ff8800;
+}
+
+#respond .required {
+    color: #ff0000;
+}
+
+#comments footer {
+    background: none;
+    margin: 0;
+    color: #000000;
+    font-size: 12px;
+}
+
+#comments footer a {
+    color: #000000;
+}
+
+#comments footer div {
+    display: inline;
+}
+
+#comments ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#comments article {
+    border: 1px dotted #aaaaaa;
+    padding: 10px 20px 20px 20px;
+    margin-bottom: 10px;
+}
+
+#comments .comment-content {
+    margin-left: 30px;
+}
+
