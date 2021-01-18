@@ -22,4 +22,4 @@
 
 #### **ReactJS Class Projects**
 
-* TestRun01 「[t1_tictactoe](WebApplication/ReactJS/t1_tictactoe/public/index.html)」
+* TestRun01 「[t1_tictactoe](WebApplication/ReactJS/t1_tictactoe/src/index.js)」
