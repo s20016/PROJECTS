@@ -4,11 +4,10 @@ export PATH=$PATH:$HOME/.local/bin  # GL504GM, SF313-51, SF313-51U
 alias sbash="source ~/.bashrc"
 alias update="sudo apt update && sudo apt upgrade -y"
 
-# Activity
-initiate() {
+# Initialize
+init() {
     NAME=$(uname -a | awk '{print $2}')
-    echo Welcome back, JC! You are logged on [${NAME}].
-    echo Today is $(date)
+    echo Welcome back, JC! You are logged on ${NAME} @ $(date)
     if [[ $1 = "PROJECTS" ]]; then
         cd ~/PROJECTS && git pull
     elif [[ $1 = "FILES" ]]; then
