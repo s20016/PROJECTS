@@ -17,9 +17,3 @@
 * Chapter10 「[テーブル](WebExtension/chapter10/ch10-table.html)」
 * Chapter11 「[標準的なフォームの例](WebExtension/chapter11/ch11-form.html)」
 * Chapter12 「[レイアウトとナビゲーション](WebExtension/chapter12/ch12-03/index.html)」
-
-## **WebApplication**
-
-#### **ReactJS Class Projects**
-
-* TestRun01 「[t1_tictactoe](WebApplication/ReactJS/t1_tictactoe/src/index.js)」
