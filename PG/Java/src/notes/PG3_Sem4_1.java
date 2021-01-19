@@ -7,7 +7,7 @@ public class PG3_Sem4_1 {
 	public static void main(String[] args) {
 		
 		// Test method here:
-		instanceSample();
+		UseSuperClass3();
 	}
 
 	/*
@@ -51,6 +51,12 @@ public class PG3_Sem4_1 {
 	 * 		overloadSample();
 	 * 		overloadSample2();
 	 * 		instanceSample();
+	 * 
+	 * Lesson 12 (01-19-2021)
+	 * 		usingPackage();
+	 * 		UseSuperClass();
+	 * 		UseSuperClass2();
+	 * 		UseSuperClass3();
 	 * 
 	 */
 	
@@ -515,5 +521,99 @@ public class PG3_Sem4_1 {
 		for (sample sample : samples) {
 			System.out.println(sample);
 		}
+	}
+	
+	/** Lesson 12 (01-19-2021) **/
+	
+	/**
+	 * Naming Convention
+	 * Package	-	All-lower case ASCII letters (com.apple.quicktime.v2)
+	 * Class	-	Noun, mixed case, CamelCase (class MountainBike)
+	 * Methods	-	Verb, mixed case, first letter lower case (changeGear)
+	 * Variable	-	Short, meaningful (int gear = 0;)
+	 * C. Var	-	All upper case, separate by "_" (static final int MIN_WIDTH = 4;)
+	 * 
+	 * SuperClass > SubClass
+	 * 
+	 */
+	
+	static void usingPackage() {
+		// Method 1, Call package in the class. Not recommended.
+		// java.package1.Sample test = new java.package1.Sample();
+		
+		// Method 2, import package then call method.
+		// import java.package1.*
+		// Sample sample = new Sample();	
+		
+	}
+	
+	static void UseSuperClass() {
+		class SuperClass {
+			public void hello() {
+				System.out.println("Hello");
+			}
+		}
+		
+		class SubClass extends SuperClass {}
+		
+		SubClass sub = new SubClass();
+		sub.hello();
+	}
+	
+	static void UseSuperClass2() {
+		class SuperClass {
+			public void hello() {
+				System.out.println("Hello!");
+			}
+		}
+		
+		class SubClass extends SuperClass {
+			public void goodBye() {
+				System.out.println("Goodbye!");
+			}
+		}
+		
+		class SubClass2 extends SubClass {
+			public void helloAgain() {
+				System.out.println("Hello Again!");
+			}
+		}
+		
+		SuperClass sup = new SuperClass();
+		sup.hello();
+		
+		// Has access to all method in SuperClass
+		SubClass sub = new SubClass();
+		sub.hello();
+		sub.goodBye();
+		
+		// Has access to all methods in SubClass
+		SubClass2 sub2 = new SubClass2();
+		sub2.hello();		// SuperClass Method
+		sub2.goodBye();		// SubClass Method
+		sub2.helloAgain();		// SubClass2 Method
+	}
+	
+	static void UseSuperClass3() {
+		// When int num is private = Output: 0
+		// When int num is public or default = Output: 20
+		class A {
+//			private int num;
+			int num;
+			public void setNum(int num) {
+				this.num = num;
+			}
+		}
+		
+		class B extends A {
+//			private int num;
+			public int getNum() {
+				return num + 10;
+			}
+		}
+		
+		B b = new B() ;
+		b.setNum(10);
+		System.out.println(b.getNum());
 	}
 }
