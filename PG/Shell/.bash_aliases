@@ -1,19 +1,25 @@
 export PATH=$PATH:$HOME/.local/bin  # GL504GM, SF313-51, SF313-51U
 
+YELLOW=$(tput setaf 3)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+RESET=$(tput sgr 0)
+
 # Aliases
 alias sbash="source ~/.bashrc"
 alias update="sudo apt update && sudo apt upgrade -y"
 
 # Initialize
-init() {
-    NAME=$(uname -a | awk '{print $2}')
-    echo Welcome back, JC! You are logged on ${NAME} @ $(date)
-    if [[ $1 = "PROJECTS" ]]; then
-        cd ~/PROJECTS && git pull
-    elif [[ $1 = "FILES" ]]; then
-        cd ~/FILES && git pull
-    fi
-}
+
+# linkstart() {
+#     NAME=$(uname -a | awk '{print $2}')
+#     echo -e "\n\t${GREEN}Welcome back, JC! ${RESET}You are logged on ${YELLOW}${NAME}${RESET}\n"
+#     if [[ $1 = "PROJECTS" ]]; then
+#         cd ~/PROJECTS && git pull
+#     elif [[ $1 = "FILES" ]]; then
+#         cd ~/FILES && git pull
+#     fi
+# }
 
 # Functions
 # Python Functions *****************************************************************************
@@ -25,7 +31,7 @@ pyrun() {
     for f in $FILES; do
         if [[ ${NAME} = "GL504GM" ]]; then
             sed -i '3,4 s/s20016/czekras/' ${f} 
-        elif [[ ${NAME} = "SF313-51" ]]; then
+        elif [[ ${NAME} = "SF313-51" ]] || [[ ${NAME} = "sf313-51u" ]]; then
             sed -i '3,4 s/czekras/s20016/' ${f}
         fi
     done
@@ -42,7 +48,7 @@ pycode() {
     for f in $FILES; do
         if [[ ${NAME} = "GL504GM" ]]; then
             sed -i '3,4 s/s20016/czekras/' ${f} 
-        elif [[ ${NAME} = "SF313-51" ]]; then
+        elif [[ ${NAME} = "SF313-51" ]] || [[ ${NAME} = "sf313-51u" ]]; then
             sed -i '3,4 s/czekras/s20016/' ${f}
         fi
     done
@@ -87,7 +93,7 @@ push() {
             cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json \
                 > ~/PROJECTS/PG/Shell/settings.json
         fi
-        echo [PROJECTS]: Bash Updated!
+        echo -e "\t[PROJECTS]: ${YELLOW}Bash Updated!${RESET}"
         # for f in ~/PROJECTS/PG/Shell/*.vim; do mv -- "$f" "${f%.vim}.txt" ; done
 
     # Update WordPress/cms-theme
@@ -95,7 +101,7 @@ push() {
         if [[ ${NAME} ]]; then
             cp -r ~/WordPress/wp-content/themes/cms-theme/* ~/PROJECTS/WebApplication/WordPress/cms-theme/.
             # rm ~/PROJECTS/WebApplication/WordPress/cms-theme/.git 
-            echo [PROJECTS]: WordPress/cms-theme Updated!
+            echo -e "\t[PROJECTS]: ${YELLOW}cms-theme Updated!${RESET}"
         fi
     fi
 }
@@ -103,16 +109,18 @@ push() {
 # Function to be used ONLY by SF313-51 & SF313-51U
 pull() {
     if [[ $1 = "bash" ]]; then
-        read -p "Update: .bash_aliases  .config/nvim/*.vim  WinTerminal(Settings)? [Y/n] " response
+        read -p "\tUpdate: .bash_aliases  .config/nvim/*.vim  WinTerminal(Settings)? [Y/n] " response
         case "$response" in
             [yY][eE][sS]|[yY])
                 NAME=$(uname -a | awk '{print $2}')
                 VAR1="/mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
                 VAR2="/mnt/c/Users/s20016/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
+                # .bash configurations
                 cat ~/PROJECTS/PG/Shell/.bash_aliases > ~/.bash_aliases
                 cat ~/PROJECTS/PG/Shell/init.vim > ~/.config/nvim/init.vim
                 cat ~/PROJECTS/PG/Shell/local_bundles.vim > ~/.config/nvim/local_bundles.vim
                 cat ~/PROJECTS/PG/Shell/local_init.vim > ~/.config/nvim/local_init.vim
+                # Windows Terminal setting
                 if [[ ${NAME} = "GL504GM" ]]; then
                     cat ~/PROJECTS/PG/Shell/settings.json > ${VAR1}
                     sed -i '11, 50 s/c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40/2c4de342-38b7-51cf-b940-2309a097f518/' ${VAR1} 
@@ -124,11 +132,12 @@ pull() {
                     sed -i '55 s/Ubuntu/Ubuntu-18\.04/' ${VAR2}
                     sed -i '61 s/12/14/' ${VAR2}
                 fi
+
                 source ~/.bash_aliases && source ~/.bashrc
-                echo Local Bash Update Complete!
+                echo -e "\t${YELLOW}Local Bash Update Complete!${RESET}"
                 ;;
             *)
-                echo Update Canceled!
+                echo -e "\t${RED}Update Canceled!${RESET}"
                 ;;
         esac
     fi
