@@ -93,7 +93,7 @@ push() {
             cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json \
                 > ~/PROJECTS/PG/Shell/settings.json
         fi
-        echo -e "\t[PROJECTS]: ${YELLOW}Bash Updated!${RESET}"
+        echo -e "[PROJECTS]: ${YELLOW}Bash Updated!${RESET}"
         # for f in ~/PROJECTS/PG/Shell/*.vim; do mv -- "$f" "${f%.vim}.txt" ; done
 
     # Update WordPress/cms-theme
@@ -101,7 +101,7 @@ push() {
         if [[ ${NAME} ]]; then
             cp -r ~/WordPress/wp-content/themes/cms-theme/* ~/PROJECTS/WebApplication/WordPress/cms-theme/.
             # rm ~/PROJECTS/WebApplication/WordPress/cms-theme/.git 
-            echo -e "\t[PROJECTS]: ${YELLOW}cms-theme Updated!${RESET}"
+            echo -e "[PROJECTS]: ${YELLOW}cms-theme Updated!${RESET}"
         fi
     fi
 }
@@ -109,7 +109,7 @@ push() {
 # Function to be used ONLY by SF313-51 & SF313-51U
 pull() {
     if [[ $1 = "bash" ]]; then
-        read -p "\tUpdate: .bash_aliases  .config/nvim/*.vim  WinTerminal(Settings)? [Y/n] " response
+        read -p "Update: .bash_aliases  .config/nvim/*.vim  WinTerminal(Settings)? [Y/n] " response
         case "$response" in
             [yY][eE][sS]|[yY])
                 NAME=$(uname -a | awk '{print $2}')
@@ -134,10 +134,10 @@ pull() {
                 fi
 
                 source ~/.bash_aliases && source ~/.bashrc
-                echo -e "\t${YELLOW}Local Bash Update Complete!${RESET}"
+                echo -e "${YELLOW}Local Bash Update Complete!${RESET}"
                 ;;
             *)
-                echo -e "\t${RED}Update Canceled!${RESET}"
+                echo -e "${RED}Update Canceled!${RESET}"
                 ;;
         esac
     fi
