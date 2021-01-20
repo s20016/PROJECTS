@@ -319,16 +319,21 @@ public class PG3_Sem4_1 {
 	/** Lesson 9 (01-12-2021) **/
 
 	/**
-	 * 4 Pillars of Object Oriented Programming (OOP) ABSTRACTION - Hiding of Info.
-	 * Show only Essentials - Isolate impact of changes POLYMORPHISM - Redefining
-	 * switch/case statements INHERITANCE - Sharing of Info. Eliminate redundant
-	 * code ENCAPSULATION - Group related variable and function - Manipulation of
-	 * data and functions
+	 * 4 Pillars of Object Oriented Programming (OOP) 
+	 * ABSTRACTION		- Hiding of Info. Show only Essentials 
+	 * 					- Isolate impact of changes 
+	 * POLYMORPHISM 	- Redefining switch/case statements 
+	 * INHERITANCE		- Sharing of Info. Eliminate redundant code 
+	 * ENCAPSULATION	- Group related variable and function 
+	 * 					- Manipulation of data and functions
 	 * 
-	 * Get Method & Set Method get method (getVARNAME) - returns value of variable
+	 * Get Method & Set Method 
+	 * get method (getVARNAME) - returns value of variable
 	 * set method (setVARNAME) - takes parameter then assign to variable
 	 * 
-	 * this Keyword in Java - refer instance variable of current class
+	 * this Keyword in Java 
+	 * 		- refer instance variable of current class
+	 * 
 	 */
 
 	static void getSetMethod() {
@@ -353,20 +358,25 @@ public class PG3_Sem4_1 {
 	/** Lesson 10 (01-13-2021) **/
 
 	/**
-	 * Garbage Collection (GC) - Process of destroying UNREFERENCED OBJESTCS in the
-	 * HEAP - Follows FIFO (First in, First out) algorithm - Performed automatically
-	 * - If HEAP is full, GC is performed from Old Space
+	 * Garbage Collection (GC) 
+	 * 				- Process of destroying UNREFERENCED OBJESTCS in the
+	 * HEAP 		- Follows FIFO (First in, First out) algorithm 
+	 * 				- Performed automatically
+	 * 				- If HEAP is full, GC is performed from Old Space
 	 * 
-	 * Ways in which Objects are Unreferenced: 1. Nulling the reference. Test a =
-	 * new Test(); a = null;
+	 * Ways in which Objects are Unreferenced: 
+	 * 		1. Nulling the reference. 
+	 * 			Test a = new Test(); a = null;
 	 * 
-	 * 2. Assigning a reference to another. Test a = new Test(); Test b = new
-	 * Test(); a = b;
+	 * 		2. Assigning a reference to another. 
+	 * 			Test a = new Test(); 
+	 * 			Test b = new Test(); a = b;
 	 * 
-	 * 3. Anonymous object. new Test();
+	 * 		3. Anonymous object. new Test();
 	 * 
-	 * Stack - Linear data structure for LOCAL VARIABLES - Follows LIFO (Last in,
-	 * Fist out) algorithm - Follows three basic operation: PUSH, POP, (TOP),
+	 * Stack 		- Linear data structure for LOCAL VARIABLES 
+	 * 				- Follows LIFO (Last in, Fist out) algorithm 
+	 * 				- Follows three basic operation: PUSH, POP, (TOP),
 	 * isEmpty Heap - Stores OBJECTS - Divided into 2 parts: Young Space & Old Space
 	 * 
 	 */
@@ -542,11 +552,12 @@ public class PG3_Sem4_1 {
 	/** Lesson 12 (01-19-2021) **/
 
 	/**
-	 * Naming Convention Package - All-lower case ASCII letters
-	 * (com.apple.quicktime.v2) Class - Noun, mixed case, CamelCase (class
-	 * MountainBike) Methods - Verb, mixed case, first letter lower case
-	 * (changeGear) Variable - Short, meaningful (int gear = 0;) C. Var - All upper
-	 * case, separate by "_" (static final int MIN_WIDTH = 4;)
+	 * Naming Convention 
+	 * Package 	- All-lower case ASCII letters (com.apple.quicktime.v2) 
+	 * Class 	- Noun, mixed case, CamelCase (class MountainBike) 
+	 * Methods 	- Verb, mixed case, first letter lower case (changeGear) 
+	 * Variable	- Short, meaningful (int gear = 0;) 
+	 * C. Var 	- All upper case, separate by "_" (static final int MIN_WIDTH = 4;)
 	 * 
 	 * SuperClass > SubClass
 	 * 
@@ -637,20 +648,21 @@ public class PG3_Sem4_1 {
 	/** Lesson 13 (01-20-2021) **/
 
 	/**
-	 * Override and Overload Override - Occurs between SuperClass and SubClass -
-	 * Parameters, return type, and access modifier must be the same Overload -
-	 * Occurs within the same class - Different parameters
+	 * Override and Overload Override 
+	 * 		- Occurs between SuperClass and SubClass 
+	 * 		- Parameters, return type, and access modifier must be the same Overload 
+	 * 		- Occurs within the same class - Different parameters
 	 * 
-	 * Override - It's the ability to overwrite method with the same name Overload -
-	 * It's the ability to write methods that have the same name but accept
-	 * different parameters.
+	 * Override - It's the ability to overwrite method with the same name 
+	 * Overload - It's the ability to write methods that have the same name but accept different parameters.
 	 * 
 	 * Signature - Method name and parameter list
 	 * 
 	 * Error and Exception in Java - Both subclasses of java.lang.Throwable class
 	 * 
-	 * Error - condition which cannot get recovered - causes termination of the
-	 * program Exception - recoverable using try, catch and throw keywords
+	 * Error 		- condition which cannot get recovered 
+	 * 				- causes termination of the program 
+	 * Exception 	- recoverable using try, catch and throw keywords
 	 * 
 	 */
 
