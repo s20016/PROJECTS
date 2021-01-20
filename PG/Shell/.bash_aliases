@@ -99,7 +99,7 @@ push() {
     # Update WordPress/cms-theme
     elif [[ $1 = "cms-theme" ]]; then
         if [[ ${NAME} ]]; then
-            cp -r ~/WordPress/wp-content/themes/cms-theme/* ~/PROJECTS/WebApplication/WordPress/cms-theme/.
+            cp -r ~/PGLibrary/WordPress/wp-content/themes/cms-theme/* ~/PROJECTS/WebApplication/WordPress/cms-theme/.
             # rm ~/PROJECTS/WebApplication/WordPress/cms-theme/.git 
             echo -e "[PROJECTS]: ${YELLOW}cms-theme Updated!${RESET}"
         fi
