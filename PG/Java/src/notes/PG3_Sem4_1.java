@@ -1,13 +1,15 @@
 package notes;
 
-import java.util.Scanner; // usingScanner();
+import java.io.File;		// L14
+import java.io.IOException;		// L14
+import java.util.Scanner;		// L5, L6
 
 public class PG3_Sem4_1 {
 
 	public static void main(String[] args) {
 
 		// Test method here:
-		sampleError();
+		sampleThrowAndThrows();
 	}
 
 	/*
@@ -67,6 +69,11 @@ public class PG3_Sem4_1 {
 	 * 		sampleOverload(); 
 	 * 		sampleSuperClass(); 
 	 * 		sampleError();
+	 * 
+	 * Lesson 14 (01-21-2021)
+	 * 		sampleTryCatchError();
+	 * 		sampleTryCatchFinally();
+	 * 		sampleThrowAndThrows();
 	 * 
 	 */
 
@@ -129,7 +136,7 @@ public class PG3_Sem4_1 {
 		}
 	}
 
-	/** Lesson 5 (12-09-2020) **/
+	/* Lesson 5 (12-09-2020) */
 	static void finalVar() {
 		final int finalVar;
 		finalVar = 10; // Assigns the final value
@@ -185,7 +192,7 @@ public class PG3_Sem4_1 {
 		System.out.println(a + b + "円"); // 30円 - Adds a, b
 	}
 
-	/** Lesson 6 (12-10-2020) **/
+	/* Lesson 6 (12-10-2020) */
 	static void usingScanner2() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter a num: ");
@@ -277,7 +284,7 @@ public class PG3_Sem4_1 {
 		}
 	}
 
-	/** Lesson 8 (12-16-2020) **/
+	/* Lesson 8 (12-16-2020) */
 	static void arrayList() {
 		// int[] arrayName; // declare array
 		// int arrayName[]; // declare array (Not recommended)
@@ -316,9 +323,9 @@ public class PG3_Sem4_1 {
 		System.out.println("C");
 	}
 
-	/** Lesson 9 (01-12-2021) **/
+	/* Lesson 9 (01-12-2021) */
 
-	/**
+	/*
 	 * 4 Pillars of Object Oriented Programming (OOP) 
 	 * ABSTRACTION		- Hiding of Info. Show only Essentials 
 	 * 					- Isolate impact of changes 
@@ -355,9 +362,9 @@ public class PG3_Sem4_1 {
 		robotB.sayHello();
 	}
 
-	/** Lesson 10 (01-13-2021) **/
+	/* Lesson 10 (01-13-2021) */
 
-	/**
+	/*
 	 * Garbage Collection (GC) 
 	 * 				- Process of destroying UNREFERENCED OBJESTCS in the
 	 * HEAP 		- Follows FIFO (First in, First out) algorithm 
@@ -485,7 +492,7 @@ public class PG3_Sem4_1 {
 		a.hello();
 	}
 
-	/** Lesson 11 (01-14-2021) **/
+	/* Lesson 11 (01-14-2021) */
 	static void constructorSample3() {
 		// Sample code without "Setter" or "Getter"
 		class A {
@@ -549,9 +556,9 @@ public class PG3_Sem4_1 {
 		}
 	}
 
-	/** Lesson 12 (01-19-2021) **/
+	/* Lesson 12 (01-19-2021) */
 
-	/**
+	/*
 	 * Naming Convention 
 	 * Package 	- All-lower case ASCII letters (com.apple.quicktime.v2) 
 	 * Class 	- Noun, mixed case, CamelCase (class MountainBike) 
@@ -645,13 +652,13 @@ public class PG3_Sem4_1 {
 		System.out.println(b.getNum());
 	}
 
-	/** Lesson 13 (01-20-2021) **/
+	/* Lesson 13 (01-20-2021) */
 
-	/**
+	/*
 	 * Override and Overload Override 
-	 * 		- Occurs between SuperClass and SubClass 
-	 * 		- Parameters, return type, and access modifier must be the same Overload 
-	 * 		- Occurs within the same class - Different parameters
+	 * 	Occurs between SuperClass and SubClass 
+	 * 	Parameters, return type, and access modifier must be the same Overload 
+	 * 	Occurs within the same class - Different parameters
 	 * 
 	 * Override - It's the ability to overwrite method with the same name 
 	 * Overload - It's the ability to write methods that have the same name but accept different parameters.
@@ -751,4 +758,86 @@ public class PG3_Sem4_1 {
 		System.out.println(array[0]); // Error
 		System.out.println("End"); // Will not execute
 	}
+	
+	
+	/* Lesson 14 (01-21-2021) */
+	
+	/*
+	 * The catch Block
+	 * 	Each catch block is an exception handler that handles the type of 
+	 * 	exception indicated by its argument.
+	 * 
+	 * throw & throws
+	 * throw	- Used to explicitly throw an exception
+	 * 			- Used within the method
+	 * 			- Followed by an instance
+	 * throws	- Used to declare an exception
+	 * 			- Used with the method signature
+	 * 			- Followed by a class
+	 * 
+	 */
+	
+	static void sampleTryCatchError() {
+		File file = new File("sample.txt");
+//		file.createNewFile();	// Exception in thread "main"
+		try {
+			file.createNewFile();
+		} catch (IOException e) {
+			System.err.println(e.toString());
+		}
+		System.out.println("End");
+	}
+	
+	static void sampleTryCatchFinally() {
+		System.out.println("A");
+		try {
+			int[] array = new int[3];
+			System.out.println("B");
+			
+			array[0] = 10;		// Not an Error
+			System.out.println("C");
+			
+			array[4] = 20;		// Error
+			System.out.println("D");	// Skipped
+			
+			System.out.println("E");	// Skipped
+		} catch (NullPointerException e1){
+			System.out.println("F");	// Skipped, No NullPointerException
+		} catch (ArrayIndexOutOfBoundsException e2){
+			System.out.println("G");
+		} finally {
+			System.out.println("H");
+		}
+		System.out.println("I");
+		
+//		A
+//		B
+//		C
+//		G
+//		H
+//		I
+	}
+	
+	static void sampleThrowAndThrows() {
+		class ThrowSample {
+			public void test(String val) throws Exception {
+				if (val == null) {
+					throw new Exception();
+				}
+			}
+		}
+		class UseThrowSample {
+			public void sample() throws Exception {
+				ThrowSample a = new ThrowSample();
+				a.test(null);
+			}
+		}
+		UseThrowSample b = new UseThrowSample();
+		try {
+			b.sample();
+		} catch (Exception e) {
+			System.out.println("Error Occured");
+		}
+	}
+	
 }
