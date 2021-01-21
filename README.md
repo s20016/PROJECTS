@@ -1,5 +1,5 @@
 ![GP2](./WebExtension/Preview/GitSocialPreview2.png)
-#
+
 ## **WebExtension**
 
 #### **My HTML Projects**
@@ -20,7 +20,7 @@
 - Chapter11 「[標準的なフォームの例](WebExtension/chapter11/ch11-form.html)」
 - Chapter12 「[レイアウトとナビゲーション](WebExtension/chapter12/ch12-03/index.html)」
 
-#
+
 ## **Java**
 
 #### **Class Notes**
@@ -29,7 +29,7 @@
 #### **My Java Projects**
 - My codes in [Java CodingBat](./PG/Java/src/notes/PG3_Sem4_2.java)
 
-#
+
 ## **Python**
 
 #### **Class Notes**
