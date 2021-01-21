@@ -1,21 +1,40 @@
 ![GP2](./WebExtension/Preview/GitSocialPreview2.png)
-
+#
 ## **WebExtension**
 
-#### **HTML Projects**
-* Project01 &nbsp;「[AniLIST](WebExtension/project01/aniList.html)」Updated: 01/18/2020
+#### **My HTML Projects**
+- Project01 「[AniLIST](WebExtension/project01/aniList.html)」Updated: 01/18/2020
 
-#### **HTML Class Projects**
-* Task01&nbsp; &nbsp; &nbsp; &nbsp;「[学科紹介](WebExtension/task01/)」
-* Chapter01 「[Windows環境でHTML](WebExtension/chapter01/ch01-firsthtml-win.html)」
-* Chapter02 「[Linux環境でHTMLを作る](WebExtension/chapter02/ch02-firsthtml-linux.html)」
-* Chapter03 「[マークアップの考え方](WebExtension/chapter03/ch03-markuptag1.html)」
-* Chapter04 「[自己紹介ページ](WebExtension/chapter04/ch04-markuptag1.html)」
-* Chapter05 「[リンク、画像、特殊文字](WebExtension/chapter05/ch05-markuptag2.html)」
-* Chapter06 「[ページにCSSを適用する](WebExtension/chapter06/index.html)」
-* Chapter07 「[テキストの装飾](WebExtension/chapter07/ch07-fontsytle.html)」  
-* Chapter08 「[リンクの設定と画像の表示](WebExtension/chapter08/ch08-linkimg.html)」
-* Chapter09 「[ボックスと情報の整理](WebExtension/chapter09/ch09-boxcss.html)」
-* Chapter10 「[テーブル](WebExtension/chapter10/ch10-table.html)」
-* Chapter11 「[標準的なフォームの例](WebExtension/chapter11/ch11-form.html)」
-* Chapter12 「[レイアウトとナビゲーション](WebExtension/chapter12/ch12-03/index.html)」
+#### **Class Projects**
+- Task01 「[学科紹介](WebExtension/task01/)」
+- Chapter01 「[Windows環境でHTML](WebExtension/chapter01/ch01-firsthtml-win.html)」
+- Chapter02 「[Linux環境でHTMLを作る](WebExtension/chapter02/ch02-firsthtml-linux.html)」
+- Chapter03 「[マークアップの考え方](WebExtension/chapter03/ch03-markuptag1.html)」
+- Chapter04 「[自己紹介ページ](WebExtension/chapter04/ch04-markuptag1.html)」
+- Chapter05 「[リンク、画像、特殊文字](WebExtension/chapter05/ch05-markuptag2.html)」
+- Chapter06 「[ページにCSSを適用する](WebExtension/chapter06/index.html)」
+- Chapter07 「[テキストの装飾](WebExtension/chapter07/ch07-fontsytle.html)」  
+- Chapter08 「[リンクの設定と画像の表示](WebExtension/chapter08/ch08-linkimg.html)」
+- Chapter09 「[ボックスと情報の整理](WebExtension/chapter09/ch09-boxcss.html)」
+- Chapter10 「[テーブル](WebExtension/chapter10/ch10-table.html)」
+- Chapter11 「[標準的なフォームの例](WebExtension/chapter11/ch11-form.html)」
+- Chapter12 「[レイアウトとナビゲーション](WebExtension/chapter12/ch12-03/index.html)」
+
+#
+## **Java**
+
+#### **Class Notes**
+- My summary of [Object Oriented Programming](./PG/Java/src/README.md).
+
+#### **My Java Projects**
+- My codes in [Java CodingBat](./PG/Java/src/notes/PG3_Sem4_2.java)
+
+#
+## **Python**
+
+#### **Class Notes**
+- My methods of [Reading an Input](./PG/Python/Notes/CP_Input.py) in a Python Program.
+
+#### **My Python Projects**
+- My codes in [Python CodingBat](./PG/Python/Notes/PB1_Sem1_1.py)
+
