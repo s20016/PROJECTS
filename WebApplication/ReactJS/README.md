@@ -1,6 +1,6 @@
 ## **ReactJS**
 
-[Main ReactJS Repository](https://github.com/s20016/ReactJS)
+Main ReactJS Repository: [https://github.com/s20016/ReactJS](https://github.com/s20016/ReactJS)
 
 #### **Personal Projects**
 * Tutorial: Intro to React「[P1-Tictactoe](https://github.com/s20016/ReactJS/tree/tictactoe)」
