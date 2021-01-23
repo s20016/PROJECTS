@@ -1,6 +1,5 @@
 ## **Objective Oriented Programming (OOP)**
 Created: January 21, 2021
-#
 
 **What is Object Oriented Programming (OOP) ?**<br>
 

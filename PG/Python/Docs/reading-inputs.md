@@ -1,6 +1,5 @@
 ## **Methods of Reading `Input.txt`**
-Created: August 1, 2020
-#
+Updated: August 1, 2020
 
 **Notes:**<br>
 - `import sys` when `sys.stdin` is in use.<br>
