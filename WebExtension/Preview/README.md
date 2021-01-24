@@ -1,4 +1,4 @@
-<h1 align="center">GitHub Social Preview</h1>
+<h1 align="center">Social Preview</h1>
 
 ![GP2](./GitSocialPreview2.png)
 ![GP1](./GitSocialPreview1.png)
