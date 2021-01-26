@@ -9,7 +9,8 @@ public class PG3_Sem4_1 {
 	public static void main(String[] args) {
 
 		// Test method here:
-		sampleThrowAndThrows();
+		samplePolymorphism();
+		useCalculatorSample();
 	}
 
 	/*
@@ -74,6 +75,10 @@ public class PG3_Sem4_1 {
 	 * 		sampleTryCatchError();
 	 * 		sampleTryCatchFinally();
 	 * 		sampleThrowAndThrows();
+	 * 
+	 * Lesson 15 (01-26-2021)
+	 * 		samplePolymorphism();
+	 * 		useCalculatorSample();
 	 * 
 	 */
 
@@ -838,6 +843,117 @@ public class PG3_Sem4_1 {
 		} catch (Exception e) {
 			System.out.println("Error Occured");
 		}
+	}
+	
+	
+	/* Lesson 15 (01-26-2021) */
+	
+	/* 
+	 * @Override Annotation
+	 * - Informs the compiler that the element is meant to override
+	 * an element declared in a superclass.
+	 * - Not required to use this annotation when overriding a method
+	 * - The compiler generates an error when a method with @Override annotation fails 
+	 * to override a method in one of its superclass.
+	 * 
+	 * TODO:
+	 * Practice: https://www.sikaku.gr.jp/js/jv/sample/3/jv3-2_20130508.pdf
+	 * 
+	 */
+	
+	static void samplePolymorphism() {
+		// Superclass
+		class Car {
+			public void drive() {
+				System.out.println("CarA R");
+			}
+			public void stop() {
+				System.out.println("CarA S");
+			}
+			
+			public int totalTurn;
+			public void setTurn(int turn) {
+				this.totalTurn = turn;
+			}
+			public int getTurn() {
+				return 0;
+			}
+		}	
+		// Subclass
+		class CarA extends Car {
+			@Override
+			public void stop() {
+				System.out.println("CarA Stops");
+			}
+			@Override
+			public int getTurn() {
+				int total = super.totalTurn + 90;
+				return total;
+			}
+		}
+		// Main
+		Car car = new CarA();
+		car.drive();
+		car.stop();
+		
+		car.setTurn(0);
+		int total = car.getTurn();
+		System.out.println(total);
+		
+		// CarA R		<- Not Override
+		// CarA Stops	<- Override
+		// 90			<- Override
+	}
+
+	static void useCalculatorSample() {
+		class TaxCalculator {
+			protected int price;
+			public void setPrice(int price) {
+				this.price = price;
+			}
+			public int getResult() {
+				return 0;
+			}
+		}
+		
+		class ExciseTax extends TaxCalculator {
+			@Override
+			public int getResult() {
+				int result = (int)(super.price * 1.10);
+				return result;
+			}
+		}
+		
+		class Calculator {
+			private TaxCalculator taxCal;
+			private int price;
+			private int qty;
+			public void setTaxCal(TaxCalculator taxCal) {
+				this.taxCal = taxCal;
+			}
+			public void setPrice(int price) {
+				this.price = price;
+			}
+			public void setQty(int qty) {
+				this.qty = qty;
+			}
+			public int getResult() {
+				if (this.taxCal != null) {
+					taxCal.setPrice(price * qty);
+					return taxCal.getResult();
+				}
+				return price * qty;
+			}
+		}
+		
+		Calculator calc = new Calculator();
+		calc.setPrice(1000);
+		calc.setQty(3);
+		calc.setTaxCal(new ExciseTax());
+		int result = calc.getResult();
+		System.out.printf("%d Yen", result);
+		
+		// 3300 Yen
 	}
 	
 }
