@@ -1,6 +1,6 @@
 package notes;
 
-import java.io.File;		// L14
+import java.io.File;			// L14
 import java.io.IOException;		// L14
 import java.util.Scanner;		// L5, L6
 
@@ -8,9 +8,8 @@ public class PG3_Sem4_1 {
 
 	public static void main(String[] args) {
 
-		// Test method here:
-		samplePolymorphism();
-		useCalculatorSample();
+		// TODO: Test method here
+		sampleInterface();
 	}
 
 	/*
@@ -77,12 +76,21 @@ public class PG3_Sem4_1 {
 	 * 		sampleThrowAndThrows();
 	 * 
 	 * Lesson 15 (01-26-2021)
+	 * 		E: @Override Annotation 
 	 * 		samplePolymorphism();
 	 * 		useCalculatorSample();
 	 * 
+	 * Lesson 16 (01-27-2021)
+	 * 		E: Upcast & Downcast
+	 * 		sampleCasting();
+	 * 		sampleEquals();
+	 * 		sampleEquals2();
+     *      sampleEquals3();
+     *      sampleInterface();
+	 * 
 	 */
 
-	/** Lesson 4 (12-08-2020) **/
+	/* LESSON: 4 (12-08-2020) */
 	static void forLoop() {
 
 		// for (initialization; termination; increment) {
@@ -141,7 +149,7 @@ public class PG3_Sem4_1 {
 		}
 	}
 
-	/* Lesson 5 (12-09-2020) */
+	/* LESSON: 5 (12-09-2020) */
 	static void finalVar() {
 		final int finalVar;
 		finalVar = 10; // Assigns the final value
@@ -197,7 +205,7 @@ public class PG3_Sem4_1 {
 		System.out.println(a + b + "円"); // 30円 - Adds a, b
 	}
 
-	/* Lesson 6 (12-10-2020) */
+	/* LESSON: 6 (12-10-2020) */
 	static void usingScanner2() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter a num: ");
@@ -289,7 +297,7 @@ public class PG3_Sem4_1 {
 		}
 	}
 
-	/* Lesson 8 (12-16-2020) */
+	/* LESSON: 8 (12-16-2020) */
 	static void arrayList() {
 		// int[] arrayName; // declare array
 		// int arrayName[]; // declare array (Not recommended)
@@ -328,7 +336,7 @@ public class PG3_Sem4_1 {
 		System.out.println("C");
 	}
 
-	/* Lesson 9 (01-12-2021) */
+	/* LESSON: 9 (01-12-2021) */
 
 	/*
 	 * 4 Pillars of Object Oriented Programming (OOP) 
@@ -367,7 +375,7 @@ public class PG3_Sem4_1 {
 		robotB.sayHello();
 	}
 
-	/* Lesson 10 (01-13-2021) */
+	/* LESSON: 10 (01-13-2021) */
 
 	/*
 	 * Garbage Collection (GC) 
@@ -497,7 +505,7 @@ public class PG3_Sem4_1 {
 		a.hello();
 	}
 
-	/* Lesson 11 (01-14-2021) */
+	/* LESSON: 11 (01-14-2021) */
 	static void constructorSample3() {
 		// Sample code without "Setter" or "Getter"
 		class A {
@@ -561,7 +569,7 @@ public class PG3_Sem4_1 {
 		}
 	}
 
-	/* Lesson 12 (01-19-2021) */
+	/* LESSON: 12 (01-19-2021) */
 
 	/*
 	 * Naming Convention 
@@ -657,7 +665,7 @@ public class PG3_Sem4_1 {
 		System.out.println(b.getNum());
 	}
 
-	/* Lesson 13 (01-20-2021) */
+	/* LESSON: 13 (01-20-2021) */
 
 	/*
 	 * Override and Overload Override 
@@ -666,7 +674,8 @@ public class PG3_Sem4_1 {
 	 * 	Occurs within the same class - Different parameters
 	 * 
 	 * Override - It's the ability to overwrite method with the same name 
-	 * Overload - It's the ability to write methods that have the same name but accept different parameters.
+	 * Overload - It's the ability to write methods that have the same name 
+	 * but accept different parameters.
 	 * 
 	 * Signature - Method name and parameter list
 	 * 
@@ -765,7 +774,7 @@ public class PG3_Sem4_1 {
 	}
 	
 	
-	/* Lesson 14 (01-21-2021) */
+	/* LESSON: 14 (01-21-2021) */
 	
 	/*
 	 * The catch Block
@@ -846,7 +855,7 @@ public class PG3_Sem4_1 {
 	}
 	
 	
-	/* Lesson 15 (01-26-2021) */
+	/* LESSON: 15 (01-26-2021) */
 	
 	/* 
 	 * @Override Annotation
@@ -856,7 +865,6 @@ public class PG3_Sem4_1 {
 	 * - The compiler generates an error when a method with @Override annotation fails 
 	 * to override a method in one of its superclass.
 	 * 
-	 * TODO:
 	 * Practice: https://www.sikaku.gr.jp/js/jv/sample/3/jv3-2_20130508.pdf
 	 * 
 	 */
@@ -956,4 +964,120 @@ public class PG3_Sem4_1 {
 		// 3300 Yen
 	}
 	
+	
+	/* LESSON: 16 (01-27-2021) */
+	
+	/*
+	 * Upcast & Downcast
+	 * 		Subclass -> extends -> Superclass
+	 * 	
+	 * Upcast	- Parent p = new Child();
+	 * Downcast	- Parent p = new Child(); Child c = (Child) p;
+	 * 			- Child c = new Parent() <- Compile Error
+	 * 
+	 */
+	
+	static void sampleCasting() {
+		class SuperClass {
+		}
+		class SubClass extends SuperClass {
+		}
+		SuperClass s = new SubClass();
+//		SubClass sub = s;		// Compile Error
+		
+		if (s instanceof SuperClass) {
+			System.out.println("Yes");
+		}
+	}
+	
+	static void sampleEquals() {
+		class A {
+		}
+		A a = new A();
+		A b = a;
+		A c = b;
+		System.out.printf("a == b: %b\n", a == b);
+		System.out.printf("a == c: %b\n", a == c);
+	}
+	
+	static void sampleEquals2() {
+		class Client {
+			private int id;
+			private String name;
+			public Client(int id, String name) {
+				this.id = id;
+				this.name = name;
+			}
+			// Some code
+		}
+		Client a = new Client(100, "ClientA");
+		Client b = new Client(100, "ClientB");
+		Client c = a;	// id: 100, name: ClientA
+		
+		System.out.printf("a == b: %b\n", a == b);	// false
+		System.out.printf("a == c: %b\n", a == c);	// true
+	}
+
+
+	static void sampleEquals3() {
+		class Client {
+			private int id;
+			private String name;
+			public Client(int id, String name) {
+				this.id = id;
+				this.name = name;
+			}
+
+            @Override
+            public boolean equals(Object obj) {
+                if (obj == null) {
+                    return false;
+                }
+                if (obj instanceof Client == false) {
+                    return false;
+                }
+                Client target = (Client) obj;
+                return this.id == target.id;
+            }
+		}
+		Client a = new Client(100, "ClientA");
+		Client b = new Client(100, "ClientB");
+		
+		System.out.println(a == b);     // false
+        System.out.println(a.equals(b));    // true
+	}
+
+    static void sampleInterface() {
+        class Car {
+            public void drive() {}
+            public void stop() {}
+            public void turn() {}
+        }
+
+        // interface Car {
+        //     public void drive();
+        //     public void stop();
+        //     public void turn();
+        // }
+
+        // class CarA implements Car {
+        class CarA extends Car {
+            @Override
+            public void drive() {
+                System.out.println("CarA Runs!");
+            }
+            @Override
+            public void stop() {
+                System.out.println("CarA Stops!");
+            }
+            @Override
+            public void turn() {
+                System.out.println("CarA Turns!");
+            }
+        }
+        Car a = new CarA();
+        a.drive();
+        a.stop();
+        a.turn();
+    }
 }
