@@ -1,6 +1,6 @@
 package notes;
 
-import java.io.File;			// L14
+import java.io.File;			// L1
 import java.io.IOException;		// L14
 import java.util.Scanner;		// L5, L6
 
@@ -85,8 +85,8 @@ public class PG3_Sem4_1 {
 	 * 		sampleCasting();
 	 * 		sampleEquals();
 	 * 		sampleEquals2();
-     *      sampleEquals3();
-     *      sampleInterface();
+	 * 		sampleEquals3();
+	 * 		sampleInterface();
 	 * 
 	 */
 
@@ -336,9 +336,9 @@ public class PG3_Sem4_1 {
 		System.out.println("C");
 	}
 
-	/* LESSON: 9 (01-12-2021) */
 
-	/*
+	/* LESSON: 9 (01-12-2021)
+	 * 
 	 * 4 Pillars of Object Oriented Programming (OOP) 
 	 * ABSTRACTION		- Hiding of Info. Show only Essentials 
 	 * 					- Isolate impact of changes 
@@ -375,9 +375,9 @@ public class PG3_Sem4_1 {
 		robotB.sayHello();
 	}
 
-	/* LESSON: 10 (01-13-2021) */
 
-	/*
+	/* LESSON: 10 (01-13-2021)
+	 * 
 	 * Garbage Collection (GC) 
 	 * 				- Process of destroying UNREFERENCED OBJESTCS in the
 	 * HEAP 		- Follows FIFO (First in, First out) algorithm 
@@ -569,9 +569,9 @@ public class PG3_Sem4_1 {
 		}
 	}
 
-	/* LESSON: 12 (01-19-2021) */
 
-	/*
+	/* LESSON: 12 (01-19-2021)
+	 * 
 	 * Naming Convention 
 	 * Package 	- All-lower case ASCII letters (com.apple.quicktime.v2) 
 	 * Class 	- Noun, mixed case, CamelCase (class MountainBike) 
@@ -774,9 +774,8 @@ public class PG3_Sem4_1 {
 	}
 	
 	
-	/* LESSON: 14 (01-21-2021) */
-	
-	/*
+	/* LESSON: 14 (01-21-2021)
+	 * 
 	 * The catch Block
 	 * 	Each catch block is an exception handler that handles the type of 
 	 * 	exception indicated by its argument.
@@ -855,9 +854,8 @@ public class PG3_Sem4_1 {
 	}
 	
 	
-	/* LESSON: 15 (01-26-2021) */
-	
-	/* 
+	/* LESSON: 15 (01-26-2021)
+	 * 
 	 * @Override Annotation
 	 * - Informs the compiler that the element is meant to override
 	 * an element declared in a superclass.
@@ -965,9 +963,8 @@ public class PG3_Sem4_1 {
 	}
 	
 	
-	/* LESSON: 16 (01-27-2021) */
-	
-	/*
+	/* LESSON: 16 (01-27-2021)
+	 * 
 	 * Upcast & Downcast
 	 * 		Subclass -> extends -> Superclass
 	 * 	
@@ -1080,4 +1077,33 @@ public class PG3_Sem4_1 {
         a.stop();
         a.turn();
     }
+    
+    
+    /* LESSON: 17 (01-28-2021)
+     * 
+     * Field - A variable inside a class
+     * 
+     */
+    
+    static void sampleAbstract() {
+    	class TaxCalculator {
+    		protected int price;
+    		public void setPrice(int price) {
+    			this.price = price;
+    		}
+        	public int getResult() {
+        		return 0;
+        	}
+    	}
+
+    	class ExciseTax extends TaxCalculator {
+    		@Override
+    		public int getResult() {
+    			int result = (int)(super.price * 1.08);
+    			return result;
+    		}
+    	}
+    }
+    
+    
 }
