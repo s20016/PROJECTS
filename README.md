@@ -16,4 +16,4 @@
 - Chapter09 「[ボックスと情報の整理](WebExtension/chapter09/ch09-boxcss.html)」
 - Chapter10 「[テーブル](WebExtension/chapter10/ch10-table.html)」
 - Chapter11 「[標準的なフォームの例](WebExtension/chapter11/ch11-form.html)」
-- Chapter12 「[レイアウトとナビゲーション](WebExtension/chapter12/ch12-03/index.html)
+- Chapter12 「[レイアウトとナビゲーション](WebExtension/chapter12/ch12-03/index.html)」
