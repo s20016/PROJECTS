@@ -1,5 +1,3 @@
-![GP2](./WebExtension/Preview/GitSocialPreview2.png)
-
 ## **WebExtension**
 
 #### **My HTML Projects**
