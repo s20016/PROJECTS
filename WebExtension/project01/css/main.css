@@ -2,22 +2,6 @@ html {
   max-width: 600px;
   margin: auto;
   scroll-behavior: smooth;
-  --BG: #FAFAFA;
-  --Main: #363636;
-  --Sub: #828283;
-  --LM: #007AFF;
-  --LR: #FF2D55;
-  --Border: #CECED0;
-  --Toggle-BG:  #CECED0;
-}
-
-html[data-theme='dark'] {
-  --BG: #101010;
-  --Main: #ffffff;
-  --Sub: #A9A9B0;
-  --LM: #70D7FF;
-  --LR: #FF6482;
-  --Border: #222223;
 }
 
 body {

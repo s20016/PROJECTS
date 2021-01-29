@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
+<!-- <html lang="en" data-theme="light"> -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,8 @@
     <title>AniLIST</title>
 
     <!-- css -->
+    <link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="css/light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
     <link rel="stylesheet" href="css/main.css">
 
     <!-- Google Font -->
@@ -24,9 +27,9 @@
     <header>
         <div class="mainHeader">
             <div class="title">Anime List</div>
-            <div class="toggle-container">
+            <!-- <div class="toggle-container">
                 <input type="checkbox" id="switch" name="theme" /><label for="switch"></label>
-            </div>
+            </div> -->
         </div>
     </header>
 
@@ -291,22 +294,23 @@
 
     <script>
         // Toggle Theme
-        var checkbox = document.querySelector('input[name=theme]');
+        // const checkbox = document.querySelector('input[name=theme]');
+        // const doc = document.documentElement
 
-        checkbox.addEventListener('change', function() {
-            if(this.checked) {
-                trans()
-                document.documentElement.setAttribute('data-theme', 'dark')
-            } else {
-                trans()
-                document.documentElement.setAttribute('data-theme', 'light')
-            }
-        })
+        // checkbox.addEventListener('change', function() {
+        //     if(this.checked) {
+        //         trans()
+        //         doc.setAttribute('data-theme', 'dark')
+        //     } else {
+        //         trans()
+        //         doc.setAttribute('data-theme', 'light')
+        //     }
+        // })
 
         let trans = () => {
-            document.documentElement.classList.add('transition');
+            doc.classList.add('transition');
             window.setTimeout(() => {
-                document.documentElement.classList.remove('transition')
+                doc.classList.remove('transition')
             }, 0)
         }
 
@@ -321,7 +325,6 @@
                 $('.totalMenu').slideToggle()
             })
         })(jQuery);
-
 
     </script>
 </body>
