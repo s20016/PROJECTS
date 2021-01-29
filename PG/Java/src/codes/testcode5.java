@@ -1,5 +1,10 @@
 package codes;
 
-public abstract class testcode5 {
-	abstract void test();
+//Main.java
+public class testcode5 {
+	public static void main(String[] args) {
+
+		Sakura sakura = new Sakura();
+		sakura.Attack(92);
+	}
 }
