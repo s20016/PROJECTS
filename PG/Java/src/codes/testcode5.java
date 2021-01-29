@@ -1,5 +1,5 @@
 package codes;
 
-public abstract class testcode5 implements SampleInterface {
+public abstract class testcode5 {
 	abstract void test();
 }
