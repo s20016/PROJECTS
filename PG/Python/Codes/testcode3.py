@@ -10,81 +10,50 @@ sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 # normal - dd
 
 mainList = list(sys.stdin.read().split("\n"))
+
+mainList2 = []
 rewatchList = []
 movieList = []
 mainListSort = []
 finalMainList = []
 
-# for i in mainList:
-#     if i[:4] == "(2) ":
-#         rewatchList.append(i[4:])
-#         mainListSort.append(i[4:])
-#     else:
-#         mainListSort.append(i)
-
-# for i in mainListSort:
-#     if i[-4:] == " (M)":
-#         movieList.append(i[:-4])
-#         mainListSort.append(i[:-4])
-
-# M, R
-# for i in mainList:
-#     if i[-4:] == " (M)":
-#         newI = i.replace("(M)", "").strip()
-#         if i[:4] == "(2) ":
-#             newI2 = newI.replace("(2)", "").strip()
-#             movieList.append(newI2)
-#             finalMainList.append(f'<li>{newI2}<span class="M">M</span><span class="R">2</span></li>')
-#             continue
-#         finalMainList.append(f'<li>{newI}<span class="M">M</span></li>')
-#         movieList.append(newI)
-#     elif i[:4] == "(2) ":
-#         newI3 = i.replace("(2)", "").strip()
-#         rewatchList.append(i[4:])
-#         finalMainList.append(f'<li>{newI3}<span class="R">2</span></li>')
-#     else:
-#         finalMainList.append(f"<li>{i}</li>")
-
-# Dot
 for i in mainList:
-    if i[-4:] == " (M)":
-        newI = i.replace("(M)", "").strip()
-        if i[:4] == "(2) ":
-            newI2 = newI.replace("(2)", "").strip()
-            movieList.append(newI2)
-            finalMainList.append(
-                f'<li>{newI2}<span class="M">&#9679;</span><span class="R">&#9679;&#9679;</span></li>'
+    if '<li class="M">' in i:
+        if '<span class="R">2</span>' in i:
+            rewatchList.append(
+                i.replace('<li class="M">', '')
+                .replace('<span class="R">2</span></li>', '[M-2]')
             )
-            continue
-        finalMainList.append(f'<li>{newI}<span class="M">&#9679;</span></li>')
-        movieList.append(newI)
-    elif i[:4] == "(2) ":
-        newI3 = i.replace("(2)", "").strip()
-        rewatchList.append(i[4:])
-        finalMainList.append(f'<li>{newI3}<span class="R">&#9679;&#9679;</span></li>')
+        else: 
+            movieList.append(
+            i.replace('<li class="M">', '')
+            .replace('</li>', '[M-1]')
+        )
     else:
-        finalMainList.append(f"<li>{i}</li>")
+        if '<span class="R">2</span>' in i:
+            rewatchList.append(
+                i.replace('<li>', '')
+                .replace('<span class="R">2</span></li>', '[A-2]')
+            )
+        else:
+            mainList2.append(
+                i.replace('<li>', '')
+                .replace('<span class="R">2</span></li>', '[A-1]')
+                .replace('</li>', '[A-1]')
+            )
+
+for i in mainList2:
+    mainListSort.append(i)
+for i in rewatchList:
+    mainListSort.append(i)
+for i in movieList:
+    mainListSort.append(i)
+
+mainListSort.sort()
+# print("\n".join(mainListSort))
 
 
-# print(mainList)
-# print(len(mainListSort))
+for i in mainListSort:
+    finalMainList.append(f'"{i}",')
 
-# mainListSort.sort()
-# print("\n".join(i for i in finalMainList))
-
-# for i in mainListSort:
-#     if i in movieList:
-#         finalMainList.append(f"<dt>{i}</dt>")
-#     else:
-#         finalMainList.append(f"<dd>{i}</dd>")
-
-# print(len(rewatchList))     # 12 Rewatch
-# print(len(movieList))       # 28 Movies
-# print(len(finalMainList))   # 203 Anime
-
-# print(rewatchList)    # 12 Rewatch
-# print(movieList)      # 28 Movies
-# print(finalMainList)  # 203 Anime
-
-print("\n".join(i for i in finalMainList))
-# print("\n".join(f"<li>{i}</li>" for i in finalMainList))
+print("\n".join(finalMainList))
