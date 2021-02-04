@@ -6,13 +6,27 @@ sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 # TEST CODE 2
 # =========================================================================
 
-list = [*range(2, int(input()) + 1)]
+x = list(sys.stdin.read().split("\n"))
+main = [x[0]]
+main2 = []
 
-for x in [2, 3, 4, 5, 7]:
-    for y in list:
-        if x == y:
-            continue
-        elif y % x == 0:
-            list.remove(y)
+for i in range(len(x)):
+    if i > 0:
+        main.append(x[i].split(" ")[1])
 
-print(list)
+component = [
+    "this.GetAnimeList()",
+    "this.GetAnimeIMG()",
+    "GetAnimeList",
+    "GetAnimeIMG",
+    "AnimeHeader",
+    "AnimeDisplay",
+    "AnimeListMode",
+    "AnimeIMGMode",
+    "AnimeFooter"
+]
+
+for num in main:
+    main2.append(f'{num} - {component[int(num) - 1]}')
+
+print("\n".join(main2))
