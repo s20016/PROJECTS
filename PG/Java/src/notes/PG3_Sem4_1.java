@@ -1,15 +1,20 @@
 package notes;
 
 import java.io.File;			// L1
-import java.io.IOException;		// L14
 import java.util.Scanner;		// L5, L6
+import java.io.IOException;		// L14
+import java.util.ArrayList;		// L19
+import java.util.List;			// L19
+import java.util.HashSet;		// L19
+import java.util.Iterator;		// L19
+import java.util.Set;			// L19
 
 public class PG3_Sem4_1 {
 
 	public static void main(String[] args) {
 
 		// TODO: Test method here
-		sampleInterface();
+		sampleGeneric();
 	}
 
 	/*
@@ -81,12 +86,24 @@ public class PG3_Sem4_1 {
 	 * 		useCalculatorSample();
 	 * 
 	 * Lesson 16 (01-27-2021)
-	 * 		E: Upcast & Downcast
+	 * 		E: Up-cast & Downcast
 	 * 		sampleCasting();
 	 * 		sampleEquals();
 	 * 		sampleEquals2();
 	 * 		sampleEquals3();
 	 * 		sampleInterface();
+	 * 
+	 * Lesson 17 (01-28-2021)
+	 * 		sampleAbstract();
+	 * 
+	 * Lesson 19 (02-04-2021)
+	 * 		E: Collections, Generic, Set, Iterator
+	 * 		sampleCollections();
+	 * 		sampleCollections2();
+	 * 		sampleCollections3();
+	 * 		sampleGeneric();
+	 * 		sampleSet();
+	 * 		sampleSet2();
 	 * 
 	 */
 
@@ -103,6 +120,7 @@ public class PG3_Sem4_1 {
 	}
 
 	static void nestedForLoop() {
+		// Simple For loop Example
 		for (int i = 1; i < 5; i++) {
 			System.out.print(i);
 			if (i == 3) {
@@ -434,6 +452,7 @@ public class PG3_Sem4_1 {
 				this.light = light;
 			}
 
+			@SuppressWarnings("unused")
 			public String getName() {
 				return name;
 			}
@@ -449,6 +468,7 @@ public class PG3_Sem4_1 {
 		robot.sayHello();
 	}
 
+	@SuppressWarnings("unused")
 	static void heapSample() {
 		class Test {
 			private String name;
@@ -554,6 +574,7 @@ public class PG3_Sem4_1 {
 		new overload("Hello");
 	}
 
+	@SuppressWarnings("unused")
 	static void instanceSample() {
 		class sample {
 			// The method hello() cannot be declared static
@@ -742,6 +763,7 @@ public class PG3_Sem4_1 {
 		a.hello("JC");
 	}
 
+	@SuppressWarnings("unused")
 	static void sampleSuperClass() {
 		class A {
 			// Method signature A(String)
@@ -997,6 +1019,7 @@ public class PG3_Sem4_1 {
 		System.out.printf("a == c: %b\n", a == c);
 	}
 	
+	@SuppressWarnings("unused")
 	static void sampleEquals2() {
 		class Client {
 			private int id;
@@ -1016,6 +1039,7 @@ public class PG3_Sem4_1 {
 	}
 
 
+	@SuppressWarnings("unused")
 	static void sampleEquals3() {
 		class Client {
 			private int id;
@@ -1085,6 +1109,7 @@ public class PG3_Sem4_1 {
      * 
      */
     
+    @SuppressWarnings("unused")
     static void sampleAbstract() {
     	class TaxCalculator {
     		protected int price;
@@ -1106,5 +1131,113 @@ public class PG3_Sem4_1 {
     }
     
     
+    /* LESSON: 19 (02-04-2021)
+     * 
+     * Collections 
+     * 	- A framework that represents a unified architecture
+     * for storing and manipulating a group of objects.
+     * 	- A single unit of objects
+     * 
+     * Generic - Specify the type that will be held inside the list.
+     * 	- Diamond operator <> containing the type
+     * 
+     */
     
+	@SuppressWarnings({"rawtypes", "unchecked"})
+	static void sampleCollections() {
+		// The defined list could hold any Object thus the warning
+		// Without Generic Method = Raw type Warning
+    	List list = new ArrayList();	// raw type warning
+    	for (int i = 0; i < 10; i++) {
+    		list.add(new Object());		// unchecked warning
+    	}
+    	System.out.println(list.size());
+    	
+    	// 10
+    }
+    
+    static void sampleCollections2() {
+    	// With Generic Method
+    	List<String> list = new ArrayList<String>();
+    	list.add("A");
+    	list.add("B");
+    	list.add("C");
+    	System.out.println(list);
+    }
+    
+    static void sampleCollections3() {
+    	List<String> list = new ArrayList<String>();
+    	String arr[] = {"A", "B", "C", "D"};
+    	
+    	// Enhanced For loop
+    	for (String ret : arr) {
+    		list.add(ret);
+    	}
+    	System.out.println(list);
+    	
+    	// [A, B, C, D]
+    }
+    
+    @SuppressWarnings("unused")
+    static void sampleGeneric() {
+    	class sample<T> {
+    		T ret;
+    		
+    		sample(T ret) {
+    			this.ret = ret;
+    		}
+    		
+    		void getValue() {
+    			System.out.println(ret.getClass().getName());
+    		}
+    	}
+    	sample<Integer> obj = new sample<>(10);
+    	obj.getValue();
+    	
+    	// java.lang.Integer
+    }
+    
+    static void sampleGeneric2() {
+    	class sample<T, V> {
+    		T num;
+    		V num2;
+    		
+    		sample(T num, V num2) {
+    			this.num = num;
+    			this.num2 = num2;
+    		}
+    		
+    		void getValue() {
+    			System.out.println(num.getClass().getName());
+    			System.out.println(num2.getClass().getName());
+    		}
+    	}
+    	sample<Integer, Double> ret = new sample<>(3000, 5000.0);
+    	ret.getValue();
+    	
+    }
+    
+    static void sampleSet() {
+    	Set<String> set = new HashSet<>();
+    		set.add("A");
+    		set.add("B");
+    		set.add("C");
+    		for (String str: set) {
+    			System.out.println(str);
+    	}
+    }
+    
+    static void sampleSet2() {
+    	Set<String> set = new HashSet<>();
+		set.add("A");
+		set.add("B");
+		set.add("C");
+		set.add(null);
+		
+		Iterator<String> ret = set.iterator();
+		while(ret.hasNext()) {
+			String str = ret.next();
+			System.out.println(str);
+		}
+    }
 }

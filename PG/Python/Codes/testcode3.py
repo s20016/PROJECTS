@@ -21,25 +21,25 @@ for i in mainList:
     if '<li class="M">' in i:
         if '<span class="R">2</span>' in i:
             rewatchList.append(
-                i.replace('<li class="M">', '')
-                .replace('<span class="R">2</span></li>', '[M-2]')
+                i.replace('<li class="M">', '"')
+                .replace('<span class="R">2</span></li>', '", "", "M2"')
             )
         else: 
             movieList.append(
-            i.replace('<li class="M">', '')
-            .replace('</li>', '[M-1]')
+            i.replace('<li class="M">', '"')
+            .replace('</li>', '", "", "M1"')
         )
     else:
         if '<span class="R">2</span>' in i:
             rewatchList.append(
-                i.replace('<li>', '')
-                .replace('<span class="R">2</span></li>', '[A-2]')
+                i.replace('<li>', '"')
+                .replace('<span class="R">2</span></li>', '", "", "A2"')
             )
         else:
             mainList2.append(
-                i.replace('<li>', '')
-                .replace('<span class="R">2</span></li>', '[A-1]')
-                .replace('</li>', '[A-1]')
+                i.replace('<li>', '"')
+                .replace('<span class="R">2</span></li>', '", "", "A1"')
+                .replace('</li>', '", "", "A1"')
             )
 
 for i in mainList2:
@@ -54,6 +54,6 @@ mainListSort.sort()
 
 
 for i in mainListSort:
-    finalMainList.append(f'"{i}",')
+    finalMainList.append('[' + i + '],')
 
 print("\n".join(finalMainList))

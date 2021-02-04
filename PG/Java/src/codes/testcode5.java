@@ -1,10 +1,9 @@
 package codes;
 
-//Main.java
 public class testcode5 {
 	public static void main(String[] args) {
-
-		Sakura sakura = new Sakura();
-		sakura.Attack(92);
+		testcode4<Integer> obj = new testcode4<>(10);
+		
+		obj.getValue();
 	}
 }
