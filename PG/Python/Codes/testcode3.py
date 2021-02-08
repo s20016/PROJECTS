@@ -6,9 +6,6 @@ sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 # TEST CODE 3
 # =========================================================================
 
-# movie - dt
-# normal - dd
-
 mainList = list(sys.stdin.read().split("\n"))
 
 mainList2 = []
@@ -21,25 +18,26 @@ for i in mainList:
     if '<li class="M">' in i:
         if '<span class="R">2</span>' in i:
             rewatchList.append(
-                i.replace('<li class="M">', '"')
-                .replace('<span class="R">2</span></li>', '", "", "M2"')
+                i.replace('<li class="M">', '"').replace(
+                    '<span class="R">2</span></li>', '", "", "M2"'
+                )
             )
-        else: 
+        else:
             movieList.append(
-            i.replace('<li class="M">', '"')
-            .replace('</li>', '", "", "M1"')
-        )
+                i.replace('<li class="M">', '"').replace("</li>", '", "", "M1"')
+            )
     else:
         if '<span class="R">2</span>' in i:
             rewatchList.append(
-                i.replace('<li>', '"')
-                .replace('<span class="R">2</span></li>', '", "", "A2"')
+                i.replace("<li>", '"').replace(
+                    '<span class="R">2</span></li>', '", "", "A2"'
+                )
             )
         else:
             mainList2.append(
-                i.replace('<li>', '"')
+                i.replace("<li>", '"')
                 .replace('<span class="R">2</span></li>', '", "", "A1"')
-                .replace('</li>', '", "", "A1"')
+                .replace("</li>", '", "", "A1"')
             )
 
 for i in mainList2:
@@ -54,6 +52,6 @@ mainListSort.sort()
 
 
 for i in mainListSort:
-    finalMainList.append('[' + i + '],')
+    finalMainList.append("[" + i + "],")
 
 print("\n".join(finalMainList))
