@@ -1,0 +1,1 @@
+![GP2](WebApplication/SocialPreview/GitSocialPreview2.png)
