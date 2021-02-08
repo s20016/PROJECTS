@@ -30,3 +30,5 @@ for num in main:
     main2.append(f'{num} - {component[int(num) - 1]}')
 
 print("\n".join(main2))
+
+
