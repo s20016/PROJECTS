@@ -1,20 +1,14 @@
 package notes;
 
-import java.io.File;			// L1
-import java.util.Scanner;		// L5, L6
-import java.io.IOException;		// L14
-import java.util.ArrayList;		// L19
-import java.util.List;			// L19
-import java.util.HashSet;		// L19
-import java.util.Iterator;		// L19
-import java.util.Set;			// L19
+import java.io.*;
+import java.util.*;
 
 public class PG3_Sem4_1 {
 
 	public static void main(String[] args) {
 
 		// TODO: Test method here
-		sampleGeneric();
+		sampleChar();
 	}
 
 	/*
@@ -104,6 +98,21 @@ public class PG3_Sem4_1 {
 	 * 		sampleGeneric();
 	 * 		sampleSet();
 	 * 		sampleSet2();
+	 * 
+	 * Lesson 20 (02-09-2021)
+	 * 		E: List & Set
+	 * 		sampleSet3();
+	 * 		sampleIterator();
+	 * 		sampleIterator2();
+	 * 		sampleMap();
+	 * 		sampeWrapper();
+	 * 		sampleWrapper2();
+	 * 		sampleList();
+	 * 		sampleMap2();
+	 * 		sampleString();
+	 * 		sampleString2();
+	 * 		sampleString3();
+	 * 		sampleChar();
 	 * 
 	 */
 
@@ -1239,5 +1248,166 @@ public class PG3_Sem4_1 {
 			String str = ret.next();
 			System.out.println(str);
 		}
+    }
+    
+    
+    /* LESSON: 20 (02-09-2021) 
+     * 
+     * List & Set
+     * List can contain duplicate elements
+     * Set contains unique elements only
+     * 
+     * */
+    
+    static void sampleSet3() {
+    	Set<String> set = new HashSet<>();
+    	set.add("A");
+    	set.add("B");
+    	set.add("C");
+    	
+    	System.out.println(set);  // [A, B, C]
+    	
+    	set.add("A");
+    	set.add("D");
+   
+    	System.out.println(set);  // [A, B, C, D]
+    }
+    
+    static void sampleIterator() {
+    	Set<String> set = new HashSet<>();
+    	set.add("A");
+    	set.add("B");
+    	set.add("C");
+    	set.add(null);
+    	set.add("A");
+    	
+    	Iterator<String> ite = set.iterator();
+    	while (ite.hasNext()) {
+    		String str = ite.next();
+    		System.out.print(str + " ");
+    	}
+    	// null A B C 
+    }
+    
+    static void sampleIterator2() {
+    	ArrayList<String> list = new ArrayList<>();
+    	list.add("A");
+    	list.add("B");
+    	list.add("C");
+    	list.add("A");
+    	
+    	Iterator<String> ite = list.iterator();
+    	while (ite.hasNext()) {
+    		String str = ite.next();
+    		System.out.print(str + " ");
+    	}
+    	// A B C A
+    }
+    
+    static void sampleMap() {
+    	class Item {
+    		private String name;
+    		private int price;
+    		public Item(String name, int price) {
+    			this.name = name;
+    			this.price = price;
+    		}
+    		public String getName() {
+    			return name;
+    		}
+    		@SuppressWarnings("unused")
+			public int getPrice() {
+    			return price;
+    		}
+    	}
+    	
+    	Map<String, Item> menu = new HashMap<>();
+    	menu.put("apple", new Item("apple", 100));
+    	menu.put("orange", new Item("orange", 80));
+    	menu.put("banana", new Item("banana", 120));
+    	
+    	Set<String> keys = menu.keySet();
+    	for (String key : keys) {
+    		Item item = menu.get(key);
+    		System.out.println(item.getName());
+    	}
+		// orange
+		// banana
+		// apple
+    }
+    
+    @SuppressWarnings("deprecation")
+	static void sampleWrapper() {
+    	int a  = new Integer(10);
+    	a++;
+    	System.out.println(a);
+    	
+    	// 11
+    }
+    
+    @SuppressWarnings("deprecation")
+    static void sampleWrapper2() {
+		int a = new Integer(10).intValue();
+    	a++;
+    	System.out.println(a);
+    	
+    	// 11
+    }
+    
+    static void sampleList() {
+    	List<Integer> list = new ArrayList<>();
+    	for (int i = 0; i < 10; i++) {
+    		list.add(i);
+    	}
+    	for (Integer val: list) {
+    		System.out.println(val.intValue());
+    	}
+    }
+    
+    static void sampleMap2() {
+    	String alpha[] = {"A", "B", "C", "D", "E"};
+    	Map<Integer, String> list = new HashMap<>();
+    	for (int i = 0; i < 5; i++) {
+    		list.put(i, alpha[i]);
+    	}
+    	System.out.println(list);
+    	// {0=A, 1=B, 2=C, 3=D, 4=E}
+    }
+    
+    static void sampleString() {
+    	String a = "Hello, Java!";
+    	String b = "Hello, Java!";
+    	System.out.println(a == b); // true
+    }
+    
+    static void sampleString2() {
+    	String a = new String("Hello, Java!");
+    	String b = new String("Hello, Java!");
+    	System.out.println(a == b); // false
+    }
+    
+    static void sampleString3() {
+    	final String str = "Hello, Java!";
+    	String a = str;
+    	String b = str;
+    	System.out.println(a == b); // true
+    }
+    
+    static void sampleChar() {
+    	// .charAt()
+    	String str = "Yahallo!";
+    	System.out.println(str.charAt(3)); // a
+    	
+    	// .replace()
+    	String str2 = str.replace("a", "A");
+    	System.out.println(str2); // YAhAllo!
+    	
+    	// .substring()
+    	String str3 = str.substring(2);
+    	System.out.println(str3); // hallo!
+    	
+    	// .split()
+    	String str4[] = str.split("l");
+    	System.out.println(str4[0]); // Yaha
     }
 }
