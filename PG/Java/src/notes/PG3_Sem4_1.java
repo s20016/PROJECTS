@@ -1,6 +1,8 @@
 package notes;
 
 import java.io.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class PG3_Sem4_1 {
@@ -8,7 +10,7 @@ public class PG3_Sem4_1 {
 	public static void main(String[] args) {
 
 		// TODO: Test method here
-		sampleChar();
+		sampleCalendar2();
 	}
 
 	/*
@@ -113,6 +115,14 @@ public class PG3_Sem4_1 {
 	 * 		sampleString2();
 	 * 		sampleString3();
 	 * 		sampleChar();
+	 * 
+	 * Lesson 21 (02-10-2021)
+	 * 		E: Mutable & Immutable
+	 * 		sampleMutable();
+	 * 		sampleMutable2();
+	 * 		sampleTime();
+	 * 		sampleCalendar();
+	 * 		sampleCalendar2();
 	 * 
 	 */
 
@@ -1187,7 +1197,6 @@ public class PG3_Sem4_1 {
     	// [A, B, C, D]
     }
     
-    @SuppressWarnings("unused")
     static void sampleGeneric() {
     	class sample<T> {
     		T ret;
@@ -1410,4 +1419,73 @@ public class PG3_Sem4_1 {
     	String str4[] = str.split("l");
     	System.out.println(str4[0]); // Yaha
     }
+    
+    
+    /* LESSON: 21 (02-10-2021)
+     * 
+     * Mutable & Immutable
+     *	- A mutable object can change after it's created,
+     * 	and an immutable object can't.
+     * 
+     * Mutable
+     * 	- Provide a method to modify the field values
+     * 	- Has Getter and Setter method
+     * 
+     * Immutable
+     * 	- All classes should be declared final
+     * 	- All fields should be declared private
+     * 	- No Setter method
+     * 	- Make all mutable fields final
+     * 
+     * FileWriter - Write characters to a file (character based)
+     * FileOutPutStream - byte based
+     * 
+     * FileReader - Read contents of a file (character based)
+     * FileinputStream - byte based
+     * 
+     * */
+    
+    static void sampleMutable() {
+    	String a = "a";
+    	String b = "b";
+    	String c = "c";
+    	String result = String.format("%s.%s.%s", a, b, c);
+    	System.out.println(result);
+    	// a.b.c
+    }
+    
+    static void sampleMutable2() {
+    	StringBuilder msg = new StringBuilder();
+    	// Method chain
+    	msg.append("Hello, ").append("World!");
+    	System.out.println(msg.toString());
+    	//Hello, World!
+    }
+    
+    static void sampleTime() {
+    	// ms between current time and January 01, 1970
+    	long ms = System.currentTimeMillis();
+    	System.out.println(ms);
+    }
+    
+    static void sampleCalendar() {
+    	Calendar cal = Calendar.getInstance();
+    	int y = cal.get(Calendar.YEAR);
+    	int m = cal.get(Calendar.MONTH) + 1;
+    	int d = cal.get(Calendar.DATE);
+    	
+//    	System.out.println(cal.getTime());
+    	System.out.printf("%d/%d/%d", y, m, d);
+    	// 2021/2/10
+    }
+    
+    static void sampleCalendar2() {
+    	Calendar cal = Calendar.getInstance();
+    	DateFormat fmt = new SimpleDateFormat("yyyy/MM/dd");
+    	System.out.println(fmt.format(cal.getTime()));
+    	// 2021/02/10
+    }
+    
+    
+    
 }

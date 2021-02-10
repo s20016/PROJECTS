@@ -1,2 +1,1 @@
-constructor
-hello
+TEST
