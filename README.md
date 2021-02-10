@@ -1,8 +1,9 @@
 ## PROJECTS  
 > My class activities and personal projects in one repository.
 
-Main ReactJS repository [ [ReactJS](https://github.com/s20016/ReactJS) ]  
-Project Animate [ [Animate](https://github.com/s20016/Animate) ]
+Repo: Main ReactJS [ [ReactJS](https://github.com/s20016/ReactJS) ]  
+Repo: Project Animate [ [Animate](https://github.com/s20016/Animate) ]
+
 ```
 PROJECTS
 ├── README.md
@@ -11,12 +12,13 @@ PROJECTS
 │   ├── JavaScript
 │   ├── Python
 │   └── Shell
+│       └── Vim Script
 ├── WebApplication
 │   ├── ReactJS
 │   ├── SocialPreview
 │   └── WordPress
+│       └── PHP
 └── WebExtension
-    ├── project01
-    └── task01
+    ├── HTML
+    └── CSS/SCSS
 ```
-
