@@ -1,5 +1,6 @@
-<h1 align="center">Social Preview</h1>
-
-![GP2](./GitSocialPreview2.png)
-![GP1](./GitSocialPreview1.png)
-<div align="center">- January 2021 -</div>
+<div align="center">
+  <h1>Social Preview</h1>
+  <img src="./GitSocialPreview2.png" />
+  <img src="./GitSocialPreview1.png" />
+  <p>January 2021</p>
+</div>
