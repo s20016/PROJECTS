@@ -1,4 +1,4 @@
-## **Methods of Reading `Input.txt`**
+## Methods for Reading Input.txt
 Updated: August 1, 2020
 
 **Notes:**<br>
