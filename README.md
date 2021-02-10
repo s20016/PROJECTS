@@ -1,8 +1,9 @@
 ## PROJECTS  
 > My class activities and personal projects in one repository.
-
-Repo: Main ReactJS [ [ReactJS](https://github.com/s20016/ReactJS) ]  
-Repo: Project Animate [ [Animate](https://github.com/s20016/Animate) ]
+ 
+[ [Web](https://s20016.github.io/PROJECTS/WebExtension/) ] WebExtension - All my class and personal HTML webpage/websites.  
+[ [App](https://s20016.github.io/ReactJS/) ] Main ReactJS - My React projects packed in one simple web application.  
+[ [App](https://s20016.github.io/Animate/) ] Project Animate - An app that shows all my anime list.  
 
 ```
 PROJECTS

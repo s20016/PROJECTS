@@ -1,7 +1,7 @@
 ## **WebExtension**
 
 #### **My HTML Projects**
-- Project01 「[AniLIST](./project01/aniList.html)」Updated: 01/18/2020 
+- Project01 「[AniLIST](./project01/aniList.html)」
 
 #### **Class Projects**
 - Task01 「[学科紹介](WebExtension/task01/index.html)」
