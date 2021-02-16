@@ -8,7 +8,8 @@ public class testcode5 {
 		FileReader input = null;
 		try {
 			String dir = System.getProperty("user.dir");
-			String file = String.format("%s\\src\\codes\\output.txt", dir);
+//			String file = String.format("%s\\src\\codes\\input.txt", dir);
+			String file = String.format("%s//input.txt", dir);
 			input = new FileReader(file);
 			int c = 0;
 			while ((c = input.read()) != -1) {

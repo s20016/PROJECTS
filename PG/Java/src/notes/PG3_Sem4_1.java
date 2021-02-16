@@ -1,8 +1,7 @@
 package notes;
 
 import java.io.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+import java.text.*;
 import java.util.*;
 
 public class PG3_Sem4_1 {
@@ -10,7 +9,7 @@ public class PG3_Sem4_1 {
 	public static void main(String[] args) {
 
 		// TODO: Test method here
-		sampleCalendar2();
+		sampleInput4();
 	}
 
 	/*
@@ -123,6 +122,13 @@ public class PG3_Sem4_1 {
 	 * 		sampleTime();
 	 * 		sampleCalendar();
 	 * 		sampleCalendar2();
+	 * 
+	 * Lesson 22 (02-16-2021)
+	 * 		E: Lambda & Stream, De/Serialization
+	 * 		sampleInput();
+	 * 		sampleInput2();
+	 * 		sampleInput3(); <- Error
+	 * 		sampleInput4(); <- Error
 	 * 
 	 */
 
@@ -1487,5 +1493,135 @@ public class PG3_Sem4_1 {
     }
     
     
+    /* LESSON: 22 (02-16-2021) 
+     * 
+     * Lambda - a short block of code which takes in parameter and returns 
+     * a value.
+     * 
+     * parameter -> expression
+     * (paramter1, parameter2) -> { expression }
+     * 
+     * Serialization - converting the state of an object into byte stream
+     * Deserialization - byte stream is used to create the actual java
+     * object in memory
+     * 
+     * 
+     * */
+    
+    static void sampleInput() {
+		FileReader input = null;
+		try {
+			String dir = System.getProperty("user.dir");
+			String file = String.format("%s\\src\\codes\\input.txt", dir);
+			input = new FileReader(file);
+			int c = 0;
+			while ((c = input.read()) != -1) {
+				char ch = (char) c;
+				System.out.println(ch);
+			}
+		} catch (Exception err) {
+			System.out.println(err.getMessage());
+		} finally {
+			if (input != null) {
+				try {
+					input.close();
+				} catch (IOException err) {
+					System.out.println(err.getMessage());
+				}
+			}
+		}
+		// T
+		// E
+		// S
+		// T
+    }
+    
+    @SuppressWarnings("resource")
+	static void sampleInput2() {
+    	FileReader input = null;
+    	String dir = System.getProperty("user.dir");
+		String file = String.format("%s\\src\\codes\\input.txt", dir);
+
+    	try {
+    		input = new FileReader(file);
+        	BufferedReader br = new BufferedReader(input);
+        	String line = null;
+        	while ((line = br.readLine()) != null) {
+        		System.out.println(line + "!");
+        	}
+    	} catch (Exception err) {
+    		System.out.println(err.getMessage());
+    	} finally {
+    		if (input != null) {
+    			try {
+    				input.close();
+    			} catch (IOException err) {
+    				System.out.println(err.getMessage());
+    			}
+    		}
+    	}
+//    	TEST1!
+//    	TEST2!
+//    	TEST3!
+    }
+    
+    @SuppressWarnings("resource")
+	static void sampleInput3() {
+    	FileWriter output = null;
+    	String dir = System.getProperty("user.dir");
+		String file = String.format("%s\\src\\codes\\output.txt", dir);
+		
+		try {
+			output = new FileWriter(file);
+			BufferedWriter bw = new BufferedWriter(output);
+			Console console = System.console();
+			
+			while (true) {
+				String line = console.readLine();
+				if ("".equals(line)) {
+					break;
+				}
+				bw.write(line);
+				bw.newLine();
+			}
+			bw.flush();
+		} catch (IOException err) {
+			System.out.println(err.getMessage());
+		} finally {
+			if (output != null) {
+				try {
+					output.close();
+				} catch (IOException err) {
+					System.out.println(err.getMessage());
+				}
+			}
+		}
+    }
+    
+    
+    @SuppressWarnings("resource")
+	static void sampleInput4() {
+    	Console con = System.console();
+    	System.out.println("Enter something: ");
+    	String msg = con.readLine();
+    	
+    	FileOutputStream fos = null;
+    	try {
+    		fos = new FileOutputStream("message.ser");
+    		ObjectOutputStream out = new ObjectOutputStream(fos);
+    		out.writeObject(msg);
+    		out.flush();
+    	} catch (Exception err) {
+    		System.out.println(err.getMessage());
+    	} finally {
+    		if (fos != null) {
+    			try {
+    				fos.close();
+    			} catch (IOException err) {
+    				System.out.println(err.getMessage());
+    			}
+    		}
+    	}
+    }
     
 }
