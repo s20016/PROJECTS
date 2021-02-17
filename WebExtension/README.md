@@ -4,7 +4,7 @@
 - Project01 「[AniLIST](./project01/aniList.html)」(Deprecated)
 
 #### **Class Projects**
-- Task01 「[学科紹介](WebExtension/task01/index.html)」
+- Task01 「[学科紹介](./task01/index.html)」
 - Chapter01 「[Windows環境でHTML](./chapter01/ch01-firsthtml-win.html)」
 - Chapter02 「[Linux環境でHTMLを作る](./chapter02/ch02-firsthtml-linux.html)」
 - Chapter03 「[マークアップの考え方](./chapter03/ch03-markuptag1.html)」
