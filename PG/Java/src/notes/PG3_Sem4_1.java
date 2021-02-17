@@ -9,7 +9,7 @@ public class PG3_Sem4_1 {
 	public static void main(String[] args) {
 
 		// TODO: Test method here
-		sampleInput4();
+		sampleLambda();
 	}
 
 	/*
@@ -129,6 +129,9 @@ public class PG3_Sem4_1 {
 	 * 		sampleInput2();
 	 * 		sampleInput3(); <- Error
 	 * 		sampleInput4(); <- Error
+	 * 
+	 * Lesson 23 (02-17-2021)
+	 * 		sampleLambda();
 	 * 
 	 */
 
@@ -1624,4 +1627,23 @@ public class PG3_Sem4_1 {
     	}
     }
     
+    
+    /* LESSON: 23 (02-17-2020) 
+     * 
+     * Buffered & Unbuffered Stream
+     * 
+     */
+    
+    static void sampleLambda() {
+    	int[] numlist = {1, 5, 0, 7, 9, 2, 10, 8, 3};
+    	Arrays.stream(numlist)
+    		.filter((n) -> n > 3)
+    		.sorted()
+    		.forEach((n) -> System.out.println(n));
+//    	5
+//    	7
+//    	8
+//    	9
+//    	10
+    }
 }
