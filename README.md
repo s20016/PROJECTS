@@ -1,9 +1,9 @@
 ## PROJECTS  
 > My class activities and personal projects in one repository.
  
-[ [Web](https://s20016.github.io/PROJECTS/WebExtension/) ] **WebExtension**  
-[ [App](https://s20016.github.io/ReactJS/) ] **Project ReactJS**  
 [ [App](https://s20016.github.io/Animate/) ] **Project Animate**  
+[ [App](https://s20016.github.io/ReactJS/) ] **Project ReactJS**  
+[ [Web](https://s20016.github.io/PROJECTS/WebExtension/) ] **WebExtension**  
 
 ```
 PROJECTS
