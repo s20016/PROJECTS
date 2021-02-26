@@ -14,7 +14,6 @@ PROJECTS
 │   ├── JavaScript
 │   ├── Python
 │   └── Shell
-│       └── Vim Script
 ├── WebApplication
 │   ├── ReactJS
 │   ├── SocialPreview
