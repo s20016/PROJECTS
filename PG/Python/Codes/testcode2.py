@@ -7,28 +7,10 @@ sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 # =========================================================================
 
 x = list(sys.stdin.read().split("\n"))
-main = [x[0]]
-main2 = []
 
-for i in range(len(x)):
-    if i > 0:
-        main.append(x[i].split(" ")[1])
+for i in x:
+    comma = i.count(",")
+    if comma > 3:
+        print(f"{i}: {comma}")
 
-component = [
-    "this.GetAnimeList()",
-    "this.GetAnimeIMG()",
-    "GetAnimeList",
-    "GetAnimeIMG",
-    "AnimeHeader",
-    "AnimeDisplay",
-    "AnimeListMode",
-    "AnimeIMGMode",
-    "AnimeFooter"
-]
-
-for num in main:
-    main2.append(f'{num} - {component[int(num) - 1]}')
-
-print("\n".join(main2))
-
-
+print(x)
