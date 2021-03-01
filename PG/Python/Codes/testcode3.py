@@ -6,12 +6,13 @@ sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 # TEST CODE 3
 # =========================================================================
 
-mal_id = list(sys.stdin.read().split("\n"))
+x = list(sys.stdin.read().split("\n"))
 
-mid = []
+l = []
 
-for anime in mal_id:
-    mid.append(anime.split(" ")[1])
+for i in x:
+    if "{" in i:
+        print(i.replace("{", "{\n "))
+    else: print(i)
 
-print("\n".join(mid))
-# print(mid)
+# print("\n".join(l))

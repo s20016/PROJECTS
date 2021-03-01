@@ -6,11 +6,5 @@ sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 # TEST CODE 2
 # =========================================================================
 
-x = list(sys.stdin.read().split("\n"))
-
-for i in x:
-    comma = i.count(",")
-    if comma > 3:
-        print(f"{i}: {comma}")
-
-print(x)
+for i in range(len(l4)):
+    print(f'{{\n  "mal_id": {l4[i]},\n  "en_title": "{l3[i]}",\n  "ja_title": "{l5[i]}",\n  "subtitle": "",\n  "type": "{l6[i]}",\n  "count": 1\n}},')
