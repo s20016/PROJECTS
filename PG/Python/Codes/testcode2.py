@@ -6,5 +6,7 @@ sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 # TEST CODE 2
 # =========================================================================
 
-for i in range(len(l4)):
-    print(f'{{\n  "mal_id": {l4[i]},\n  "en_title": "{l3[i]}",\n  "ja_title": "{l5[i]}",\n  "subtitle": "",\n  "type": "{l6[i]}",\n  "count": 1\n}},')
+import tmp_animate as animate
+
+for i in range(len(animate.l4)):
+    print(f'{{\n  "mal_id": {animate.l4[i]},\n  "en_title": "{animate.l3[i]}",\n  "ja_title": "{animate.l5[i]}",\n  "subtitle": "",\n  "type": "{animate.l6[i]}",\n  "count": 1\n}},')
