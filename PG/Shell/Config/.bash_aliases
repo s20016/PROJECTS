@@ -9,25 +9,12 @@ RESET=$(tput sgr 0)
 alias sbash="source ~/.bashrc"
 alias update="sudo apt update && sudo apt upgrade -y"
 
-# Initialize
-
-# linkstart() {
-#     NAME=$(uname -a | awk '{print $2}')
-#     echo -e "\n\t${GREEN}Welcome back, JC! ${RESET}You are logged on ${YELLOW}${NAME}${RESET}\n"
-#     if [[ $1 = "PROJECTS" ]]; then
-#         cd ~/PROJECTS && git pull
-#     elif [[ $1 = "FILES" ]]; then
-#         cd ~/FILES && git pull
-#     fi
-# }
-
-# Functions
 # Python Functions *****************************************************************************
 
 pyrun() {
     NAME=$(uname -a | awk '{print $2}')
-    FILES=~/PROJECTS/PG/Python/Codes/*.py
     USER=$(echo $USER)
+    FILES=~/PROJECTS/PG/Python/Codes/*.py
     for f in $FILES; do
         if [[ ${NAME} = "GL504GM" ]]; then
             sed -i '3,4 s/s20016/czekras/' ${f} 
@@ -35,10 +22,14 @@ pyrun() {
             sed -i '3,4 s/czekras/s20016/' ${f}
         fi
     done
-    cat ~/PROJECTS/PG/Python/Codes/input.txt | python3 ~/PROJECTS/PG/Python/Codes/testcode$1.py \
-        > ~/PROJECTS/PG/Python/Codes/output.txt
-    cat ~/PROJECTS/PG/Python/Codes/output.txt
-    echo
+    if [[ $1 = "p" ]]; then
+        python3 ~/PROJECTS/PG/Python/Projects/P$2*.py
+    else
+        cat ~/PROJECTS/PG/Python/Codes/input.txt | python3 ~/PROJECTS/PG/Python/Codes/testcode$1.py \
+            > ~/PROJECTS/PG/Python/Codes/output.txt
+        cat ~/PROJECTS/PG/Python/Codes/output.txt
+        echo
+    fi
 }
 
 pycode() {
@@ -62,10 +53,10 @@ javacode() {
 }
 
 javarun() {
-   cat ~/PROJECTS/PG/Java/src/codes/input.txt | java ~/PROJECTS/PG/Java/src/codes/testcode$1.java \
-       > ~/PROJECTS/PG/Java/src/codes/output.txt
-   cat ~/PROJECTS/PG/Java/src/codes/output.txt 
-   echo
+    cat ~/PROJECTS/PG/Java/src/codes/input.txt | java ~/PROJECTS/PG/Java/src/codes/testcode$1.java \
+        > ~/PROJECTS/PG/Java/src/codes/output.txt
+    cat ~/PROJECTS/PG/Java/src/codes/output.txt 
+    echo
 }
 
 # JavaScript Functions *******************************************************************************
@@ -75,13 +66,13 @@ jscode() {
 }
 
 jsrun() {
-   cat ~/PROJECTS/PG/JavaScript/Codes/input.txt | node ~/PROJECTS/PG/JavaScript/Codes/testcode$1.js \
+    cat ~/PROJECTS/PG/JavaScript/Codes/input.txt | node ~/PROJECTS/PG/JavaScript/Codes/testcode$1.js \
        > ~/PROJECTS/PG/JavaScript/Codes/output.txt
-   cat ~/PROJECTS/PG/JavaScript/Codes/output.txt 
-   echo
+    cat ~/PROJECTS/PG/JavaScript/Codes/output.txt 
+    echo
 }
-# Nvim Functions *******************************************************************************
 
+# Nvim Functions *******************************************************************************
 # Function to be used ONLY by GL504GM
 push() {
     # Update Bash

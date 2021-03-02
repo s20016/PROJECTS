@@ -1,7 +1,7 @@
-import sys, os
+import sys
 
-sys.stdin = open(f"{os.getcwd()}/input.txt", "r")
-sys.stdout = open(f"{os.getcwd()}/output.txt", "w")
+sys.stdin = open("/home/czekras/PROJECTS/PG/Python/Codes/input.txt", "r")
+sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 
 # TEST CODE 3
 # =========================================================================
