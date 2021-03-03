@@ -2,12 +2,12 @@
 
 1.01.1 Install, boot, connect, disconnect and stop Linux  
 1.01.2 Concept and use of virtual machine and cotainer  
-1.01.3 Boot process and systemmd
-1.01.4 Create, monitor and terminate process
-1.01.5 Use dektop environment
+1.01.3 Boot process and systemmd  
+1.01.4 Create, monitor and terminate process  
+1.01.5 Use dektop environment  
 #
 
-### 1.01.3 Boot process and systemmd
+### **1.01.3 Boot process and systemmd**
 **Hardware settings**  
 Settings are usually configured in either Basic Input-Output Services (BIOS) or Universal Extensible Firmware Interface (UEFI).  
 
@@ -17,7 +17,7 @@ BIOS Setup Utility: InsydeH20 (Swift SF313-51)
 3. Boot - contains boot mode, and boot priority order.
 
 
-Note:
+**Note**:
 - BIOS now has a user interface, and settings stored in a non-volatile memory (NVM). NVM is a type of computer memory that can hold its data even without power. 
 - A device that are unsupported or no longer commonly used by most devices are called "legacy device".
 
@@ -42,40 +42,6 @@ Note:
     - poweroff --reboot
 
 
-**Mass storage devices**
-- Diskettes or floppy disks (~5MB)
-- CD, DVD, Blue-Ray Drives
-- Flash or thumb drives (1GB-1TB)
-- Hard disk drive (HDD)
-- Solid-state drives (SSD)
-
-
-**Coldplug vs. Hotplug**  
-Coldplug devices should only be removed when the computer power is off.
-- Random-access Memory (RAM)
-- Central Processing Unit (CPU)
-- Peripheral Component Interconnect (PCI)
-- Hard disk drives
-
-Hotplug devices can be removed while the computer power is on.
-- Universal Serial Bus (USB) drives
-- FireWire devices
-
-
-**Filesystem Hierarchy:**
-1. /dev - contains mostly device files. 
-2. /proc - provides running processes including kernel processes.
-3. /sys - constains information and configuration settings about devices, drivers and some kernel features.
-
-Note: 
-- Virtual files are built from scratch every reboot. It exists in RAM and disappears when power is off.
-
-Linux uses the following components to manage devices:  
-1. sysfs - A virtual filesystem mounted at /sys which exports information about hotplug devices so that other utilities can access the information. 
-2. /udev - A virtual filesystem that creates device files as devices are added and removed. 
-3. Desktop Bus (D-Bus) daemon - Allows process to communicate with each other and notify them of new hotplug devices.
-
-
 **Linux Commands for Hardware Info**  
 1. lshw (list hardware)
     - info about hardware devices presenton the system (/proc file system).
@@ -90,6 +56,3 @@ Linux uses the following components to manage devices:
 5. lsusb (list USB)
     - list all usb devices.
     - unable to initialize libusb: -99 (No USB controllers present)
-
-
-
