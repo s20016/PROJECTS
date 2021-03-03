@@ -17,10 +17,10 @@ if animateOption.lower() in ["a", "anime"]:
         url.append(aniUR := anime.url)
 
         print(f'{{\n  "mal_id": {malID}')
-        print(f'  "en_title": "{aniEN}"')
-        print(f'  "ja_title": "{aniJA}"')
-        print(f'  "subtitle": ""')
-        print(f'  "type": "{aniTP}"')
+        print(f'  "en_title": "{aniEN}",')
+        print(f'  "ja_title": "{aniJA}",')
+        print(f'  "subtitle": "",')
+        print(f'  "type": "{aniTP}",')
         print(f'  "count": 1\n}},')
     
     print()
