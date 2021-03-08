@@ -16,7 +16,7 @@ if animateOption.lower() in ["a", "anime"]:
         aniTP = anime.type
         url.append(aniUR := anime.url)
 
-        print(f'{{\n  "mal_id": {malID}')
+        print(f'{{\n  "mal_id": {malID},')
         print(f'  "en_title": "{aniEN}",')
         print(f'  "ja_title": "{aniJA}",')
         print(f'  "subtitle": "",')
