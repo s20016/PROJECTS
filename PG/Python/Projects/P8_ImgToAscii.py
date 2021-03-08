@@ -1,5 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
-import math, os
+import math
+import os
 
 asciiLvl = [' ', '.', '"', '`', '^', '"', ',', ':', ';', 'I', 'l', '!', 'i',
             '~', '+', '_', '-', '?', ']', '[', '1', ')', '(', '|', '\\', '/',
@@ -8,13 +9,15 @@ asciiLvl = [' ', '.', '"', '`', '^', '"', ',', ':', ';', 'I', 'l', '!', 'i',
             'k', 'h', 'a', 'o', '*', '#', 'M', 'W', '&', '8', '%', 'B', '@', '$']
 
 asciiLen, intvl = len(asciiLvl), len(asciiLvl)/256
-asciiW, asciiH, scale = 10, 15, 0.1
+asciiW, asciiH, scale = 10, 15, 0.2
+
 
 def getAscii(inputInt):
     return asciiLvl[math.floor(inputInt * intvl)]
 
+
 textFile = open("./output.txt", "w")
-img = Image.open("1.png")
+img = Image.open("waifu.jpg")
 fnt = ImageFont.truetype("/mnt/c/Windows/Fonts/cour.ttf", 16)
 
 W, H = img.size
@@ -24,7 +27,7 @@ img = img.resize(
 W, H = img.size
 pic = img.load()
 
-outputImg = Image.new("RGB", (asciiW * W, asciiH * H), color=(0, 0, 0))
+outputImg = Image.new("RGB", (asciiW * W, asciiH * H), color=(50, 50, 50))
 pic2 = ImageDraw.Draw(outputImg)
 
 for px1 in range(H):
@@ -33,12 +36,13 @@ for px1 in range(H):
         h = int((R + G + B)/3)
         pic[px2, px1] = (h, h, h)
         textFile.write(getAscii(h))
-        pic2.text((px2 * asciiW, px1 * asciiH), getAscii(h), font=fnt, fill=(R, G, B))
+        pic2.text((px2 * asciiW, px1 * asciiH),
+                  getAscii(h), font=fnt, fill=(R, G, B))
     textFile.write("\n")
 
 outputImg.save("output.png")
 os.remove("./output.txt")
 
 
-# Requirements: 
+# Requirements:
 # pip3 install Pillow
