@@ -4,8 +4,6 @@ sys.stdin = open("/home/czekras/PROJECTS/PG/Python/Codes/input.txt", "r")
 sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 # =========================================================================
 
-# CodingBat
-
 # CodingBat Warmup1 - sleep_in
 def sleep_in(weekday, vacation):
     return not weekday or vacation

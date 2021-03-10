@@ -1,6 +1,6 @@
 ## **WebExtension**
 
-#### **My HTML Projects**
+#### **My Projects**
 - Project01 「[AniLIST](./project01/aniList.html)」(Deprecated)
 
 #### **Class Projects**
