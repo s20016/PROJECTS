@@ -9,7 +9,7 @@ asciiLvl = [' ', '.', '"', '`', '^', '"', ',', ':', ';', 'I', 'l', '!', 'i',
             'k', 'h', 'a', 'o', '*', '#', 'M', 'W', '&', '8', '%', 'B', '@', '$']
 
 asciiLen, intvl = len(asciiLvl), len(asciiLvl)/256
-asciiW, asciiH, scale = 10, 15, 0.2
+asciiW, asciiH, scale = 10, 15, 0.1
 
 
 def getAscii(inputInt):
@@ -17,7 +17,7 @@ def getAscii(inputInt):
 
 
 textFile = open("./output.txt", "w")
-img = Image.open("waifu.jpg")
+img = Image.open("1.jpg")
 fnt = ImageFont.truetype("/mnt/c/Windows/Fonts/cour.ttf", 16)
 
 W, H = img.size
@@ -27,7 +27,7 @@ img = img.resize(
 W, H = img.size
 pic = img.load()
 
-outputImg = Image.new("RGB", (asciiW * W, asciiH * H), color=(50, 50, 50))
+outputImg = Image.new("RGB", (asciiW * W, asciiH * H), color=(0, 0, 0))
 pic2 = ImageDraw.Draw(outputImg)
 
 for px1 in range(H):
@@ -40,7 +40,7 @@ for px1 in range(H):
                   getAscii(h), font=fnt, fill=(R, G, B))
     textFile.write("\n")
 
-outputImg.save("output.png")
+outputImg.save("./output.png")
 os.remove("./output.txt")
 
 

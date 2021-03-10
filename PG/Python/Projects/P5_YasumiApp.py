@@ -4,7 +4,7 @@
 # Japan national holidays from year: 2019-2021
 # WebAPI from "https://holidays-jp.github.io/api/v1/date.json" & "https://yesno.wtf/api"
 
-# --------------------------- Added Features in v2: -------------------------- #
+# --------------------------- Added Features in v1.2.0: -------------------------- #
 # Auto deletion of just created "YasumiApp.html" in 5s
 # Catches error from user input
 # Added more random Emoji
