@@ -21,5 +21,4 @@
   <img src="./Projects/Output/P8_Output1.png">
   <img src="./Projects/Output/P8_Output2.png">
   <img src="./Projects/Output/P8_Output3.png">
-  <img src="./Projects/Output/P8_Output4.png">
 </p>
