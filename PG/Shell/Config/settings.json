@@ -57,7 +57,7 @@
                 "cursorShape": "filledBox",
                 "icon": "",
                 "cursorColor" : "#FFFFFF",
-                "fontFace" : "Monospace",
+                "fontFace" : "Consolas",
                 "fontSize": 12,
                 "fontWeight": "normal",
                 "padding" : "5",

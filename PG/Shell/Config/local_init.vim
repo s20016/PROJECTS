@@ -21,10 +21,7 @@ autocmd Filetype json setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascriptreact setlocal ts=2 sw=2 expandtab
 
-""------------------------------------
-" ale_linters
-""------------------------------------
-
+" Ale_linters
 let g:ale_linters = {
     \ 'python': ['flake8'],
     \ 'javascript': ['standard'],
@@ -39,25 +36,14 @@ let g:ale_fixers = {
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 
-""------------------------------------
-" Display
-""------------------------------------
-
-set cursorline " カーソル行をハイライト
-
-" 不可視文字表示
+set cursorline
 set list
 set listchars=tab:>\ ,extends:<
 
-" 全角スペースの表示
 highlight ZenkakuSpace cterm=underline ctermfg=red guibg=darkgray
 match ZenkakuSpace /　/
 
-""------------------------------------
 " Map
-""------------------------------------
-
-" ハイライトを抑制
 nmap \q :nohlsearch<CR>
 
 noremap <BS> <Nop>
@@ -90,5 +76,5 @@ inoremap <C-f> <Right>
 inoremap <silent> jj <ESC>
 inoremap <silent> <C-j> <ESC>
 
-" visual時vで行末まで選択
+" Visual Mode with v
 vnoremap v $h
