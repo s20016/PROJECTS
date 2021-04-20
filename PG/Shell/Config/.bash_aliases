@@ -9,7 +9,7 @@ RESET=$(tput sgr 0)
 alias sbash="source ~/.bashrc"
 alias update="sudo apt update && sudo apt upgrade -y"
 
-# Python Functions *****************************************************************************
+# Python Functions **********************************************************************
 
 pyrun() {
     NAME=$(uname -a | awk '{print $2}')
@@ -46,7 +46,7 @@ pycode() {
     nvim -S ~/.config/nvim/session/PythonSession.vim
 }
 
-# Java Functions *******************************************************************************
+# Java Functions ************************************************************************
 
 javacode() {
     nvim -S ~/.config/nvim/session/JavaSession.vim
@@ -59,7 +59,7 @@ javarun() {
     echo
 }
 
-# JavaScript Functions *******************************************************************************
+# JavaScript Functions ******************************************************************
 
 jscode() {
     nvim -S ~/.config/nvim/session/JsSession.vim
@@ -72,14 +72,14 @@ jsrun() {
     echo
 }
 
-# Nvim Functions *******************************************************************************
+# Nvim Functions ************************************************************************
 # Function to be used ONLY by GL504GM
 push() {
     # Update Bash
     NAME=$(uname -a | awk '{print $2}')
     if [[ $1 = "bash" ]]; then
         cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/Config/.bash_aliases
-        cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/Config/
+        cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/NVIM/conf/.
         if [[ ${NAME} = "GL504GM" ]]; then
             cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json \
                 > ~/PROJECTS/PG/Shell/Config/settings.json
@@ -108,9 +108,9 @@ pull() {
                 VAR2="/mnt/c/Users/s20016/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
                 # .bash configurations
                 cat ~/PROJECTS/PG/Shell/Config/.bash_aliases > ~/.bash_aliases
-                cat ~/PROJECTS/PG/Shell/Config/init.vim > ~/.config/nvim/init.vim
-                cat ~/PROJECTS/PG/Shell/Config/local_bundles.vim > ~/.config/nvim/local_bundles.vim
-                cat ~/PROJECTS/PG/Shell/Config/local_init.vim > ~/.config/nvim/local_init.vim
+                cat ~/PROJECTS/PG/Shell/NVIM/conf/init.vim > ~/.config/nvim/init.vim
+                cat ~/PROJECTS/PG/Shell/NVIM/conf/local_bundles.vim > ~/.config/nvim/local_bundles.vim
+                cat ~/PROJECTS/PG/Shell/NVIM/conf/local_init.vim > ~/.config/nvim/local_init.vim
                 # Windows Terminal setting
                 if [[ ${NAME} = "GL504GM" ]]; then
                     cat ~/PROJECTS/PG/Shell/Config/settings.json > ${VAR1}
