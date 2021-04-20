@@ -10,8 +10,8 @@
 #
 
 ### **Neovim**
-- **Neovim**
-  - `cd ~/PROJETCS/PG/Shell/NVIM`
+- **Install Neovim**
+  - `cd ~/PROJETCS/PG/Shell/nvim`
   - `chmod 774 nvim.sh` if permission is not 744 level
   - `./nvim.sh`
 - **Create New Vim Session**
@@ -19,6 +19,9 @@
   - `:tabdo | set splitright | vsplit INPUT.txt | vertical resize -35 | set splitbelow | split OUTPUT.txt`
   - `:mks ~/.config/nvim/session/SESSEION_NAME`
   - `$ nvim -S PATH/SESSION_NAME`
+
+NOTE:
+- Installment inlcudes Python3 Linter
 
 #
 
