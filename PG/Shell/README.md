@@ -53,4 +53,7 @@ NOTE:
   - `exit` to exit ssh, then `vagrant halt` to end 
   - `vagrant destroy` to destroy vagrant
   - `vagrant status`
-
+- ** Slack (Ubuntu)**
+  - `sudo snap install slack --classic`
+- ** LibreOffice (Ubuntu)**
+  - `sudo snap install LibreOffice`
