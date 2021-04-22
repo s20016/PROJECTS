@@ -38,21 +38,15 @@ NOTE:
 - **OBS Studio (Ubuntu)**
   - `sudo apt install obs-studio -y` 
 - **Vagrant Box (Ubuntu)**
-  - `vagrant box list` to see installed vagrants
   - `sudo apt install virtualbox`
-  - `curl -O https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb`
-  - `sudo apt install ./vagrant_2.2.9_x86_64.deb`
-  - `vagrant -v` to verify
-  - `mkdir -p ~/Vagrant/ && cd $_`
-  - `vagrant init hashicorp/precise64`
-  - ALT: `sudo apt install virtualbox`
   - `mkdir ./Boxes/TEST && cd $_`
   - `vagrant box add ubuntu/focal64`
   - `vagrant init ubuntu/focal64`
   - `vagrant up` to start, `vagrant ssh` to enter vagrantbox
   - `exit` to exit ssh, then `vagrant halt` to end 
+  - `vagrant box list` to see installed vagrant
   - `vagrant destroy` to destroy vagrant
-  - `vagrant status`
+  - `vagrant status` to see working vagrant
 - **Slack (Ubuntu)**
   - `sudo snap install slack --classic`
   - `sudo snap remove slack`
