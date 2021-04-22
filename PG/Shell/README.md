@@ -35,6 +35,8 @@ NOTE:
   - `wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -`
   - `sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"`
   - `sudo apt install code`
+- **OBS Studio (Ubuntu)**
+  - `sudo apt install obs-studio -y` 
 - **Vagrant Box (Ubuntu)**
   - `vagrant box list` to see installed vagrants
   - `sudo apt install virtualbox`
