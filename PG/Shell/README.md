@@ -19,8 +19,7 @@
 - **Create New Vim Session**
   - `$ nvim -p FILE_NAMES` 
   - `:tabdo | set splitright | vsplit INPUT.txt | vertical resize -35 | set splitbelow | split OUTPUT.txt`
-  - `:mks ~/.config/nvim/session/SESSEION_NAME`
-  - `$ nvim -S PATH/SESSION_NAME`
+  - `:mks ~/.config/nvim/session/SESSEION_NAME` `$ nvim -S PATH/SESSION_NAME`
 
 NOTE:
 - Installment inlcudes Python3 Linter
@@ -37,10 +36,19 @@ NOTE:
   - `sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"`
   - `sudo apt install code`
 - **Vagrant Box (Ubuntu)**
+  - `vagrant box list` to see installed vagrants
   - `sudo apt install virtualbox`
   - `curl -O https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb`
   - `sudo apt install ./vagrant_2.2.9_x86_64.deb`
   - `vagrant -v` to verify
   - `mkdir -p ~/Vagrant/ && cd $_`
-  - `vagrant init --minimal ubuntu/bionic64`
-  - `vagrant up` to start, `vagrant halt` to end
+  - `vagrant init hashicorp/precise64`
+  - ALT: `sudo apt install virtualbox`
+  - `mkdir ./Boxes/TEST && cd $_`
+  - `vagrant box add ubuntu/focal64`
+  - `vagrant init ubuntu/focal64`
+  - `vagrant up` to start, `vagrant ssh` to enter vagrantbox
+  - `exit` to exit ssh, then `vagrant halt` to end 
+  - `vagrant destroy` to destroy vagrant
+  - `vagrant status`
+
