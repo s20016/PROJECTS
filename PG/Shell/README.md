@@ -1,4 +1,4 @@
-## **Linux**
+## **Linux (Ubuntu)**
 
 ### **Commands**
 - **Show Password of Known Networks**
@@ -19,7 +19,8 @@
 - **Create New Vim Session**
   - `$ nvim -p FILE_NAMES` 
   - `:tabdo | set splitright | vsplit INPUT.txt | vertical resize -35 | set splitbelow | split OUTPUT.txt`
-  - `:mks ~/.config/nvim/session/SESSEION_NAME` `$ nvim -S PATH/SESSION_NAME`
+  - `:mks ~/.config/nvim/session/SESSEION_NAME`
+  - `$ nvim -S PATH/SESSION_NAME`
 
 NOTE:
 - Installment inlcudes Python3 Linter
