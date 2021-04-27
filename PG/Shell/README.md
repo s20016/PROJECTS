@@ -8,6 +8,8 @@
 - **Change Directory Names JA to EN**
   - `$ LANG=C`
   - `$ xdg-user-dirs-update`
+- **Play Video (.mkv)**
+  - `xdg-open ./VIDEO_NAME.mkv`
 
 #
 
