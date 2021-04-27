@@ -31,6 +31,9 @@ NOTE:
 - **Google Chrome (Ubuntu)**
   - Download [Google Chrome](https://www.google.co.jp/chrome/browser/desktop/index.html) and move to downloaded directory
   - `sudo apt install ./google-chrome-stable_current_amd64.deb`
+  - **Disable Tab Search**
+  - Search in address bar `chrome://flags`
+  - Search "Tab Search" and disable 
 - **VS Code (Ubuntu)**
   - `sudo apt install software-properties-common apt-transport-https wge`
   - `wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -`
