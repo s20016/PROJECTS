@@ -60,9 +60,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " Color
-Plug 'tomasr/molokai'
 Plug 'tomasiser/vim-code-dark'
-
 
 " Custom Bundles *************************************************************
 
@@ -235,8 +233,8 @@ command! FixWhitespace :%s/\s\+$//e
 if !exists('*s:setupWrapping')
   function s:setupWrapping()
     set wrap
-    set wm = 2
-    set textwidth = 79
+    set wm=2
+    set textwidth=79
   endfunction
 endif
 
