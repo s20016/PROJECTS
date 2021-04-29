@@ -1,7 +1,7 @@
 ## **Python**
 
 #### **Notes**
-- Methods for Reading input.txt [ [20200801](./Notes/20200801.md) ]
+- Methods for Reading input.txt [ [200801](./Notes/200801.md) ]
 - Coding Bat Solutions [ [PB1_S1N1](./Notes/PB1_S1N1.py) ]
 
 
