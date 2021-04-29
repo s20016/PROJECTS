@@ -40,7 +40,7 @@ nvim +'PlugInstall --sync' +qa
 read -p "Do you want to save .bash_aliases? [Y/n] " RES
 case "$RES" in
     [yY])
-        cat ~/PRROJECTS/PG/Shell/Config/.bash_aliases > ~/.bash_aliases
+        cat ~/PROJECTS/PG/Shell/Config/.bash_aliases > ~/.bash_aliases
         source ~/.bash_aliases && source ~/.bashrc
         echo -e "${YELLOW}Updated: nvim .bash_aliases${RESET}"
         ;;
