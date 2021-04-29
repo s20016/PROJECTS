@@ -3,7 +3,6 @@
 _CONFIG_DIR="$HOME/.config/nvim"
 _PLUGIN_DIR="$HOME/.local/share/nvim/site/autoload"
 
-
 YELLOW=$(tput setaf 3)
 RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
@@ -22,29 +21,43 @@ curl -fLo "$_PLUGIN_DIR/plug.vim" --create-dirs \
 
 cp $HOME/PROJECTS/PG/Shell/nvim/conf/{init.vim,local_bundles.vim,local_init.vim} $_CONFIG_DIR
 
-
 # Python3 Linter
-sudo apt install -y python3-pip
-pip3 install flake8 autopep8 black isort
-echo -e "${GREEN}Updated: Python3 Settings${RESET}"
+install_python3() {
+    sudo apt install -y python3-pip
+    pip3 install flake8 autopep8 black isort
+    echo -e "${GREEN}Updated: Python3 Settings${RESET}"
+}
 
 # NodeJS
-sudo apt install -y nodejs npm
-sudo npm install -g eslint
-sudo npm install -g prettier-standard standard
-echo -e "${GREEN}Updated: NodeJS Settings${RESET}"
+install_nodejs() {
+    sudo apt install -y nodejs npm
+    sudo npm install -g eslint
+    sudo npm install -g prettier-standard standard
+    echo -e "${GREEN}Updated: NodeJS Settings${RESET}"
+}
+
+# Select Language
+echo -e "\n\033[1mSelect Language(s) to Install:\033[0m"
+read -p "1) Python3  2) NodeJS  3) All: " INPUT_RES
+case "$INPUT_RES" in
+    '1') install_python3;;
+    '2') install_nodejs;;
+    '3') install_python3; install_nodejs;;
+esac
 
 echo 'export PATH=$PATH:$HOME/.local/bin' >> $HOME/.bash_aliases
 nvim +'PlugInstall --sync' +qa
 
+# Save .bash_aliases
 read -p "Do you want to save .bash_aliases? [Y/n] " RES
 case "$RES" in
     [yY])
         cat ~/PROJECTS/PG/Shell/Config/.bash_aliases > ~/.bash_aliases
-        source ~/.bash_aliases && source ~/.bashrc
         echo -e "${YELLOW}Updated: nvim .bash_aliases${RESET}"
         ;;
     *)
         echo -e "${YELLOW}Updated: nvim${RESET}"
         ;;
 esac
+
+source ~/.bashrc
