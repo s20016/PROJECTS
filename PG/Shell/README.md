@@ -45,7 +45,7 @@ NOTE:
   - `sudo apt install obs-studio -y` 
 - **Vagrant Box (Ubuntu)**
   - `sudo apt install virtualbox`
-  - `mkdir ./Boxes/TEST && cd $_`
+  - `mkdir ~/Boxes/TEST && cd $_`
   - `vagrant box add ubuntu/focal64`
   - `vagrant init ubuntu/focal64`
   - `vagrant up` to start, `vagrant ssh` to enter vagrantbox
