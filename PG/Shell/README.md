@@ -25,7 +25,8 @@
   - `$ nvim -S PATH/SESSION_NAME`
 
 NOTE:
-- Installment inlcudes Python3 Linter
+- Includes: Python3 Linter
+- Includes: NodeJS npm eslinter
 
 #
 
