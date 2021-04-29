@@ -72,7 +72,34 @@ jsrun() {
     echo
 }
 
-# Nvim Functions *******************************************************************************
+# Functions *******************************************************************************
+# Create New Vagrant Environment
+mkbox() {
+    DIR=~/Boxes/$1
+    FILE=~/Boxes/$1/Vagrantfile
+    
+    if [ ! -d "$DIR" ]; then
+        mkdir ~/Boxes/$1 && cd $_
+        vagrant init ubuntu/focal64
+
+        if [ -f "$FILE" ]; then
+            echo -e "\n==> mkbox: Vagrant init Success!"
+            read -p "==> mkbox: Create/SSH to $1? [Y/n] " RES
+            case "$RES" in
+                [yY])
+                    vagrant up
+                    vagrant ssh
+                    ;;
+                *)
+                    echo -e "\033[1m==> mkbox: Box Created!\033[0m"
+                    ;;
+            esac
+        fi
+    else
+        echo "==> mkbox: Failed to create directory because it already exists."
+    fi
+}
+
 # Function to be used ONLY by GL504GM
 push() {
     # Update Bash
