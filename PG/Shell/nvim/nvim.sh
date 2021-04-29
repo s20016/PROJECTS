@@ -3,6 +3,7 @@
 _CONFIG_DIR="$HOME/.config/nvim"
 _PLUGIN_DIR="$HOME/.local/share/nvim/site/autoload"
 
+sudo apt update
 sudo apt install neovim -y
 sudo apt install curl
 
@@ -16,9 +17,15 @@ curl -fLo "$_PLUGIN_DIR/plug.vim" --create-dirs \
 cp ./conf/{init.vim,local_bundles.vim,local_init.vim} $_CONFIG_DIR
 
 
-### Python3 Linter
+# Python3 Linter
 sudo apt install python3-pip
 pip3 install flake8 autopep8 black isort
+
+# NodeJS
+sudo apt install -y nodejs npm
+sudo npm install -g eslint
+sudo npm install -g prettier-standard standard
+
 echo 'export PATH=$PATH:$HOME/.local/bin' >> $HOME/.bash_aliases
 
 vim +'PlugInstall --sync' +qa
