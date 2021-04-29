@@ -45,9 +45,6 @@ case "$INPUT_RES" in
     '3') install_python3; install_nodejs;;
 esac
 
-echo 'export PATH=$PATH:$HOME/.local/bin' >> $HOME/.bash_aliases
-nvim +'PlugInstall --sync' +qa
-
 # Save .bash_aliases
 read -p "Do you want to save .bash_aliases? [Y/n] " RES
 case "$RES" in
@@ -60,4 +57,7 @@ case "$RES" in
         ;;
 esac
 
-source ~/.bashrc
+echo 'export PATH=$PATH:$HOME/.local/bin' >> $HOME/.bash_aliases
+nvim +'PlugInstall --sync' +qa
+
+# Do not forget to source ~/.bashrc
