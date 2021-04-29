@@ -3,8 +3,14 @@
 _CONFIG_DIR="$HOME/.config/nvim"
 _PLUGIN_DIR="$HOME/.local/share/nvim/site/autoload"
 
+
+YELLOW=$(tput setaf 3)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+RESET=$(tput sgr 0)
+
 sudo apt update
-sudo apt install neovim -y
+sudo apt install -y neovim
 sudo apt install curl
 
 if [ ! -d $_CONFIG_DIR ]; then
@@ -20,12 +26,25 @@ cp ./conf/{init.vim,local_bundles.vim,local_init.vim} $_CONFIG_DIR
 # Python3 Linter
 sudo apt install python3-pip
 pip3 install flake8 autopep8 black isort
+echo -e "${GREEN}Updated: Python3 Settings${RESET}"
 
 # NodeJS
 sudo apt install -y nodejs npm
 sudo npm install -g eslint
 sudo npm install -g prettier-standard standard
+echo -e "${GREEN}Updated: NodeJS Settings${RESET}"
 
 echo 'export PATH=$PATH:$HOME/.local/bin' >> $HOME/.bash_aliases
+nvim +'PlugInstall --sync' +qa
 
-vim +'PlugInstall --sync' +qa
+read -p "Do you want to save .bash_aliases? [Y/n] " RES
+case "$RES" in
+    [yY])
+        cat ~/PRROJECTS/PG/Shell/Config/.bash_aliases > ~/.bash_aliases
+        source ~/.bash_aliases && source ~/.bashrc
+        echo -e "${YELLOW}Updated: nvim .bash_aliases${RESET}"
+        ;;
+    *)
+        echo -e "${YELLOW}Updated: nvim${RESET}"
+        ;;
+esac
