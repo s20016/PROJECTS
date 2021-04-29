@@ -2,7 +2,7 @@
 
 ### Commands
 <details>
-<summary>Show Password of Known Networks</summary>
+<summary><bold>Show Password of Known Networks</bold></summary>
 
 ```bash
 $ ls /etc/NetworkManager/system-connections
@@ -12,7 +12,7 @@ $ sudo cat /etc/NetworkManager/system-connections/NETWORK_NAME
 </details>
 
 <details>
-<summary>Change Directory Names JA to EN</summary>
+<summary><bold>Change Directory Names JA to EN</bold></summary>
 
 ```bash
 $ LANG=C
@@ -21,7 +21,7 @@ $ xdg-user-dirs-update
 </details>
 
 <details>
-<summary>Play Video (.mkv)</summary>
+<summary><bold>Play Video (.mkv)</bold></summary>
 
 ```bash
 xdg-open ./VIDEO_NAME.mkv
@@ -31,7 +31,7 @@ xdg-open ./VIDEO_NAME.mkv
 #
 ### Neovim  
 <details>
-<summary>Install Neovim</summary>
+<summary><bold>Install Neovim</bold></summary>
 
 ```bash
 cd ~/PROJETCS/PG/Shell/nvim
@@ -41,7 +41,7 @@ chmod 774 nvim.sh if permission is not 744 level
 </details>
 
 <details>
-<summary>Create New Vim Session</summary>
+<summary><bold>Create New Vim Session</bold></summary>
 
 ```bash
 $ nvim -p FILE_NAMES 
@@ -58,12 +58,12 @@ $ nvim -S PATH/SESSION_NAME
 #
 ### Install Programs
 <details>
-<summary>Google Chrome (Ubuntu)</summary>
+<summary><bold>Google Chrome (Ubuntu)</bold></summary>
 
 Download [Google Chrome](https://www.google.co.jp/chrome/browser/desktop/index.html) and move to downloaded directory
 
 ```bash
-sudo apt install ./google-chrome-stable_current_amd64.deb
+$ sudo apt install ./google-chrome-stable_current_amd64.deb
 ```
 
 **Disable Tab Search**
@@ -72,7 +72,7 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 </details>
 
 <details>
-<summary>VS Code (Ubuntu)</summary>
+<summary><bold>VS Code (Ubuntu)</bold></summary>
 
 ```bash
 $ sudo apt install software-properties-common apt-transport-https wge
@@ -83,7 +83,7 @@ $ sudo apt install code
 </details>
 
 <details>
-<summary>OBS Studio (Ubuntu)</summary>
+<summary><bold>OBS Studio (Ubuntu)</bold></summary>
 
 ```bash
 sudo apt install obs-studio -y 
@@ -91,7 +91,7 @@ sudo apt install obs-studio -y
 </details>
 
 <details>
-<summary>Vagrant Box (Ubuntu)</summary>
+<summary><bold>Vagrant Box (Ubuntu)</bold></summary>
 
 ```bash
 $ sudo apt install virtualbox
@@ -108,7 +108,7 @@ $ vagrant status
 </details>
 
 <details>
-<summary>Slack (Ubuntu)</summary>
+<summary><bold>Slack (Ubuntu)</bold></summary>
 
 ```bash
 $ sudo snap install slack --classic
@@ -117,7 +117,7 @@ $ sudo snap remove slack
 </details>
 
 <details>
-<summary>LibreOffice (Ubuntu)</summary>
+<summary><bold>LibreOffice (Ubuntu)</bold></summary>
 
 ```bash
 $ sudo snap install libreoffice
