@@ -8,8 +8,8 @@ let g:polyglot_disabled = ['python']
 
 if !filereadable(vimplug_exists)
   if !executable("curl")
-    echoerr "You have to install curl or first install vim-plug yourself!"
-    execute "q!"
+  echoerr "You have to install curl or first install vim-plug yourself!"
+  execute "q!"
   endif
   echo "Installing Vim-Plug..."
   echo ""
@@ -25,7 +25,7 @@ call plug#begin(expand('~/.local/share/nvim/site/plugged'))
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
@@ -47,7 +47,7 @@ else
 endif
 let g:make = 'gmake'
 if exists('make')
-        let g:make = 'make'
+  let g:make = 'make'
 endif
 Plug 'Shougo/vimproc.vim', {'do': g:make}
 
@@ -117,9 +117,9 @@ set smartcase
 set fileformats=unix,dos,mac
 
 if exists('$SHELL')
-    set shell=$SHELL
+  set shell=$SHELL
 else
-    set shell=/bin/sh
+  set shell=/bin/sh
 endif
 
 " session management
@@ -149,8 +149,8 @@ set gfn=Monospace\ 10
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
-    set guifont=Menlo:h12
-    set transparency=7
+  set guifont=Menlo:h12
+  set transparency=7
   endif
 else
   let g:CSApprox_loaded = 1
@@ -199,7 +199,7 @@ cnoreabbrev Qall! qall!
 cnoreabbrev Wq wq
 cnoreabbrev Wa wa
 cnoreabbrev wQ wq
- cnoreabbrev WQ wq
+cnoreabbrev WQ wq
 cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
@@ -232,9 +232,9 @@ command! FixWhitespace :%s/\s\+$//e
 " Functions ******************************************************************
 if !exists('*s:setupWrapping')
   function s:setupWrapping()
-    set wrap
-    set wm=2
-    set textwidth=79
+  set wrap
+  set wm=2
+  set textwidth=79
   endfunction
 endif
 
@@ -403,8 +403,8 @@ augroup END
 augroup vimrc-python
   autocmd!
   autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 "colorcolumn=79
-    \ formatoptions+=croq softtabstop=4
-    \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+  \ formatoptions+=croq softtabstop=4
+  \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
 " jedi-vim
@@ -420,7 +420,7 @@ let g:jedi#smart_auto_mappings = 0
 
 " ale
 :call extend(g:ale_linters, {
-    \'python': ['flake8'], })
+  \'python': ['flake8'], })
 
 " vim-airline
 " let g:airline#extensions#virtualenv#enabled = 1
@@ -445,15 +445,15 @@ endif
 if !exists('g:airline_powerline_fonts')
   let g:airline#extensions#tabline#left_sep = ' '
   let g:airline#extensions#tabline#left_alt_sep = ''
-  let g:airline#extensions#branch#prefix     = '⤴'
+  let g:airline#extensions#branch#prefix   = '⤴'
   let g:airline#extensions#readonly#symbol   = '⊘'
   let g:airline#extensions#linecolumn#prefix = '¶'
-  let g:airline#extensions#paste#symbol      = 'ρ'
-  let g:airline_symbols.linenr    = ''
-  let g:airline_symbols.branch    = 'ᚠ'
-  let g:airline_symbols.paste     = 'ρ'
-  let g:airline_symbols.paste     = 'Þ'
-  let g:airline_symbols.paste     = '∥'
+  let g:airline#extensions#paste#symbol    = 'ρ'
+  let g:airline_symbols.linenr  = ''
+  let g:airline_symbols.branch  = 'ᚠ'
+  let g:airline_symbols.paste   = 'ρ'
+  let g:airline_symbols.paste   = 'Þ'
+  let g:airline_symbols.paste   = '∥'
   let g:airline_symbols.whitespace = ''
 else
   let g:airline#extensions#tabline#left_sep = ''

@@ -1,4 +1,7 @@
 import sys
+import webbrowser
+
+from mal import Anime, AnimeSearch
 
 # sys.stdin = open("/home/czekras/PROJECTS/PG/Python/Codes/input.txt", "r")
 # sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
@@ -6,8 +9,6 @@ import sys
 # TEST CODE 1
 # =========================================================================
 
-import webbrowser
-from mal import Anime, AnimeSearch
 
 animeList = list(input("Enter Anime: ").split(","))
 
