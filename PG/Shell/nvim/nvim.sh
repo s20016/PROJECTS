@@ -60,4 +60,4 @@ esac
 echo 'export PATH=$PATH:$HOME/.local/bin' >> $HOME/.bash_aliases
 nvim +'PlugInstall --sync' +qa
 
-# Do not forget to source ~/.bashrc
+echo  -e '\033[5mExecute: source ~/.bashrc\033[0m'
