@@ -17,9 +17,10 @@ pyrun() {
     FILES=~/PROJECTS/PG/Python/Codes/*.py
     for f in $FILES; do
         if [[ ${NAME} = "GL504GM" ]]; then
-            sed -i '3,4 s/s20016/czekras/' ${f} 
+            # sed -i '3,4 s/s20016/czekras/' ${f} 
+            sed -i 's/s20016/czekras/g' ${f} 
         elif [[ ${NAME} = "SF313-51" ]] || [[ ${NAME} = "sf313-51u" ]]; then
-            sed -i '3,4 s/czekras/s20016/' ${f}
+            sed -i  's/czekras/s20016/g' ${f}
         fi
     done
     if [[ $1 = "p" ]]; then
@@ -38,9 +39,9 @@ pycode() {
     USER=$(echo $USER)
     for f in $FILES; do
         if [[ ${NAME} = "GL504GM" ]]; then
-            sed -i '3,4 s/s20016/czekras/' ${f} 
+            sed -i 's/s20016/czekras/g' ${f} 
         elif [[ ${NAME} = "SF313-51" ]] || [[ ${NAME} = "sf313-51u" ]]; then
-            sed -i '3,4 s/czekras/s20016/' ${f}
+            sed -i 's/czekras/s20016/g' ${f}
         fi
     done
     nvim -S ~/.config/nvim/session/PythonSession.vim
