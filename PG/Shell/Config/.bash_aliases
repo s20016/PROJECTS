@@ -68,7 +68,7 @@ jscode() {
 
 jsrun() {
     cat ~/PROJECTS/PG/JavaScript/Codes/input.txt | node ~/PROJECTS/PG/JavaScript/Codes/testcode$1.js \
-       > ~/PROJECTS/PG/JavaScript/Codes/output.txt
+        > ~/PROJECTS/PG/JavaScript/Codes/output.txt
     cat ~/PROJECTS/PG/JavaScript/Codes/output.txt 
     echo
 }
@@ -78,26 +78,29 @@ jsrun() {
 mkbox() {
     DIR=~/Boxes/$1
     FILE=~/Boxes/$1/Vagrantfile
-    
-    if [ ! -d "$DIR" ]; then
-        mkdir ~/Boxes/$1 && cd $_
-        vagrant init ubuntu/focal64
-
-        if [ -f "$FILE" ]; then
-            echo -e "\n==> mkbox: Vagrant init Success!"
-            read -p "==> mkbox: Create/SSH to $1? [Y/n] " RES
-            case "$RES" in
-                [yY])
-                    vagrant up
-                    vagrant ssh
-                    ;;
-                *)
-                    echo -e "\033[1m==> mkbox: Box Created!\033[0m"
-                    ;;
-            esac
+    NAME=$(uname -a | awk '{print $2}')
+    if [[ ${NAME} != "GL504GM" ]]; then
+        if [ ! -d "$DIR" ]; then
+            mkdir ~/Boxes/$1 && cd $_
+            vagrant init ubuntu/focal64
+            if [ -f "$FILE" ]; then
+                echo -e "\n==> mkbox: Vagrant init Success!"
+                read -p "==> mkbox: Create/SSH to $1? [Y/n] " RES
+                case "$RES" in
+                    [yY])
+                        vagrant up
+                        vagrant ssh
+                        ;;
+                    *)
+                        echo -e "\033[1m==> mkbox: Box Created!\033[0m"
+                        ;;
+                esac
+            fi
+        else
+            echo "==> mkbox: Failed to create directory because it already exists."
         fi
     else
-        echo "==> mkbox: Failed to create directory because it already exists."
+        echo "==> mkbox: Denied. You're in GL504GM WSL."
     fi
 }
 
