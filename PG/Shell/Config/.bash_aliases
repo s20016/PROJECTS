@@ -36,7 +36,12 @@ pyrun() {
 pycode() {
     NAME=$(uname -a | awk '{print $2}')
     FILES=~/PROJECTS/PG/Python/Codes/*.py
-    USER=$(echo $USER)
+    VIM_SESS=~/.config/nvim/session/PythonSession.vim
+    if [ ! -e "$VIM_SESS" ]; then
+        cd ~/PROJECTS/PG/Python/Codes
+        nvim -p testcode*.py +"tabdo | set splitright | vsplit input.txt | vertical resize -35 | set splitbelow | split output.txt" \
+            +"mks ~/.config/nvim/session/PythonSession.vim" +qa
+    fi
     for f in $FILES; do
         if [[ ${NAME} = "GL504GM" ]]; then
             sed -i 's/s20016/czekras/g' ${f} 
@@ -50,6 +55,12 @@ pycode() {
 # Java Functions *******************************************************************************
 
 javacode() {
+    VIM_SESS=~/.config/nvim/session/JavaSession.vim
+    if [ ! -e "$VIM_SESS" ]; then
+        cd ~/PROJECTS/PG/Java/src/codes
+        nvim -p testcode*.java +"tabdo | set splitright | vsplit input.txt | vertical resize -35 | set splitbelow | split output.txt" \
+            +"mks ~/.config/nvim/session/JavaSession.vim" +qa
+    fi
     nvim -S ~/.config/nvim/session/JavaSession.vim
 }
 
@@ -63,6 +74,12 @@ javarun() {
 # JavaScript Functions *******************************************************************************
 
 jscode() {
+    VIM_SESS=~/.config/nvim/session/JsSession.vim
+    if [ ! -e "$VIM_SESS" ]; then
+        cd ~/PROJECTS/PG/JavaScript/Codes
+        nvim -p testcode*.js +"tabdo | set splitright | vsplit input.txt | vertical resize -35 | set splitbelow | split output.txt" \
+            +"mks ~/.config/nvim/session/JsSession.vim" +qa
+    fi
     nvim -S ~/.config/nvim/session/JsSession.vim
 }
 
