@@ -1,11 +1,10 @@
 #!/bin/bash
 
+# Colors
 YELLOW=$(tput setaf 3)
 RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
 RESET=$(tput sgr 0)
-
-sudo apt update
 
 # Initial Install Configurations
 _CONFIG_DIR="$HOME/.config/nvim"
@@ -40,7 +39,8 @@ install_nodejs() {
   echo -e "${GREEN}Updated: NodeJS Settings${RESET}"
 }
 
-# Select Language
+# Main Function
+sudo apt update
 echo -e "\n\033[1mSelect Language(s) to Install:\033[0m"
 read -p "1) Python3  2) Java  3) NodeJS  4) All: : " INPUT_RES
 case "$INPUT_RES" in
@@ -55,11 +55,9 @@ read -p "Do you want to save .bash_aliases? [Y/n] " RES
 case "$RES" in
   [yY])
     cat ~/PROJECTS/PG/Shell/Config/.bash_aliases > ~/.bash_aliases
-    echo -e "${YELLOW}Updated: nvim .bash_aliases${RESET}"
-    ;;
+    echo -e "${YELLOW}Updated: nvim .bash_aliases${RESET}";;
   *)
-    echo -e "${YELLOW}Updated: nvim${RESET}"
-    ;;
+    echo -e "${YELLOW}Updated: nvim${RESET}";;
 esac
 
 # Git Configuration for non GL504GM
