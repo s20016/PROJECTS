@@ -17,10 +17,9 @@ pyrun() {
     FILES=~/PROJECTS/PG/Python/Codes/*.py
     for f in $FILES; do
         if [[ ${NAME} = "GL504GM" ]]; then
-            # sed -i '3,4 s/s20016/czekras/' ${f} 
             sed -i 's/s20016/czekras/g' ${f} 
-        elif [[ ${NAME} = "SF313-51" ]] || [[ ${NAME} = "sf313-51u" ]]; then
-            sed -i  's/czekras/s20016/g' ${f}
+        else
+            sed -i 's/czekras/s20016/g' ${f}
         fi
     done
     if [[ $1 = "p" ]]; then
@@ -45,7 +44,7 @@ pycode() {
     for f in $FILES; do
         if [[ ${NAME} = "GL504GM" ]]; then
             sed -i 's/s20016/czekras/g' ${f} 
-        elif [[ ${NAME} = "SF313-51" ]] || [[ ${NAME} = "sf313-51u" ]]; then
+        else
             sed -i 's/czekras/s20016/g' ${f}
         fi
     done
@@ -92,6 +91,7 @@ jsrun() {
 
 # Functions *******************************************************************************
 # Create New Vagrant Environment
+
 mkbox() {
     DIR=~/Boxes/$1
     FILE=~/Boxes/$1/Vagrantfile
@@ -106,11 +106,9 @@ mkbox() {
                 case "$RES" in
                     [yY])
                         vagrant up
-                        vagrant ssh
-                        ;;
+                        vagrant ssh;;
                     *)
-                        echo -e "\033[1m==> mkbox: Box Created!\033[0m"
-                        ;;
+                        echo -e "\033[1m==> mkbox: Box Created!\033[0m";;
                 esac
             fi
         else
@@ -134,7 +132,6 @@ push() {
         fi
         echo -e "[PROJECTS]: ${YELLOW}Bash Updated!${RESET}"
         # for f in ~/PROJECTS/PG/Shell/Config/*.vim; do mv -- "$f" "${f%.vim}.txt" ; done
-
     # Update WordPress/cms-theme
     elif [[ $1 = "cms-theme" ]]; then
         if [[ ${NAME} ]]; then
@@ -173,11 +170,9 @@ pull() {
                 fi
 
                 source ~/.bash_aliases && source ~/.bashrc
-                echo -e "${YELLOW}Local Bash Update Complete!${RESET}"
-                ;;
+                echo -e "${YELLOW}Local Bash Update Complete!${RESET}";;
             *)
-                echo -e "${RED}Update Canceled!${RESET}"
-                ;;
+                echo -e "${RED}Update Canceled!${RESET}";;
         esac
     fi
 }
