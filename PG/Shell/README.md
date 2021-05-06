@@ -37,7 +37,7 @@ xdg-open ./VIDEO_NAME.mkv
 $ cd ~/PROJETCS/PG/Shell/nvim
 $ ./nvim.sh
 
-# Includes: Python3, NodeJS
+# Includes: Python3, Java, NodeJS
 # Updates: .bash_aliases
 ```
 </details>
@@ -57,7 +57,27 @@ $ nvim -S PATH/SESSION_NAME
 #
 ### Install Programs
 <details>
-<summary>Google Chrome (Ubuntu)</summary>
+<summary>IntelliJ IDEA (Kotlin)</summary>
+
+Download [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=linux). Note: file must be .tar.gz
+
+```bash
+# sudo apt update
+# sudo apt install -y default-jre default-jdk
+
+$ cd Downloads
+$ tar -xf idealE...tar.gz -C ~/Documents
+$ cd ~/Documents/idea-IC.../bin
+$ ./idea.sh
+```
+
+**Desktop Icon:**
+- Open IntelliJ IDEA
+- Tools > Create Desktop Entry 
+</details>
+
+<details>
+<summary>Google Chrome</summary>
 
 Download [Google Chrome](https://www.google.co.jp/chrome/browser/desktop/index.html) and move to downloaded directory
 
@@ -71,7 +91,7 @@ $ sudo apt install ./google-chrome-stable_current_amd64.deb
 </details>
 
 <details>
-<summary>VS Code (Ubuntu)</summary>
+<summary>VS Code</summary>
 
 ```bash
 $ sudo apt install software-properties-common apt-transport-https wge
@@ -82,7 +102,7 @@ $ sudo apt install code
 </details>
 
 <details>
-<summary>OBS Studio (Ubuntu)</summary>
+<summary>OBS Studio</summary>
 
 ```bash
 sudo apt install obs-studio -y 
@@ -90,7 +110,7 @@ sudo apt install obs-studio -y
 </details>
 
 <details>
-<summary>Vagrant Box (Ubuntu)</summary>
+<summary>Vagrant Box</summary>
 
 ```bash
 $ sudo apt install virtualbox
@@ -110,7 +130,7 @@ $ vagrant status
 </details>
 
 <details>
-<summary>Slack (Ubuntu)</summary>
+<summary>Slack</summary>
 
 ```bash
 $ sudo snap install slack --classic
@@ -119,7 +139,7 @@ $ sudo snap remove slack
 </details>
 
 <details>
-<summary>LibreOffice (Ubuntu)</summary>
+<summary>LibreOffice</summary>
 
 ```bash
 $ sudo snap install libreoffice

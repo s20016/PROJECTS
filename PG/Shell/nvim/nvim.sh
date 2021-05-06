@@ -67,9 +67,9 @@ esac
 # Git Configuration for non GL504GM
 NAME=$(uname -a | awk '{print $2}')
 if [[ ${NAME} != "GL504GM" ]]; then
-    cd ~/PROJECTS/
-    git config --global user.email "s20016@std.it-college.ac.jp"
-    git config --global user.name "s20016"
+  cd ~/PROJECTS/
+  git config --global user.email "s20016@std.it-college.ac.jp"
+  git config --global user.name "s20016"
 fi
 
 echo 'export PATH=$PATH:$HOME/.local/bin' >> $HOME/.bash_aliases
