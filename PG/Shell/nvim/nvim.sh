@@ -44,11 +44,11 @@ install_nodejs() {
 
 # Select Language
 echo -e "\n\033[1mSelect Language(s) to Install:\033[0m"
-read -p "1) Python3  2) NodeJS  3) All: " INPUT_RES
+read -p "1) Python3  2) Java  3) NodeJS  4) All: : " INPUT_RES
 case "$INPUT_RES" in
   '1') install_python3;;
-  '2') install_nodejs;;
-  '3') install_java;;
+  '2') install_java;;
+  '3') install_nodejs;;
   '4') install_python3; install_java; install_nodejs;;
 esac
 
@@ -63,6 +63,14 @@ case "$RES" in
     echo -e "${YELLOW}Updated: nvim${RESET}"
     ;;
 esac
+
+# Git Configuration for non GL504GM
+NAME=$(uname -a | awk '{print $2}')
+if [[ ${NAME} != "GL504GM" ]]; then
+    cd ~/PROJECTS/
+    git config --global user.email "s20016@std.it-college.ac.jp"
+    git config --global user.name "s20016"
+fi
 
 echo 'export PATH=$PATH:$HOME/.local/bin' >> $HOME/.bash_aliases
 nvim +'PlugInstall --sync' +qa
