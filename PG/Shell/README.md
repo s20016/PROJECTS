@@ -66,7 +66,7 @@ Download [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=linux)
 # sudo apt update
 # sudo apt install -y default-jre default-jdk
 
-$ cd Downloads
+$ cd ~/Downloads
 $ tar -xf idealE...tar.gz -C ~/Documents
 $ cd ~/Documents/idea-IC.../bin
 $ ./idea.sh
