@@ -39,6 +39,7 @@ $ ./nvim.sh
 
 # Includes: Python3, Java, NodeJS
 # Updates: .bash_aliases
+# Adds: Git configuration (s20016)
 ```
 </details>
 
