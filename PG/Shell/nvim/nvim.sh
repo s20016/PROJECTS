@@ -28,6 +28,12 @@ install_python3() {
   echo -e "${GREEN}Updated: Python3 Settings${RESET}"
 }
 
+# Java
+install_java() {
+  sudo apt install -y default-jre default-jdk
+  echo -e "${GREEN}Updated: Java Settings${RESET}"
+}
+
 # NodeJS
 install_nodejs() {
   sudo apt install -y nodejs npm
@@ -42,7 +48,8 @@ read -p "1) Python3  2) NodeJS  3) All: " INPUT_RES
 case "$INPUT_RES" in
   '1') install_python3;;
   '2') install_nodejs;;
-  '3') install_python3; install_nodejs;;
+  '3') install_java;;
+  '4') install_python3; install_java; install_nodejs;;
 esac
 
 # Save .bash_aliases
