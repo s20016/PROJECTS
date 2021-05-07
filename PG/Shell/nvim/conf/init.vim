@@ -186,8 +186,8 @@ endif
 
 " vim-airline
 " let g:airline_theme = 'powerlineish'
-let g:airline_theme = 'minimalist'
-" let g:airline_theme = 'bubblegum'
+" let g:airline_theme = 'minimalist'
+let g:airline_theme = 'bubblegum'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
