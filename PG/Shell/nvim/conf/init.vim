@@ -185,7 +185,9 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'powerlineish'
+" let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'minimalist'
+" let g:airline_theme = 'bubblegum'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -425,6 +427,9 @@ let g:jedi#smart_auto_mappings = 0
 " vim-airline
 " let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
+" Tab Name Only
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Syntax highlight
 let g:polyglot_disabled = ['python']
