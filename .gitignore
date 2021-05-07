@@ -1,0 +1,16 @@
+# Main
+PG/.vscode
+
+# PG/C/
+PG/C/Codes/*.out
+
+# PG/Java/ 
+PG/Java/.classpath
+PG/Java/.project
+PG/Java/bin
+
+# PG/JavaScript
+PG/JavaScript/.vscode
+
+# WebApplication/WordPress/cms-theme
+/WebApplication/Wordpress/cms-theme/img/
