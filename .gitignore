@@ -4,10 +4,14 @@ PG/.vscode
 # PG/C/
 PG/C/Codes/*.out
 
-# PG/Java/ 
+# PG/Java/ (WSL)
 PG/Java/.classpath
 PG/Java/.project
 PG/Java/bin
+# PG/Java [IntelliJ IDEA (Ubuntu)]
+PG/Java/.idea/
+PG/Java/PG.iml
+PG/Java/out/
 
 # PG/JavaScript
 PG/JavaScript/.vscode
