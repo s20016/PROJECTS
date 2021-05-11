@@ -42,7 +42,7 @@ install_nodejs() {
 # Main Function
 sudo apt update
 echo -e "\n\033[1mSelect Language(s) to Install:\033[0m"
-read -p "1) Python3  2) Java  3) NodeJS  4) All: : " INPUT_RES
+read -p "1) Python3  2) Java  3) NodeJS  4) All: " INPUT_RES
 case "$INPUT_RES" in
   '1') install_python3;;
   '2') install_java;;
