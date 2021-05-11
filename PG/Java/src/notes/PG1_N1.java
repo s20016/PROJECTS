@@ -4,7 +4,7 @@ import java.io.*;
 import java.text.*;
 import java.util.*;
 
-public class PG3_Sem4_1 {
+public class PG1_N1 {
 
 	public static void main(String[] args) {
 

@@ -2,7 +2,7 @@
 
 #### **Notes**
 - Methods for Reading input.txt [ [200801](./Notes/200801.md) ]
-- Coding Bat Solutions [ [PB1_S1N1](./Notes/PB1_S1N1.py) ]
+- Coding Bat Solutions [ [PG1_N1](./Notes/PG1_N1.py) ]
 
 
 #### **Projects**

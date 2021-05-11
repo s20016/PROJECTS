@@ -1,0 +1,6 @@
+# .idea
+/.idea/shelf/
+/.idea/workspace.xml
+
+# bin
+/bin/*

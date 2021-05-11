@@ -1,10 +1,10 @@
 package notes;
 
-public class PG3_Sem4_2 {
+public class PG1_N2 {
 
     public static void main(String[] args) {
 
-        PG3_Sem4_2 x = new PG3_Sem4_2();
+        PG1_N2 x = new PG1_N2();
 
         System.out.println(x.startWord("hippo", "hi"));
         System.out.println(x.startWord("hippo", "xip"));

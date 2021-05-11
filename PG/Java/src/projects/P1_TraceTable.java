@@ -1,6 +1,6 @@
 package projects;
 
-public class project1 {
+public class P1_TraceTable {
 
     public static void main(String[] args) {
 
