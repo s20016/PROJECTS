@@ -50,13 +50,13 @@ fun main() {
     val y = Rational(2, 3)
     val z = Rational(2, 1)
 
-    val numL: HashMap<String, Rational> = hashMapOf(
+    val numL: MutableMap<String, Rational> = mutableMapOf(
         "w*x" to w.mul(x),
         "x*y" to x.mul(y),
         "y*z" to y.mul(z),
         "z*w" to z.mul(w)
     )
-    println("Multiplication: $numL")
+    println("Multiplication: ${numL.toList()}")
 }
 
 // OUTPUT
