@@ -125,7 +125,7 @@ mkbox() {
 
 # Function to be used ONLY by GL504GM
 push() {
-  # Update Bash
+  # Update Bash -> PROJECTS
   NAME=$(uname -a | awk '{print $2}')
   if [[ $1 = "bash" ]]; then
     cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/Config/.bash_aliases
@@ -135,14 +135,16 @@ push() {
         > ~/PROJECTS/PG/Shell/Config/settings.json
     fi
     echo -e "[PROJECTS]: ${YELLOW}Bash Updated!${RESET}"
-    # for f in ~/PROJECTS/PG/Shell/Config/*.vim; do mv -- "$f" "${f%.vim}.txt" ; done
-  # Update WordPress/cms-theme
-  elif [[ $1 = "cms-theme" ]]; then
-    if [[ ${NAME} ]]; then
-      cp -r ~/PGLibrary/WordPress/wp-content/themes/cms-theme/* \
-        ~/PROJECTS/WebApplication/WordPress/cms-theme/.
-      echo -e "[PROJECTS]: ${YELLOW}CMS-THEMES Updated!${RESET}"
-    fi
+
+  # Update WordPress/cms-theme (Win) -> PROJECTS
+  elif [[ $1 = "cms-theme" && ${NAME} = "GL504GM" ]]; then
+    cp -r ~/PGLibrary/WordPress/wp-content/themes/cms-theme/* \
+      ~/PROJECTS/WebApplication/WordPress/cms-theme/.
+    echo -e "[PROJECTS]: ${YELLOW}CMS-THEMES Updated!${RESET}"
+
+  # Update Kotlin (Win) -> PROJECTS
+  elif [[ $1 = "kotlin" && ${NAME} = "GL504GM" ]]; then
+    cp ~/PGLibrary/Kotlin/src/main/kotlin/*.kt ~/PROJECTS/PG/Kotlin/.
   fi
 }
 
