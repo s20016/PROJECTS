@@ -56,6 +56,33 @@ $ nvim -S PATH/SESSION_NAME
 </details>
 
 #
+### Common Issues
+<details>
+<summary>Desktop is HOME Directory</summary>
+
+```bash
+# Look for .config/user-dirs.dirs
+$ nvim ~/.config/user-dirs.dirs
+
+# Replace similar lines with:
+XDG_DESKTOP_DIR="$HOME/Desktop"
+XDG_DOWNLOAD_DIR="$HOME/Downloads"
+XDG_TEMPLATES_DIR="$HOME/Templates"
+XDG_PUBLICSHARE_DIR="$HOME/Public"
+XDG_DOCUMENTS_DIR="$HOME/Documents"
+XDG_MUSIC_DIR="$HOME/Music"
+XDG_PICTURES_DIR="$HOME/Pictures"
+XDG_VIDEOS_DIR="$HOME/Videos"
+# Save and Quit nvim
+
+$ xdg-user-dirs-update --force
+$ LANG=C
+$ xdg-user-dirs-gtk-update
+# Logout and Login again
+```
+</details>
+
+#
 ### Install Programs
 <details>
 <summary>IntelliJ IDEA (Kotlin)</summary>
