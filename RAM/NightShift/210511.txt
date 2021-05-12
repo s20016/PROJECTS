@@ -1,0 +1,21 @@
+Night Class 210510
+
+pwd, cd, ls
+mkdir, rmdir, touch, rm, cp, mv, cat, * (wild card)
+
+cat ~/.bash_history | cut -d" " -f1 | sort | uniq -c | sort -n -r | head -n 3
+sudo apt update
+sudo apt upgrade -y
+sudo apt install virtualbox vagrant -y
+sudo apt install tree -y
+
+// Directory ABSOLUTE PATH, RELATIVE PATH
+
+IF install vagrant != WORKING THEN "Japan Ubuntu Team"
+
+mkdir ~/Boxes/Python3
+
+cd ~/Desktop -> GO BACK TO DESKTOP FROM HOME
+xdg-users-dirs-update --force
+LANG=C
+
