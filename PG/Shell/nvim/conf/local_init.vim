@@ -8,6 +8,7 @@ set shiftwidth=2
 
 " PG Tab Space
 autocmd Filetype python setlocal ts=4 sw=4 expandtab
+autocmd Filetype kotlin setlocal ts=4 sw=4 expandtab
 autocmd Filetype java setlocal ts=4 sw=4 expandtab
 autocmd Filetype c setlocal ts=4 sw=4 expandtab
 
