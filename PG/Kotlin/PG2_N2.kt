@@ -44,8 +44,8 @@ fun main() {
 
 
     // IF STATEMENT
-    if (1 in -1..0) println("やっはろー")
-    else println("ああ") // ああ
+//    if (1 in -1..0) println("やっはろー")
+//    else println("ああ") // ああ
 
     // SWITCH STATEMENT
     val var1 = 7
@@ -55,6 +55,22 @@ fun main() {
         in 4..5 -> "THREE"
         else -> "${var1}: NOT IN OPTION"
     }
-    println(str1) // 7: NOT IN OPTION
+//    println(str1) // 7: NOT IN OPTION
+
+    // WHEN
+    val var2 = 90
+    val str2: String = when {
+        var2 >= 90 -> "S"
+        var2 >= 80 -> "A"
+        var2 >= 70 -> "B"
+        var2 >= 60 -> "C"
+        else -> "D"
+    }
+//    println(str2) // S
+
+    // FOR LOOP
+    for (x in 0..9) {
+        println(x)
+    }
 
 }
