@@ -134,17 +134,18 @@ push() {
       cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json \
         > ~/PROJECTS/PG/Shell/Config/settings.json
     fi
-    echo -e "[PROJECTS]: ${YELLOW}Bash Updated!${RESET}"
+    echo -e "[PROJECTS]: Bash Updated!${RESET}"
 
   # Update WordPress/cms-theme (Win) -> PROJECTS
   elif [[ $1 = "cms-theme" && ${NAME} = "GL504GM" ]]; then
     cp -r ~/PGLibrary/WordPress/wp-content/themes/cms-theme/* \
       ~/PROJECTS/WebApplication/WordPress/cms-theme/.
-    echo -e "[PROJECTS]: ${YELLOW}CMS-THEMES Updated!${RESET}"
+    echo -e "[PROJECTS]: cms-theme Updated!${RESET}"
 
   # Update Kotlin (Win) -> PROJECTS
   elif [[ $1 = "kotlin" && ${NAME} = "GL504GM" ]]; then
     cp ~/PGLibrary/Kotlin/src/main/kotlin/*.kt ~/PROJECTS/PG/Kotlin/.
+    echo -e "[PROJECTS]: Kotlin Updated!${RESET}"
   fi
 }
 
