@@ -11,12 +11,11 @@ class Rational(n: Int, d: Int) {
     private val numerator: Int by lazy { n / g }
     private val denominator: Int by lazy { d / g }
 
-    // Whole Number
-    operator fun plus(n: Int): Rational =
-        Rational(numerator + n * denominator, denominator)
+//    operator fun plus(n: Int): Rational =
+//        Rational(numerator + n * denominator, denominator)
 
     // Fraction
-    fun plus(that: Rational): Rational =
+    fun add(that: Rational): Rational =
         Rational(
             numerator * that.denominator + that.numerator * denominator,
             denominator * that.denominator
@@ -41,26 +40,22 @@ class Rational(n: Int, d: Int) {
     private tailrec fun gcd(a: Int, b: Int): Int =
         if (b == 0) a else gcd(b, a % b)
 }
-
-operator fun Int.plus(r: Rational): Rational = r + this
+// operator fun Int.plus(r: Rational): Rational = r + this
 
 fun main() {
-    val w = Rational(1, 2)
-    val x = Rational(3, 2)
-    val y = Rational(2, 3)
-    val z = Rational(2, 1)
-
-    val numL: MutableMap<String, Rational> = mutableMapOf(
-        "w*x" to w.mul(x),
-        "x*y" to x.mul(y),
-        "y*z" to y.mul(z),
-        "z*w" to z.mul(w)
+    val (r1, r2, n1) = listOf(
+        Rational(2, 3),Rational(3, 4), Rational(5, 1),
     )
-    println("Multiplication: ${numL.toList()}")
+
+    val operatorList = listOf("Addition:", "Subtraction:", "Multiplication:", "Division:")
+    val mainList: List<MutableMap<String, Rational>> = listOf(
+        mutableMapOf("R1+R2" to r1.add(r2), "N1+R1" to n1.add(r1), "R2+N1" to r2.add(n1)),
+        mutableMapOf("R1-R2" to r1.sub(r2), "N1-R1" to n1.sub(r1), "R2-N1" to r2.sub(n1)),
+        mutableMapOf("R1*R2" to r1.mul(r2), "N1*R1" to n1.mul(r1), "R2*N1" to r2.mul(n1)),
+        mutableMapOf("R1/R2" to r1.div(r2), "N1/R1" to n1.div(r1), "R2/N1" to r2.div(n1)),
+    )
+
+    println("R1=2/3, R2=3/4, N1=5\n")
+    for (i in 0..3) println("${operatorList[i]} ${mainList[i]}")
 }
 
-// OUTPUT
-// Multiplication: {y*z=4/3, w*x=3/4, x*y=1/1, z*w=1/1}
-// Division: {w/x=1/3, x/y=9/4, z/w=4/1, y/z=1/3}
-// Addition: {y+z=8/3, w+x=2/1, x+y=13/6, z+w=5/2
-// Subtraction: {w-x=-1/1, x-y=5/6, z-w=3/2, y-z=-4/3}
