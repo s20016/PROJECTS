@@ -1,4 +1,4 @@
-Night Class 210510
+210510 ------------------------------------------
 
 pwd, cd, ls
 mkdir, rmdir, touch, rm, cp, mv, cat, * (wild card)
@@ -18,4 +18,60 @@ mkdir ~/Boxes/Python3
 cd ~/Desktop -> GO BACK TO DESKTOP FROM HOME
 xdg-users-dirs-update --force
 LANG=C
+
+
+210513 ------------------------------------------
+
+mkdir -p
+rm, rm -ri
+cat, cat -n, q (exit)
+ctrl + c, ctrl + d
+
+cat /etc/bash.bashrc
+
+cd ~/Desktop/work
+touch file1 fil2
+mkdir ~/Desktop/work/dir1
+cd ~/Desktop/work/dir1
+mkdir ~/Desktop/work/dir2
+
+alias cp='cp -i'
+cp -r dir2 dir3
+ls -R dir3/
+sudo apt install tree -y
+
+cd ~/Desktop
+mkdir mvtest
+touch file1
+mv file1 file2
+mkdir dir1
+mv file3 dir2
+
+mv dir2/file3 dir1/file1
+
+cd ../
+rmdir mvtest
+
+cat < /etc/crontab
+
+-- TEACH HERE!
+echo hello > /dev/stdout
+cat < /dev/stdin
+
+ls -l > list.txt
+cat < list.txt
+
+ls xxx > test.txt
+ls xxx 2> test.txt
+
+ls xxx > test2.txt 2>&1
+
+echo 123 > test.txt
+cat test.txt
+cat > test.txt
+
+echo 123 >> test.txt
+cat test.txt
+
+--- FIN
 
