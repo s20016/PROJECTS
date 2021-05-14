@@ -66,8 +66,9 @@ javacode() {
 }
 
 javarun() {
+  FIRST_ARG=$1; shift
   cat ~/PROJECTS/PG/Java/src/codes/input.txt | \
-    java ~/PROJECTS/PG/Java/src/codes/testcode$1.java \
+    java ~/PROJECTS/PG/Java/src/codes/testcode${FIRST_ARG}.java "$@"\
     > ~/PROJECTS/PG/Java/src/codes/output.txt
   cat ~/PROJECTS/PG/Java/src/codes/output.txt
   echo
