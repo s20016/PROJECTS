@@ -6,17 +6,6 @@ RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
 RESET=$(tput sgr 0)
 
-# Initial Install Configurations
-_CONFIG_DIR="$HOME/.config/nvim"
-_PLUGIN_DIR="$HOME/.local/share/nvim/site/autoload"
-if [ ! -d $_CONFIG_DIR ]; then
-  sudo apt install -y neovim
-  sudo apt install curl
-  mkdir -p $_CONFIG_DIR
-  curl -fLo "$_PLUGIN_DIR/plug.vim" --create-dirs \
-  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  cp $HOME/PROJECTS/PG/Shell/nvim/conf/{init.vim,local_bundles.vim,local_init.vim} $_CONFIG_DIR
-fi
 
 # Python3 Linter
 install_python3() {
@@ -43,6 +32,17 @@ install_nodejs() {
 sudo apt update
 echo -e "\n\033[1mSelect Language(s) to Install:\033[0m"
 read -p "1) Python3  2) Java  3) NodeJS  4) All: " INPUT_RES
+# Initial Install Configurations
+_CONFIG_DIR="$HOME/.config/nvim"
+_PLUGIN_DIR="$HOME/.local/share/nvim/site/autoload"
+if [ ! -d $_CONFIG_DIR ]; then
+  sudo apt install -y neovim
+  sudo apt install curl
+  mkdir -p $_CONFIG_DIR
+  curl -fLo "$_PLUGIN_DIR/plug.vim" --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  cp $HOME/PROJECTS/PG/Shell/nvim/conf/{init.vim,local_bundles.vim,local_init.vim} $_CONFIG_DIR
+fi
 case "$INPUT_RES" in
   '1') install_python3;;
   '2') install_java;;
