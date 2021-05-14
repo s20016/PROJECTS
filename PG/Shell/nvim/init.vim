@@ -1,4 +1,8 @@
 " ==============================================================================
+" Filename: ~/.config/nvim/init.vim
+" Author: s20016
+" Last Change: 2021/5/14
+" =============================================================================
 
 call plug#begin(expand('~/.local/share/nvim/site/plugged'))
 
@@ -16,9 +20,7 @@ call plug#end()
 
 filetype plugin indent on
 
-" ==============================================================================
-
-colorscheme codedark                    " tomasiser/vim-code/dark
+" ==== SETTINGS ===============================================================
 
 syntax enable                           " Enables syntax highlighing
 set t_Co=256                            " Support 256 colors
@@ -65,7 +67,8 @@ set noswapfile                          " Disable tmp files
 au FocusGained,BufEnter * :silent! !
 au FocusLost,WinLeave * :silent! w
 
-" ==============================================================================
+
+" ==== MAPPINGS ===============================================================
 
 " Map leader
 let g:mapleader = ','
@@ -106,16 +109,23 @@ nnoremap <M-l> :vertical resize +2<CR>
 " Clear search highlight
 nnoremap <silent> <leader><space> :noh<cr>
 
-" Comment out
-autocmd FileType apache setlocal commentstring=#\ %s
-
-command! FixWhiteSpace :%s/\s\+$//e
-
 " Indentation Level
 autocmd Filetype python setlocal ts=4 sw=4 expandtab
 autocmd Filetype kotlin setlocal ts=4 sw=4 epandtab
 autocmd Filetype java setlocal ts=4 sw=4 expandtab
 autocmd Filetype c setlocal ts=4 sw=4 expandtab
+
+" Commands
+command! FixWhiteSpace :%s/\s\+$//e
+
+
+" ==== PLUGIN CONFIG  =========================================================
+
+" tomasiser/vim-code/dark
+colorscheme codedark
+
+" Comment out (vim-commentary)
+autocmd FileType apache setlocal commentstring=#\ %s
 
 " Neovim Session
 let g:session_directory = "~/.config/nvim/session"
@@ -169,7 +179,8 @@ let g:lightline = {
 " landscape, one, materia, material, OldHope, nord, deus,
 " simpleblack, srcery_drk, ayu_mirage, ayu_light, ayu_dark,
 
-" ==============================================================================
+
+" ==== AUTO CMD ===============================================================
 augroup vimrc-remember-cursor-position
   autocmd!
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
