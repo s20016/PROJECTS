@@ -1,7 +1,7 @@
 " ==============================================================================
 " Filename: ~/.config/nvim/init.vim
 " Author: s20016
-" Last Change: 2021/05/16
+" Last Change: 2021/5/14
 " =============================================================================
 
 call plug#begin(expand('~/.local/share/nvim/site/plugged'))
@@ -12,7 +12,7 @@ Plug 'tomasiser/vim-code-dark'          " VS Code color theme
 Plug 'tpope/vim-commentary'             " Comment out lines
 Plug 'tpope/vim-fugitive'               " Allows Git commands
 Plug 'xolox/vim-misc'                   " Vim session
-Plug 'xolox/vim-session'                " vim seesion
+Plug 'xolox/vim-session'                " Vim seesion
 Plug 'yuttie/comfortable-motion.vim'    " Easy to eyes scroll
 Plug 'tpope/vim-surround'               " Surrounding bracket pairs
 Plug 'mhinz/vim-startify'               " Start screen
@@ -66,6 +66,7 @@ set updatetime=100                      " Set update time for Git gutter
 set visualbell                          " Error flash screen
 
 " ==== MAPPINGS ===============================================================
+" See :help key-notaion
 
 " Map leader
 let g:mapleader = ','
@@ -85,8 +86,6 @@ vnoremap K :m '<-2<CR>gv=gv
 " Faster scroll
 nnoremap J 10gj
 nnoremap K 10gk
-vnoremap J 10gj
-vnoremap K 10gk
 
 " Skip by page
 inoremap <C-b> <Left>
@@ -116,10 +115,14 @@ nnoremap <M-l> :vertical resize +2<CR>
 " Clear search highlight
 nnoremap <silent> <leader><space> :noh<cr>
 
-" Automatically closing braces
-inoremap {<CR> {<CR>}<Esc>ko<tab>
-inoremap [<CR> [<CR>]<Esc>ko<tab>
-inoremap (<CR> (<CR>)<Esc>ko<tab>
+" Automatically closing brackets
+inoremap (<CR> ()<Esc>ha
+inoremap {<CR> {}<Esc>ha
+inoremap [<CR> []<Esc>ha
+
+" Automatically closing quotes
+inoremap "<CR> ""<Esc>ha
+inoremap '<CR> ''<Esc>ha
 
 " Commands
 command! FixWhiteSpace :%s/\s\+$//e
@@ -164,7 +167,7 @@ let g:comfortable_motion_scroll_up_key = "k"
 let g:lightline = {
 	\ 'colorscheme': 'wombat',
 	\ 'active': {
-	\ 'left': [ 
+	\ 'left': [
 	\		[ 'mode', 'paste' ],
 	\   [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
 	\ },
@@ -173,7 +176,7 @@ let g:lightline = {
 
 let g:lightline.component_function = { 'lineinfo': 'LightlineLineinfo' }
 
-" Highlight active window color 
+" Highlight active window color
 function! LightlineLineinfo() abort
 	if winwidth(0) < 86
 		return ''
