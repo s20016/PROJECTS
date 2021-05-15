@@ -1,77 +1,78 @@
 " ==============================================================================
 " Filename: ~/.config/nvim/init.vim
 " Author: s20016
-" Last Change: 2021/5/14
+" Last Change: 2021/05/16
 " =============================================================================
 
 call plug#begin(expand('~/.local/share/nvim/site/plugged'))
 
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-commentary'
-Plug 'junegunn/seoul256.vim'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
-Plug 'tomasiser/vim-code-dark'
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-Plug 'itchyny/lightline.vim'
+Plug 'airblade/vim-gitgutter'           " Shows git changes in gutter
+Plug 'itchyny/lightline.vim'            " Minimal status line
+Plug 'tomasiser/vim-code-dark'          " VS Code color theme
+Plug 'tpope/vim-commentary'             " Comment out lines
+Plug 'tpope/vim-fugitive'               " Allows Git commands
+Plug 'xolox/vim-misc'                   " Vim session
+Plug 'xolox/vim-session'                " vim seesion
+Plug 'yuttie/comfortable-motion.vim'    " Easy to eyes scroll
+Plug 'tpope/vim-surround'               " Surrounding bracket pairs
+Plug 'mhinz/vim-startify'               " Start screen
 
 call plug#end()
 
-filetype plugin indent on
-
 " ==== SETTINGS ===============================================================
 
+filetype plugin indent on
+
 syntax enable                           " Enables syntax highlighing
-set t_Co=256                            " Support 256 colors
+set autochdir                           " Change to cwd
+set autoindent                          " Indent line similar to preceding line
+set autoread                            " Auto detect changes outside nvim
+set background=dark                     " Default color
+set backspace=indent,eol,start          " Fix backspace indent
+set clipboard=unnamedplus               " Copy paste between nvim and prgrms
+set cursorline                          " Highlight current line
 set encoding=utf-8                      " The encoding displayed
 set fileencoding=utf-8                  " The encoding written to file
-set backspace=indent,eol,start          " Fix backspace indent
-set hidden                              " Enables hidden buffer
-set nowrap                              " Displays long lines as one line
-set pumheight=10                        " Popup menu height
-set ruler                               " Ruler in status line
-set splitbelow                          " Horizontal splits below
-set splitright                          " Vertical splits on right side
-set smartindent                         " Autoindent when starting new line
-set autoindent                          " Indent line similar to preceding line
-set showmatch                           " Hightlight matching bracketsa
-set number                              " Toggle number line
-set relativenumber                      " Toggle relative numbering
-set cursorline                          " Highlight current line
-set gfn=Monospace\ 10                   " Guifont
-set background=dark                     " Default color
-set clipboard+=unnamedplus               " Copy paste between nvim and prgrms
-set hlsearch                            " Highlight all search pattern
-set incsearch                           " Show pettern while typing
-set ignorecase                          " Ignore letter case
-set smartcase                           " Ignore letter case
-set scrolloff=6                         " Minimal screen line above and below
-set gcr=a:blinkon2                      " Gui cursor (Blink)
-set guioptions=egmrti                   " Describes component and options
 set fileformats=unix,dos,mac            " EOL of file format
-set mousemodel=popup                    " Hide mouse button
+set gcr=a:blinkon2                      " Gui cursor (Blink)
+set gfn=Monospace\ 10                   " Guifont
+set guioptions=egmrti                   " Describes component and options
+set hidden                              " Enables hidden buffer
+set hlsearch                            " Highlight all search pattern
+set ignorecase                          " Ignore letter case
+set incsearch                           " Show pettern while typing
 set laststatus=2                        " Enable status line
 set modeline                            " Enable modeline
 set modelines=10
+set mousemodel=popup                    " Hide mouse button
+set noswapfile                          " Disable tmp files
+set nowrap                              " Displays long lines as one line
+set number                              " Toggle number line
+set pumheight=10                        " Popup menu height
+set ruler                               " Ruler in status line
+set scrolloff=6                         " Minimal screen line above and below
+set shiftwidth=2                        " One tab == 4 spaces
+set showmatch                           " Hightlight matching bracketsa
+set smartcase                           " Ignore letter case
+set smartindent                         " Autoindent when starting new line
+set splitbelow                          " Horizontal splits below
+set splitright                          " Vertical splits on right side
+set t_Co=256                            " Support 256 colors
+set tabstop=2                           " Insert 2 spaces for tab
 set title                               " Set window title
 set titleold="Terminal"                 " Default window title
-set titlestring=%F
-set tabstop=2                           " Insert 2 spaces for tab
-set shiftwidth=2                        " Levels of indentation
-set autoread                            " Auto detect changes outside nvim
+set titlestring=%F                      " Title of window
+set updatetime=100                      " Set update time for Git gutter
 set visualbell                          " Error flash screen
-set noswapfile                          " Disable tmp files
-
-" Auto save
-au FocusGained,BufEnter * :silent! !
-au FocusLost,WinLeave * :silent! w
-
 
 " ==== MAPPINGS ===============================================================
 
 " Map leader
 let g:mapleader = ','
+
+" Auto save
+au FocusGained,BufEnter * :silent! !
+au FocusLost,WinLeave * :silent! w
 
 " Indent visual block
 vmap < <gv
@@ -80,6 +81,12 @@ vmap > >gv
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+" Faster scroll
+nnoremap J 10gj
+nnoremap K 10gk
+vnoremap J 10gj
+vnoremap K 10gk
 
 " Skip by page
 inoremap <C-b> <Left>
@@ -109,11 +116,10 @@ nnoremap <M-l> :vertical resize +2<CR>
 " Clear search highlight
 nnoremap <silent> <leader><space> :noh<cr>
 
-" Indentation Level
-autocmd Filetype python setlocal ts=4 sw=4 expandtab
-autocmd Filetype kotlin setlocal ts=4 sw=4 epandtab
-autocmd Filetype java setlocal ts=4 sw=4 expandtab
-autocmd Filetype c setlocal ts=4 sw=4 expandtab
+" Automatically closing braces
+inoremap {<CR> {<CR>}<Esc>ko<tab>
+inoremap [<CR> [<CR>]<Esc>ko<tab>
+inoremap (<CR> (<CR>)<Esc>ko<tab>
 
 " Commands
 command! FixWhiteSpace :%s/\s\+$//e
@@ -121,11 +127,23 @@ command! FixWhiteSpace :%s/\s\+$//e
 
 " ==== PLUGIN CONFIG  =========================================================
 
-" tomasiser/vim-code/dark
+" NVIM theme
 colorscheme codedark
 
 " Comment out (vim-commentary)
 autocmd FileType apache setlocal commentstring=#\ %s
+
+" Startify
+let g:startify_change_to_dir = 0
+let g:startify_session_dir = '~/.config/nvim/session'
+let g:startify_lists = [
+	\ { 'type': 'sessions',  'header': ['   Sessions']       },
+	\ { 'type': 'bookmarks', 'header': ['   Bookmarks']      }, ]
+let g:startify_bookmarks = [ {'c': '~/.config/nvim/init.vim'} ]
+let g:startify_custom_header = [
+	\ '',
+	\ '   NVIM STARTIFY',
+	\ '', ]
 
 " Neovim Session
 let g:session_directory = "~/.config/nvim/session"
@@ -133,55 +151,51 @@ let g:session_command_aliases = 1
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 
-" " Airline Configuration
-" let g:airline_theme = 'bubblegum'
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#tab_nr_type = 1
-" let g:airline#extensions#tabline#fnamemod = ':t'
-" let g:airline#extensions#tabline#left_sep = ''
-" let g:airline#extensions#tabline#left_alt_sep = ''
-" let g:airline#extensions#tabline#right_sep = ''
-" let g:airline#extensions#tabline#right_alt_sep = ''
-" let g:airline_left_sep = ''
-" let g:airline_right_sep = ''
+" Git gutter
+let g:gitgutter_async=0
 
-" if !exists('g:airline_symbols')
-"     let g:airline_symbols = {}
-"   endif
+" Comfortable motion scroll
+let g:comfortable_motion_scroll_down_key = "j"
+let g:comfortable_motion_scroll_up_key = "k"
 
-" " Unicode symbols
-" let g:airline_symbols.colnr = 'Col'
-" let g:airline_symbols.crypt = ''
-" let g:airline_symbols.linenr = ''
-" let g:airline_symbols.linenr = ''
-" let g:airline_symbols.linenr = ''
-" let g:airline_symbols.linenr = ''
-" let g:airline_symbols.maxlinenr = ''
-" let g:airline_symbols.maxlinenr = ''
-" let g:airline_symbols.branch = ''
-" let g:airline_symbols.paste = ''
-" let g:airline_symbols.paste = ''
-" let g:airline_symbols.paste = ''
-" let g:airline_symbols.spell = ''
-" let g:airline_symbols.notexists = ''
-" let g:airline_symbols.whitespace = ''
 
-" Lighline Configuration
+" ==== STATUS LINE ============================================================
+
 let g:lightline = {
-      \ 'colorscheme': 'seoul256',
-      \ }
+	\ 'colorscheme': 'wombat',
+	\ 'active': {
+	\ 'left': [ 
+	\		[ 'mode', 'paste' ],
+	\   [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+	\ },
+	\ 'component_function': { 'gitbranch': 'FugitiveHead' },
+	\ }
 
-" Currently, wombat, solarized, powerline, powerlineish, jssjdf
-" jellybeans, molokai, seoul256, darcula	Vj,
-" selenized_dark, selenized_black, selenized_light, selenized_white,
-" Tomorrow, Tomorrow_Night, Tomorrow_Night_Blue,
-" Tomorrow_Night_Bright, Tomorrow_Night_Eighties, PaperColor,
-" landscape, one, materia, material, OldHope, nord, deus,
-" simpleblack, srcery_drk, ayu_mirage, ayu_light, ayu_dark,
+let g:lightline.component_function = { 'lineinfo': 'LightlineLineinfo' }
 
+" Highlight active window color 
+function! LightlineLineinfo() abort
+	if winwidth(0) < 86
+		return ''
+	endif
+	let l:current_line = printf('%-3s', line('.'))
+	let l:max_line = printf('%-3s', line('$'))
+	let l:lineinfo = ' ' . l:current_line . '/' . l:max_line
+	return l:lineinfo
+endfunction
+
+" Tab color
+let s:palette = g:lightline#colorscheme#wombat#palette
+let s:palette.tabline.tabsel = [ [ '#444444', '#8ac6f2', 238, 117 ] ]
+unlet s:palette
+
+" Tab separator
+let g:lightline.separator = { 'left': '', 'right': '' }
+let g:lightline.subseparator = { 'left': '', 'right': '' }
 
 " ==== AUTO CMD ===============================================================
+
 augroup vimrc-remember-cursor-position
-  autocmd!
+	autocmd!
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 augroup END
