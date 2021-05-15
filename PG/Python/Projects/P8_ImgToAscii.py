@@ -9,7 +9,7 @@ asciiLvl = [' ', '.', '"', '`', '^', '"', ',', ':', ';', 'I', 'l', '!', 'i',
             'k', 'h', 'a', 'o', '*', '#', 'M', 'W', '&', '8', '%', 'B', '@', '$']
 
 asciiLen, intvl = len(asciiLvl), len(asciiLvl)/256
-asciiW, asciiH, scale = 10, 15, 0.1
+asciiW, asciiH, scale = 10, 10, 0.5
 
 
 def getAscii(inputInt):
@@ -17,8 +17,13 @@ def getAscii(inputInt):
 
 
 textFile = open("./output.txt", "w")
-img = Image.open("1.jpg")
-fnt = ImageFont.truetype("/mnt/c/Windows/Fonts/cour.ttf", 16)
+img = Image.open("1.png")
+
+# Windows font file
+# fnt = ImageFont.truetype("/mnt/c/Windows/Fonts/cour.ttf", 16)
+
+# Ubnutu font file
+fnt = ImageFont.truetype("/usr/share/fonts/truetype/NotoMono-Regular.ttf", 16)
 
 W, H = img.size
 img = img.resize(
