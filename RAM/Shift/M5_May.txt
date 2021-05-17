@@ -90,5 +90,34 @@ probably ok
 --
 git config user.name "s20016"
 git config user.email "s20016@std-...."
+git config --global core.editor 'code -w'
 
+ln -s ~/dir/file ~/Desktop
+diff file1 file2
+
+
+git --version
+sudo apt install git
+sudo apt install neovim -y
+sudpo apt install code
+
+googlechrome - > vscode
+cd ~/Downloads/
+sudo apt install ./code<tab>:
+
+mkdir ./findgrep
+cd findgrep
+git init
+
+
+git status
+git add findgrep.sh
+git commit -m "Initial Git"
+
+git log
+git diff :
+
+git push 
+
+git diff
 
