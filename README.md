@@ -20,7 +20,6 @@ PROJECTS
 │   └── Shift 
 ├── WebApplication
 │   ├── ReactJS
-│   ├── SocialPreview
 │   └── WordPress
 │       └── PHP
 └── WebExtension
