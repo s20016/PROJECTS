@@ -6,7 +6,8 @@
 
 call plug#begin(expand('~/.local/share/nvim/site/plugged'))
 
-Plug 'tomasiser/vim-code-dark'                            " VS Code color theme
+Plug 'morhetz/gruvbox'                                    " Gruvbox theme
+Plug 'shinchu/lightline-gruvbox.vim'                      " Gruvbox limelight
 Plug 'airblade/vim-gitgutter'                             " Gutter changes
 Plug 'itchyny/lightline.vim'                              " Minimal status line
 Plug 'tpope/vim-commentary'                               " Comment out lines
@@ -126,6 +127,18 @@ nnoremap <M-l> :vertical resize +2<CR>
 " Clear search highlight
 nnoremap <silent> <leader><space> :noh<cr>
 
+" PLUGIN: FZF
+nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
+nnoremap <silent> <Leader>/ :BLines<CR>
+nnoremap <silent> <Leader>' :Marks<CR>
+nnoremap <silent> <Leader>g :Commits<CR>
+nnoremap <silent> <Leader>H :Helptags<CR>
+nnoremap <silent> <Leader>hh :History<CR>
+nnoremap <silent> <Leader>h: :History:<CR>
+nnoremap <silent> <Leader>h/ :History/<CR>
+
 " Automatically closing brackets
 inoremap (<CR> ()<Esc>ha
 inoremap {<CR> {}<Esc>ha
@@ -141,26 +154,15 @@ command! FixWhiteSpace :%s/\s\+$//e
 
 " ==== PLUGIN CONFIG  =========================================================
 
-" NVIM theme
-colorscheme codedark
+" PLUGIN: Gruvebox Theme
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
-" Comment out (vim-commentary)
+" PLUGIN: vim-commentary
 autocmd FileType apache setlocal commentstring=#\ %s
 
-" CSS color
+" PLUGIN: colorizer.lua
 lua require'colorizer'.setup()
-
-
-" Ale_linters
-let g:ale_lint_on_save = 1
-let g:ale_fix_on_save = 1
-let g:ale_sign_error = '>'
-let g:ale_sign_warning = '>'
-let g:ale_linters = {'python': [ 'flake8' ]}
-let g:ale_fixers = {'python': [ 'autopep8', 'black', 'isort' ]}
-
-highlight ALEErrorSign    guifg=#db4437 ctermfg=203
-highlight ALEWarningSign  guifg=#f4b400 ctermfg=228
 
 " Startify
 " let g:startify_change_to_dir = 0
@@ -174,16 +176,27 @@ highlight ALEWarningSign  guifg=#f4b400 ctermfg=228
 " 	\ '   NVIM STARTIFY',
 " 	\ '', ]
 
-" Neovim Session
+" PLUGIN: Neovim Session
 let g:session_directory = "~/.config/nvim/session"
 let g:session_command_aliases = 1
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 
-" FZF (Open below)
+" PLUGIN: FZF (Open below)
 let g:fzf_layout = { 'down': '~40%' }
 
-" Git gutter
+" PLUGIN: Ale_linters
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+let g:ale_sign_error = '>'
+let g:ale_sign_warning = '>'
+let g:ale_linters = {'python': [ 'flake8' ]}
+let g:ale_fixers = {'python': [ 'autopep8', 'black', 'isort' ]}
+
+highlight ALEErrorSign    guifg=#db4437 ctermfg=203
+highlight ALEWarningSign  guifg=#f4b400 ctermfg=228
+
+" PLUGIN: Git gutter
 let g:gitgutter_async=0
 let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '~'
@@ -195,21 +208,19 @@ let g:gitgutter_sign_modified_removed = '-'
 highlight GitGutterAdd    guifg=#95e454 ctermfg=119
 highlight GitGutterChange guifg=#cae682 ctermfg=180
 highlight GitGutterDelete guifg=#e5786d ctermfg=173
-
-" Comfortable motion scroll
-let g:comfortable_motion_scroll_down_key = "j"
-let g:comfortable_motion_scroll_up_key = "k"
+highlight SignColumn guibg=none ctermbg=none
 
 
 " ==== STATUS LINE ============================================================
 " See `:h g:lightline.component` for details
+" See `:h g:lightline.colorscheme` for available colorscheme
 
 let g:lightline = {
-	\ 'colorscheme': 'powerlineish',
+	\ 'colorscheme': 'gruvbox',
 	\ 'active': {
 	\ 'left': [
 	\		[ 'mode', 'paste' ],
-	\   [ 'gitbranch' ],  [ 'readonly', 'modified' ] ],
+	\   [ 'gitbranch' ],  [ 'readonly', 'modified', 'filename' ] ],
 	\ 'right': [
 	\   [ 'lineinfo' ], [ 'percent' ], [ 'filetype' ] ]
 	\ },
@@ -225,7 +236,7 @@ let g:lightline.tab = {
 
 " Highlight active window color
 function! LightlineLineinfo() abort
-	if winwidth(0) < 86
+	if winwidth(0) < 50
 		return ''
 	endif
 	let l:current_line = printf('%-3s', line('.'))
@@ -233,11 +244,6 @@ function! LightlineLineinfo() abort
 	let l:lineinfo = '' . l:current_line . '/' . l:max_line
 	return l:lineinfo
 endfunction
-
-" Tab color
-let s:palette = g:lightline#colorscheme#powerlineish#palette
-let s:palette.tabline.tabsel = [ [ '#005f00', '#afd700', 22, 148 ] ]
-unlet s:palette
 
 " Tab separator
 let g:lightline.separator = { 'left': '', 'right': '' }
