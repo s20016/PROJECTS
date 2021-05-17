@@ -103,11 +103,11 @@ highlight SignColumn guibg=none ctermbg=none
 " See `:h g:lightline.colorscheme` for available colorscheme
 
 let g:lightline = {
-	\ 'colorscheme': 'gruvbox',
-	\ 'active': {
-	\ 'left': [
-	\		[ 'mode', 'paste' ],
-	\   [ 'gitbranch' ],  [ 'readonly', 'modified', 'filename' ] ],
+			\ 'colorscheme': 'gruvbox',
+			\ 'active': {
+			\ 'left': [
+			\		[ 'mode', 'paste' ],
+			\   [ 'gitbranch' ],  [ 'readonly', 'filename', 'modified' ] ],
 	\ 'right': [
 	\   [ 'lineinfo' ], [ 'percent' ], [ 'filetype' ] ]
 	\ },
