@@ -57,10 +57,23 @@ fun containsDigit(str: String): Boolean {
 fun add1(n: Int): Int = n + 1
 fun twice(n: Int, f: (Int) -> Int): Int = f(f(n))
 
-fun main() {
-  // TODO: Entry Point
-  val got = twice(5, ::add1); println(got)
+class Greeter {
+  fun greet(name: String) { println("Hello ${name}!")}
+}
 
+class Person {
+  private val name: String = "Hello"
+  private val nameLength: Int
+  get(): Int { return name.length }
+}
+
+
+fun main() {
+  // TODO: Entry Point ↓↓↓
+  val a = Greeter()
+  a.greet("Kotlin")
+
+  // val got = twice(5, ::add1); println(got)
   // println(containsDigit("abc"))
   // log{"Message 1"} // Message 1
   // log(false){"Message 2"}
