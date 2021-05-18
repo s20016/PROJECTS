@@ -3,7 +3,7 @@
  
 [ [App](https://s20016.github.io/Animate/) ] **Project Animate**  
 [ [App](https://s20016.github.io/ReactJS/) ] **Project ReactJS**  
-[ [Web](https://s20016.github.io/PROJECTS/WebExtension/) ] **WebExtension**  
+[ [Web](https://s20016.github.io/PROJECTS/WebExtension/HTML) ] **WebExtension**  
 
 ```
 PROJECTS
@@ -16,11 +16,8 @@ PROJECTS
 │   ├── Python
 │   └── Shell
 ├── RAM
-│   ├── IT-Passport
-├── WebApplication
-│   └── WordPress
-│       └── PHP
+│   └── IT-Passport
 └── WebExtension
     ├── HTML
-    └── CSS/SCSS
+    └── WordPress
 ```
