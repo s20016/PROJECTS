@@ -17,9 +17,7 @@ PROJECTS
 │   └── Shell
 ├── RAM
 │   ├── IT-Passport
-│   └── Shift 
 ├── WebApplication
-│   ├── ReactJS
 │   └── WordPress
 │       └── PHP
 └── WebExtension
