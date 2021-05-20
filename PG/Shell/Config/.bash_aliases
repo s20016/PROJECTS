@@ -130,7 +130,7 @@ push() {
   NAME=$(uname -a | awk '{print $2}')
   if [[ $1 = "bash" ]]; then
     cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/Config/.bash_aliases
-    cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/nvim/conf/.
+    cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/nvim/conf_test/.
     if [[ ${NAME} = "GL504GM" ]]; then
       cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json \
         > ~/PROJECTS/PG/Shell/Config/settings.json
@@ -151,37 +151,37 @@ push() {
 }
 
 # Function to be used ONLY by SF313-51 & SF313-51U
-pull() {
-  if [[ $1 = "bash" ]]; then
-    read -p "Update: .bash_aliases  .config/nvim/*.vim  WinTerminal(Settings)? [Y/n] " response
-    case "$response" in
-      [yY])
-        NAME=$(uname -a | awk '{print $2}')
-        VAR1="/mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
-        VAR2="/mnt/c/Users/s20016/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
-        # .bash configurations
-        cat ~/PROJECTS/PG/Shell/Config/.bash_aliases > ~/.bash_aliases
-        cat ~/PROJECTS/PG/Shell/nvim/conf/init.vim > ~/.config/nvim/init.vim
-        cat ~/PROJECTS/PG/Shell/nvim/conf/local_bundles.vim > ~/.config/nvim/local_bundles.vim
-        cat ~/PROJECTS/PG/Shell/nvim/conf/local_init.vim > ~/.config/nvim/local_init.vim
-        # Windows Terminal setting
-        if [[ ${NAME} = "GL504GM" ]]; then
-          cat ~/PROJECTS/PG/Shell/Config/settings.json > ${VAR1}
-          sed -i '11, 50 s/c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40/2c4de342-38b7-51cf-b940-2309a097f518/' ${VAR1}
-          sed -i '55 s/s20016/czekras/' ${VAR1}
-        elif [[ ${NAME} = "SF313-51" ]]; then
-          cat ~/PROJECTS/PG/Shell/Config/settings.json > ${VAR2}
-          sed -i '11, 50 s/2c4de342-38b7-51cf-b940-2309a097f518/c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40/' ${VAR2}
-          sed -i '55 s/czekras/s20016/' ${VAR2}
-          sed -i '55 s/Ubuntu/Ubuntu-18\.04/' ${VAR2}
-          sed -i '61 s/12/14/' ${VAR2}
-        fi
-        echo -e "[PROJECTS]: ${YELLOW}Bash Updated!${RESET}";;
-      *)
-        echo -e "[PROJECTS]: ${RED}Update Canceled!${RESET}";;
-    esac
-  fi
-}
+# pull() {
+#   if [[ $1 = "bash" ]]; then
+#     read -p "Update: .bash_aliases  .config/nvim/*.vim  WinTerminal(Settings)? [Y/n] " response
+#     case "$response" in
+#       [yY])
+#         NAME=$(uname -a | awk '{print $2}')
+#         VAR1="/mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
+#         VAR2="/mnt/c/Users/s20016/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
+#         # .bash configurations
+#         cat ~/PROJECTS/PG/Shell/Config/.bash_aliases > ~/.bash_aliases
+#         cat ~/PROJECTS/PG/Shell/nvim/conf/init.vim > ~/.config/nvim/init.vim
+#         cat ~/PROJECTS/PG/Shell/nvim/conf/local_bundles.vim > ~/.config/nvim/local_bundles.vim
+#         cat ~/PROJECTS/PG/Shell/nvim/conf/local_init.vim > ~/.config/nvim/local_init.vim
+#         # Windows Terminal setting
+#         if [[ ${NAME} = "GL504GM" ]]; then
+#           cat ~/PROJECTS/PG/Shell/Config/settings.json > ${VAR1}
+#           sed -i '11, 50 s/c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40/2c4de342-38b7-51cf-b940-2309a097f518/' ${VAR1}
+#           sed -i '55 s/s20016/czekras/' ${VAR1}
+#         elif [[ ${NAME} = "SF313-51" ]]; then
+#           cat ~/PROJECTS/PG/Shell/Config/settings.json > ${VAR2}
+#           sed -i '11, 50 s/2c4de342-38b7-51cf-b940-2309a097f518/c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40/' ${VAR2}
+#           sed -i '55 s/czekras/s20016/' ${VAR2}
+#           sed -i '55 s/Ubuntu/Ubuntu-18\.04/' ${VAR2}
+#           sed -i '61 s/12/14/' ${VAR2}
+#         fi
+#         echo -e "[PROJECTS]: ${YELLOW}Bash Updated!${RESET}";;
+#       *)
+#         echo -e "[PROJECTS]: ${RED}Update Canceled!${RESET}";;
+#     esac
+#   fi
+# }
 
 # Adding aliases to nvim
 # let $BASH_ENV = "~/.bash_aliases" <- Add to ~/.config/nvim/init.vim
