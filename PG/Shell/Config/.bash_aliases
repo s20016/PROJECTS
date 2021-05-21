@@ -166,11 +166,16 @@ pull () {
 
 	# Nvim Update PROJECTS -> Local
 	elif [ $1 = "nvim" ]; then
-		cat ~/PROJECTS/PG/Shell/nvim/conf_test/init.vim > ~/.config/nvim/init.vim
-		cat ~/PROJECTS/PG/Shell/nvim/conf_test/mapping.vim > ~/.config/nvim/mapping.vim
-		cat ~/PROJECTS/PG/Shell/nvim/conf_test/setting.vim > ~/.config/nvim/setting.vim
-		cat ~/PROJECTS/PG/Shell/nvim/conf_test/plugins.vim > ~/.config/nvim/plugins.vim
-    echo -e "[LOCAL]: Neovim Updated!"
+		read -p "[LOCAL]: Update nvim with TEST CONFIG? [Y/n] " RES
+		case $RES in
+			[Yy])
+				cat ~/PROJECTS/PG/Shell/nvim/conf_test/init.vim > ~/.config/nvim/init.vim
+				cat ~/PROJECTS/PG/Shell/nvim/conf_test/mapping.vim > ~/.config/nvim/mapping.vim
+				cat ~/PROJECTS/PG/Shell/nvim/conf_test/setting.vim > ~/.config/nvim/setting.vim
+				cat ~/PROJECTS/PG/Shell/nvim/conf_test/plugins.vim > ~/.config/nvim/plugins.vim
+				echo -e "[LOCAL]: Neovim Updated!";;
+			*   ) echo -e "[LOCAL]: Update Canelled!";;
+		esac
 	fi
 }
 
