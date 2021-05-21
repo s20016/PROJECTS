@@ -21,28 +21,6 @@ autocmd FileType apache setlocal commentstring=#\ %s
 " PLUGIN: colorizer.lua
 lua require'colorizer'.setup()
 
-" PLUGIN: Startify
-let g:startify_change_to_dir = 0
-let g:startify_session_dir = '~/.config/nvim/session'
-let g:startify_lists = [
-	\ { 'type': 'sessions',  'header': ['   Sessions']  },
-	\ { 'type': 'bookmarks', 'header': ['   Bookmarks'] }, ]
-
-let g:startify_bookmarks = [
-  \ { 'a': '~/.bash_aliases' } ]
-
-" let g:startify_custom_header = [
-" 	\ '',
-" 	\ '   NVIM STARTIFY' ]
-
-let g:startify_custom_header = [
-  \ '    ____  ____   ___      _ _____ ____ _____ ____   ',
-  \ '   |  _ \|  _ \ / _ \    | | ____/ ___|_   _/ ___|  ',
-  \ '   | |_) | |_) | | | |_  | |  _|| |     | | \___ \  ',
-  \ '   |  __/|  _ <| |_| | |_| | |__| |___  | |  ___) | ',
-  \ '   |_|   |_| \_\\___/ \___/|_____\____| |_| |____/  ',
-  \ '' ]
-
 " PLUGIN: Neovim Session
 let g:session_directory = "~/.config/nvim/session"
 let g:session_command_aliases = 1
@@ -52,6 +30,29 @@ let g:session_autosave = "no"
 " PLUGIN: FZF (Open below)
 " let g:fzf_layout = { 'down': '~40%' }
 
+" ==== STARTIFY ===============================================================
+
+" PLUGIN: Startify
+let g:startify_change_to_dir = 0
+let g:startify_session_dir = '~/.config/nvim/session'
+let g:startify_lists = [
+			\ { 'type': 'sessions',  'header': ['   Sessions']  },
+			\ { 'type': 'bookmarks', 'header': ['   Bookmarks'] }, ]
+
+let g:startify_bookmarks = [
+			\ { 'a': '~/.bash_aliases' } ]
+
+" let g:startify_custom_header = [
+" 	\ '',
+" 	\ '   NVIM STARTIFY' ]
+
+let g:startify_custom_header = [
+			\ '    ____  ____   ___      _ _____ ____ _____ ____   ',
+			\ '   |  _ \|  _ \ / _ \    | | ____/ ___|_   _/ ___|  ',
+			\ '   | |_) | |_) | | | |_  | |  _|| |     | | \___ \  ',
+			\ '   |  __/|  _ <| |_| | |_| | |__| |___  | |  ___) | ',
+			\ '   |_|   |_| \_\\___/ \___/|_____\____| |_| |____/  ',
+			\ '' ]
 
 " ==== ERROR & WARNING ========================================================
 

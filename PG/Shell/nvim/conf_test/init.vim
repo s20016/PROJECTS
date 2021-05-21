@@ -34,6 +34,8 @@ Plug 'junegunn/fzf.vim'                                   " FZF ext.
 Plug 'norcalli/nvim-colorizer.lua'                        " Color CSS
 Plug 'jiangmiao/auto-pairs'                               " Auto pair brackets 
 Plug 'dense-analysis/ale'                                 " Linting
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}       " Column select
+Plug 'junegunn/goyo.vim'                                  " Distraction-free
 
 " Plug 'tomasiser/vim-code-dark'                            " VS Code theme
 
@@ -46,3 +48,4 @@ source $HOME/.config/nvim/plugins.vim
 
 " NOTE:
 " Sessions are saved in $HOME/.config/nvim/session/
+" Netrwhist are saved in $HOME/.config/nvim/
