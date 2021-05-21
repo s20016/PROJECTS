@@ -22,8 +22,7 @@ let g:startify_lists = [
 	\ { 'type': 'sessions',  'header': ['   Sessions']  },
 	\ { 'type': 'bookmarks', 'header': ['   Bookmarks'] }, ]
 let g:startify_bookmarks = [
-  \ { 'a': '~/.bash_aliases' },
-  \ { 'c': '~/.config/nvim/init.vim'} ]
+  \ { 'a': '~/.bash_aliases' } ]
 let g:startify_custom_header = [
 	\ '',
 	\ '   NVIM STARTIFY',
