@@ -151,6 +151,26 @@ push() {
 }
 
 # Function to be used ONLY by SF313-51 & SF313-51U
+
+pull () {
+	$SHLL_DIR="$HOME/PROJECTS/PG/SHELL"
+	$CONF_DIR="$HOME/.config/nvim"
+
+	# Bash Update PROJECTS -> local
+	if [ $1 = "bash" ]; then
+		cat $SHLL_DIR/Config/.bash_aliases > $HOME/.bash_aliases
+    echo -e "[LOCAL]: Bash Updated!"
+
+	# Nvim Update PROJECTS -> Local
+	elif [ $1 = "nvim" ]; then
+		cat $SHLL_DIR/nvim/conf_test/init.vim > $CONF_DIR/init.vim
+		cat $SHLL_DIR/nvim/conf_test/mapping.vim > $CONF_DIR/mapping.vim
+		cat $SHLL_DIR/nvim/conf_test/setting.vim > $CONF_DIR/setting.vim
+		cat $SHLL_DIR/nvim/conf_test/plugins.vim > $CONF_DIR/plugins.vim
+    echo -e "[LOCAL]: Neovim Updated!"
+	fi
+}
+
 # pull() {
 #   if [[ $1 = "bash" ]]; then
 #     read -p "Update: .bash_aliases  .config/nvim/*.vim  WinTerminal(Settings)? [Y/n] " response
