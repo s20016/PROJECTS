@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/init.vim
 " Author: s20016
-" Last Change: 2021/05/20
+" Last Change: Sat 22 May 2021 09:28:45 PM JST
 " =============================================================================
 
 " Enables alias in nvim
@@ -17,7 +17,6 @@ call plug#begin(expand('~/.local/share/nvim/site/plugged'))
 Plug 'morhetz/gruvbox'                                    " Gruvbox theme
 Plug 'shinchu/lightline-gruvbox.vim'                      " Gruvbox limelight
 Plug 'mhinz/vim-startify'                                 " Custom vim start
-
 Plug 'airblade/vim-gitgutter'                             " Gutter changes
 Plug 'itchyny/lightline.vim'                              " Minimal status line
 Plug 'tpope/vim-commentary'                               " Comment out lines

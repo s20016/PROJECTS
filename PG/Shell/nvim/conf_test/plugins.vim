@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/plugins.vim
 " Author: s20016
-" Last Change: 2021/05/20
+" Last Change: Sat 22 May 2021 09:28:45 PM JST
 " =============================================================================
 
 " netrw file browser
@@ -40,7 +40,8 @@ let g:startify_lists = [
 			\ { 'type': 'bookmarks', 'header': ['   Bookmarks'] }, ]
 
 let g:startify_bookmarks = [
-			\ { 'a': '~/.bash_aliases' } ]
+			\ { 'a': '~/.bash_aliases' }, ]
+
 
 " let g:startify_custom_header = [
 " 	\ '',
