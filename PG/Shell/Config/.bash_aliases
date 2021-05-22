@@ -1,7 +1,7 @@
 # =============================================================================
 # Filename: ~/.bash_aliases
 # Author: s20016
-# Last Change: 2021/05/20
+# Last Change: Sat 22 May 2021 09:28:45 PM JST
 # =============================================================================
 
 export PATH=$PATH:$HOME/.local/bin  # GL504GM, SF313-51, SF313-51U
@@ -134,7 +134,9 @@ mkbox() {
 push() {
   # Update Bash -> PROJECTS
   NAME=$(uname -a | awk '{print $2}')
+	UPDATE=$(date)
   if [[ $1 = "bash" ]]; then
+		sed -i "4s/:.*$/: $UPDATE/" ~/.bash_aliases ~/.config/nvim/*.vim
     cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/Config/.bash_aliases
     cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/nvim/conf_test/.
     if [[ ${NAME} = "GL504GM" ]]; then
@@ -169,12 +171,9 @@ pull () {
 		read -p "[LOCAL]: Update nvim with TEST CONFIG? [Y/n] " RES
 		case $RES in
 			[Yy])
-				cat ~/PROJECTS/PG/Shell/nvim/conf_test/init.vim > ~/.config/nvim/init.vim
-				cat ~/PROJECTS/PG/Shell/nvim/conf_test/mapping.vim > ~/.config/nvim/mapping.vim
-				cat ~/PROJECTS/PG/Shell/nvim/conf_test/setting.vim > ~/.config/nvim/setting.vim
-				cat ~/PROJECTS/PG/Shell/nvim/conf_test/plugins.vim > ~/.config/nvim/plugins.vim
+				cp ~/PROJECTS/PG/Shell/nvim/conf_test/*.vim  ~/.config/nvim/.
 				echo -e "[LOCAL]: Neovim Updated!";;
-			*   ) echo -e "[LOCAL]: Update Canelled!";;
+			*   ) echo -e "[LOCAL]: Update Cancelled!";;
 		esac
 	fi
 }
