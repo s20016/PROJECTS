@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/setting.vim
 " Author: s20016
-" Last Change: Sat 22 May 2021 09:28:45 PM JST
+" Last Change: Sun 23 May 2021 09:46:40 AM JST
 " =============================================================================
 
 filetype plugin indent on
@@ -48,7 +48,6 @@ set termguicolors                       " Enables 24-bit color
 set title                               " Set window title
 set titlestring=%F                      " Title of window
 set updatetime=100                      " Set update time for Git gutter
-set visualbell                          " Error flash screen
 set wildmenu                            " Cmd tab complete opt
 
 " set relativenumber                      " Number relative to line

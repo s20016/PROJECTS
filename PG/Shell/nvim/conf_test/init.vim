@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/init.vim
 " Author: s20016
-" Last Change: Sat 22 May 2021 09:28:45 PM JST
+" Last Change: Sun 23 May 2021 09:46:40 AM JST
 " =============================================================================
 
 " Enables alias in nvim
@@ -35,8 +35,6 @@ Plug 'jiangmiao/auto-pairs'                               " Auto pair brackets
 Plug 'dense-analysis/ale'                                 " Linting
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}       " Column select
 Plug 'junegunn/goyo.vim'                                  " Distraction-free
-
-" Plug 'tomasiser/vim-code-dark'                            " VS Code theme
 
 call plug#end()
 

@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/plugins.vim
 " Author: s20016
-" Last Change: Sat 22 May 2021 09:28:45 PM JST
+" Last Change: Sun 23 May 2021 09:46:40 AM JST
 " =============================================================================
 
 " netrw file browser
@@ -13,7 +13,6 @@ let g:netrw_winsize = 15
 " PLUGIN: Themes
 let g:gruvbox_italic=1
 colorscheme gruvbox
-" colorscheme codedark
 
 " PLUGIN: vim-commentary
 autocmd FileType apache setlocal commentstring=#\ %s
@@ -45,7 +44,7 @@ let g:startify_bookmarks = [
 
 " let g:startify_custom_header = [
 " 	\ '',
-" 	\ '   NVIM STARTIFY' ]
+" 	\ '   PROJECTS' ]
 
 let g:startify_custom_header = [
 			\ '    ____  ____   ___      _ _____ ____ _____ ____   ',
@@ -69,7 +68,7 @@ highlight ALEErrorSign    guifg=#db4437 ctermfg=203
 highlight ALEWarningSign  guifg=#f4b400 ctermfg=228
 
 " PLUGIN: Git gutter
-let g:gitgutter_async=0
+let g:gitgutter_async = 0
 let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '~'
 let g:gitgutter_sign_removed = 'x'

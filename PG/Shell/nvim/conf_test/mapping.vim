@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/mapping.vim
 " Author: s20016
-" Last Change: Sat 22 May 2021 09:28:45 PM JST
+" Last Change: Sun 23 May 2021 09:46:40 AM JST
 " =============================================================================
 
 " For key mapping guide
