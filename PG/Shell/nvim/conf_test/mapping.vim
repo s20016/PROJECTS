@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/mapping.vim
 " Author: s20016
-" Last Change: Sun 23 May 2021 09:46:40 AM JST
+" Last Change: Sun May 23 12:08:58 JST 2021
 " =============================================================================
 
 " For key mapping guide
@@ -25,14 +25,6 @@ vnoremap K :m '<-2<CR>gv=gv
 " Faster scroll
 nnoremap <M-j> 10gj
 nnoremap <M-k> 10gk
-
-" Skip by page
-inoremap <C-b> <Left>
-inoremap <C-f> <Right>
-
-" Split
-noremap <Leader>h :<C-u>split<CR>
-noremap <Leader>v :<C-u>vsplit<CR>
 
 " Switch tab
 nnoremap <Tab> gt

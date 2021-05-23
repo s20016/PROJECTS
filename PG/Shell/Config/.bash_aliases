@@ -1,7 +1,7 @@
 # =============================================================================
 # Filename: ~/.bash_aliases
 # Author: s20016
-# Last Change: Sun 23 May 2021 09:46:40 AM JST
+# Last Change: Sun May 23 12:08:58 JST 2021
 # =============================================================================
 
 export PATH=$PATH:$HOME/.local/bin  # GL504GM, SF313-51, SF313-51U
@@ -143,7 +143,7 @@ push() {
       cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json \
         > ~/PROJECTS/PG/Shell/Config/settings.json
     fi
-    echo -e "[PROJECTS]: Bash Updated!"
+		echo -e "[PROJECTS]: Bash / Neovim (Conf_test) Updated!"
 
   # Update WordPress/cms-theme (Win) -> PROJECTS
   elif [[ $1 = "cms-theme" && ${NAME} = "GL504GM" ]]; then

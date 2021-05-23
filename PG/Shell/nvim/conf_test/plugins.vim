@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/plugins.vim
 " Author: s20016
-" Last Change: Sun 23 May 2021 09:46:40 AM JST
+" Last Change: Sun May 23 12:08:58 JST 2021
 " =============================================================================
 
 " netrw file browser
@@ -33,18 +33,18 @@ let g:session_autosave = "no"
 
 " PLUGIN: Startify
 let g:startify_change_to_dir = 0
+let g:startify_files_number = 5
 let g:startify_session_dir = '~/.config/nvim/session'
 let g:startify_lists = [
 			\ { 'type': 'sessions',  'header': ['   Sessions']  },
 			\ { 'type': 'bookmarks', 'header': ['   Bookmarks'] }, ]
 
 let g:startify_bookmarks = [
-			\ { 'a': '~/.bash_aliases' }, ]
-
+			\ { 'a': '~/.bash_aliases' } ]
 
 " let g:startify_custom_header = [
 " 	\ '',
-" 	\ '   PROJECTS' ]
+" 	\ '   NVIM STARTIFY' ]
 
 let g:startify_custom_header = [
 			\ '    ____  ____   ___      _ _____ ____ _____ ____   ',
@@ -68,7 +68,7 @@ highlight ALEErrorSign    guifg=#db4437 ctermfg=203
 highlight ALEWarningSign  guifg=#f4b400 ctermfg=228
 
 " PLUGIN: Git gutter
-let g:gitgutter_async = 0
+let g:gitgutter_async=0
 let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '~'
 let g:gitgutter_sign_removed = 'x'
