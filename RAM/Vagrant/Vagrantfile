@@ -1,0 +1,59 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  # Box Settings
+  config.vm.box = "ubuntu/focal64"
+
+  # Provider Settings
+   config.vm.provider "virtualbox" do |vb|
+     vb.gui = false
+     vb.memory = "1024"
+     # vb.cpus = 2
+   end
+
+  # Install Apache2
+   # sudo apt install -y apache2
+   # access apache2 default index.html at /var/www/html/index.html
+  
+  # Network Settings
+  # config.vm.box_check_update = false
+    # Guest: Box; Host: Local Mahichine
+    # http://localhost:8080
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+    # Local IP Add 
+  config.vm.network "private_network", ip: "192.168.33.10"
+  # config.vm.network "public_network"
+   # To create own address:
+   # Exit ssh, `sudo nvim /etc/hosts`
+   # Input: 192.168.33.10 test.local www.test.local
+   # Browser: http://test.local
+  
+  # Folder Settings
+  config.vm.synced_folder ".", "/var/www/html"
+  
+  # Provision Settings
+  # config.vm.provision "shell", inline: <<-SHELL
+  #   apt update && apt upgrade -y
+  #   apt install -y git
+  #   apt install -y neovim
+  #   apt install -y apache2
+  # SHELL
+  
+  # Provision Settings but using a shell script
+  config.vm.provision "shell", path: "bootstrap.sh"
+end
+
+# Inside Box:
+# vagrant reload
+# vagrant destroy
+# vagrant suspend
+# vagrant resume
+
+# Code: Extensions -> Install Remote-SSH
+# Hover Remote Window option (Bottom-left)
+# Terminal in Box: `vagrant ssh-config` and copy all output
+# Select "Remote-ssh: Open configuration file" then paste
+# Remote Explorer: Select Default
