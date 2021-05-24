@@ -1,9 +1,10 @@
 ## PROJECTS  
 > My class activities and personal projects in one repository.
  
-[ [App](https://s20016.github.io/Animate/) ] **Project Animate**  
-[ [App](https://s20016.github.io/ReactJS/) ] **Project ReactJS**  
-[ [Web](https://s20016.github.io/PROJECTS/WebExtension/HTML/) ] **WebExtension**  
+[ [App](https://s20016.github.io/Animate/) ] **PROJECTS: Animate**  
+[ [App](https://s20016.github.io/ReactJS/) ] **PROJECTS: ReactJS**  
+[ [Vim](https://s20016.github.io/MugenVim/) ] **PROJECTS: MugenVim**  
+[ [Web](https://s20016.github.io/PROJECTS/WebExtension/HTML/) ] **WebExtension: HTML**  
 
 ```
 PROJECTS
@@ -16,7 +17,8 @@ PROJECTS
 │   ├── Python
 │   └── Shell
 ├── RAM
-│   └── IT-Passport
+│   ├── IT-Passport
+│   └── Vagrant
 └── WebExtension
     ├── HTML
     └── WordPress
