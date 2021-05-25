@@ -29,33 +29,6 @@ xdg-open ./VIDEO_NAME.mkv
 </details>
 
 #
-### Neovim  
-<details>
-<summary>Install Neovim</summary>
-
-```bash
-$ cd ~/PROJETCS/PG/Shell/nvim
-$ ./nvim.sh
-
-# Includes: Python3, Java, NodeJS
-# Updates: .bash_aliases
-# Adds: Git configuration (s20016)
-```
-</details>
-
-<details>
-<summary>Create New Vim Session</summary>
-
-```bash
-$ nvim -p FILE_NAMES 
-:tabdo | set splitright | vsplit INPUT.txt | vertical resize -35
-:tabdo | set splitbelow | split OUTPUT.txt
-:mks ~/.config/nvim/session/SESSEION_NAME
-$ nvim -S PATH/SESSION_NAME
-```
-</details>
-
-#
 ### Common Issues
 <details>
 <summary>Desktop is HOME Directory</summary>
