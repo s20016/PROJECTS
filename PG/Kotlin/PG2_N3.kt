@@ -2,6 +2,7 @@
 // Kotlinスタートブック【第５～６章】
 
 // Functions
+@Suppress("UNUSED_PARAMETER")
 fun sample1(i: Int) = i + 20
 fun sample2(i: Int): Int = i * i
 fun sample3(n: String): String = "Hello, $n"
@@ -14,18 +15,6 @@ fun sum(vararg numL: Int): Int {
 fun sum2(num: List<Int>): Int =
   if (num.isEmpty()) 0
   else num.first() + sum2(num.drop(1))
-//fun test1(numList: List<Int>): String {
-//  var num: String
-//  for (i in numList) {
-//    num = when {
-//      i % 15 == 0 -> "FizzBuzz"
-//      i % 5 == 0 -> "Buzz"
-//      i % 3 == 0 -> "Fizz"
-//      else -> "$i"
-//    }
-//    println(num)
-//  }; return "END"
-//}
 
 // Lambda
 val square: (Int) -> Int = { i: Int -> i * i }
