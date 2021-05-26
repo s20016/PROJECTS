@@ -52,12 +52,12 @@ fun main() {
   val date1 = listOf(2000, 6, 20)
   val date2 = listOf(1999, 8, 10)
 
-  // (1) FIND DAY OF THE WEEK
-  println(getDay(date2))          // [1999, 8, 10]: Tuesday
+  println(getDay(date2))  // (1) FIND DAY OF THE WEEK
+  println(getDiff(date1, date2))  // (2) FIND DATE - DATE
+  println(getDate(date2, 314))  // (3) FIND DATE + n DAYS
 
-  // (2) FIND DATE - DATE
-  println(getDiff(date1, date2))  // [2000, 6, 20] - [1999, 8, 10]: 315 Days
-
-  // (3) FIND DATE + n DAYS
-  println(getDate(date2, 314)) // [2000, 6, 20]: Tuesday
+  // OUTPUT
+  // [1999, 8, 10]: Tuesday
+  // [2000, 6, 20] - [1999, 8, 10]: 315 Days
+  // [2000, 6, 20]: Tuesday
 }
