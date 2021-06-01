@@ -1,18 +1,18 @@
 " =============================================================================
 " Filename: ~/.config/nvim/setting.vim
 " Author: s20016
-" Last Change: Sun May 23 12:08:58 JST 2021
+" Last Change: Tue 01 Jun 2021 09:56:50 PM JST
 " =============================================================================
 
 filetype plugin indent on
 
-syntax enable                           " Enables syntax highlighting
+syntax enable                           " Enables syntax highlight
 set autochdir                           " Change to cwd
 set autoindent                          " Indent ln similar to preceding ln
 set autoread                            " Auto detect changes outside nvim
 set background=dark                     " Default color
 set backspace=indent,eol,start          " Fix backspace indent
-set clipboard+=unnamedplus              " Copy paste between nvim and prgrms
+set clipboard+=unnamedplus              " Copy paste between nvim and programs
 set cursorline                          " Highlight current line
 set encoding=utf-8                      " The encoding displayed
 set fileencoding=utf-8                  " The encoding written to file
@@ -23,10 +23,9 @@ set guioptions=egmrti                   " Describes component and options
 set hidden                              " Enables hidden buffer
 set hlsearch                            " Highlight all search pattern
 set ignorecase                          " Ignore letter case
-set inccommand=split                    " Show change in split
 set incsearch                           " Show pattern while typing
 set laststatus=2                        " Enable status line
-set modeline                            " Enable modeline
+set modeline                            " Enable mode line
 set modelines=10
 set mousemodel=popup                    " Hide mouse button
 set noswapfile                          " Disable tmp files
@@ -49,9 +48,8 @@ set termguicolors                       " Enables 24-bit color
 set title                               " Set window title
 set titlestring=%F                      " Title of window
 set updatetime=100                      " Set update time for Git gutter
-set visualbell                          " Error flash screen
 set wildmenu                            " Cmd tab complete opt
 
-" set spell=en                            " Check spelling errors
 " set relativenumber                      " Number relative to line
-" set colorcolumn=80                      " Add col color in ln 80
+" set colorcolumn=80                      " Add col color in line 80
+" set spell                               " Check spelling errors

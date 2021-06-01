@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/plugins.vim
 " Author: s20016
-" Last Change: Sun May 23 12:08:58 JST 2021
+" Last Change: Tue 01 Jun 2021 09:56:50 PM JST
 " =============================================================================
 
 " netrw file browser
@@ -12,6 +12,7 @@ let g:netrw_winsize = 15
 
 " PLUGIN: Themes
 let g:gruvbox_italic=1
+" colorscheme gruvbox
 colorscheme gruvbox
 
 " PLUGIN: vim-commentary
@@ -33,18 +34,18 @@ let g:session_autosave = "no"
 
 " PLUGIN: Startify
 let g:startify_change_to_dir = 0
-let g:startify_files_number = 5
 let g:startify_session_dir = '~/.config/nvim/session'
 let g:startify_lists = [
 			\ { 'type': 'sessions',  'header': ['   Sessions']  },
 			\ { 'type': 'bookmarks', 'header': ['   Bookmarks'] }, ]
 
 let g:startify_bookmarks = [
-			\ { 'a': '~/.bash_aliases' } ]
+			\ { 'a': '~/.bash_aliases' }, ]
+
 
 " let g:startify_custom_header = [
 " 	\ '',
-" 	\ '   NVIM STARTIFY' ]
+" 	\ '   PROJECTS' ]
 
 let g:startify_custom_header = [
 			\ '    ____  ____   ___      _ _____ ____ _____ ____   ',
@@ -61,14 +62,21 @@ let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 let g:ale_sign_error = '>'
 let g:ale_sign_warning = '>'
-let g:ale_linters = {'python': [ 'flake8' ]}
-let g:ale_fixers = {'python': [ 'autopep8', 'black', 'isort' ]}
+let g:ale_linters_ignore = {'javascript': ['eslint']}
+let g:ale_linters = {
+	\ 'python': [ 'flake8' ], 
+	\ 'javascript': [ 'eslint', 'standard' ]
+  \ }
+let g:ale_fixers = {
+  \ 'python': [ 'autopep8', 'black', 'isort' ],
+	\ 'javascript': [ 'eslint', 'standard' ]
+	\ }
 
 highlight ALEErrorSign    guifg=#db4437 ctermfg=203
 highlight ALEWarningSign  guifg=#f4b400 ctermfg=228
 
 " PLUGIN: Git gutter
-let g:gitgutter_async=0
+let g:gitgutter_async = 0
 let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '~'
 let g:gitgutter_sign_removed = 'x'
