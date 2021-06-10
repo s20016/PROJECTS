@@ -84,8 +84,7 @@ def string_bits(str):
 
 # CodingBat Warmup2 - string_splosion
 def string_splosion(str):
-    x = list(str[:i] for i in range(len(str) + 1))
-    return "".join(x)
+    return "".join(list(str[:i] for i in range(len(str) + 1)))
 
 
 # CodingBat Warmup2 - last2
