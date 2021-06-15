@@ -1,16 +1,27 @@
-;(stdin => {
-  // Define Function
+process.stdin.resume()
+process.stdin.setEncoding('utf8')
+const lines = []
+const reader = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
+reader.on('line', (line) => {
+  lines.push(line)
+})
+reader.on('close', () => {
+  const [a, b] = lines
 
-  // Declare Variable
-  const inputs = stdin.toString().trim()
-  // .split(', ')
+  let msg = ''
+  if (a === b) {
+    msg = 'OK'
+  } else {
+    msg = 'NG'
+  }
 
-  const ret1 = inputs - 18.0
-  const ret2 = inputs - 18.5
+  const msg = (lines[0] === lines[1]) ? 'OK' : 'NG'
 
-  // Main Procedure
-  const result = (lines => {})(inputs)
+  // const msg = ['NG', 'OK'][Number(a === b)]
 
-  // Display
-  console.log(`${ret1.toFixed(1)} ${ret2.toFixed(1)}`)
-})(require('fs').readFileSync('/dev/stdin', 'utf8'))
+  console.log(msgg
+  // console.log(lines[1])
+})
