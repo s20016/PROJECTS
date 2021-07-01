@@ -1,7 +1,7 @@
 # =============================================================================
 # Filename: ~/.bash_aliases
 # Author: s20016
-# Last Change: Thu 01 Jul 2021 06:42:57 PM JST
+# Last Change: Thu 01 Jul 2021 06:52:24 PM JST
 # =============================================================================
 
 export PATH=$PATH:$HOME/.local/bin  # GL504GM, SF313-51, SF313-51U
@@ -68,8 +68,8 @@ ktcode() {
 
 
 ktrun() {
-	kotlinc ~/PROJECTS/PG/Kotlin/Codes/testcode$1.kt -include-runtime -d ~/PROJECTS/PG/Kotlin/Codes/jar/testcode$1.jar
-	java -jar ~/PROJECTS/PG/Kotlin/Codes/jar/testcode$1.jar > ~/PROJECTS/PG/Kotlin/Codes/output.txt
+	kotlinc ~/PROJECTS/PG/Kotlin/Codes/testcode$1.kt -include-runtime -d ~/tmp/testcode$1.jar
+	java -jar ~/tmp/testcode$1.jar > ~/PROJECTS/PG/Kotlin/Codes/output.txt
 	cat ~/PROJECTS/PG/Kotlin/Codes/output.txt
 	echo
 }
