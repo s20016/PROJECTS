@@ -1,7 +1,7 @@
 # =============================================================================
 # Filename: ~/.bash_aliases
 # Author: s20016
-# Last Change: Sun May 23 12:08:58 JST 2021
+# Last Change: Thu 01 Jul 2021 06:42:57 PM JST
 # =============================================================================
 
 export PATH=$PATH:$HOME/.local/bin  # GL504GM, SF313-51, SF313-51U
@@ -57,6 +57,21 @@ pycode() {
     fi
   done
   nvim -S ${VIM_SESS}
+}
+
+# Kotlin Functions *************************************************************
+
+ktcode() {
+  VIM_SESS=~/.config/nvim/session/KotlinSession.vim
+  nvim -S ${VIM_SESS}
+}
+
+
+ktrun() {
+	kotlinc ~/PROJECTS/PG/Kotlin/Codes/testcode$1.kt -include-runtime -d ~/PROJECTS/PG/Kotlin/Codes/jar/testcode$1.jar
+	java -jar ~/PROJECTS/PG/Kotlin/Codes/jar/testcode$1.jar > ~/PROJECTS/PG/Kotlin/Codes/output.txt
+	cat ~/PROJECTS/PG/Kotlin/Codes/output.txt
+	echo
 }
 
 # Java Functions ***************************************************************
@@ -143,7 +158,7 @@ push() {
       cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json \
         > ~/PROJECTS/PG/Shell/Config/settings.json
     fi
-		echo -e "[PROJECTS]: Bash / Neovim (Conf_test) Updated!"
+    echo -e "[PROJECTS]: Bash Updated!"
 
   # Update WordPress/cms-theme (Win) -> PROJECTS
   elif [[ $1 = "cms-theme" && ${NAME} = "GL504GM" ]]; then
