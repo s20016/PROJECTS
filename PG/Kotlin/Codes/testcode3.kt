@@ -1,3 +1,3 @@
 fun main() {
-	println("Hello world 3!")
+	for (i in 0..5) println(i)
 }
