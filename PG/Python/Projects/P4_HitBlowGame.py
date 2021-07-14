@@ -3,8 +3,7 @@
 # Random number = 0-9
 # Accepts user input errors
 
-import random
-import sys
+import random, sys, os
 
 # Title
 ast25, dash4, spac3 = "*" * 36, "-" * 10, " " * 8
@@ -48,6 +47,7 @@ while True:
     spc3 = " " * 2
     user_game = input(f"\n----- New Game? (y/n): ")
     if user_game.lower() in ["yes", "y"]:
+        os.system('clear')
         pass
     else:
         print(f"\n{spc3 * 4}THANK YOU FOR PLAYING!{spc3}\n"), sys.exit()
