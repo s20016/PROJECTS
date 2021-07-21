@@ -1,7 +1,7 @@
 # =============================================================================
 # Filename: ~/.bash_aliases
 # Author: s20016
-# Last Change: Thu 01 Jul 2021 06:52:24 PM JST
+# Last Change: Wed 21 Jul 2021 01:09:44 PM JST
 # =============================================================================
 
 export PATH=$PATH:$HOME/.local/bin  # GL504GM, SF313-51, SF313-51U
@@ -21,16 +21,16 @@ pyrun() {
   NAME=$(uname -a | awk '{print $2}')
   USER=$(echo $USER)
   FILES=~/PROJECTS/PG/Python/Codes/*.py
-  for f in $FILES; do
-    if [[ ${NAME} = "GL504GM" ]]; then
-      sed -i 's/s20016/czekras/g' ${f}
-    else
-      sed -i 's/czekras/s20016/g' ${f}
-    fi
-  done
   if [[ $1 = "p" ]]; then
     python3 ~/PROJECTS/PG/Python/Projects/P$2*.py
   else
+		for f in $FILES; do
+			if [[ ${NAME} = "GL504GM" ]]; then
+				sed -i 's/s20016/czekras/g' ${f}
+			else
+				sed -i 's/czekras/s20016/g' ${f}
+			fi
+		done
     cat ~/PROJECTS/PG/Python/Codes/input.txt | \
       python3 ~/PROJECTS/PG/Python/Codes/testcode$1.py \
       > ~/PROJECTS/PG/Python/Codes/output.txt
@@ -147,17 +147,20 @@ mkbox() {
 
 # Function to be used ONLY by GL504GM
 push() {
-  # Update Bash -> PROJECTS
   NAME=$(uname -a | awk '{print $2}')
 	UPDATE=$(date)
+	# Update Bash -> PROJECTS
   if [[ $1 = "bash" ]]; then
-		sed -i "4s/:.*$/: $UPDATE/" ~/.bash_aliases ~/.config/nvim/*.vim
-    cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/Config/.bash_aliases
+		sed -i "4s/:.*$/: $UPDATE/" ~/.bash_aliases
+		cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/Config/.bash_aliases
+		if [[ ${NAME} = "GL504GM" ]]; then
+			cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json \
+				> ~/PROJECTS/PG/Shell/Config/settings.json
+		fi
+  # Update Nvim Local -> PROJECTS
+	elif [[ $1 = "nvim" ]]; then
+		sed -i "4s/:.*$/: $UPDATE/" ~/.config/nvim/*.vim
     cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/nvim/conf_test/.
-    if [[ ${NAME} = "GL504GM" ]]; then
-      cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json \
-        > ~/PROJECTS/PG/Shell/Config/settings.json
-    fi
     echo -e "[PROJECTS]: Bash Updated!"
 
   # Update WordPress/cms-theme (Win) -> PROJECTS
