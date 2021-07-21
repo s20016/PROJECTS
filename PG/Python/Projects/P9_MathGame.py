@@ -14,7 +14,11 @@ def set_question():
     if opt == "+": ans = functools.reduce(lambda a, b: a + b, nums)
     if opt == "-": ans = functools.reduce(lambda a, b: a - b, nums)
     if opt == "*": ans = functools.reduce(lambda a, b: a * b, nums)
-    if opt == "/": ans = "{:.2f}".format(functools.reduce(lambda a, b: a / b, nums))
+    if opt == "/":
+        # TODO: Strip trailing zeroes in float type answers
+        dnums = [random.choice(nums), random.choice([3, 4, 5, 10, 15, 20, 25])]
+        question = f"{dnums[0]} {opt} {dnums[1]}"
+        ans = "{:.2f}".format(functools.reduce(lambda a, b: a / b, dnums))
     return question, str(ans)
 
 # Main
@@ -24,6 +28,7 @@ count, score, spc = 0, 0," "; print()
 
 while (health != 1):
     hbar = " ".join(health)
+    # TODO: Catch error if input != int
     usr_ans = str(input(f"  {hbar}{spc * count}  {question}: "))
     if usr_ans == answer:
         question, answer = set_question(); score += 1
@@ -31,8 +36,3 @@ while (health != 1):
         if len(health) <= 1: print(f"\n  Game Over! Score: {score}\n"); break
         else: health.pop(); count += 2
 
-
-# TODO: 
-# Fix decimal
-# Lessen division denominator
-# Inverse division. Max first
