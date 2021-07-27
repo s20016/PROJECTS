@@ -1,14 +1,17 @@
 {
-	"layout": [
+	"comment": [
 		{
-			"name": "Rem",
-			"social_media": "twitter",
-			"comment": "Hello"
+			"font-size": "20",
+			"color": "#FFF",
+			"logo": "./image/twitter.png",
+			"speed": "1"
 		},
 		{
-			"name": "Kato",
-			"social_media": "youtube",
-			"comment": "Hello"
+			"font-size": "20",
+			"color": "#FFF",
+			"logo": "./image/youtube.png",
+			"speed": "1"
 		}
 	]
 } 
+
