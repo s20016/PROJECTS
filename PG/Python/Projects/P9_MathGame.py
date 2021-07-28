@@ -5,12 +5,12 @@ def set_numbers():
     max_num = int("1" + (random.choice([1, 2, 3]) * "0")) - 1
     ran_opt = random.choice(["+", "-", "*", "/", "^"])
     ran_num = random.sample(range(1, max_num), 2)
-    if ran_opt == "/": 
+    if ran_opt == "/":
         ran_num = [random.choice(ran_num), random.choice([3, 4, 5, 10, 15, 20, 25])]
-    if ran_opt == "^": 
+    if ran_opt == "^":
         ran_num = [random.choice(range(1, 151)), 2]
     return ran_num, ran_opt
-    
+
 # Question
 def set_question():
     nums, opt = set_numbers(); ans = 0
@@ -40,7 +40,7 @@ while (health != 1):
         if len(health) <= 1: game_over(); break
         question, answer = set_question()
         health.pop(); count += 2
-    else: 
+    else:
         if len(health) <= 1: game_over(); break
         else: health.pop(); count += 2
 
