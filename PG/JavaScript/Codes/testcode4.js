@@ -1,11 +1,6 @@
-(stdin => {
-  // define function
+const lines = require('fs').readFileSync('/dev/stdin', 'utf8').split('\n')
+const l = Number(lines[0])
 
-  // declare variables
-  const inputs = stdin.toString().split('\n')
-  const [a, b, c] = inputs[0].split(' ').map(Number) // 数値に変換
+const str = "##########\n.........."
+for (var i = 0; i < l; i++) console.log(str)
 
-  // ここに処理を書く
-  const x = (a < b < c) ? 'Yes' : 'No'
-  console.log(x)
-})(require('fs').readFileSync('/dev/stdin', 'utf8'))

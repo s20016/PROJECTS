@@ -1,21 +1,12 @@
-;(stdin => {
-  const inputs = stdin
-    .toString()
-    .trim()
-    .split('\n')
-  const l = []
+// Read Input
+const lines = require('fs').readFileSync('/dev/stdin', 'utf8').split('\n')
+const size = Number(lines[0])
 
-  for (let i = 1; i < Number(inputs) + 1; i++) {
-    const x =
-      (i % 3 === 0) & (i % 5 === 0)
-        ? l.push('Fizz Buzz')
-        : i % 3 === 0
-          ? l.push('Fizz')
-          : i % 5 === 0
-            ? l.push('Buzz')
-            : i
-  }
+// Code Here
+const us = size - 18.0
+const uk = size - 18.5
 
-  // Display
-  console.log(x)
-})(require('fs').readFileSync('/dev/stdin', 'utf8'))
+const x = [us, uk].map(x => x.toFixed(1))
+
+console.log(x.join(' '))
+

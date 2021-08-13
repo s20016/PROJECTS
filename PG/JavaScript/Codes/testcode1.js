@@ -1,27 +1,10 @@
-process.stdin.resume()
-process.stdin.setEncoding('utf8')
-const lines = []
-const reader = require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout
-})
-reader.on('line', (line) => {
-  lines.push(line)
-})
-reader.on('close', () => {
-  const [a, b] = lines
+(stdin => {
+  // Read Input 
+  const lines= stdin.toString().split('\n')
+  const [d, s] = lines[0].split(' ').map(Number)
 
-  let msg = ''
-  if (a === b) {
-    msg = 'OK'
-  } else {
-    msg = 'NG'
-  }
+  // Code Here
+	const x = (d * 1000 * 100) / s >= 10000 ? 'Yes' : 'No'
+  console.log(x)
 
-  const msg = (lines[0] === lines[1]) ? 'OK' : 'NG'
-
-  // const msg = ['NG', 'OK'][Number(a === b)]
-
-  console.log(msgg
-  // console.log(lines[1])
-})
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
