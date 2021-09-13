@@ -147,3 +147,14 @@ $ sudo snap install libreoffice
 $ sudo snap remove libreoffice
 ```
 </details>
+
+#
+### Neovim
+
+<details>
+<summary>Open Vimtutor in both EN and JA</summary>
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/s20016/PROJECTS/master/PG/Shell/nvim/random/tutor.sh)
+```
+</details>
