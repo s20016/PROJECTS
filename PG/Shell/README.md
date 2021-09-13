@@ -157,4 +157,10 @@ $ sudo snap remove libreoffice
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/s20016/PROJECTS/master/PG/Shell/nvim/random/tutor.sh)
 ```
+
+1. Switch window with `^ww`
+2. If both files are not synced when scrolling:
+  - Moved cursor to first line in both files. `:gg` , `^ww :gg`
+  - Sync both with `:tabdo windo set scrollbind`
+
 </details>
