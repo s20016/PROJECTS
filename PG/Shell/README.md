@@ -148,19 +148,3 @@ $ sudo snap remove libreoffice
 ```
 </details>
 
-#
-### Neovim
-
-<details>
-<summary>Open Vimtutor in both EN and JA</summary>
-
-```bash
-bash <(curl -s https://gist.githubusercontent.com/s20016/25e7d0c81628c69eb38c1967686f9aec/raw/e729e485df4ea1fd786b875074e43297db69a7d1/yakan_vimtutor.sh)
-```
-
-1. Switch window with `^ww`
-2. If both files are not synced when scrolling:
-  - Moved cursor to first line in both files. `:gg` , `^ww :gg`
-  - Sync both with `:tabdo windo set scrollbind`
-
-</details>
