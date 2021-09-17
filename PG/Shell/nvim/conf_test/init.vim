@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/init.vim
 " Author: s20016
-" Last Change: Tue 01 Jun 2021 09:56:50 PM JST
+" Last Change: Fri 17 Sep 2021 07:25:02 PM JST
 " =============================================================================
 
 " Enables alias in nvim
@@ -14,6 +14,7 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 call plug#begin(expand('~/.local/share/nvim/site/plugged'))
 
+Plug 'sainnhe/sonokai'
 Plug 'morhetz/gruvbox'                                    " Gruvbox theme
 Plug 'shinchu/lightline-gruvbox.vim'                      " Gruvbox limelight
 Plug 'mhinz/vim-startify'                                 " Custom vim start
@@ -35,6 +36,7 @@ Plug 'jiangmiao/auto-pairs'                               " Auto pair brackets
 Plug 'dense-analysis/ale'                                 " Linting
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}       " Column select
 Plug 'junegunn/goyo.vim'                                  " Distraction-free
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }     " Prettier
 
 call plug#end()
 

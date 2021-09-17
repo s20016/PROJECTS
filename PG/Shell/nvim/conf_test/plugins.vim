@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/plugins.vim
 " Author: s20016
-" Last Change: Tue 01 Jun 2021 09:56:50 PM JST
+" Last Change: Fri 17 Sep 2021 07:25:02 PM JST
 " =============================================================================
 
 " netrw file browser
@@ -12,7 +12,6 @@ let g:netrw_winsize = 15
 
 " PLUGIN: Themes
 let g:gruvbox_italic=1
-" colorscheme gruvbox
 colorscheme gruvbox
 
 " PLUGIN: vim-commentary
@@ -65,11 +64,13 @@ let g:ale_sign_warning = '>'
 let g:ale_linters_ignore = {'javascript': ['eslint']}
 let g:ale_linters = {
 	\ 'python': [ 'flake8' ], 
-	\ 'javascript': [ 'eslint', 'standard' ]
+	\ 'javascript': [ 'eslint', 'standard', 'prettier' ],
+	\ 'kotlin': [ 'ktlint', 'prettier' ]
   \ }
 let g:ale_fixers = {
   \ 'python': [ 'autopep8', 'black', 'isort' ],
-	\ 'javascript': [ 'eslint', 'standard' ]
+	\ 'javascript': [ 'eslint', 'standard', 'prettier' ],
+	\ 'kotlin': [ 'ktlint', 'prettier' ]
 	\ }
 
 highlight ALEErrorSign    guifg=#db4437 ctermfg=203
