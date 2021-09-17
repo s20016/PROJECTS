@@ -7,10 +7,4 @@ open_vimtutor() {
   vi -O $ja_tutor $en_tutor +"tabdo windo set nu scb"
 }
 
-# Command 'locate' not found
-abort_script() {
-  echo `locate`
-  exit
-}
-
-if [ ! -x "$(command -v locate)" ]; then abort_script; else open_vimtutor; fi
+if [ ! -x "$(command -v locate)" ]; then echo `locate` ; else open_vimtutor; fi
