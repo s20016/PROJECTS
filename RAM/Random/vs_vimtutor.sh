@@ -2,14 +2,14 @@
 
 # Vertical split vimtutor (JA/EN)
 open_vimtutor() {
-  JA_TUTOR=$(locate tutor.ja.utf-8)
-  EN_TUTOR="${JA_TUTOR%/*}/tutor"
-  vi -O $JA_TUTOR $EN_TUTOR +"tabdo windo set nu scb"
+  ja_tutor=$(locate tutor.ja.utf-8)
+  en_tutor="${ja_tutor%/*}/tutor"
+  vi -O $ja_tutor $en_tutor +"tabdo windo set nu scb"
 }
 
 # Command 'locate' not found
 abort_script() {
-  echo -e "Command 'locate' not found."
+  echo `locate`
   exit
 }
 
