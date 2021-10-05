@@ -1,0 +1,6 @@
+Android II (211005~)
+
+When creating a new project:
+	- Check package name (jp.ac.it_college.std.s20016.project_name)
+	- Minimum SDK: API 23: Android 6.0
+
