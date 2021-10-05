@@ -68,4 +68,10 @@ SELECT title FROM books WHERE author='Alien02';
 | Python3 |
 +---------+
 
+# ALTER TABLE books ADD year INT AFTER author;
+# ALTER TABLE books DROP year;
+# SHOW CREATE TABLE books\G;
+
+
+
 
