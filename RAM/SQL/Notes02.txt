@@ -1,0 +1,68 @@
+SQL: Notes 2 (211006)
+
+Update:
+$ sudo /etc/init.d/mysql start -> sudo service mysql start
+$ sudo mysql -u root           -> mysql -u czekras -p
+
+$ sudo service mysql restart
+$ sudo service mysql stop
+
+DATA TYPES:
+- CHAR, Ex. CHAR(10): Fixed length of 10 characters.
+- VARCHAR, Ex. VARCHAR(20): Every value can have a maximum of 50 characters.
+
+- INT: Whole numbers
+- DECIMAL: Numbers with points. Precise calculation.
+- DOUBLE: Same as DECIMAL but less precise.
+
+- DATETIME: '2021-10-06 11:28:38'
+- DATE: '2021-10-06'
+- TIME, Ex. TIME(5): '11:28:38.12345'
+
+
+# SELECT curtime();
+# SELECT curdate();
+
+SELECT date_format('2000-06-20', '%M %D, %Y (%W)');
+
++---------------------------------------------+
+| date_format('2000-06-20', '%M %D, %Y (%W)') |
++---------------------------------------------+
+| June 20th, 2000 (Tuesday)                   |
++---------------------------------------------+
+
+***
+
+CREATE TABLE login(
+-> id INT NOT NULL AUTO_INCREMENT,
+-> date DATE NOT NULL,
+-> name VARCHAR(50),
+-> PRIMARY KEY(id)
+-> );
+
+DESCRIBE login;
+
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int         | NO   | PRI | NULL    | auto_increment |
+| date  | date        | NO   |     | NULL    |                |
+| name  | varchar(50) | YES  |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+
+INSERT INTO login VALUES (1, curdate(), 'Alien01');
+INSERT INTO login(date, name) VALUES
+-> (curdate(), 'Alien04'),
+-> (curdate(), 'Alien03');
+
+SELECT * FROM login;
+
++----+------------+---------+
+| id | date       | name    |
++----+------------+---------+
+|  1 | 2021-10-06 | Alien01 |
+|  2 | 2021-10-06 | Alien02 |
+|  3 | 2021-10-06 | Alien03 |
++----+------------+---------+
+
+

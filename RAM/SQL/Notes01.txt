@@ -1,4 +1,4 @@
-SQL: Notes 1 (211005~)
+SQL: Notes 1 (211005)
 
 Database - A collection of data stored in a format that can easily be accessed.
 DBMS - Database Management System
@@ -13,15 +13,15 @@ MS Docs: https://dev.mysql.com/doc/mysql-getting-started/en/#mysql-getting-start
 Cheatsheet: https://gist.github.com/bradtraversy/c831baaad44343cc945e76c2e30927b3
 
 *** Commands
-# sudo apt update
-# sudo apt install mysql-server -y
+$ sudo apt update
+$ sudo apt install mysql-server -y
 
 sudo /etc/init.d/mysql start
 sudo mysql -u root
 
-# sudo /etc/init.d/mysql status 
-# sudo /etc/init.d/mysql stop
-# sudo mysql_secure_installation
+$ sudo /etc/init.d/mysql status 
+$ sudo /etc/init.d/mysql stop
+$ sudo mysql_secure_installation
 
 QUIT
 
@@ -29,24 +29,36 @@ QUIT
 SHOW DATABASES;
 CREATE DATABASE library;
 USE library;
+
+/* Comment in MySQL */
+
+SELECT database();
+
++------------+
+| database() |
++------------+
+| library    |
++------------+
+
 CREATE TABLE books(
-	id INT AUTO_INCREMENT,
-	title VARCHAR(100) NOT NULL,
-	author VARCHAR(50) NOT NULL,
-	class VARCHAR(50),
-	PRIMARY KEY(id)
+-> id INT AUTO_INCREMENT,
+-> title VARCHAR(100) NOT NULL,
+-> author VARCHAR(50) NOT NULL,
+-> class VARCHAR(50),
+-> PRIMARY KEY(id)
 );
 
 # DROP TABLE books;
 # DESCRIBE books;
+# EXPLAIN books;
 SHOW TABLES;
 INSERT INTO books(title, author, class) VALUES
-	('Android App', 'Alien01', 'Android II'),
-	('Python3', 'Alien02', 'Python'),
-	('HTML & CSS', 'Alien03', 'HTML'),
-	('Java', 'Alien04', 'Java'),
-	('React JS', 'Alien05', 'React'),
-	('MySQL', 'Alien06', 'SQL');
+-> ('Android App', 'Alien01', 'Android II'),
+-> ('Python3', 'Alien02', 'Python'),
+-> ('HTML & CSS', 'Alien03', 'HTML'),
+-> ('Java', 'Alien04', 'Java'),
+-> ('React JS', 'Alien05', 'React'),
+-> ('MySQL', 'Alien06', 'SQL');
 SELECT * FROM books;
 
 +----+-------------+---------+------------+
@@ -72,6 +84,51 @@ SELECT title FROM books WHERE author='Alien02';
 # ALTER TABLE books DROP year;
 # SHOW CREATE TABLE books\G;
 
+INSERT INTO books VALUES
+-> (7, 'SCSS', 'Alien07', 'SCSS'),
+-> (8, 'Bootsrap', 'Alien08', 'Bootsrap');
 
++----+-------------+---------+------------+
+| id | title       | author  | class      |
++----+-------------+---------+------------+
+|  1 | Android App | Alien01 | Android II |
+|  2 | Python3     | Alien02 | Python     |
+|  3 | HTML & CSS  | Alien03 | HTML       |
+|  4 | Java        | Alien04 | Java       |
+|  5 | React JS    | Alien05 | React      |
+|  6 | MySQL       | Alien06 | SQL        |
+|  7 | SCSS        | Alien07 | SCSS       |
+|  8 | Bootstrap   | Alien08 | Bootstrap  |
++----+-------------+---------+------------+
+
+UPDATE books SET title='HTML', class='WebExtension' WHERE id=3;
+
++----+-------+---------+--------------+
+| id | title | author  | class        |
++----+-------+---------+--------------+
+|  3 | HTML  | Alien03 | WebExtension |
++----+-------+---------+--------------+
+
+DELETE FROM books WHERE id BETWEEN 6 AND 8;
+
++----+-------------+---------+--------------+
+| id | title       | author  | class        |
++----+-------------+---------+--------------+
+|  1 | Android App | Alien01 | Android II   |
+|  2 | Python3     | Alien02 | Python       |
+|  3 | HTML        | Alien03 | WebExtension |
+|  4 | Java        | Alien04 | Java         |
+|  5 | React JS    | Alien05 | React        |
++----+-------------+---------+--------------+
+
+DELETE FROM books WHERE id IN (2, 4);
+
++----+-------------+---------+--------------+
+| id | title       | author  | class        |
++----+-------------+---------+--------------+
+|  1 | Android App | Alien01 | Android II   |
+|  3 | HTML        | Alien03 | WebExtension |
+|  5 | React JS    | Alien05 | React        |
++----+-------------+---------+--------------+
 
 
