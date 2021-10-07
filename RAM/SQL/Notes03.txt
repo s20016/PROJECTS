@@ -1,0 +1,89 @@
+SQL: Notes 3 (211007)
+
+Introduction to Database
+
++---------------------+
+| Tables_in_classroom |
++---------------------+
+| class               |
+| professor           |
+| textbook            |
++---------------------+
+
+      +---------+-----------+-----------+---------- 'Field' or column
++----------+---------+-------------+---------+
+| class_id | prof_id | class       | book_id |
++----------+---------+-------------+---------+
+|        1 | P2      | HTML && CSS | 2A1     |  <-- Each are called 'Data Value'
+|        2 | P5      | JavaScript  | 2A2     |  <-- A set of Data Value is called 'Record' or Row
+|        3 | P3      | ReactJS     | 2A3     |
+|        4 | P1      | Python3     | 3B1     |  < When data is stored in columns and row,
+|        5 | P7      | Java        | 3B2     |  it is a 'Stored tabular data'
+|        6 | P9      | Kotlin      | 3B4     |  
+|        7 | P6      | SQL         | 3C2     |  < Always simplify a table
++----------+---------+-------------+---------+
+
++---------+----------------+----------+--------+
+| prof_id | name           | username | number |  < Use Relational Algebra: Allows data to be retrieved efficiently
++---------+----------------+----------+--------+
+| P1      | Eris           | eris     |   6554 |
+| P2      | Hinata Uzumaki | hinata   |   1234 |
+| P3      | Zero Two       | zero     |   1600 |
+| P5      | Kato Megumi    | kato     |   2345 |
+| P6      | Betty          | betty    |   7777 |
+| P7      | Mai Sakurajima | mai      |   9078 |
+| P9      | Inori Yuzuriha | inori    |   9999 |
++---------+----------------+----------+--------+
+
++---------+-------------------+------------+------------+
+| book_id | title             | language   | publish    |
++---------+-------------------+------------+------------+
+| 2A1     | WebExtension 2021 | HTML, CSS  | 2021-10-07 |
+| 2A2     | JS for Dummies    | JavaScript | 2021-08-10 |
+| 2A3     | React JavaScript  | JSX        | 2021-06-20 |
+| 3B1     | Python3 2077      | Python     | 2077-04-27 |
+| 3B2     | Java is Hard      | Java       | 2021-10-07 |
+| 3B4     | Sup Kotlin?       | Kotlin     | 2099-01-01 |
+| 3C2     | SQL Drill         | MySQL      | 2021-10-07 |
++---------+-------------------+------------+------------+
+
+Related tables form a 'Relational Database'
+
+***
+'AS' command is used for renaming a column or table.
+
+SELECT class.class AS 'Class', professor.name AS 'Professor'
+-> FROM class, professor
+-> WHERE class.prof_id = professor.prof_id;
+
++-------------+----------------+
+| Class       | Professor      |
++-------------+----------------+
+| HTML && CSS | Hinata Uzumaki |
+| JavaScript  | Kato Megumi    |
+| ReactJS     | Zero Two       |
+| Python3     | Eris           |
+| Java        | Mai Sakurajima |
+| Kotlin      | Inori Yuzuriha |
+| SQL         | Betty          |
++-------------+----------------+
+
+SELECT CONCAT(class.class, ', ', professor.name) AS 'Class / Prof'
+-> FROM class, professor
+-> WHERE class.prof_id = professor.prof_id;
+
++-----------------------------+
+| Class / Professor           |
++-----------------------------+
+| HTML && CSS, Hinata Uzumaki |
+| JavaScript, Kato Megumi     |
+| ReactJS, Zero Two           |
+| Python3, Eris               |
+| Java, Mai Sakurajima        |
+| Kotlin, Inori Yuzuriha      |
+| SQL, Betty                  |
++-----------------------------+
+
+
+
+
