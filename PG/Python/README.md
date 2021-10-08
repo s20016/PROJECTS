@@ -1,7 +1,7 @@
 ## **Python**
 
 #### **Notes**
-- Methods for Reading input.txt [ [200801](./Notes/200801.md) ]
+- Python: Methods for Reading Inputs [ [200801](./Notes/200801.md) ]
 - Coding Bat Solutions [ [PG1_N1](./Notes/PG1_N1.py) ]
 
 
@@ -14,6 +14,9 @@
 - [ [P6](./Projects/P6_AutoAttendance.py) ] Auto Attendance
 - [ [P7](./Projects/P7_AnimateList.py) ] Animate List
 - [ [P8](./Projects/P8_ImgToAscii.py) ] Img to ASCII
+- [ [P9](./Projects/P9_MathGame.py) ] Simple Math Game
+- [ [P11](./Projects/P11_dokoQLConverter.py) ] dokoQL Converter
+
 
 #
 #### **P8 Img to ASCII Output**
