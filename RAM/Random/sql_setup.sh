@@ -1,17 +1,16 @@
 #!/bin/bash
 
-sudo apt update && sudo apt upgrade -y
-sudo apt dist-upgrade 
-sudo apt autoremove
-
-if [! command -v vagrant -v &> /dev/null]; then
-	echo "Command vagrant is not found. Install Vagrant."
-	exit
+if [! command -v vagrant &> /dev/null]; then
+	echo "Command vagrant is not found. Install Vagrant."; exit
 fi
 
 if [! -f ~/Downloads/LINUX.X64_193000_db_home.zip ]; then
-	echo "「LINUX.X64_193000_db_home.zip」 does not exist."
+	echo "Please install 「LINUX.X64_193000_db_home.zip」"; exit
 fi
+
+sudo apt update && sudo apt upgrade -y
+sudo apt dist-upgrade 
+sudo apt autoremove
 
 mkdir -p ~/Boxes
 git clone https://github.com/oracle/vagrant-projects ~/Boxes/.
@@ -22,3 +21,4 @@ cd ~/Boxes/vagrant-projects/OracleDatabase/19.3.0/; vagrant up
 echo "パスワードをメモ:"
 echo "ORACLE PASSWORD FOR SYS, SYSTEM AND PDBADMIN: パスワードが表示される"
 echo "--- Run 'vagrant ssh' to continue."
+
