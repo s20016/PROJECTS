@@ -1,4 +1,4 @@
-## **Linux (Ubuntu)**
+## **Ubuntu 20.04 LTS**
 
 ### Commands
 <details>
@@ -78,20 +78,6 @@ $ ./idea.sh
 </details>
 
 <details>
-<summary>Google Chrome</summary>
-
-Download [Google Chrome](https://www.google.co.jp/chrome/browser/desktop/index.html) and move to downloaded directory
-
-```bash
-$ sudo apt install ./google-chrome-stable_current_amd64.deb
-```
-
-**Disable Tab Search**
-- Search in address bar chrome://flags
-- Search "Tab Search" and disable 
-</details>
-
-<details>
 <summary>VS Code</summary>
 
 ```bash
@@ -103,48 +89,30 @@ $ sudo apt install code
 </details>
 
 <details>
-<summary>OBS Studio</summary>
+<summary>Vagrant Box</summary>  
 
 ```bash
-sudo apt install obs-studio -y 
-```
-</details>
+# NOTE: Disable Secure Boot from UEFI
 
-<details>
-<summary>Vagrant Box</summary>
-
-```bash
-$ sudo apt install virtualbox
+# Install Vagrant Box
+$ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+$ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+$ sudo apt-get update && sudo apt-get install vagrant
 
 # Create Box
 $ mkdir ~/Boxes/TEST && cd $_
 $ vagrant box add ubuntu/focal64
 $ vagrant init ubuntu/focal64
+
+# Initialize Vagrant
 $ vagrant up && vagrant ssh
-$ exit
+
+# Close Vagrant
 $ vagrant halt
 
 $ vagrant box list
 $ vagrant destroy
 $ vagrant status
-```
-</details>
-
-<details>
-<summary>Slack</summary>
-
-```bash
-$ sudo snap install slack --classic
-$ sudo snap remove slack
-```
-</details>
-
-<details>
-<summary>LibreOffice</summary>
-
-```bash
-$ sudo snap install libreoffice
-$ sudo snap remove libreoffice
 ```
 </details>
 
