@@ -32,9 +32,9 @@
     "copyOnSelect": true,
     "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
     "focusFollowMouse": true,
-    "initialCols": 165,
+    "initialCols": 181,
     "initialPosition": "42,42",
-    "initialRows": 36,
+    "initialRows": 41,
     "launchMode": "default",
     "profiles": 
     {
