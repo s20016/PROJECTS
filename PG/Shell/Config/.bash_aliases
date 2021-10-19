@@ -1,10 +1,10 @@
 # =============================================================================
 # Filename: ~/.bash_aliases
 # Author: s20016
-# Last Change: Wed Oct 13 10:30:05 JST 2021
+# Last Change: Tue 19 Oct 2021 12:20:13 PM JST
 # =============================================================================
 
-export PATH=$PATH:$HOME/.local/bin  # GL504GM, SF313-51, SF313-51U
+export PATH=$PATH:$HOME/.local/bin  # GL504GM, GL504GMU
 
 # Colors
 YELLOW=$(tput setaf 3)
@@ -15,6 +15,7 @@ RESET=$(tput sgr 0)
 # Aliases
 alias sbash="source ~/.bashrc"
 alias update="sudo apt update && sudo apt upgrade -y"
+
 
 # Python Functions *************************************************************
 pyrun() {
@@ -153,26 +154,25 @@ push() {
   if [[ $1 = "bash" ]]; then
 		sed -i "4s/:.*$/: $UPDATE/" ~/.bash_aliases
 		cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/Config/.bash_aliases
-		if [[ ${NAME} = "GL504GM" ]]; then
-			cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json \
-				> ~/PROJECTS/PG/Shell/Config/settings.json
-		fi
+		# if [[ ${NAME} = "GL504GM" ]]; then
+		# 	cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json \
+		# 		> ~/PROJECTS/PG/Shell/Config/settings.json
+		# fi
   # Update Nvim Local -> PROJECTS
 	elif [[ $1 = "nvim" ]]; then
 		sed -i "4s/:.*$/: $UPDATE/" ~/.config/nvim/*.vim
-    cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/nvim/conf_test/.
-    echo -e "[PROJECTS]: Bash Updated!"
+    cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/Neovim//.
 
   # Update WordPress/cms-theme (Win) -> PROJECTS
-  elif [[ $1 = "cms-theme" && ${NAME} = "GL504GM" ]]; then
-    cp -r ~/PGLibrary/WordPress/wp-content/themes/cms-theme/* \
-      ~/PROJECTS/WebApplication/WordPress/cms-theme/.
-    echo -e "[PROJECTS]: cms-theme Updated!"
+  # elif [[ $1 = "cms-theme" && ${NAME} = "GL504GM" ]]; then
+  #   cp -r ~/PGLibrary/WordPress/wp-content/themes/cms-theme/* \
+  #     ~/PROJECTS/WebApplication/WordPress/cms-theme/.
+  #   echo -e "[PROJECTS]: cms-theme Updated!"
 
   # Update Kotlin (Win) -> PROJECTS
-  elif [[ $1 = "kotlin" && ${NAME} = "GL504GM" ]]; then
-    cp ~/PGLibrary/Kotlin/src/main/kotlin/*.kt ~/PROJECTS/PG/Kotlin/.
-    echo -e "[PROJECTS]: Kotlin Updated!"
+  # elif [[ $1 = "kotlin" && ${NAME} = "GL504GM" ]]; then
+  #   cp ~/PGLibrary/Kotlin/src/main/kotlin/*.kt ~/PROJECTS/PG/Kotlin/.
+  #   echo -e "[PROJECTS]: Kotlin Updated!"
   fi
 }
 
@@ -189,7 +189,7 @@ pull () {
 		read -p "[LOCAL]: Update nvim with TEST CONFIG? [Y/n] " RES
 		case $RES in
 			[Yy])
-				cp ~/PROJECTS/PG/Shell/nvim/conf_test/*.vim  ~/.config/nvim/.
+				cp ~/PROJECTS/PG/Shell/Neovim/*.vim  ~/.config/nvim/.
 				echo -e "[LOCAL]: Neovim Updated!";;
 			*   ) echo -e "[LOCAL]: Update Cancelled!";;
 		esac

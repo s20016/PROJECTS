@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/mapping.vim
 " Author: s20016
-" Last Change: Sun May 23 12:08:58 JST 2021
+" Last Change: Tue 19 Oct 2021 12:20:27 PM JST
 " =============================================================================
 
 " For key mapping guide
@@ -71,7 +71,23 @@ inoremap '<CR> ''<Esc>ha
 " ==== CUSTOM CMD =============================================================
 " When in nvim, enter cmd with `:<command name>`
 
+" Run current file and redirect to output.txt
+function! ExecuteFileToOutput() abort
+	let l:fn = ("%")
+	let l:ft = expand("%:e")
+	if l:ft == "py"
+		execute "!cat input.txt | python3 " . l:fn . " > output.txt"
+	elseif l:ft == "js"
+		execute "!cat ./input.txt | node " . l:fn . " > ./output.txt"
+	endif
+endfunction
+
+" command! Run :call ExecuteFileToOutput()
 command! FixWhiteSpace :%s/\s\+$//e                       
+
+" [IN VIM SESSION], save file and ExecuteFileToOuput()
+nnoremap <Leader>w :silent wa \| :call ExecuteFileToOutput()<CR>
+	
 "  ==== AUTO CMD ===============================================================
 
 autocmd BufEnter * set cursorline
