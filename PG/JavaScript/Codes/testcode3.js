@@ -1,12 +1,19 @@
-// Read Input
-const lines = require('fs').readFileSync('/dev/stdin', 'utf8').split('\n')
-const size = Number(lines[0])
+const readLines = (file = '/dev/stdin') => 
+  require('fs').readFileSync(file).toString().trim().split('\n')
+const identity = value => value
+const join = sep => list => list.join(sep)
+const split = (sep, fun = identity) => iter => Array.from(iter.split(sep), fun)
+const slice = (begin, end) => iter => end === undefined ? iter.slice(begin) : iter.slice(begin, end)
+const toInt = s => parseInt(s, 10)
+const toStr = n => n.toString()
+const toList = fun => iter => Array.from(iter, fun)
+const print = fun => value => console.log(fun(value))
 
-// Code Here
-const us = size - 18.0
-const uk = size - 18.5
+const fun = (...args) => {
+	const [[a, b, c], d] = toList(split(' ', toInt))(args)
+	return d.slice(0, c).reduce((a, b) => a + b)
+}
 
-const x = [us, uk].map(x => x.toFixed(1))
-
-console.log(x.join(' '))
+const lines =  readLines('./input.txt')
+print(identity)(fun(...lines))
 
