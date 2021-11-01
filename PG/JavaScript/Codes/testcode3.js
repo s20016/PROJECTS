@@ -10,8 +10,17 @@ const toList = fun => iter => Array.from(iter, fun)
 const print = fun => value => console.log(fun(value))
 
 const fun = (...args) => {
-	const [[a, b, c], d] = toList(split(' ', toInt))(args)
-	return d.slice(0, c).reduce((a, b) => a + b)
+	// const [[a, b, c], d, e] = toList(split(' ', toInt))(args)
+	// return d.slice(0, c).reduce((a, b) => a + b)
+
+	// const a = [50, 50]
+	// const m = a.map(v => v * 2)         // 20,40,60,80,100
+	// const f = a.filter(v => v > 25)     // 30,40,50
+	// const r = a.reduce(add , 10) // 150
+
+	const f = (a, b) => a + b
+	const [[N, A, B], AS] = toList(split(' ', toInt))(args)
+	return slice(A - 1, B)(AS).reduce(f)
 }
 
 const lines =  readLines('./input.txt')
