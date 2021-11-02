@@ -1,7 +1,7 @@
 # =============================================================================
 # Filename: ~/.bash_aliases
 # Author: s20016
-# Last Change: Tue 19 Oct 2021 12:20:13 PM JST
+# Last Change: Tue Nov  2 21:57:26 JST 2021
 # =============================================================================
 
 export PATH=$PATH:$HOME/.local/bin  # GL504GM, GL504GMU
@@ -161,7 +161,7 @@ push() {
   # Update Nvim Local -> PROJECTS
 	elif [[ $1 = "nvim" ]]; then
 		sed -i "4s/:.*$/: $UPDATE/" ~/.config/nvim/*.vim
-    cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/Neovim//.
+    cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/Neovim/.
 
   # Update WordPress/cms-theme (Win) -> PROJECTS
   # elif [[ $1 = "cms-theme" && ${NAME} = "GL504GM" ]]; then
@@ -182,17 +182,17 @@ pull () {
 	# Bash Update PROJECTS -> local
 	if [ $1 = "bash" ]; then
 		cat ~/PROJECTS/PG/Shell/Config/.bash_aliases > ~/.bash_aliases
-    echo -e "[LOCAL]: Bash Updated!"
+    # echo -e "[LOCAL]: Bash Updated!"
 
 	# Nvim Update PROJECTS -> Local
 	elif [ $1 = "nvim" ]; then
-		read -p "[LOCAL]: Update nvim with TEST CONFIG? [Y/n] " RES
-		case $RES in
-			[Yy])
-				cp ~/PROJECTS/PG/Shell/Neovim/*.vim  ~/.config/nvim/.
-				echo -e "[LOCAL]: Neovim Updated!";;
-			*   ) echo -e "[LOCAL]: Update Cancelled!";;
-		esac
+		# read -p "[LOCAL]: Update nvim with TEST CONFIG? [Y/n] " RES
+		# case $RES in
+		# 	[Yy])
+		cp ~/PROJECTS/PG/Shell/Neovim/*.vim  ~/.config/nvim/.
+				# echo -e "[LOCAL]: Neovim Updated!";;
+			# *   ) echo -e "[LOCAL]: Update Cancelled!";;
+		# esac
 	fi
 }
 

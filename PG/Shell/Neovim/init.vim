@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/init.vim
 " Author: s20016
-" Last Change: Tue 19 Oct 2021 12:20:27 PM JST
+" Last Change: Tue Nov  2 21:57:32 JST 2021
 " =============================================================================
 
 " Enables alias in nvim
@@ -15,20 +15,20 @@ let g:python3_host_prog = '/usr/bin/python3'
 call plug#begin(expand('~/.local/share/nvim/site/plugged'))
 
 Plug 'SirVer/ultisnips'                                   " Snippet engine
+Plug 'honza/vim-snippets'                                 " Snippet files
 Plug 'airblade/vim-gitgutter'                             " Gutter changes
 Plug 'dense-analysis/ale'                                 " Linting
 Plug 'honza/vim-snippets'                                 " Snippets
 Plug 'itchyny/lightline.vim'                              " Minimal status line
 Plug 'jiangmiao/auto-pairs'                               " Auto pair brackets 
+Plug 'joshdick/onedark.vim'                               " Color Scheme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }       " Filter cmd
 Plug 'junegunn/fzf.vim'                                   " FZF ext.
 Plug 'junegunn/goyo.vim'                                  " Distraction-free
 Plug 'mattn/emmet-vim'                                    " HTML Emmet
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}       " Column select
 Plug 'mhinz/vim-startify'                                 " Custom vim start
-Plug 'morhetz/gruvbox'                                    " Gruvbox theme
 Plug 'norcalli/nvim-colorizer.lua'                        " Color CSS
-Plug 'shinchu/lightline-gruvbox.vim'                      " Gruvbox limelight
 Plug 'tpope/vim-commentary'                               " Comment out lines
 Plug 'tpope/vim-fugitive'                                 " Allows Git commands
 Plug 'tpope/vim-rhubarb'                                  " Github link

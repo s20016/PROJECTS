@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/plugins.vim
 " Author: s20016
-" Last Change: Tue 19 Oct 2021 12:20:27 PM JST
+" Last Change: Tue Nov  2 21:57:32 JST 2021
 " =============================================================================
 
 " netrw file browser
@@ -11,8 +11,7 @@ let g:netrw_browse_split = 3
 let g:netrw_winsize = 15
 
 " PLUGIN: Themes
-let g:gruvbox_italic=1
-colorscheme gruvbox
+colorscheme onedark
 
 " PLUGIN: vim-commentary
 autocmd FileType apache setlocal commentstring=#\ %s
@@ -28,6 +27,17 @@ let g:session_autosave = "no"
 
 " PLUGIN: FZF (Open below)
 " let g:fzf_layout = { 'down': '~40%' }
+
+" ==== SNIPPETS ================================================================
+
+" custom snippet directory
+let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.config/nvim/UltiSnips']
+
+" toggle snippets with tab
+let g:UltiSnipsExpandTrigger="<tab>"
+
+" list all snippets for current filetype
+let g:UltiSnipsListSnippets="<c-l>"
 
 " ==== STARTIFY ===============================================================
 
@@ -62,9 +72,12 @@ let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 let g:ale_sign_error = '>'
 let g:ale_sign_warning = '>'
-let g:ale_linters = {'python': [ 'flake8' ]}
-let g:ale_fixers = {'python': [ 'autopep8', 'black', 'isort' ]}
-
+let g:ale_linters = {
+			\ 'python': [ 'flake8' ]
+			\ }
+let g:ale_fixers = {
+			\ 'python': [ 'autopep8', 'black', 'isort' ]
+			\ }
 highlight ALEErrorSign    guifg=#db4437 ctermfg=203
 highlight ALEWarningSign  guifg=#f4b400 ctermfg=228
 
@@ -84,16 +97,21 @@ highlight GitGutterAdd    guifg=#95e454 ctermfg=119
 highlight GitGutterChange guifg=#cae682 ctermfg=180
 highlight GitGutterDelete guifg=#e5786d ctermfg=173
 
-highlight Normal ctermbg=none guibg=none
-highlight SignColumn ctermbg=none guibg=none
-" highlight LineNr ctermbg=none guibg=none
+highlight Normal       guibg=none
+highlight Visual       guibg=#585858
+highlight SignColumn   guibg=none guifg=#444444
+highlight LineNr       guibg=none guifg=#444444
+
+" highlight CursorLine   
+highlight CursorColumn guibg=none guifg=none
+highlight CursorLineNR guibg=#444444 guifg=#808080
 
 " ==== STATUS LINE ============================================================
 " See `:h g:lightline.component` for details
 " See `:h g:lightline.colorscheme` for available colorscheme
 
 let g:lightline = {
-	\ 'colorscheme': 'gruvbox',
+	\ 'colorscheme': 'onedark',
 	\ 'active': {
 	\ 'left': [
 	\		[ 'mode', 'paste' ],

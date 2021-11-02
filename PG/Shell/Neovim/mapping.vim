@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/mapping.vim
 " Author: s20016
-" Last Change: Tue 19 Oct 2021 12:20:27 PM JST
+" Last Change: Tue Nov  2 21:57:32 JST 2021
 " =============================================================================
 
 " For key mapping guide
@@ -87,6 +87,27 @@ command! FixWhiteSpace :%s/\s\+$//e
 
 " [IN VIM SESSION], save file and ExecuteFileToOuput()
 nnoremap <Leader>w :silent wa \| :call ExecuteFileToOutput()<CR>
+
+let g:NetrwIsOpen=0
+
+function! ToggleNetrw()
+    if g:NetrwIsOpen
+        let i = bufnr("$")
+        while (i >= 1)
+            if (getbufvar(i, "&filetype") == "netrw")
+                silent exe "bwipeout " . i 
+            endif
+            let i-=1
+        endwhile
+        let g:NetrwIsOpen=0
+    else
+        let g:NetrwIsOpen=1
+        silent tabdo Lexplore
+    endif
+endfunction
+
+" Add your own mapping. For example:
+noremap <silent> <C-E> :call ToggleNetrw()<CR>
 	
 "  ==== AUTO CMD ===============================================================
 
