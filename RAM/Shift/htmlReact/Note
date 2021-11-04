@@ -1,0 +1,9 @@
+211104: JC
+node$: mkdir htmlReact && cd $_
+node$: git init
+	-> if error: fix .gitconfig
+node$: touch index.html
+	-> see index.html
+	-> run with `python3 -m http.server 3000`
+
+211108: JC
