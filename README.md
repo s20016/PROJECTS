@@ -9,7 +9,6 @@
 PROJECTS
 ├── README.md
 ├── PG
-│   ├── C
 │   ├── Java
 │   ├── JavaScript
 │   ├── Kotlin 
