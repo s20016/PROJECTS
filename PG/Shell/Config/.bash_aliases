@@ -1,7 +1,7 @@
 # =============================================================================
 # Filename: ~/.bash_aliases
 # Author: s20016
-# Last Change: Tue Nov  2 21:57:26 JST 2021
+# Last Change: Thu Nov 18 05:39:13 JST 2021
 # =============================================================================
 
 export PATH=$PATH:$HOME/.local/bin  # GL504GM, GL504GMU
