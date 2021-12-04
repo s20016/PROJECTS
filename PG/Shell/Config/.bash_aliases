@@ -1,7 +1,7 @@
 # =============================================================================
 # Filename: ~/.bash_aliases
 # Author: s20016
-# Last Change: Thu 25 Nov 2021 10:18:34 PM JST
+# Last Change: Sat Dec  4 22:49:38 JST 2021
 # =============================================================================
 
 export PATH=$PATH:$HOME/.local/bin  # GL504GM, GL504GMU
@@ -15,7 +15,7 @@ RESET=$(tput sgr 0)
 # Aliases
 alias sbash="source ~/.bashrc"
 alias update="sudo apt update && sudo apt upgrade -y"
-alias newvol="/usr/bin/udisksctl mount -b /dev/sda2"
+
 
 # Python Functions *************************************************************
 pyrun() {

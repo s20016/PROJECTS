@@ -1,23 +1,31 @@
-" =============================================================================
+" ============================================================================
 " Filename: ~/.config/nvim/init.vim
 " Author: s20016
-" Last Change: Tue Nov  2 21:57:32 JST 2021
+" Last Change: Sat Dec  4 22:49:40 JST 2021
 " =============================================================================
 
 " Enables alias in nvim
 let $BASH_ENV = "~/.bash_aliases"
 
-" Python3 PATH
+" PATH
 let g:python3_host_prog = '/usr/bin/python3'
 
 " ==== PLUGIN =================================================================
 
 call plug#begin(expand('~/.local/share/nvim/site/plugged'))
 
+Plug 'hrsh7th/cmp-buffer'                                 " LSP
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'neovim/nvim-lspconfig'                              
+Plug 'onsails/lspkind-nvim'
+
 Plug 'SirVer/ultisnips'                                   " Snippet engine
-Plug 'honza/vim-snippets'                                 " Snippet files
 Plug 'airblade/vim-gitgutter'                             " Gutter changes
 Plug 'dense-analysis/ale'                                 " Linting
+Plug 'honza/vim-snippets'                                 " Snippet files
 Plug 'honza/vim-snippets'                                 " Snippets
 Plug 'itchyny/lightline.vim'                              " Minimal status line
 Plug 'jiangmiao/auto-pairs'                               " Auto pair brackets 
@@ -29,11 +37,13 @@ Plug 'mattn/emmet-vim'                                    " HTML Emmet
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}       " Column select
 Plug 'mhinz/vim-startify'                                 " Custom vim start
 Plug 'norcalli/nvim-colorizer.lua'                        " Color CSS
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'                " cmp + ultisnips
 Plug 'tpope/vim-commentary'                               " Comment out lines
 Plug 'tpope/vim-fugitive'                                 " Allows Git commands
 Plug 'tpope/vim-rhubarb'                                  " Github link
 Plug 'xolox/vim-misc'                                     " Vim session
 Plug 'xolox/vim-session'                                  " Vim session
+Plug 'ryanoasis/vim-devicons'                             " NerdFont
 
 call plug#end()
 
