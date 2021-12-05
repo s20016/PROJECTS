@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/plugins.vim
 " Author: s20016
-" Last Change: Sat Dec  4 22:49:40 JST 2021
+" Last Change: Sun Dec  5 23:17:15 JST 2021
 " =============================================================================
 
 " netrw file browser
@@ -25,9 +25,6 @@ let g:session_command_aliases = 1
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 
-" PLUGIN: FZF (Open below)
-" let g:fzf_layout = { 'down': '~40%' }
-
 " ==== SNIPPETS ================================================================
 " custom snippet directory
 let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME.'/.config/nvim/UltiSnips']
@@ -39,15 +36,16 @@ let g:UltiSnipsListSnippets="<c-l>"
 " PLUGIN: Startify
 let g:webdevicons_enable_startify = 1
 let g:startify_change_to_dir = 0
+let g:startify_enable_special = 0
 let g:startify_files_number = 10
 let g:startify_session_dir = '~/.config/nvim/session'
 let g:startify_lists = [
-			\ { 'type': 'files',     'header': ['   MRU']            },
-			\ { 'type': 'commands',  'header': ['   Commands']       },
+			\ { 'type': 'sessions',  'header': ['   Sessions' ] },
+			\ { 'type': 'files',     'header': ['   FILES'    ] },
+			\ { 'type': 'commands',  'header': ['   Commands' ] },
 			\ { 'type': 'bookmarks', 'header': ['   Bookmarks'] }, ]
 
 let g:startify_bookmarks = [
-			\ { 'a': '~/.bash_aliases' },
 		  \	{ '-': '~/Documents/Clone/FILES/MyGit' } ]
 
 let g:startify_custom_header = [
@@ -61,8 +59,11 @@ let g:startify_custom_header = [
 " ==== ERROR & WARNING ========================================================
 
 " PLUGIN: Ale_linters
-let g:ale_sign_error = ''
-let g:ale_sign_warning = ''
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
@@ -120,13 +121,13 @@ endfunction
 let g:lightline.separator = { 'left': '', 'right': '' }
 let g:lightline.subseparator = { 'left': '', 'right': '' }
 
-
 lua << EOF
 	local lspkind = require "lspkind"
 	local cmp = require "cmp"
 
 	lspkind.init()
 
+  -- CMP Config
 	cmp.setup({
 		snippet = {
 			expand = function(args)

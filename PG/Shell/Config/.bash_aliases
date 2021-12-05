@@ -1,7 +1,7 @@
 # =============================================================================
 # Filename: ~/.bash_aliases
 # Author: s20016
-# Last Change: Sat Dec  4 22:49:38 JST 2021
+# Last Change: Sun Dec  5 23:17:09 JST 2021
 # =============================================================================
 
 export PATH=$PATH:$HOME/.local/bin  # GL504GM, GL504GMU
@@ -15,7 +15,7 @@ RESET=$(tput sgr 0)
 # Aliases
 alias sbash="source ~/.bashrc"
 alias update="sudo apt update && sudo apt upgrade -y"
-
+alias bashcode="nvim -p ~/.config/nvim/*.vim ~/.bash_aliases"
 
 # Python Functions *************************************************************
 pyrun() {

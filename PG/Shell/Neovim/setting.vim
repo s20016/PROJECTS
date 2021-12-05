@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/setting.vim
 " Author: s20016
-" Last Change: Sat Dec  4 22:49:40 JST 2021
+" Last Change: Sun Dec  5 23:17:15 JST 2021
 " =============================================================================
 
 filetype plugin indent on

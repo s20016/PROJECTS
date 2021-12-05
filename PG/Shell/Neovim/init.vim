@@ -1,7 +1,7 @@
 " ============================================================================
 " Filename: ~/.config/nvim/init.vim
 " Author: s20016
-" Last Change: Sat Dec  4 22:49:40 JST 2021
+" Last Change: Sun Dec  5 23:17:15 JST 2021
 " =============================================================================
 
 " Enables alias in nvim
@@ -21,13 +21,13 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'neovim/nvim-lspconfig'                              
 Plug 'onsails/lspkind-nvim'
+Plug 'itchyny/lightline.vim'
 
 Plug 'SirVer/ultisnips'                                   " Snippet engine
 Plug 'airblade/vim-gitgutter'                             " Gutter changes
 Plug 'dense-analysis/ale'                                 " Linting
 Plug 'honza/vim-snippets'                                 " Snippet files
 Plug 'honza/vim-snippets'                                 " Snippets
-Plug 'itchyny/lightline.vim'                              " Minimal status line
 Plug 'jiangmiao/auto-pairs'                               " Auto pair brackets 
 Plug 'joshdick/onedark.vim'                               " Color Scheme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }       " Filter cmd
