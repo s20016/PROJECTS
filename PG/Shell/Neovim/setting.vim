@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/setting.vim
 " Author: s20016
-" Last Change: Sun Dec  5 23:17:15 JST 2021
+" Last Change: Tue Dec  7 11:30:33 JST 2021
 " =============================================================================
 
 filetype plugin indent on
@@ -13,7 +13,7 @@ set autoread                            " Auto detect changes outside nvim
 set background=dark                     " Default color
 set backspace=indent,eol,start          " Fix backspace indent
 set clipboard+=unnamedplus              " Copy paste between nvim and prgrms
-set encoding=UTF-8							        " String encoding
+set encoding=UTF-8                      " String encoding
 set fileformats=unix,dos,mac            " EOL of file format
 set gcr=a:blinkon2                      " Gui cursor (Blink)
 set gfn=Monospace\ 10                   " Guifont
@@ -26,6 +26,8 @@ set incsearch                           " Show pattern while typing
 set laststatus=2                        " Enable status line
 set modeline                            " Enable modeline
 set modelines=10
+set wrap breakindent
+set mouse=a
 set mousemodel=popup                    " Hide mouse button
 set noswapfile                          " Disable tmp files
 set nowrap                              " Displays long lines as one line
@@ -51,3 +53,5 @@ set visualbell                          " Error flash screen
 set wildmenu                            " Cmd tab complete opt
 set noshowmode                          " Hide message
 set completeopt=menuone,noselect
+set listchars=tab:\|\ 
+set list

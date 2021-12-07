@@ -1,7 +1,7 @@
 " ============================================================================
 " Filename: ~/.config/nvim/init.vim
 " Author: s20016
-" Last Change: Sun Dec  5 23:17:15 JST 2021
+" Last Change: Tue Dec  7 11:30:33 JST 2021
 " =============================================================================
 
 " Enables alias in nvim
@@ -14,36 +14,33 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 call plug#begin(expand('~/.local/share/nvim/site/plugged'))
 
-Plug 'hrsh7th/cmp-buffer'                                 " LSP
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'neovim/nvim-lspconfig'                              
-Plug 'onsails/lspkind-nvim'
-Plug 'itchyny/lightline.vim'
-
 Plug 'SirVer/ultisnips'                                   " Snippet engine
 Plug 'airblade/vim-gitgutter'                             " Gutter changes
 Plug 'dense-analysis/ale'                                 " Linting
-Plug 'honza/vim-snippets'                                 " Snippet files
-Plug 'honza/vim-snippets'                                 " Snippets
-Plug 'jiangmiao/auto-pairs'                               " Auto pair brackets 
+Plug 'hrsh7th/cmp-buffer'                                 " cmp extension
+Plug 'hrsh7th/cmp-cmdline'                                " cmp extension
+Plug 'hrsh7th/cmp-nvim-lsp'                               " cmp extension
+Plug 'hrsh7th/cmp-path'                                   " cmp extension
+Plug 'hrsh7th/nvim-cmp'                                   " cmp extension
+Plug 'itchyny/lightline.vim'                              " Minimal statuline
+Plug 'jiangmiao/auto-pairs'                               " Insert auto-pairs
 Plug 'joshdick/onedark.vim'                               " Color Scheme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }       " Filter cmd
 Plug 'junegunn/fzf.vim'                                   " FZF ext.
 Plug 'junegunn/goyo.vim'                                  " Distraction-free
-Plug 'mattn/emmet-vim'                                    " HTML Emmet
+Plug 'mattn/emmet-vim'                                    " Enable Emmet
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}       " Column select
 Plug 'mhinz/vim-startify'                                 " Custom vim start
+Plug 'neovim/nvim-lspconfig'                              " LSP
 Plug 'norcalli/nvim-colorizer.lua'                        " Color CSS
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'                " cmp + ultisnips
+Plug 'onsails/lspkind-nvim'                               " LSP pictograms
+Plug 'psliwka/vim-smoothie'                               " Smooth scrolling
+Plug 'ryanoasis/vim-devicons'                             " Enable icons
 Plug 'tpope/vim-commentary'                               " Comment out lines
 Plug 'tpope/vim-fugitive'                                 " Allows Git commands
 Plug 'tpope/vim-rhubarb'                                  " Github link
-Plug 'xolox/vim-misc'                                     " Vim session
-Plug 'xolox/vim-session'                                  " Vim session
-Plug 'ryanoasis/vim-devicons'                             " NerdFont
+Plug 'williamboman/nvim-lsp-installer'                    " LSP installer
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 

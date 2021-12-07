@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/plugins.vim
 " Author: s20016
-" Last Change: Sun Dec  5 23:17:15 JST 2021
+" Last Change: Tue Dec  7 11:30:33 JST 2021
 " =============================================================================
 
 " netrw file browser
@@ -15,15 +15,6 @@ colorscheme onedark
 
 " PLUGIN: vim-commentary
 autocmd FileType apache setlocal commentstring=#\ %s
-
-" PLUGIN: colorizer.lua
-lua require'colorizer'.setup()
-
-" PLUGIN: Neovim Session
-let g:session_directory = "~/.config/nvim/session"
-let g:session_command_aliases = 1
-let g:session_autoload = "no"
-let g:session_autosave = "no"
 
 " ==== SNIPPETS ================================================================
 " custom snippet directory
@@ -67,13 +58,16 @@ let g:ale_sign_warning = ''
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
+
 let g:ale_linters = {
-			\ 'javascript': ['eslint'],
-			\ 'python': [ 'flake8' ]
+			\ 'javascript': ['standard'],
+			\ 'python'    : ['flake8']
 			\ }
+
 let g:ale_fixers = {
-			\ 'javascript': ['prettier', 'eslint'],
-			\ 'python': [ 'autopep8', 'black', 'isort' ]
+			\ 'javascript': ['prettier-standard', 'eslint'],
+			\ 'html'      : ['prettier'],
+			\ 'python'    : ['autopep8', 'black', 'isort']
 			\ }
 
 highlight Normal       guibg=none
@@ -122,10 +116,23 @@ let g:lightline.separator = { 'left': '', 'right': '' }
 let g:lightline.subseparator = { 'left': '', 'right': '' }
 
 lua << EOF
+	local lsp_installer = require("nvim-lsp-installer")
 	local lspkind = require "lspkind"
 	local cmp = require "cmp"
-
 	lspkind.init()
+
+	require'colorizer'.setup()
+
+	require'nvim-treesitter.configs'.setup {
+		ensure_installed = "maintained",
+		sync_install = false,
+		ignore_install = { "javascript" },
+		highlight = {
+			enable = true,
+			disable = {},
+			additional_vim_regex_highlighting = false,
+		},
+	}
 
   -- CMP Config
 	cmp.setup({
@@ -194,12 +201,10 @@ lua << EOF
 		}
 	})
 
-	cmp.setup.cmdline(':', {
-		sources = cmp.config.sources({
-			{ name = 'path' }
-		}, {
-			{ name = 'cmdline' }
-		})
+	require'cmp'.setup.cmdline('/', {
+		sources = {
+			{ name = 'buffer' }
+		}
 	})
 
 	local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
