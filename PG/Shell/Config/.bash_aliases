@@ -1,7 +1,7 @@
 # =============================================================================
 # Filename: ~/.bash_aliases
 # Author: s20016
-# Last Change: Sun Dec  5 23:17:09 JST 2021
+# Last Change: Fri Dec 17 02:31:45 JST 2021
 # =============================================================================
 
 export PATH=$PATH:$HOME/.local/bin  # GL504GM, GL504GMU
@@ -13,6 +13,7 @@ GREEN=$(tput setaf 2)
 RESET=$(tput sgr 0)
 
 # Aliases
+alias vim="nvim"
 alias sbash="source ~/.bashrc"
 alias update="sudo apt update && sudo apt upgrade -y"
 alias bashcode="nvim -p ~/.config/nvim/*.vim ~/.bash_aliases"
@@ -25,13 +26,13 @@ pyrun() {
   if [[ $1 = "p" ]]; then
     python3 ~/PROJECTS/PG/Python/Projects/P$2*.py
   else
-		for f in $FILES; do
-			if [[ ${NAME} = "GL504GM" ]]; then
-				sed -i 's/s20016/czekras/g' ${f}
-			else
-				sed -i 's/czekras/s20016/g' ${f}
-			fi
-		done
+  for f in $FILES; do
+   if [[ ${NAME} = "GL504GM" ]]; then
+    sed -i 's/s20016/czekras/g' ${f}
+   else
+    sed -i 's/czekras/s20016/g' ${f}
+   fi
+  done
     cat ~/PROJECTS/PG/Python/Codes/input.txt | \
       python3 ~/PROJECTS/PG/Python/Codes/testcode$1.py \
       > ~/PROJECTS/PG/Python/Codes/output.txt
@@ -43,7 +44,7 @@ pyrun() {
 pycode() {
   NAME=$(uname -a | awk '{print $2}')
   FILES=~/PROJECTS/PG/Python/Codes/*.py
-  VIM_SESS=~/.config/nvim/session/PythonSession.vim
+  VIM_SESS=~/.config/nvim/session/PythonSession
   if [ ! -e "$VIM_SESS" ]; then
     cd ~/PROJECTS/PG/Python/Codes
     nvim -p testcode*.py +"tabdo | set splitright | vsplit input.txt | \
@@ -63,21 +64,21 @@ pycode() {
 # Kotlin Functions *************************************************************
 
 ktcode() {
-  VIM_SESS=~/.config/nvim/session/KotlinSession.vim
+  VIM_SESS=~/.config/nvim/session/KotlinSession
   nvim -S ${VIM_SESS}
 }
 
 
 ktrun() {
-	kotlinc ~/PROJECTS/PG/Kotlin/Codes/testcode$1.kt -include-runtime -d ~/tmp/testcode$1.jar
-	java -jar ~/tmp/testcode$1.jar > ~/PROJECTS/PG/Kotlin/Codes/output.txt
-	cat ~/PROJECTS/PG/Kotlin/Codes/output.txt
-	echo
+ kotlinc ~/PROJECTS/PG/Kotlin/Codes/testcode$1.kt -include-runtime -d ~/tmp/testcode$1.jar
+ java -jar ~/tmp/testcode$1.jar > ~/PROJECTS/PG/Kotlin/Codes/output.txt
+ cat ~/PROJECTS/PG/Kotlin/Codes/output.txt
+ echo
 }
 
 # Java Functions ***************************************************************
 javacode() {
-  VIM_SESS=~/.config/nvim/session/JavaSession.vim
+  VIM_SESS=~/.config/nvim/session/JavaSession
   if [ ! -e "$VIM_SESS" ]; then
     cd ~/PROJECTS/PG/Java/src/codes
     nvim -p testcode*.java +"tabdo | set splitright | vsplit input.txt | \
@@ -98,7 +99,7 @@ javarun() {
 
 # JavaScript Functions *********************************************************
 jscode() {
-  VIM_SESS=~/.config/nvim/session/JsSession.vim
+  VIM_SESS=~/.config/nvim/session/JsSession
   if [ ! -e "$VIM_SESS" ]; then
     cd ~/PROJECTS/PG/JavaScript/Codes
     nvim -p testcode*.js +"tabdo | set splitright | vsplit input.txt | \
@@ -149,18 +150,19 @@ mkbox() {
 # Function to be used ONLY by GL504GM
 push() {
   NAME=$(uname -a | awk '{print $2}')
-	UPDATE=$(date)
-	# Update Bash -> PROJECTS
+  UPDATE=$(date)
+ # Update Bash -> PROJECTS
   if [[ $1 = "bash" ]]; then
-		sed -i "4s/:.*$/: $UPDATE/" ~/.bash_aliases
-		cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/Config/.bash_aliases
-		# if [[ ${NAME} = "GL504GM" ]]; then
-		# 	cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json \
-		# 		> ~/PROJECTS/PG/Shell/Config/settings.json
-		# fi
+    sed -i "4s/:.*$/: $UPDATE/" ~/.bash_aliases ~/.tmux.conf
+    cat ~/.bash_aliases > ~/PROJECTS/PG/Shell/Config/.bash_aliases
+    cat ~/.tmux.conf > ~/PROJECTS/PG/Shell/Config/.tmux.conf
+  # if [[ ${NAME} = "GL504GM" ]]; then
+  #  cat /mnt/c/Users/tinio/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json \
+  #   > ~/PROJECTS/PG/Shell/Config/settings.json
+  # fi
   # Update Nvim Local -> PROJECTS
-	elif [[ $1 = "nvim" ]]; then
-		sed -i "4s/:.*$/: $UPDATE/" ~/.config/nvim/*.vim
+ elif [[ $1 = "nvim" ]]; then
+  sed -i "4s/:.*$/: $UPDATE/" ~/.config/nvim/*.vim
     cp ~/.config/nvim/*.vim ~/PROJECTS/PG/Shell/Neovim/.
 
   # Update WordPress/cms-theme (Win) -> PROJECTS
@@ -179,21 +181,21 @@ push() {
 # Function to be used ONLY by SF313-51 & SF313-51U
 
 pull () {
-	# Bash Update PROJECTS -> local
-	if [ $1 = "bash" ]; then
-		cat ~/PROJECTS/PG/Shell/Config/.bash_aliases > ~/.bash_aliases
+ # Bash Update PROJECTS -> local
+ if [ $1 = "bash" ]; then
+  cat ~/PROJECTS/PG/Shell/Config/.bash_aliases > ~/.bash_aliases
     # echo -e "[LOCAL]: Bash Updated!"
 
-	# Nvim Update PROJECTS -> Local
-	elif [ $1 = "nvim" ]; then
-		# read -p "[LOCAL]: Update nvim with TEST CONFIG? [Y/n] " RES
-		# case $RES in
-		# 	[Yy])
-		cp ~/PROJECTS/PG/Shell/Neovim/*.vim  ~/.config/nvim/.
-				# echo -e "[LOCAL]: Neovim Updated!";;
-			# *   ) echo -e "[LOCAL]: Update Cancelled!";;
-		# esac
-	fi
+ # Nvim Update PROJECTS -> Local
+ elif [ $1 = "nvim" ]; then
+  # read -p "[LOCAL]: Update nvim with TEST CONFIG? [Y/n] " RES
+  # case $RES in
+  #  [Yy])
+  cp ~/PROJECTS/PG/Shell/Neovim/*.vim  ~/.config/nvim/.
+    # echo -e "[LOCAL]: Neovim Updated!";;
+   # *   ) echo -e "[LOCAL]: Update Cancelled!";;
+  # esac
+ fi
 }
 
 # pull() {

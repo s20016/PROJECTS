@@ -1,18 +1,23 @@
 " =============================================================================
 " Filename: ~/.config/nvim/mapping.vim
 " Author: s20016
-" Last Change: Tue Dec  7 11:30:33 JST 2021
+" Last Change: Fri Dec 17 02:31:43 JST 2021
 " =============================================================================
 
 " For key mapping guide
 " See :help key-notaion
 
 " Map leader
-let g:mapleader = ','
+" let g:mapleader = ','
 
 " Auto save
 " au FocusGained,BufEnter * :silent! !
 " au FocusLost,WinLeave * :silent! w
+
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 " Indent visual block
 vmap < <gv
@@ -52,7 +57,7 @@ nnoremap <silent> <Leader>f :Files<CR>
 " nnoremap <silent> <Leader>f :Rg<CR>
 nnoremap <silent> <Leader>/ :BLines<CR>
 nnoremap <silent> <Leader>' :Marks<CR>
-nnoremap <silent> <Leader>g :Commits<CR>   
+nnoremap <silent> <Leader>g :Commits<CR>
 nnoremap <silent> <Leader>H :Helptags<CR>
 nnoremap <silent> <Leader>hh :History<CR>
 nnoremap <silent> <Leader>h: :History:<CR>
@@ -73,7 +78,7 @@ function! ExecuteFileToOutput() abort
 endfunction
 
 " command! Run :call ExecuteFileToOutput()
-command! FixWhiteSpace :%s/\s\+$//e                       
+command! FixWhiteSpace :%s/\s\+$//e
 
 " [IN VIM SESSION], save file and ExecuteFileToOuput()
 nnoremap <Leader>w :silent wa \| :call ExecuteFileToOutput()<CR>
@@ -85,7 +90,7 @@ function! ToggleNetrw()
         let i = bufnr("$")
         while (i >= 1)
             if (getbufvar(i, "&filetype") == "netrw")
-                silent exe "bwipeout " . i 
+                silent exe "bwipeout " . i
             endif
             let i-=1
         endwhile
@@ -98,8 +103,10 @@ endfunction
 
 " Add your own mapping. For example:
 noremap <silent> <C-E> :call ToggleNetrw()<CR>
-	
+
 "  ==== AUTO CMD ===============================================================
+
+" autocmd BufWritePre <buffer> <cmd>EslintFixAll<CR>
 
 autocmd BufEnter * set cursorline
 autocmd BufLeave * set nocursorline

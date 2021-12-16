@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/setting.vim
 " Author: s20016
-" Last Change: Tue Dec  7 11:30:33 JST 2021
+" Last Change: Fri Dec 17 02:31:43 JST 2021
 " =============================================================================
 
 filetype plugin indent on
@@ -27,11 +27,12 @@ set laststatus=2                        " Enable status line
 set modeline                            " Enable modeline
 set modelines=10
 set wrap breakindent
+set expandtab
 set mouse=a
 set mousemodel=popup                    " Hide mouse button
 set noswapfile                          " Disable tmp files
 set nowrap                              " Displays long lines as one line
-set number                              " Toggle number line
+set relativenumber                              " Toggle number line
 set pumheight=10                        " Pop-up menu height
 set ruler                               " Ruler in status line
 set scrolloff=6                         " Minimal screen line above and below
@@ -53,5 +54,3 @@ set visualbell                          " Error flash screen
 set wildmenu                            " Cmd tab complete opt
 set noshowmode                          " Hide message
 set completeopt=menuone,noselect
-set listchars=tab:\|\ 
-set list

@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/plugins.vim
 " Author: s20016
-" Last Change: Tue Dec  7 11:30:33 JST 2021
+" Last Change: Fri Dec 17 02:31:43 JST 2021
 " =============================================================================
 
 " netrw file browser
@@ -40,6 +40,7 @@ let g:startify_bookmarks = [
 		  \	{ '-': '~/Documents/Clone/FILES/MyGit' } ]
 
 let g:startify_custom_header = [
+      \ '                                                    ',
 			\ '    ____  ____   ___      _ _____ ____ _____ ____   ',
 			\ '   |  _ \|  _ \ / _ \    | | ____/ ___|_   _/ ___|  ',
 			\ '   | |_) | |_) | | | |_  | |  _|| |     | | \___ \  ',
@@ -58,6 +59,11 @@ let g:ale_sign_warning = ''
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
+let g:ale_javascript_standard_use_global = 1
+
+let g:ale_pattern_options = {
+			\   '.*\.json$': {'ale_enabled': 0},
+			\}
 
 let g:ale_linters = {
 			\ 'javascript': ['standard'],
@@ -65,7 +71,8 @@ let g:ale_linters = {
 			\ }
 
 let g:ale_fixers = {
-			\ 'javascript': ['prettier-standard', 'eslint'],
+			\  '*': ['remove_trailing_lines', 'trim_whitespace'],
+			\ 'javascript': ['eslint', 'prettier_standard'],
 			\ 'html'      : ['prettier'],
 			\ 'python'    : ['autopep8', 'black', 'isort']
 			\ }
@@ -75,7 +82,7 @@ highlight Visual       guibg=#585858
 highlight SignColumn   guibg=none guifg=#444444
 highlight LineNr       guibg=none guifg=#444444
 
-" highlight CursorLine   
+" highlight CursorLine
 highlight CursorColumn guibg=none guifg=none
 highlight CursorLineNR guibg=#444444 guifg=#808080
 
@@ -93,7 +100,7 @@ let g:lightline = {
 	\ 'right': [
 	\   [ 'lineinfo' ], [ 'percent' ], [ 'filetype' ] ] },
 	\ 'component_function': {
-  \   'gitbranch': 'FugitiveHead', 
+  \   'gitbranch': 'FugitiveHead',
   \   'lineinfo': 'LightlineLineinfo' },
 	\ 'tab': {
 	\  'active': [ 'filename', 'modified' ],
@@ -126,7 +133,6 @@ lua << EOF
 	require'nvim-treesitter.configs'.setup {
 		ensure_installed = "maintained",
 		sync_install = false,
-		ignore_install = { "javascript" },
 		highlight = {
 			enable = true,
 			disable = {},
@@ -189,7 +195,7 @@ lua << EOF
 
 		sources = cmp.config.sources({
 			{ name = 'nvim_lsp' },
-			{ name = 'ultisnips' }, 
+			{ name = 'ultisnips' },
 		}, {
 			{ name = 'buffer', keyword_length = 4 },
 		})
@@ -207,10 +213,48 @@ lua << EOF
 		}
 	})
 
-	local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-	require('lspconfig')['pyright'].setup {
-		capabilities = capabilities
-	}
+  local nvim_lsp = require('lspconfig')
+
+  local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+  -- Enable completion triggered by <c-x><c-o>
+  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  -- Mappings.
+  local opts = { noremap=true, silent=true }
+
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+  buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+  buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+  buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+  buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  buf_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+  buf_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+  buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+  buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+	end
+
+	local servers = { 'pyright', 'eslint', 'stylelint_lsp', 'tsserver'}
+	for _, lsp in ipairs(servers) do
+		nvim_lsp[lsp].setup {
+			capablities = capabilities,
+			on_attach = on_attach,
+			flags = {
+				debounce_text_changes = 150,
+			}
+		}
+	end
 EOF
-
