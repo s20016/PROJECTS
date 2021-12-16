@@ -1,0 +1,1968 @@
+{
+  "kitsu_id": 43367,
+  "mal_id": 41380,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "100-man no Inochi no Ue ni Ore wa Tatteiru",
+  "ja_jp": "100万の命の上に俺は立っている"
+},
+{
+  "kitsu_id": 14276,
+  "mal_id": 36793,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "3D Kanojo: Real Girl",
+  "ja_jp": "３Ｄ彼女　リアルガール"
+},
+{
+  "kitsu_id": 1517,
+  "mal_id": 1689,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Byousoku 5 Centimeter",
+  "ja_jp": "秒速５センチメートル"
+},
+{
+  "kitsu_id": 43066,
+  "mal_id": 41457,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "86",
+  "ja_jp": "86―エイティシックス―"
+},
+{
+  "kitsu_id": 8641,
+  "mal_id": 25397,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Absolute Duo",
+  "ja_jp": "アブソリュート・デュオ"
+},
+{
+  "kitsu_id": 13259,
+  "mal_id": 34881,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Aho Girl",
+  "ja_jp": "アホガール"
+},
+{
+  "kitsu_id": 759,
+  "mal_id": 857,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Air Gear",
+  "ja_jp": "エア・ギア"
+},
+{
+  "kitsu_id": 10621,
+  "mal_id": 30123,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Akagami no Shirayuki-hime",
+  "ja_jp": "赤髪の白雪姫"
+},
+{
+  "kitsu_id": 8270,
+  "mal_id": 22199,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Akame ga Kill!",
+  "ja_jp": "アカメが斬る！"
+},
+{
+  "kitsu_id": 3772,
+  "mal_id": 4744,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Akaneiro ni Somaru Saka",
+  "ja_jp": "あかね色に染まる坂"
+},
+{
+  "kitsu_id": 43067,
+  "mal_id": 41433,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Akudama Drive",
+  "ja_jp": "アクダマドライブ"
+},
+{
+  "kitsu_id": 7844,
+  "mal_id": 19429,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Akuma no Riddle",
+  "ja_jp": "悪魔のリドル"
+},
+{
+  "kitsu_id": 9136,
+  "mal_id": 29223,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Aldnoah.Zero 2nd Season",
+  "ja_jp": "アルドノア・ゼロ2ndシーズン"
+},
+{
+  "kitsu_id": 5435,
+  "mal_id": 8676,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Amagami SS",
+  "ja_jp": "アマガミSS"
+},
+{
+  "kitsu_id": 8259,
+  "mal_id": 22147,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Amagi Brilliant Park",
+  "ja_jp": "甘城ブリリアントパーク"
+},
+{
+  "kitsu_id": 6217,
+  "mal_id": 24531,
+  "watchCount": 1,
+  "subtype": "OVA",
+  "en_jp": "Anemone",
+  "ja_jp": "Anemone"
+},
+{
+  "kitsu_id": 4604,
+  "mal_id": 6547,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Angel Beats!",
+  "ja_jp": "Angel Beats!（エンジェルビーツ）"
+},
+{
+  "kitsu_id": 5981,
+  "mal_id": 9989,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.",
+  "ja_jp": "あの日見た花の名前を僕達はまだ知らない。"
+},
+{
+  "kitsu_id": 1870,
+  "mal_id": 15039,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Hana yori Dango (Movie)",
+  "ja_jp": "花より男子"
+},
+{
+  "kitsu_id": 6462,
+  "mal_id": 11111,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Another",
+  "ja_jp": "アナザー"
+},
+{
+  "kitsu_id": 8488,
+  "mal_id": 21995,
+  "watchCount": 1,
+  "subtype": "OVA",
+  "en_jp": "Ao Haru Ride OVA",
+  "ja_jp": "アオハライド OAD"
+},
+{
+  "kitsu_id": 5940,
+  "mal_id": 9919,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Ao no Exorcist",
+  "ja_jp": "青の祓魔師(エクソシスト)"
+},
+{
+  "kitsu_id": 6859,
+  "mal_id": 12967,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Arcana Famiglia",
+  "ja_jp": "アルカナ・ファミリア －La storia della Arcana Famiglia－"
+},
+{
+  "kitsu_id": 6768,
+  "mal_id": 12581,
+  "watchCount": 1,
+  "subtype": "OVA",
+  "en_jp": "Asa made Jugyou Chu!",
+  "ja_jp": "朝まで授業chu!"
+},
+{
+  "kitsu_id": 42148,
+  "mal_id": 39198,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kanata no Astra",
+  "ja_jp": "彼方のアストラ"
+},
+{
+  "kitsu_id": 42147,
+  "mal_id": 39195,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "BEASTARS",
+  "ja_jp": "BEASTARS ビースターズ"
+},
+{
+  "kitsu_id": 6164,
+  "mal_id": 10396,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Ben-To",
+  "ja_jp": "ベン・トー"
+},
+{
+  "kitsu_id": 8052,
+  "mal_id": 20787,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Black Bullet",
+  "ja_jp": "ブラック・ブレット　BLACK BULLET　［黒の銃弾］"
+},
+{
+  "kitsu_id": 6489,
+  "mal_id": 11285,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Black★Rock Shooter (TV)",
+  "ja_jp": "ブラック★ロックシューター"
+},
+{
+  "kitsu_id": 6552,
+  "mal_id": 11633,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Blood Lad",
+  "ja_jp": "ブラッドラッド"
+},
+{
+  "kitsu_id": 13881,
+  "mal_id": 36456,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Boku no Hero Academia 3",
+  "ja_jp": "僕のヒーローアカデミア 3rdシーズン"
+},
+{
+  "kitsu_id": 6316,
+  "mal_id": 10719,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Boku wa Tomodachi ga Sukunai",
+  "ja_jp": "僕は友達が少ない"
+},
+{
+  "kitsu_id": 8536,
+  "mal_id": 24913,
+  "watchCount": 1,
+  "subtype": "special",
+  "en_jp": "Bokura wa Minna Kawai-sou: Hajimete no",
+  "ja_jp": "僕らはみんな河合荘 初めての"
+},
+{
+  "kitsu_id": 44501,
+  "mal_id": 48849,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Sonny Boy",
+  "ja_jp": "ソニーボーイ"
+},
+{
+  "kitsu_id": 42414,
+  "mal_id": 38186,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Bokutachi wa Benkyou ga Dekinai!",
+  "ja_jp": "ぼくたちは勉強ができない !"
+},
+{
+  "kitsu_id": 7113,
+  "mal_id": 14345,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Btooom!",
+  "ja_jp": "BTOOOM!"
+},
+{
+  "kitsu_id": 43273,
+  "mal_id": 41312,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kami-tachi ni Hirowareta Otoko",
+  "ja_jp": "神達に拾われた男"
+},
+{
+  "kitsu_id": 6061,
+  "mal_id": 10163,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "C: The Money of Soul and Possibility Control",
+  "ja_jp": "「C」 THE MONEY OF SOUL AND POSSIBILITY CONTROL"
+},
+{
+  "kitsu_id": 6702,
+  "mal_id": 12293,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Campione!: Matsurowanu Kamigami to Kamigoroshi no Maou",
+  "ja_jp": "カンピオーネ！ ～まつろわぬ神々と神殺しの魔王～"
+},
+{
+  "kitsu_id": 10103,
+  "mal_id": 28999,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Charlotte",
+  "ja_jp": "Charlotte（シャーロット）"
+},
+{
+  "kitsu_id": 7160,
+  "mal_id": 14741,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Chuunibyou demo Koi ga Shitai!",
+  "ja_jp": "中二病でも恋がしたい!"
+},
+{
+  "kitsu_id": 12737,
+  "mal_id": 34382,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Citrus",
+  "ja_jp": "citrus"
+},
+{
+  "kitsu_id": 1962,
+  "mal_id": 2167,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Clannad",
+  "ja_jp": "CLANNAD"
+},
+{
+  "kitsu_id": 1415,
+  "mal_id": 1575,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Code Geass: Hangyaku no Lelouch",
+  "ja_jp": "コードギアス 反逆のルルーシュ"
+},
+{
+  "kitsu_id": 11902,
+  "mal_id": 28121,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka Gaiden: Sword Oratoria",
+  "ja_jp": "ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア"
+},
+{
+  "kitsu_id": 11902,
+  "mal_id": 32887,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka Gaiden: Sword Oratoria",
+  "ja_jp": "ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア"
+},
+{
+  "kitsu_id": 41778,
+  "mal_id": 37348,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka Movie: Orion no Ya",
+  "ja_jp": "劇場版 ダンジョンに出会いを求めるのは間違っているだろうか -オリオンの矢-"
+},
+{
+  "kitsu_id": 7656,
+  "mal_id": 12549,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Dakara Boku wa, H ga Dekinai.",
+  "ja_jp": "だから僕は、Hができない。"
+},
+{
+  "kitsu_id": 7469,
+  "mal_id": 16592,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Danganronpa: Kibou no Gakuen to Zetsubou no Koukousei The Animation",
+  "ja_jp": "ダンガンロンパ 希望の学園と絶望の高校生 THE ANIMATION"
+},
+{
+  "kitsu_id": 6616,
+  "mal_id": 12893,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Danshi Koukousei no Nichijou",
+  "ja_jp": "男子高校生の日常"
+},
+{
+  "kitsu_id": 13600,
+  "mal_id": 35849,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Darling in the FranXX",
+  "ja_jp": "ダーリン・イン・ザ・フランキス"
+},
+{
+  "kitsu_id": 7839,
+  "mal_id": 15583,
+  "watchCount": 1,
+  "subtype": "OVA",
+  "en_jp": "Date A Live: Date to Date",
+  "ja_jp": "デート・ア・ライブ DATE TO DATE"
+},
+{
+  "kitsu_id": 13276,
+  "mal_id": 34497,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Death March kara Hajimaru Isekai Kyousoukyoku",
+  "ja_jp": "デスマーチからはじまる異世界狂想曲"
+},
+{
+  "kitsu_id": 1376,
+  "mal_id": 1535,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Death Note",
+  "ja_jp": "デスノート"
+},
+{
+  "kitsu_id": 9969,
+  "mal_id": 28223,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Death Parade",
+  "ja_jp": "デス・パレード"
+},
+{
+  "kitsu_id": 11785,
+  "mal_id": 38000,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Onigiri",
+  "ja_jp": "鬼斬"
+},
+{
+  "kitsu_id": 5710,
+  "mal_id": 9379,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Denpa Onna to Seishun Otoko",
+  "ja_jp": "電波女と青春男"
+},
+{
+  "kitsu_id": 7446,
+  "mal_id": 16512,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Devil Survivor 2 The Animation",
+  "ja_jp": "デビルサバイバー２ THE ANIMATION"
+},
+{
+  "kitsu_id": 41083,
+  "mal_id": 37520,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Dororo",
+  "ja_jp": "どろろ"
+},
+{
+  "kitsu_id": 199,
+  "mal_id": 223,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Dragon Ball",
+  "ja_jp": "ドラゴンボール"
+},
+{
+  "kitsu_id": 5678,
+  "mal_id": 9330,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Dragon Crisis!",
+  "ja_jp": "ドラゴンクライシス!"
+},
+{
+  "kitsu_id": 4696,
+  "mal_id": 6746,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Durarara!!",
+  "ja_jp": "デュラララ!!"
+},
+{
+  "kitsu_id": 4211,
+  "mal_id": 5630,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Higashi no Eden",
+  "ja_jp": "東のエデン"
+},
+{
+  "kitsu_id": 11914,
+  "mal_id": 32901,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Eromanga-sensei",
+  "ja_jp": "エロマンガ先生"
+},
+{
+  "kitsu_id": 8675,
+  "mal_id": 25537,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Gekijouban Fate/stay night: Heaven's Feel I. Presage Flower",
+  "ja_jp": "劇場版「Fate/stay night [Heaven's Feel] Ⅰ.presage flower」"
+},
+{
+  "kitsu_id": 7882,
+  "mal_id": 22297,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Fate/stay night: Unlimited Blade Works",
+  "ja_jp": "Fate/stay night [Unlimited Blade Works]"
+},
+{
+  "kitsu_id": 323,
+  "mal_id": 356,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Fate/stay night",
+  "ja_jp": "Fate/stay night"
+},
+{
+  "kitsu_id": 7710,
+  "mal_id": 9367,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Freezing Vibration",
+  "ja_jp": "フリージング ヴァイブレーション"
+},
+{
+  "kitsu_id": 43211,
+  "mal_id": 41025,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Fumetsu no Anata e",
+  "ja_jp": "不滅のあなたへ"
+},
+{
+  "kitsu_id": 10085,
+  "mal_id": 28907,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Gate: Jieitai Kanochi nite, Kaku Tatakaeri",
+  "ja_jp": "GATE（ゲート）自衛隊　彼の地にて、斯く戦えり"
+},
+{
+  "kitsu_id": 8576,
+  "mal_id": 25183,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Gangsta.",
+  "ja_jp": "GANGSTA. ギャングスタ"
+},
+{
+  "kitsu_id": 13265,
+  "mal_id": 35222,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Gakuen Babysitters",
+  "ja_jp": "学園ベビーシッターズ"
+},
+{
+  "kitsu_id": 7904,
+  "mal_id": 14131,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Girls & Panzer Movie",
+  "ja_jp": "ガールズ&パンツァー 劇場版"
+},
+{
+  "kitsu_id": 40597,
+  "mal_id": 37349,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Goblin Slayer",
+  "ja_jp": "ゴブリンスレイヤー"
+},
+{
+  "kitsu_id": 42204,
+  "mal_id": 39576,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Goblin Slayer: Goblin's Crown",
+  "ja_jp": "ゴブリンスレイヤー -GOBLIN'S CROWN-"
+},
+{
+  "kitsu_id": 9130,
+  "mal_id": 27631,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "God Eater",
+  "ja_jp": "GOD EATER"
+},
+{
+  "kitsu_id": 12634,
+  "mal_id": 33783,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Godzilla: Kaijuu Wakusei",
+  "ja_jp": "GODZILLA 怪獣惑星"
+},
+{
+  "kitsu_id": 7708,
+  "mal_id": 17895,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Golden Time",
+  "ja_jp": "ゴールデンタイム"
+},
+{
+  "kitsu_id": 5330,
+  "mal_id": 8425,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Gosick",
+  "ja_jp": "GOSICK -ゴシック-"
+},
+{
+  "kitsu_id": 14190,
+  "mal_id": 37105,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Grand Blue",
+  "ja_jp": "ぐらんぶる"
+},
+{
+  "kitsu_id": 11447,
+  "mal_id": 31859,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Hai to Gensou no Grimgar",
+  "ja_jp": "灰と幻想のグリムガル"
+},
+{
+  "kitsu_id": 7982,
+  "mal_id": 17729,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Grisaia no Kajitsu",
+  "ja_jp": "グリザイアの果実"
+},
+{
+  "kitsu_id": 6349,
+  "mal_id": 10793,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Guilty Crown",
+  "ja_jp": "ギルティクラウン"
+},
+{
+  "kitsu_id": 6896,
+  "mal_id": 15729,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Hagure Yuusha no Aesthetica",
+  "ja_jp": "はぐれ勇者の鬼畜美学〈エステティカ〉"
+},
+{
+  "kitsu_id": 42030,
+  "mal_id": 38816,
+  "watchCount": 2,
+  "subtype": "movie",
+  "en_jp": "Hello World",
+  "ja_jp": "ハロー・ワールド"
+},
+{
+  "kitsu_id": 5407,
+  "mal_id": 8630,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Hidan no Aria",
+  "ja_jp": "緋弾のアリア"
+},
+{
+  "kitsu_id": 6550,
+  "mal_id": 11617,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "High School DxD",
+  "ja_jp": "ハイスクールD×D"
+},
+{
+  "kitsu_id": 5767,
+  "mal_id": 8074,
+  "watchCount": 1,
+  "subtype": "OVA",
+  "en_jp": "Highschool of the Dead: Drifters of the Dead",
+  "ja_jp": "学園黙示録 HIGHSCHOOL OF THE DEAD ドリフターズ・オブ・ザ・デッド"
+},
+{
+  "kitsu_id": 8008,
+  "mal_id": 20853,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Hitsugi no Chaika",
+  "ja_jp": "棺姫のチャイカ"
+},
+{
+  "kitsu_id": 6025,
+  "mal_id": 10079,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Hoshizora e Kakaru Hashi",
+  "ja_jp": "星空へ架かる橋"
+},
+{
+  "kitsu_id": 6169,
+  "mal_id": 10408,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Hotarubi no Mori e",
+  "ja_jp": "蛍火の杜へ"
+},
+{
+  "kitsu_id": 6686,
+  "mal_id": 12189,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Hyouka",
+  "ja_jp": "氷菓"
+},
+{
+  "kitsu_id": 43271,
+  "mal_id": 42361,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Ijiranaide, Nagatoro-san",
+  "ja_jp": "いじらないで、長瀞さん"
+},
+{
+  "kitsu_id": 5583,
+  "mal_id": 9041,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "IS: Infinite Stratos",
+  "ja_jp": "IS 〈インフィニット・ストラトス〉"
+},
+{
+  "kitsu_id": 11207,
+  "mal_id": 35413,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Imouto sae Ireba Ii.",
+  "ja_jp": "妹さえいればいい。"
+},
+{
+  "kitsu_id": 6439,
+  "mal_id": 11013,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Inu x Boku SS",
+  "ja_jp": "妖狐×僕SS"
+},
+{
+  "kitsu_id": 41133,
+  "mal_id": 41623,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Isekai Maou to Shoukan Shoujo no Dorei Majutsu",
+  "ja_jp": "異世界魔王と召喚少女の奴隷魔術"
+},
+{
+  "kitsu_id": 5850,
+  "mal_id": 9750,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Itsuka Tenma no Kuro Usagi",
+  "ja_jp": "いつか天魔の黒ウサギ"
+},
+{
+  "kitsu_id": 13788,
+  "mal_id": 36220,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Itsudatte Bokura no Koi wa 10 cm Datta.",
+  "ja_jp": "いつだって僕らの恋は10センチだった。"
+},
+{
+  "kitsu_id": 7165,
+  "mal_id": 14765,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Ixion Saga DT",
+  "ja_jp": "イクシオン サーガ DT"
+},
+{
+  "kitsu_id": 42825,
+  "mal_id": 40787,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Josee to Tora to Sakana-tachi",
+  "ja_jp": "ジョゼと虎と魚たち"
+},
+{
+  "kitsu_id": 13530,
+  "mal_id": 35639,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Just Because!",
+  "ja_jp": "Just Because!"
+},
+{
+  "kitsu_id": 10036,
+  "mal_id": 28623,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Koutetsujou no Kabaneri",
+  "ja_jp": "甲鉄城のカバネリ"
+},
+{
+  "kitsu_id": 4852,
+  "mal_id": 7054,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kaichou wa Maid-sama!",
+  "ja_jp": "会長はメイド様!"
+},
+{
+  "kitsu_id": 43204,
+  "mal_id": 41930,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kamisama ni Natta Hi",
+  "ja_jp": "神様になった日"
+},
+{
+  "kitsu_id": 7358,
+  "mal_id": 16009,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kamisama no Inai Nichiyoubi",
+  "ja_jp": "神さまのいない日曜日"
+},
+{
+  "kitsu_id": 1519,
+  "mal_id": 1691,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kaze no Stigma",
+  "ja_jp": "風のスティグマ"
+},
+{
+  "kitsu_id": 4397,
+  "mal_id": 6045,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Kimi ni Todoke",
+  "ja_jp": "君に届け"
+},
+{
+  "kitsu_id": 13723,
+  "mal_id": 36098,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Kimi no Suizou wo Tabetai",
+  "ja_jp": "君の膵臓をたべたい"
+},
+{
+  "kitsu_id": 11614,
+  "mal_id": 32281,
+  "watchCount": 2,
+  "subtype": "movie",
+  "en_jp": "Kimi no Na wa.",
+  "ja_jp": "君の名は。"
+},
+{
+  "kitsu_id": 2651,
+  "mal_id": 2927,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kimikiss Pure Rouge",
+  "ja_jp": "キミキス pure rouge"
+},
+{
+  "kitsu_id": 7672,
+  "mal_id": 17741,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kimi no Iru Machi",
+  "ja_jp": "君のいる町"
+},
+{
+  "kitsu_id": 5045,
+  "mal_id": 7593,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kiss x Sis (TV)",
+  "ja_jp": "キスシス"
+},
+{
+  "kitsu_id": 43861,
+  "mal_id": 44276,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kyuukyoku Shinka Shita Full Dive RPG ga Genjitsu yori mo Kusogee Dattara",
+  "ja_jp": "究極進化したフルダイブRPGが現実よりもクソゲーだったら"
+},
+{
+  "kitsu_id": 6682,
+  "mal_id": 12175,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Koi to Senkyo to Chocolate",
+  "ja_jp": "恋と選挙とチョコレート"
+},
+{
+  "kitsu_id": 10028,
+  "mal_id": 28851,
+  "watchCount": 2,
+  "subtype": "movie",
+  "en_jp": "Koe no Katachi",
+  "ja_jp": "聲の形"
+},
+{
+  "kitsu_id": 6626,
+  "mal_id": 11887,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Kokoro Connect",
+  "ja_jp": "ココロコネクト"
+},
+{
+  "kitsu_id": 42101,
+  "mal_id": 38889,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kono Oto Tomare!",
+  "ja_jp": "この音とまれ！"
+},
+{
+  "kitsu_id": 5507,
+  "mal_id": 8841,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kore wa Zombie Desu ka?",
+  "ja_jp": "これはゾンビですか?"
+},
+{
+  "kitsu_id": 42117,
+  "mal_id": 39017,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kyokou Suiri",
+  "ja_jp": "虚構推理"
+},
+{
+  "kitsu_id": 7714,
+  "mal_id": 18153,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kyoukai no Kanata",
+  "ja_jp": "境界の彼方"
+},
+{
+  "kitsu_id": 5403,
+  "mal_id": 7148,
+  "watchCount": 1,
+  "subtype": "special",
+  "en_jp": "Ladies versus Butlers! Tokuten Disc Music Clip",
+  "ja_jp": "れでぃ×ばと!"
+},
+{
+  "kitsu_id": 472,
+  "mal_id": 513,
+  "watchCount": 2,
+  "subtype": "movie",
+  "en_jp": "Tenkuu no Shiro Laputa",
+  "ja_jp": "天空の城ラピュタ"
+},
+{
+  "kitsu_id": 12005,
+  "mal_id": 31251,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kidou Senshi Gundam: Tekketsu no Orphans 2",
+  "ja_jp": "機動戦士ガンダム 鉄血のオルフェンズ 第2期"
+},
+{
+  "kitsu_id": 765,
+  "mal_id": 93,
+  "watchCount": 1,
+  "subtype": "OVA",
+  "en_jp": "Mobile Suit Gundam Seed MSV Astray",
+  "ja_jp": "機動戦士ガンダムSEED MSV ASTRAY"
+},
+{
+  "kitsu_id": 11850,
+  "mal_id": 32792,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Mobile Suit Gundam Unicorn RE:0096",
+  "ja_jp": "機動戦士ガンダムUC（ユニコーン）RE:0096"
+},
+{
+  "kitsu_id": 7617,
+  "mal_id": 17247,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Machine-Doll wa Kizutsukanai",
+  "ja_jp": "機巧少女〈マシンドール〉は傷つかない"
+},
+{
+  "kitsu_id": 8630,
+  "mal_id": 24455,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Madan no Ou to Vanadis",
+  "ja_jp": "魔弾の王と戦姫 (ヴァナディース)"
+},
+{
+  "kitsu_id": 7879,
+  "mal_id": 19769,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Mahou Sensou",
+  "ja_jp": "魔法戦争"
+},
+{
+  "kitsu_id": 13228,
+  "mal_id": 35062,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Mahoutsukai no Yome",
+  "ja_jp": "魔法使いの嫁"
+},
+{
+  "kitsu_id": 6734,
+  "mal_id": 12445,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Tasogare Otome x Amnesia",
+  "ja_jp": "黄昏乙女×アムネジア"
+},
+{
+  "kitsu_id": 6081,
+  "mal_id": 10213,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Maji de Watashi ni Koi Shinasai!",
+  "ja_jp": "真剣で私に恋しなさい！"
+},
+{
+  "kitsu_id": 13612,
+  "mal_id": 35851,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Sayonara no Asa ni Yakusoku no Hana wo Kazarou",
+  "ja_jp": "さよならの朝に約束の花をかざろう"
+},
+{
+  "kitsu_id": 43005,
+  "mal_id": 40496,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Maou Gakuin no Futekigousha: Shijou Saikyou no Maou no Shiso, Tensei shite Shison-tachi no Gakkou e Kayou",
+  "ja_jp": "魔王学院の不適合者 ～史上最強の魔王の始祖、転生して子孫たちの学校へ通う～"
+},
+{
+  "kitsu_id": 42551,
+  "mal_id": 40397,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Maoujou de Oyasumi",
+  "ja_jp": "魔王城でおやすみ"
+},
+{
+  "kitsu_id": 7174,
+  "mal_id": 14833,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Maoyuu Maou Yuusha",
+  "ja_jp": "まおゆう魔王勇者"
+},
+{
+  "kitsu_id": 12267,
+  "mal_id": 33487,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Masamune-kun no Revenge",
+  "ja_jp": "政宗くんのリベンジ"
+},
+{
+  "kitsu_id": 6165,
+  "mal_id": 10397,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Mashiro-iro Symphony: The Color of Lovers",
+  "ja_jp": "ましろ色シンフォニー -The color of lovers-"
+},
+{
+  "kitsu_id": 6039,
+  "mal_id": 10110,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Mayo Chiki!",
+  "ja_jp": "まよチキ!"
+},
+{
+  "kitsu_id": 13949,
+  "mal_id": 40729,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Megalo Box",
+  "ja_jp": "メガロボクス"
+},
+{
+  "kitsu_id": 6266,
+  "mal_id": 10620,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Mirai Nikki (TV)",
+  "ja_jp": "未来日記"
+},
+{
+  "kitsu_id": 7573,
+  "mal_id": 5081,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Monogatari Series: Second Season",
+  "ja_jp": "〈物語〉シリーズ セカンドシーズン"
+},
+{
+  "kitsu_id": 2650,
+  "mal_id": 2926,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Myself; Yourself",
+  "ja_jp": "マイセルフ; ユアセルフ"
+},
+{
+  "kitsu_id": 42965,
+  "mal_id": 41168,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Nakitai Watashi wa Neko wo Kaburu",
+  "ja_jp": "泣きたい私は猫をかぶる"
+},
+{
+  "kitsu_id": 6256,
+  "mal_id": 10589,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Naruto: Shippuuden Movie 5 - Blood Prison",
+  "ja_jp": "劇場版NARUTO-ナルト- ブラッド・プリズン"
+},
+{
+  "kitsu_id": 3606,
+  "mal_id": 4437,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Naruto: Shippuuden Movie 2 - Kizuna",
+  "ja_jp": "劇場版NARUTO-ナルト- 疾風伝 絆"
+},
+{
+  "kitsu_id": 7008,
+  "mal_id": 13667,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Naruto: Shippuuden Movie 6 - Road to Ninja",
+  "ja_jp": "ROAD TO NINJA NARUTO THE MOVIE"
+},
+{
+  "kitsu_id": 5266,
+  "mal_id": 8246,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Naruto: Shippuuden Movie 4 - The Lost Tower",
+  "ja_jp": "劇場版 NARUTO-ナルト-疾風伝 ザ・ロストタワー"
+},
+{
+  "kitsu_id": 4520,
+  "mal_id": 6325,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Naruto: Shippuuden Movie 3 - Hi no Ishi wo Tsugu Mono",
+  "ja_jp": "ナルト- 疾風伝 火の意志を継ぐ者"
+},
+{
+  "kitsu_id": 1555,
+  "mal_id": 16870,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Naruto: Shippuuden",
+  "ja_jp": "ナルト- 疾風伝"
+},
+{
+  "kitsu_id": 11,
+  "mal_id": 1735,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Naruto",
+  "ja_jp": "ナルト"
+},
+{
+  "kitsu_id": 7110,
+  "mal_id": 14293,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Nerawareta Gakuen",
+  "ja_jp": "ねらわれた学園"
+},
+{
+  "kitsu_id": 9178,
+  "mal_id": 18897,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Nisekoi:",
+  "ja_jp": "ニセコイ:"
+},
+{
+  "kitsu_id": 7880,
+  "mal_id": 19815,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "No Game No Life",
+  "ja_jp": "ノーゲーム・ノーライフ"
+},
+{
+  "kitsu_id": 7881,
+  "mal_id": 20507,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Noragami",
+  "ja_jp": "ノラガミ"
+},
+{
+  "kitsu_id": 7782,
+  "mal_id": 18095,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Nourin",
+  "ja_jp": "のうりん"
+},
+{
+  "kitsu_id": 4588,
+  "mal_id": 6512,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Nyan Koi!",
+  "ja_jp": "にゃんこい！"
+},
+{
+  "kitsu_id": 7657,
+  "mal_id": 11933,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Oda Nobuna no Yabou",
+  "ja_jp": "織田信奈の野望"
+},
+{
+  "kitsu_id": 4519,
+  "mal_id": 6324,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Omamori Himari",
+  "ja_jp": "おまもりひまり"
+},
+{
+  "kitsu_id": 3492,
+  "mal_id": 4155,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "One Piece Film: Strong World",
+  "ja_jp": "ワンピース　フィルム　ストロングワールド"
+},
+{
+  "kitsu_id": 10740,
+  "mal_id": 30276,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "One Punch Man",
+  "ja_jp": "ワンパンマン"
+},
+{
+  "kitsu_id": 7094,
+  "mal_id": 14199,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Oniichan dakedo Ai sae Areba Kankeinai yo ne!",
+  "ja_jp": "お兄ちゃんだけど愛さえあれば関係ないよねっ"
+},
+{
+  "kitsu_id": 11844,
+  "mal_id": 32729,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Orange",
+  "ja_jp": "orange（オレンジ）"
+},
+{
+  "kitsu_id": 12565,
+  "mal_id": 34136,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Orange: Mirai",
+  "ja_jp": "orange －未来－"
+},
+{
+  "kitsu_id": 7006,
+  "mal_id": 8769,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Ore no Imouto ga Konnani Kawaii Wake ga Nai.",
+  "ja_jp": "俺の妹がこんなに可愛いわけがない。"
+},
+{
+  "kitsu_id": 7837,
+  "mal_id": 19369,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Outbreak Company",
+  "ja_jp": "アウトブレイク・カンパニー"
+},
+{
+  "kitsu_id": 9965,
+  "mal_id": 29803,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Overlord",
+  "ja_jp": "オーバーロード"
+},
+{
+  "kitsu_id": 6469,
+  "mal_id": 11179,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Papa no Iukoto wo Kikinasai!",
+  "ja_jp": "パパのいうことを聞きなさい！"
+},
+{
+  "kitsu_id": 8147,
+  "mal_id": 22535,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Kiseijuu: Sei no Kakuritsu",
+  "ja_jp": "寄生獣 セイの格率"
+},
+{
+  "kitsu_id": 9538,
+  "mal_id": 27775,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Plastic Memories",
+  "ja_jp": "プラスティック・メモリーズ"
+},
+{
+  "kitsu_id": 4471,
+  "mal_id": 6201,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Princess Lover!",
+  "ja_jp": "プリンセスラバー!"
+},
+{
+  "kitsu_id": 10745,
+  "mal_id": 30296,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Rakudai Kishi no Cavalry",
+  "ja_jp": "落第騎士の英雄譚《キャバルリィ》"
+},
+{
+  "kitsu_id": 11209,
+  "mal_id": 39587,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Re:Zero kara Hajimeru Isekai Seikatsu",
+  "ja_jp": "Re：ゼロから始める異世界生活"
+},
+{
+  "kitsu_id": 13882,
+  "mal_id": 36286,
+  "watchCount": 1,
+  "subtype": "OVA",
+  "en_jp": "Re:Zero kara Hajimeru Isekai Seikatsu: Memory Snow",
+  "ja_jp": "Re：ゼロから始める異世界生活 OVA"
+},
+{
+  "kitsu_id": 42006,
+  "mal_id": 38414,
+  "watchCount": 1,
+  "subtype": "OVA",
+  "en_jp": "Re:Zero kara Hajimeru Isekai Seikatsu: Hyouketsu no Kizuna",
+  "ja_jp": "Re：ゼロから始める異世界生活『氷結の絆』"
+},
+{
+  "kitsu_id": 7691,
+  "mal_id": 18039,
+  "watchCount": 1,
+  "subtype": "OVA",
+  "en_jp": "Rescue Me!",
+  "ja_jp": "れすきゅーME!"
+},
+{
+  "kitsu_id": 6999,
+  "mal_id": 13599,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Robotics;Notes",
+  "ja_jp": "ロボティクス・ノーツ"
+},
+{
+  "kitsu_id": 10029,
+  "mal_id": 28497,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Rokka no Yuusha",
+  "ja_jp": "六花の勇者"
+},
+{
+  "kitsu_id": 10909,
+  "mal_id": 23277,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Saenai Heroine no Sodatekata ♭",
+  "ja_jp": "冴えない彼女〈ヒロイン〉の育てかた♭"
+},
+{
+  "kitsu_id": 14050,
+  "mal_id": 36885,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Saenai Heroine no Sodatekata Fine",
+  "ja_jp": "冴えない彼女の育てかた Fine"
+},
+{
+  "kitsu_id": 8060,
+  "mal_id": 17777,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Saikin, Imouto no Yousu ga Chotto Okashiinda ga.",
+  "ja_jp": "最近、妹のようすがちょっとおかしいんだが。"
+},
+{
+  "kitsu_id": 6760,
+  "mal_id": 12531,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Sakamichi no Apollon",
+  "ja_jp": "坂道のアポロン"
+},
+{
+  "kitsu_id": 6742,
+  "mal_id": 12477,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Sakasama no Patema",
+  "ja_jp": "サカサマのパテマ"
+},
+{
+  "kitsu_id": 7978,
+  "mal_id": 20047,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Sakura Trick",
+  "ja_jp": "桜Trick"
+},
+{
+  "kitsu_id": 7023,
+  "mal_id": 13759,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Sakurasou no Pet na Kanojo",
+  "ja_jp": "さくら荘のペットな彼女"
+},
+{
+  "kitsu_id": 3235,
+  "mal_id": 2476,
+  "watchCount": 1,
+  "subtype": "OVA",
+  "en_jp": "School Days: Valentine Days",
+  "ja_jp": "School Days 「Valentine Days」"
+},
+{
+  "kitsu_id": 7877,
+  "mal_id": 21033,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Seikoku no Dragonar",
+  "ja_jp": "星刻の竜騎士"
+},
+{
+  "kitsu_id": 4354,
+  "mal_id": 5940,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Seiken no Blacksmith",
+  "ja_jp": "聖剣の刀鍛冶（ブラックスミス）"
+},
+{
+  "kitsu_id": 41991,
+  "mal_id": 38329,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai",
+  "ja_jp": "青春ブタ野郎はゆめみる少女の夢を見ない"
+},
+{
+  "kitsu_id": 41056,
+  "mal_id": 37450,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+  "ja_jp": "青春ブタ野郎はバニーガール先輩の夢を見ない"
+},
+{
+  "kitsu_id": 12673,
+  "mal_id": 33836,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Seiren",
+  "ja_jp": "セイレン"
+},
+{
+  "kitsu_id": 8082,
+  "mal_id": 20973,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Sekai Seifuku: Bouryaku no Zvezda",
+  "ja_jp": "世界征服～謀略のズヴィズダー～"
+},
+{
+  "kitsu_id": 3441,
+  "mal_id": 4063,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Sekirei",
+  "ja_jp": "セキレイ"
+},
+{
+  "kitsu_id": 322,
+  "mal_id": 355,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Shakugan no Shana",
+  "ja_jp": "灼眼のシャナ"
+},
+{
+  "kitsu_id": 7442,
+  "mal_id": 16498,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Shingeki no Kyojin",
+  "ja_jp": "進撃の巨人"
+},
+{
+  "kitsu_id": 58,
+  "mal_id": 79,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Shuffle!",
+  "ja_jp": "SHUFFLE! (シャッフル!)"
+},
+{
+  "kitsu_id": 42924,
+  "mal_id": 40904,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Bokutachi no Remake",
+  "ja_jp": "ぼくたちのリメイク"
+},
+{
+  "kitsu_id": 5646,
+  "mal_id": 11577,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Steins;Gate",
+  "ja_jp": "STEINS;GATE"
+},
+{
+  "kitsu_id": 5646,
+  "mal_id": 9253,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Steins;Gate",
+  "ja_jp": "STEINS;GATE"
+},
+{
+  "kitsu_id": 7715,
+  "mal_id": 18277,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Strike the Blood",
+  "ja_jp": "ストライク・ザ・ブラッド"
+},
+{
+  "kitsu_id": 4241,
+  "mal_id": 5681,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Summer Wars",
+  "ja_jp": "サマーウォーズ"
+},
+{
+  "kitsu_id": 7449,
+  "mal_id": 16524,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Suisei no Gargantia",
+  "ja_jp": "翠星のガルガンティア"
+},
+{
+  "kitsu_id": 6589,
+  "mal_id": 11757,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Sword Art Online",
+  "ja_jp": "ソードアート・オンライン"
+},
+{
+  "kitsu_id": 13894,
+  "mal_id": 36475,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Sword Art Online Alternative: Gun Gale Online",
+  "ja_jp": "ソードアート・オンライン オルタナティブ ガンゲイル・オンライン"
+},
+{
+  "kitsu_id": 7914,
+  "mal_id": 20021,
+  "watchCount": 2,
+  "subtype": "special",
+  "en_jp": "Sword Art Online: Extra Edition",
+  "ja_jp": "ソードアート・オンライン Extra Edition"
+},
+{
+  "kitsu_id": 11423,
+  "mal_id": 31765,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Sword Art Online Movie: Ordinal Scale",
+  "ja_jp": "劇場版 ソードアート・オンライン -オーディナル・スケール-"
+},
+{
+  "kitsu_id": 13888,
+  "mal_id": 36470,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Tada-kun wa Koi wo Shinai",
+  "ja_jp": "多田くんは恋をしない"
+},
+{
+  "kitsu_id": 11023,
+  "mal_id": 30911,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Tales of Zestiria the X",
+  "ja_jp": "テイルズ オブ ゼスティリア ザ クロス"
+},
+{
+  "kitsu_id": 13593,
+  "mal_id": 35790,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Tate no Yuusha no Nariagari",
+  "ja_jp": "盾の勇者の成り上がり"
+},
+{
+  "kitsu_id": 172,
+  "mal_id": 195,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Onegai☆Teacher",
+  "ja_jp": "おねがい☆ティーチャー"
+},
+{
+  "kitsu_id": 41024,
+  "mal_id": 37430,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Tensei shitara Slime Datta Ken",
+  "ja_jp": "転生したらスライムだった件"
+},
+{
+  "kitsu_id": 8356,
+  "mal_id": 22687,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Terra Formars",
+  "ja_jp": "TERRA FORMARS [テラフォーマーズ]"
+},
+{
+  "kitsu_id": 8342,
+  "mal_id": 23283,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Zankyou no Terror",
+  "ja_jp": "残響のテロル"
+},
+{
+  "kitsu_id": 8053,
+  "mal_id": 20785,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Mahouka Koukou no Rettousei",
+  "ja_jp": "魔法科高校の劣等生"
+},
+{
+  "kitsu_id": 7770,
+  "mal_id": 19117,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Toaru Hikuushi e no Koiuta",
+  "ja_jp": "とある飛空士への恋歌"
+},
+{
+  "kitsu_id": 2027,
+  "mal_id": 2236,
+  "watchCount": 2,
+  "subtype": "movie",
+  "en_jp": "Toki wo Kakeru Shoujo",
+  "ja_jp": "時をかける少女"
+},
+{
+  "kitsu_id": 7706,
+  "mal_id": 21353,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Tokyo ESP",
+  "ja_jp": "東京ESP"
+},
+{
+  "kitsu_id": 9135,
+  "mal_id": 22319,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Tokyo Ghoul √A",
+  "ja_jp": "東京喰種√A"
+},
+{
+  "kitsu_id": 4477,
+  "mal_id": 7654,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Tokyo Magnitude 8.0",
+  "ja_jp": "東京マグニチュード8.0"
+},
+{
+  "kitsu_id": 7359,
+  "mal_id": 16011,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Tokyo Ravens",
+  "ja_jp": "東京レイヴンズ"
+},
+{
+  "kitsu_id": 7099,
+  "mal_id": 14227,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Tonari no Kaibutsu-kun",
+  "ja_jp": "となりの怪物くん"
+},
+{
+  "kitsu_id": 7761,
+  "mal_id": 18139,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Tonari no Seki-kun",
+  "ja_jp": "となりの関くん"
+},
+{
+  "kitsu_id": 43034,
+  "mal_id": 41389,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Tonikaku Kawaii",
+  "ja_jp": "トニカクカワイイ"
+},
+{
+  "kitsu_id": 3532,
+  "mal_id": 4224,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Toradora!",
+  "ja_jp": "とらドラ！"
+},
+{
+  "kitsu_id": 8607,
+  "mal_id": 25157,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Trinity Seven",
+  "ja_jp": "トリニティセブン"
+},
+{
+  "kitsu_id": 1926,
+  "mal_id": 2129,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "True Tears",
+  "ja_jp": "true tears"
+},
+{
+  "kitsu_id": 13234,
+  "mal_id": 36539,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Tsuki ga Kirei",
+  "ja_jp": "月がきれい"
+},
+{
+  "kitsu_id": 13258,
+  "mal_id": 34902,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Tsurezure Children",
+  "ja_jp": "徒然チルドレン"
+},
+{
+  "kitsu_id": 13716,
+  "mal_id": 34498,
+  "watchCount": 1,
+  "subtype": "music",
+  "en_jp": "Uchiage Hanabi",
+  "ja_jp": "打上花火"
+},
+{
+  "kitsu_id": 42340,
+  "mal_id": 39741,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Violet Evergarden Gaiden: Eien to Jidou Shuki Ningyou",
+  "ja_jp": "ヴァイオレット・エヴァーガーデン 外伝~永遠と自動手記人形~"
+},
+{
+  "kitsu_id": 12230,
+  "mal_id": 33352,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Violet Evergarden",
+  "ja_jp": "ヴァイオレット・エヴァーガーデン"
+},
+{
+  "kitsu_id": 42028,
+  "mal_id": 38826,
+  "watchCount": 2,
+  "subtype": "movie",
+  "en_jp": "Tenki no Ko",
+  "ja_jp": "天気の子"
+},
+{
+  "kitsu_id": 8452,
+  "mal_id": 25159,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Inou-Battle wa Nichijou-kei no Naka de",
+  "ja_jp": "異能バトルは日常系のなかで"
+},
+{
+  "kitsu_id": 8017,
+  "mal_id": 21085,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Witch Craft Works",
+  "ja_jp": "ウィッチクラフトワークス"
+},
+{
+  "kitsu_id": 13660,
+  "mal_id": 35968,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Wotaku ni Koi wa Muzukashii",
+  "ja_jp": "ヲタクに恋は難しい"
+},
+{
+  "kitsu_id": 7169,
+  "mal_id": 14813,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Yahari Ore no Seishun Love Comedy wa Machigatteiru.",
+  "ja_jp": "やはり俺の青春ラブコメはまちがっている。"
+},
+{
+  "kitsu_id": 10042,
+  "mal_id": 28677,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Yamada-kun to 7-nin no Majo (TV)",
+  "ja_jp": "山田くんと7人の魔女"
+},
+{
+  "kitsu_id": 43063,
+  "mal_id": 39710,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Yesterday wo Utatte",
+  "ja_jp": "イエスタデイをうたって"
+},
+{
+  "kitsu_id": 5513,
+  "mal_id": 8861,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Yosuga no Sora: In Solitude, Where We Are Least Alone.",
+  "ja_jp": "ヨスガノソラ In solitude, where we are least alone."
+},
+{
+  "kitsu_id": 13503,
+  "mal_id": 35507,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e",
+  "ja_jp": "ようこそ実力至上主義の教室へ"
+},
+{
+  "kitsu_id": 8403,
+  "mal_id": 23273,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Shigatsu wa Kimi no Uso",
+  "ja_jp": "四月は君の嘘"
+},
+{
+  "kitsu_id": 14090,
+  "mal_id": 36726,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Yuragi-sou no Yuuna-san",
+  "ja_jp": "ゆらぎ荘の幽奈さん"
+},
+{
+  "kitsu_id": 7725,
+  "mal_id": 18677,
+  "watchCount": 1,
+  "subtype": "TV",
+  "en_jp": "Yuusha ni Narenakatta Ore wa Shibushibu Shuushoku wo Ketsui Shimashita.",
+  "ja_jp": "勇者になれなかった俺はしぶしぶ就職を決意しました。"
+},
+{
+  "kitsu_id": 1075,
+  "mal_id": 1195,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Zero no Tsukaima",
+  "ja_jp": "ゼロの使い魔"
+},
+{
+  "kitsu_id": 7078,
+  "mal_id": 14075,
+  "watchCount": 2,
+  "subtype": "TV",
+  "en_jp": "Zetsuen no Tempest",
+  "ja_jp": "絶園のテンペスト"
+},
+{
+  "kitsu_id": 11204,
+  "mal_id": 31245,
+  "watchCount": 1,
+  "subtype": "movie",
+  "en_jp": "Zutto Mae kara Suki deshita.: Kokuhaku Jikkou Iinkai",
+  "ja_jp": "ずっと前から好きでした。～告白実行委員会～"
+},
