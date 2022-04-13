@@ -17,6 +17,8 @@ alias vim="nvim"
 alias sbash="source ~/.bashrc"
 alias update="sudo apt update && sudo apt upgrade -y"
 alias bashcode="nvim -p ~/.config/nvim/*.vim ~/.bash_aliases"
+alias chrome="/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe"
+alias brave="/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe"
 
 # Python Functions *************************************************************
 pyrun() {
