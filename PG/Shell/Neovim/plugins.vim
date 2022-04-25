@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/plugins.vim
 " Author: s20016
-" Last Change: Tue Apr 12 01:16:38 JST 2022
+" Last Change: Tue Apr 26 02:19:21 JST 2022
 " =============================================================================
 
 " netrw file browser
@@ -247,7 +247,7 @@ lua << EOF
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 	end
 
-	local servers = { 'pyright', 'eslint', 'stylelint_lsp', 'tsserver'}
+	local servers = { 'pyright', 'tsserver'}
 	for _, lsp in ipairs(servers) do
 		nvim_lsp[lsp].setup {
 			capablities = capabilities,
