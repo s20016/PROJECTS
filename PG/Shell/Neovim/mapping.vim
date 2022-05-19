@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/mapping.vim
 " Author: s20016
-" Last Change: Tue Apr 26 02:19:21 JST 2022
+" Last Change: Thu May 19 16:40:27 JST 2022
 " =============================================================================
 
 " For key mapping guide
@@ -74,6 +74,8 @@ function! ExecuteFileToOutput() abort
 		execute "!cat input.txt | python3 " . l:fn . " > output.txt"
 	elseif l:ft == "js"
 		execute "!cat ./input.txt | node " . l:fn . " > ./output.txt"
+  elseif l:ft == "java"
+    execute "!cat ./input.txt | java "  . l:fn . " > ./output.txt"
 	endif
 endfunction
 
@@ -101,7 +103,6 @@ function! ToggleNetrw()
     endif
 endfunction
 
-" Add your own mapping. For example:
 noremap <silent> <C-E> :call ToggleNetrw()<CR>
 
 "  ==== AUTO CMD ===============================================================
@@ -111,7 +112,14 @@ noremap <silent> <C-E> :call ToggleNetrw()<CR>
 autocmd BufEnter * set cursorline
 autocmd BufLeave * set nocursorline
 
-augroup vimrc-remember-cursor-position
-	autocmd!
-  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
 augroup END

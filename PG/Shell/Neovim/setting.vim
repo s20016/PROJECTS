@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/setting.vim
 " Author: s20016
-" Last Change: Tue Apr 26 02:19:21 JST 2022
+" Last Change: Thu May 19 16:40:27 JST 2022
 " =============================================================================
 
 filetype plugin indent on
@@ -32,11 +32,11 @@ set mouse=a
 set mousemodel=popup                    " Hide mouse button
 set noswapfile                          " Disable tmp files
 set nowrap                              " Displays long lines as one line
-set relativenumber                              " Toggle number line
+set relativenumber                      " Toggle number line
 set pumheight=10                        " Pop-up menu height
 set ruler                               " Ruler in status line
 set scrolloff=6                         " Minimal screen line above and below
-set shiftwidth=2                        " One tab == 4 spaces
+set shiftwidth=2                        " One tab == 2 spaces
 set showmatch                           " Highlight matching brackets
 set signcolumn=yes:1                    " Gutter column
 set smartcase                           " Ignore letter case
@@ -53,4 +53,4 @@ set updatetime=100                      " Set update time for Git gutter
 set visualbell                          " Error flash screen
 set wildmenu                            " Cmd tab complete opt
 set noshowmode                          " Hide message
-set completeopt=menuone,noselect
+set completeopt=menu,menuone,noselect

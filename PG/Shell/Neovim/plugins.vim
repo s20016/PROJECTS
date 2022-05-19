@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/plugins.vim
 " Author: s20016
-" Last Change: Tue Apr 26 02:19:21 JST 2022
+" Last Change: Thu May 19 16:40:27 JST 2022
 " =============================================================================
 
 " netrw file browser
@@ -152,15 +152,14 @@ lua << EOF
 			["<C-d>"] = cmp.mapping.scroll_docs(-4),
 			["<C-f>"] = cmp.mapping.scroll_docs(4),
 			["<C-e>"] = cmp.mapping.close(),
-			["<c-y>"] = cmp.mapping(
+			["<C-y>"] = cmp.mapping(
 				cmp.mapping.confirm {
 					behavior = cmp.ConfirmBehavior.Insert,
 					select = true,
 				},
 				{ "i", "c" }
 			),
-
-			["<c-space>"] = cmp.mapping {
+			["<C-space>"] = cmp.mapping {
 				i = cmp.mapping.complete(),
 				c = function(
 					_
@@ -174,6 +173,20 @@ lua << EOF
 					end
 				end,
 			},
+      ["<C-n>"] = function(fallback)
+        if cmp.visible() then
+          cmp.select_next_item()
+        else
+          fallback()
+        end
+      end,
+      ["<C-p>"] = function(fallback)
+        if cmp.visible() then
+          cmp.select_prev_item()
+        else
+          fallback()
+        end
+      end,
 		},
 
 		formatting = {
@@ -197,7 +210,7 @@ lua << EOF
 			{ name = 'nvim_lsp' },
 			{ name = 'ultisnips' },
 		}, {
-			{ name = 'buffer', keyword_length = 4 },
+			{ name = 'buffer', keyword_length = 3 },
 		})
 	})
 
@@ -214,7 +227,6 @@ lua << EOF
 	})
 
   local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-
   local nvim_lsp = require('lspconfig')
 
   local on_attach = function(client, bufnr)
@@ -247,7 +259,7 @@ lua << EOF
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 	end
 
-	local servers = { 'pyright', 'tsserver'}
+	local servers = { 'pyright', 'tsserver', 'jdtls'}
 	for _, lsp in ipairs(servers) do
 		nvim_lsp[lsp].setup {
 			capablities = capabilities,
