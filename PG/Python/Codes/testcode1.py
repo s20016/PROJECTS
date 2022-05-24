@@ -4,14 +4,14 @@ import webbrowser
 import requests as req
 # from mal import Anime, AnimeSearch
 
-# sys.stdin = open("/home/s20016/PROJECTS/PG/Python/Codes/input.txt", "r")
-# sys.stdout = open("/home/s20016/PROJECTS/PG/Python/Codes/output.txt", "w")
+# sys.stdin = open("/home/czekras/PROJECTS/PG/Python/Codes/input.txt", "r")
+# sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
 
 # TEST CODE 1
 # =========================================================================
 
 x = []
-url = "https://raw.githubusercontent.com/s20016/Animate/master/public/data/anime_list.json"
+url = "https://raw.githubusercontent.com/czekras/Animate/master/public/data/anime_list.json"
 
 data = req.get(url).json()['anime']
 for i in data:
