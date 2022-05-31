@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/plugins.vim
 " Author: s20016
-" Last Change: Thu May 19 16:40:27 JST 2022
+" Last Change: Tue May 31 16:01:52 JST 2022
 " =============================================================================
 
 " netrw file browser
@@ -26,7 +26,7 @@ let g:UltiSnipsListSnippets="<c-l>"
 
 " PLUGIN: Startify
 let g:webdevicons_enable_startify = 1
-let g:startify_change_to_dir = 0
+let g:startify_change_to_dir = 1
 let g:startify_enable_special = 0
 let g:startify_files_number = 10
 let g:startify_session_dir = '~/.config/nvim/session'
@@ -72,7 +72,7 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
 			\  '*': ['remove_trailing_lines', 'trim_whitespace'],
-			\ 'javascript': ['eslint', 'prettier_standard'],
+			\ 'javascript': ['eslint', 'standard'],
 			\ 'html'      : ['prettier'],
 			\ 'python'    : ['autopep8', 'black', 'isort']
 			\ }
@@ -103,8 +103,8 @@ let g:lightline = {
   \   'gitbranch': 'FugitiveHead',
   \   'lineinfo': 'LightlineLineinfo' },
 	\ 'tab': {
-	\  'active': [ 'filename', 'modified' ],
-	\  'inactive': [ 'tabnum' ]
+	\   'active': [ 'filename', 'modified' ],
+	\   'inactive': [ 'tabnum' ]
 	\ } }
 
 " Highlight active window color
@@ -123,7 +123,7 @@ let g:lightline.separator = { 'left': '', 'right': '' }
 let g:lightline.subseparator = { 'left': '', 'right': '' }
 
 lua << EOF
-	local lsp_installer = require("nvim-lsp-installer")
+  local lsp_installer = require("nvim-lsp-installer").setup {}
 	local lspkind = require "lspkind"
 	local cmp = require "cmp"
 	lspkind.init()
@@ -259,7 +259,7 @@ lua << EOF
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 	end
 
-	local servers = { 'pyright', 'tsserver', 'jdtls'}
+  local servers = { 'pyright', 'tsserver' }
 	for _, lsp in ipairs(servers) do
 		nvim_lsp[lsp].setup {
 			capablities = capabilities,
