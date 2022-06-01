@@ -1,7 +1,7 @@
 # Heapsort
 import datetime
 
-data = [95, 20, 77]
+data = []
 n = len(data)
 
 for i in range((n - 1) // 2, -1, -1):
@@ -16,7 +16,6 @@ for i in range((n - 1) // 2, -1, -1):
         p = c
         c = p * 2 + 1
 
-# 根を切りヒープを再構成する
 d = n - 1
 while d > 0:
     data[0], data[d] = data[d], data[0]

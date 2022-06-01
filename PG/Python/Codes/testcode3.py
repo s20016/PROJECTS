@@ -1,7 +1,7 @@
 # Mergesort
 import datetime
 
-data = [95, 20, 77]
+data = []
 n = len(data)
 
 

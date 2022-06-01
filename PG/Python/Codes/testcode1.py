@@ -12,7 +12,7 @@ import random
 x = [input() for _ in range(5)]
 # print(x)
 
-d = list(map(int, x[0].split(" ")))
+d = list(map(int, x[4].split(" ")))
 print(d)
 
 # import datetime

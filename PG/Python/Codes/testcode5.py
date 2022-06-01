@@ -1,7 +1,7 @@
 # Bubblesort
 import datetime
 
-data = [95, 20, 77]
+data = []
 n = len(data)
 
 for i in range(0, n - 1):
