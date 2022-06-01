@@ -1,12 +1,21 @@
-import tkinter
+# Bubblesort
+import datetime
 
-root = tkinter.Tk()
-root.title("TEST")
+data = [95, 20, 77]
+n = len(data)
 
-cvs = tkinter.Canvas(width=600, height=600, bg="white")
-cvs.pack()
+for i in range(0, n - 1):
+    for j in range(n - 1, i, -1):
+        if data[j - 1] > data[j]:
+            data[j], data[j - 1] = data[j - 1], data[j]
 
-ox = 300
-oy = 300
+start_time = datetime.datetime.now()
 
-cvs.create_text(ox + 20, oy + 15, text=("(0,0)"))
+# Insert Sort Function
+print(data)
+
+end_time = datetime.datetime.now()
+time_diff = end_time - start_time
+execution_time = time_diff.total_seconds() * 1000
+
+print(execution_time)

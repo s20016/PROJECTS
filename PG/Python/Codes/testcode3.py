@@ -1,67 +1,53 @@
-import sys
+# Mergesort
+import datetime
 
-sys.stdin = open("/home/czekras/PROJECTS/PG/Python/Codes/input.txt", "r")
-sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
+data = [95, 20, 77]
+n = len(data)
 
-# TEST CODE 3
-# =========================================================================
 
-from mal import Anime, AnimeSearch, Manga, MangaSearch
-import webbrowser
+def merge(left, mid, right):
+    buff = [0] * (right - left)
+    i = left
+    j = mid
+    p = 0
+    while i < mid and j < right:
+        if data[i] <= data[j]:
+            buff[p] = data[i]
+            i += 1
+            p += 1
+        else:
+            buff[p] = data[j]
+            j += 1
+            p += 1
+    while i < mid:
+        buff[p] = data[i]
+        i += 1
+        p += 1
+    while j < right:
+        buff[p] = data[j]
+        j += 1
+        p += 1
+    for n in range(left, right):
+        data[n] = buff[n - left]
 
-url = []
-animateOption = input(f"Animate list for Anime/Manga? (A/M): ")
 
-if animateOption.lower() in ["a", "anime"]:
-    animeList = list(input("Enter Anime: ").split(",")); print()
+s = 2
+while s <= n:
+    loop = n // s
+    fragment = n % s
+    for i in range(loop):
+        merge(i * s, i * s + (s // 2), i * s + s)
+    if fragment > 0:
+        merge((loop - 1) * s, loop * s, n)
+    s = s * 2
 
-    for entry in animeList:
-        search = AnimeSearch(entry.lstrip())
+start_time = datetime.datetime.now()
 
-        anime = Anime(malID := search.results[0].mal_id)
-        aniEN = anime.title_english
-        aniJA = anime.title_japanese
-        aniTP = anime.type
-        url.append(aniUR := anime.url)
+# Insert Sort Function
+print(data)
 
-        print(f'{{\n  "mal_id": {malID},')
-        print(f'  "en_title": "{aniEN}",')
-        print(f'  "ja_title": "{aniJA}",')
-        print(f'  "subtitle": "",')
-        print(f'  "type": "{aniTP}",')
-        print(f'  "count": 1\n}},')
-    
-    print()
-    url2 = [print(f"{animeList[count].lstrip()}: {url}") for count, url in enumerate(url)]
-    animeURL = input(f"\nOpen {len(animeList)} URL in browser? (Y/N): ")
-    if animeURL.lower() in ["y", "yes"]:
-        for i in url: webbrowser.open_new_tab(i)
+end_time = datetime.datetime.now()
+time_diff = end_time - start_time
+execution_time = time_diff.total_seconds() * 1000
 
-elif animateOption.lower() in ["m", "manga"]:
-    mangaList = list(input("Enter Manga: ").split(",")); print()
-
-    for entry in mangaList:
-        search = MangaSearch(entry.lstrip())
-
-        manga = Manga(malID := search.results[0].mal_id)
-        manEN = manga.title_english
-        manJA = manga.title_japanese
-        url.append(manUR := manga.url)
-
-        print(f'{{\n  "mal_id": {malID},')
-        print(f'  "en_title": "{manEN}",')
-        print(f'  "ja_title": "{manJA}",')
-        print(f'  "subtitle": "",')
-        print(f'  "status": "CR",')
-        print(f'  "count": 1\n}},')
-
-    print()
-    url2 = [print(f"{mangaList[count].lstrip()}: {url}") for count, url in enumerate(url)]
-    animeURL = input(f"\nOpen {len(mangaList)} URL in browser? (Y/N): ")
-    if animeURL.lower() in ["y", "yes"]:
-        for i in url: webbrowser.open_new_tab(i)
-else:
-    print("Option Not Available")
-
-# Requirements: 
-# pip install mal-api
+print(execution_time)

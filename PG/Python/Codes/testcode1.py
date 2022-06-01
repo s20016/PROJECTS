@@ -1,43 +1,26 @@
-import sys
-import webbrowser
+import random
 
-import requests as req
-# from mal import Anime, AnimeSearch
+# i = [3, 10, 25, 70, 100]
 
-# sys.stdin = open("/home/czekras/PROJECTS/PG/Python/Codes/input.txt", "r")
-# sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
+# for n in i:
+#     x = random.sample(range(100), n)
+#     y = [f"{i:02d}" for i in x]
 
-# TEST CODE 1
-# =========================================================================
+#     print(*y)
+#     print()
 
-x = []
-url = "https://raw.githubusercontent.com/czekras/Animate/master/public/data/anime_list.json"
+x = [input() for _ in range(5)]
+# print(x)
 
-data = req.get(url).json()['anime']
-for i in data:
-    x.append(i['mal_id'])
+d = list(map(int, x[0].split(" ")))
+print(d)
 
-print(x)
+# import datetime
+# start_time = datetime.datetime.now()
+#   # Insert Sort Function
 
-# animeList = list(input("Enter Anime: ").split(","))
+# end_time = datetime.datetime.now()
+# time_diff = end_time - start_time
+# execution_time = time_diff.total_seconds() * 1000
 
-# for entry in animeList:
-#     search = AnimeSearch(entry.lstrip())
-
-#     anime = Anime(malID := search.results[0].mal_id)
-#     aniEN = anime.title_english
-#     aniJA = anime.title_japanese
-#     aniTP = anime.type
-#     aniUR = anime.url
-
-#     print(f'\n{{\n  "mal_id": {malID}')
-#     print(f'  "en_title": "{aniEN}"')
-#     print(f'  "ja_title": "{aniJA}"')
-#     print(f'  "subtitle": ""')
-#     print(f'  "type": "{aniTP}"')
-#     print(f'  "count": \n}}')
-#     print(f"\nCheck: {aniUR}")
-
-#     animeURL = input("\nOpen URL in browser? (Y/N): ")
-#     if animeURL.lower() in ["y", "yes"]:
-#         webbrowser.open_new_tab(aniUR)
+# print(execution_time)

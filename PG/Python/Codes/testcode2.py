@@ -1,33 +1,38 @@
-import sys
+# Quicksort
+import datetime
 
-sys.stdin = open("/home/czekras/PROJECTS/PG/Python/Codes/input.txt", "r")
-sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
+data = [95, 20, 77]
+n = len(data)
 
-# TEST CODE 2
-# =========================================================================
 
-# row = number of records, col = data types of each records
-row, col = 3, ["CHAR", "VARCHAR", "INT", "INT", "INT", "INT", "INT", "CHAR"]
+def quick_sort(left, right):
+    i = left
+    j = right
+    p = data[(left + right) // 2]
+    while True:
+        while data[i] < p:
+            i = i + 1
+        while data[j] > p:
+            j = j - 1
+        if i >= j:
+            break
+        data[i], data[j] = data[j], data[i]
+        i = i + 1
+        j = j - 1
+    if left < i - 1:
+        quick_sort(left, i - 1)
+    if right > j + 1:
+        quick_sort(j + 1, right)
 
-data_value, database = [], []
-data1 = list(map(lambda x: x.lower(), col))
-data2 = [input().split() for _ in range(row)]
 
-for count in range(row):
-    for num, value in enumerate(data2[count]):
-        if data1[num] in ["char", "varchar", "date"]:
-            if value == "(NULL)":
-                data_value.append("NULL")
-            else:
-                data_value.append(f"'{value}'")
-        if data1[num] in ["int"]:
-            data_value.append(value)
-        if num == len(col) - 1:
-            record = ", ".join([x for x in data_value])
-            if count == row - 1:
-                database.append(f"({record});")
-            else:
-                database.append(f"({record})")
-            data_value.clear()
+start_time = datetime.datetime.now()
 
-print(*database, sep=",\n")
+# Insert Sort Function
+quick_sort(0, n - 1)
+print(data)
+
+end_time = datetime.datetime.now()
+time_diff = end_time - start_time
+execution_time = time_diff.total_seconds() * 1000
+
+print(execution_time)

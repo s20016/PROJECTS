@@ -1,37 +1,45 @@
-import sys
+# Heapsort
+import datetime
 
-sys.stdin = open("/home/czekras/PROJECTS/PG/Python/Codes/input.txt", "r")
-sys.stdout = open("/home/czekras/PROJECTS/PG/Python/Codes/output.txt", "w")
+data = [95, 20, 77]
+n = len(data)
 
-# TEST CODE 4
-# =========================================================================
+for i in range((n - 1) // 2, -1, -1):
+    p = i
+    c = p * 2 + 1
+    while c < n:
+        if c < n - 1 and data[c] < data[c + 1]:
+            c += 1
+        if data[p] >= data[c]:
+            break
+        data[p], data[c] = data[c], data[p]
+        p = c
+        c = p * 2 + 1
 
-import tmp_animate as animate
+# 根を切りヒープを再構成する
+d = n - 1
+while d > 0:
+    data[0], data[d] = data[d], data[0]
+    p = 0
+    c = p * 2 + 1
+    while c < d:
+        if c < d - 1 and data[c] < data[c + 1]:
+            c += 1
+        if data[p] >= data[c]:
+            break
+        data[p], data[c] = data[c], data[p]
+        p = c
+        c = p * 2 + 1
+    d = d - 1
 
-mainList = list(sys.stdin.read().split("],\n"))
 
-mainList2 = []
-mainList3 = []
+start_time = datetime.datetime.now()
 
-finalMainList = []
+# Insert Sort Function
+print(data)
 
-title = []
-subtitle = []
-a_type = []
-count = []
+end_time = datetime.datetime.now()
+time_diff = end_time - start_time
+execution_time = time_diff.total_seconds() * 1000
 
-for anime in mainList:
-    title.append(anime.replace("[", "").split(", ")[0])
-    subtitle.append(anime.replace("[", "").split(", ")[1][3:-1])
-    a_type.append(anime.replace("[", "").split(", ")[2][1])
-    count.append(anime.replace("[", "").split(", ")[2][2])
-
-for i in range(len(mainList)):
-    mainList3.append(
-        f'{{ "mal_id": "{animate.mid[i]}",\n  "en_title": {title[i]},\n  "ja_title": "{animate.ja_title[i]}",\n  "subtitle": "{subtitle[i]}",\n  "type": "{"Movie" if a_type[i] == "M" else "Anime"}",\n  "count" : "{count[i]}"\n}},')
-
-# print(len(mainList3))
-print("\n".join(mainList3))
-
-# print("]\n".join(mainList))
-# print("\n".join(subtitle))
+print(execution_time)
