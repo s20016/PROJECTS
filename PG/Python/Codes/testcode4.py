@@ -1,8 +1,10 @@
 # Heapsort
 import datetime
 
-data = []
+data = list(map(int, input().split(" ")))
 n = len(data)
+
+start_time = datetime.datetime.now()
 
 for i in range((n - 1) // 2, -1, -1):
     p = i
@@ -31,10 +33,6 @@ while d > 0:
         c = p * 2 + 1
     d = d - 1
 
-
-start_time = datetime.datetime.now()
-
-# Insert Sort Function
 print(data)
 
 end_time = datetime.datetime.now()

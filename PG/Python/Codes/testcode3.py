@@ -1,7 +1,7 @@
 # Mergesort
 import datetime
 
-data = []
+data = list(map(int, input().split(" ")))
 n = len(data)
 
 
@@ -31,6 +31,8 @@ def merge(left, mid, right):
         data[n] = buff[n - left]
 
 
+start_time = datetime.datetime.now()
+
 s = 2
 while s <= n:
     loop = n // s
@@ -41,9 +43,6 @@ while s <= n:
         merge((loop - 1) * s, loop * s, n)
     s = s * 2
 
-start_time = datetime.datetime.now()
-
-# Insert Sort Function
 print(data)
 
 end_time = datetime.datetime.now()

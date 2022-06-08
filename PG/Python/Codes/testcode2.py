@@ -1,7 +1,7 @@
 # Quicksort
 import datetime
 
-data = []
+data = list(map(int, input().split(" ")))
 n = len(data)
 
 
