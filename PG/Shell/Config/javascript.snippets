@@ -1,5 +1,5 @@
-snippet simple "JS input reader" b
-const readLines = (file = '/dev/stdin') => 
+snippet simple2 "Input reader" b
+const readLines = (file = '/dev/stdin') =>
   require('fs').readFileSync(file).toString().trim().split('\n')
 const identity = value => value
 const join = sep => list => list.join(sep)
@@ -20,3 +20,7 @@ print(identity)(fun(...lines))
 $0
 endsnippet
 
+snippet simple1 "Input simplified" b
+const lines = require('fs').readFileSync('/dev/stdin', 'utf8').trim().split('\n')
+$0
+endsnippet

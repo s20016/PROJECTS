@@ -1,17 +1,11 @@
-const lines = require('fs').readFileSync('/dev/stdin', 'utf8').split('\n')
+const stream = require('fs').readFileSync('/dev/stdin', 'utf8').trim()
+const lines = stream.split('\n')
 
-// TODO: Yakan 211028
-// const y = [...Array(10).fill(0).keys()]
-// const y = [...Array(10).fill(0).entries()]
+// console.log(lines)
 
-// const y = [...Array(10).keys()].map(v => v + 1)
-// const y = Array.from(Array(10).keys(), v => v + 1)
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i)
+// }
 
-// git config --global core.editor 'code -w'
-
-const x = lines[0].split(' ')[2]
-
-const S = lines[1].split(' ').slice(0, x).map(Number)
-const y = S.reduce((a, b) => a + b)
-
-console.log(y)
+const x = [...Array(5).map((v, i) => v + 1)]
+console.log(x)

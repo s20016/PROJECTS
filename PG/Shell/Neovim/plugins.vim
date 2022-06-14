@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: ~/.config/nvim/plugins.vim
 " Author: s20016
-" Last Change: Tue May 31 16:01:52 JST 2022
+" Last Change: Tue Jun 14 12:31:37 JST 2022
 " =============================================================================
 
 " netrw file browser
@@ -40,7 +40,6 @@ let g:startify_bookmarks = [
 		  \	{ '-': '~/Documents/Clone/FILES/MyGit' } ]
 
 let g:startify_custom_header = [
-      \ '                                                    ',
 			\ '    ____  ____   ___      _ _____ ____ _____ ____   ',
 			\ '   |  _ \|  _ \ / _ \    | | ____/ ___|_   _/ ___|  ',
 			\ '   | |_) | |_) | | | |_  | |  _|| |     | | \___ \  ',
@@ -79,12 +78,13 @@ let g:ale_fixers = {
 
 highlight Normal       guibg=none
 highlight Visual       guibg=#585858
-highlight SignColumn   guibg=none guifg=#444444
-highlight LineNr       guibg=none guifg=#444444
+highlight SignColumn   guibg=none guifg=#5e5e5e
+highlight LineNr       guibg=none guifg=#5e5e5e
+highlight NonText      ctermfg=none
 
 " highlight CursorLine
 highlight CursorColumn guibg=none guifg=none
-highlight CursorLineNR guibg=#444444 guifg=#808080
+highlight CursorLineNR guibg=#5e5e5e guifg=#808080
 
 " ==== STATUS LINE ============================================================
 " See `:h g:lightline.component` for details
