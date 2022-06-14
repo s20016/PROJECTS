@@ -24,5 +24,5 @@ PROJECTS
 │   ├── SQL
 │   └── Vagrant
 └── WebExtension
-│   └── HTML
+    └── HTML
 ```
